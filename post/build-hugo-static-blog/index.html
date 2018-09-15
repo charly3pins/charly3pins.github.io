@@ -59,9 +59,7 @@
     
 
     <div class="content">
-        
-
-<p>If you want to create a fast static website I recommend you <a href="https://gohugo.io/">Hugo</a>. It&rsquo;s written in Go and it&rsquo;s really use to configure and adapt to your needs. In addition, you can choose through different <a href="https://themes.gohugo.io/">themes</a> created by the team and others by the community or even create your own one.</p>
+        <p>If you want to create a fast static website I recommend you <a href="https://gohugo.io/">Hugo</a>. It&rsquo;s written in Go and it&rsquo;s really use to configure and adapt to your needs. In addition, you can choose through different <a href="https://themes.gohugo.io/">themes</a> created by the team and others by the community or even create your own one.</p>
 
 <p>Here I&rsquo;ll explain in some steps how to create one blog with Hugo and how to be hosted &amp; deployed in GitHub and GitHub Pages. If you need more detail visit the official <a href="https://gohugo.io/documentation/">Hugo docs</a>.</p>
 
@@ -130,35 +128,36 @@
 </span><span style="color:#a61717;background-color:#e3d2d2"></span>cd &lt;YOUR-PROJECT&gt;</code></pre></div>
 <p>Run your website locally using the command <code>hugo server</code> or if you are using theme <code>hugo server -t &lt;THEME_NAME&gt;</code>. Follow the instructions in console to access it. Web server should be available at  <a href="http://localhost:1313/">http://localhost:1313/</a></p>
 
-<p>Finally you need to add the <code>&lt;USERNAME&gt;.github.io</code> repo inside the <code>public</code> folder as a git submodule in order to update your website once you regenerate the site.</p>
+<p><p>Finally you need to add the <code>&lt;USERNAME&gt;.github.io</code> repo inside the <code>public</code> folder as a git submodule in order to update your website once you regenerate the site.</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public</code></pre></div>
 <p>To automate these steps you can save it to <code>deploy.sh</code>. Remember to make it executable with:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">chmod +x deploy.sh</code></pre></div>
 <p>deploy.sh</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#cd2828;font-weight:bold">#!/bin/bash
 </span><span style="color:#cd2828;font-weight:bold"></span>
-<span style="color:#24909d">echo</span> -e <span style="color:#ed9d13">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+<span style="color:#24909d">echo</span> -e <span style="color:#ed9d13">&#34;\033[0;32mDeploying updates to GitHub&hellip;\033[0m&#34;</span></p>
 
-<span style="color:#999;font-style:italic"># Build the project.
-</span><span style="color:#999;font-style:italic"></span>hugo <span style="color:#999;font-style:italic"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+<p><span style="color:#999;font-style:italic"># Build the project.
+</span><span style="color:#999;font-style:italic"></span>hugo <span style="color:#999;font-style:italic"># if using a theme, replace with <code>hugo -t &amp;lt;YOURTHEME&amp;gt;</code>
 </span><span style="color:#999;font-style:italic"></span>
 <span style="color:#999;font-style:italic"># Go To Public folder
 </span><span style="color:#999;font-style:italic"></span><span style="color:#24909d">cd</span> public
 <span style="color:#999;font-style:italic"># Add changes to git.
-</span><span style="color:#999;font-style:italic"></span>git add .
+</span><span style="color:#999;font-style:italic"></span>git add .</p>
 
-<span style="color:#999;font-style:italic"># Commit changes.
-</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">msg</span>=<span style="color:#ed9d13">&#34;rebuilding site `date`&#34;</span>
+<p><span style="color:#999;font-style:italic"># Commit changes.
+</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">msg</span>=<span style="color:#ed9d13">&#34;rebuilding site <code>date</code>&#34;</span>
 <span style="color:#6ab825;font-weight:bold">if</span> [ <span style="color:#40ffff">$#</span> -eq <span style="color:#3677a9">1</span> ]
   <span style="color:#6ab825;font-weight:bold">then</span> <span style="color:#40ffff">msg</span>=<span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$1</span><span style="color:#ed9d13">&#34;</span>
 <span style="color:#6ab825;font-weight:bold">fi</span>
-git commit -m <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$msg</span><span style="color:#ed9d13">&#34;</span>
+git commit -m <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$msg</span><span style="color:#ed9d13">&#34;</span></p>
 
-<span style="color:#999;font-style:italic"># Push source and build repos.
-</span><span style="color:#999;font-style:italic"></span>git push origin master
+<p><span style="color:#999;font-style:italic"># Push source and build repos.
+</span><span style="color:#999;font-style:italic"></span>git push origin master</p>
 
-<span style="color:#999;font-style:italic"># Come Back up to the Project Root
-</span><span style="color:#999;font-style:italic"></span><span style="color:#24909d">cd</span> ..</code></pre></div>
+<p><span style="color:#999;font-style:italic"># Come Back up to the Project Root
+</span><span style="color:#999;font-style:italic"></span><span style="color:#24909d">cd</span> ..</code></pre></div></p>
+
     </div>
     
     <div class="tags">
