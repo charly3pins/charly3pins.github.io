@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>charly3pins</title>
-    <link>https://charly3pins.github.io/</link>
+    <link>/</link>
     <description>Recent content on charly3pins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 11 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://charly3pins.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://charly3pins.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://charly3pins.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>Hi I&amp;rsquo;m Charly. I&amp;rsquo;m a developer interested in all related about programming, passionate of the newest technologies and willing to learn new things everyday.
 I&amp;rsquo;m focused in good practices and I try to improve the systems and code of the projects that I&amp;rsquo;m involved everyday. I believe in testing as the main thing of development and the CI/CD is a good ally for it.</description>
     </item>
