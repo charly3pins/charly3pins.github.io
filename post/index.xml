@@ -6,7 +6,7 @@
     <description>Recent content in Posts on charly3pins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Build Hugo static blog</title>
       <link>/post/build-hugo-static-blog/</link>
-      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/build-hugo-static-blog/</guid>
       <description>If you want to create a fast static website I recommend you Hugo. It&amp;rsquo;s written in Go and it&amp;rsquo;s really use to configure and adapt to your needs. In addition, you can choose through different themes created by the team and others by the community or even create your own one.

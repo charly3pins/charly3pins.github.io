@@ -6,29 +6,29 @@
     <description>Recent content on charly3pins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>I&amp;rsquo;m a developer interested in all related about programming, passionate of the newest technologies and willing to learn new things everyday.
+I&amp;rsquo;m focused in good practices and I try to improve the systems and code of the projects that I&amp;rsquo;m involved everyday. I believe in testing as the main thing of development and the CI/CD is a good ally for it.</description>
+    </item>
+    
+    <item>
       <title>Build Hugo static blog</title>
       <link>/post/build-hugo-static-blog/</link>
-      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/build-hugo-static-blog/</guid>
       <description>If you want to create a fast static website I recommend you Hugo. It&amp;rsquo;s written in Go and it&amp;rsquo;s really use to configure and adapt to your needs. In addition, you can choose through different themes created by the team and others by the community or even create your own one.
 Here I&amp;rsquo;ll explain in some steps how to create one blog with Hugo and how to be hosted &amp;amp; deployed in GitHub and GitHub Pages.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Hi I&amp;rsquo;m Charly. I&amp;rsquo;m a developer interested in all related about programming, passionate of the newest technologies and willing to learn new things everyday.
-I&amp;rsquo;m focused in good practices and I try to improve the systems and code of the projects that I&amp;rsquo;m involved everyday. I believe in testing as the main thing of development and the CI/CD is a good ally for it.</description>
     </item>
     
   </channel>
