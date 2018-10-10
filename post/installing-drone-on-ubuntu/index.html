@@ -7,14 +7,14 @@
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Quick steps to create your onw static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages">
+    <meta name="description" content="Simple post explaining how to install Drone on Ubuntu 16.04 server.">
     
     <meta name="keyword"  content="blog, developer, coding, tutorial, review, code, code review">
     <link rel="shortcut icon" href="https://charly3pins.github.io/img/favicon.png">
 
-    <title>Building static blog with Hugo - Charly3Pins Blog</title>
+    <title>Installing Drone on Ubuntu - Charly3Pins Blog</title>
 
-    <link rel="canonical" href="https://charly3pins.github.io/post/building-static-blog-with-hugo/">
+    <link rel="canonical" href="https://charly3pins.github.io/post/installing-drone-on-ubuntu/">
 
     <link rel="stylesheet" href="https://charly3pins.github.io/css/iDisqus.min.css"/>
 	
@@ -112,7 +112,7 @@
 
 <style type="text/css">
     header.intro-header{
-        background-image: url('https://charly3pins.github.io/img/build-hugo-static-blog/old-school-developer-bg.jpg')
+        background-image: url('https://charly3pins.github.io/img/droneio.png')
     }
 </style>
 <header class="intro-header" >
@@ -126,26 +126,22 @@
                            go
                         </a>
                         
-                       <a class="tag" href="/tags/hugo" title="hugo">
-                           hugo
+                       <a class="tag" href="/tags/drone" title="drone">
+                           drone
                         </a>
                         
-                       <a class="tag" href="/tags/github" title="github">
-                           github
+                       <a class="tag" href="/tags/ci/cd" title="ci/cd">
+                           ci/cd
                         </a>
                         
-                       <a class="tag" href="/tags/cms" title="cms">
-                           cms
-                        </a>
-                        
-                       <a class="tag" href="/tags/static-site-generator" title="static-site-generator">
-                           static-site-generator
+                       <a class="tag" href="/tags/devops" title="devops">
+                           devops
                         </a>
                         
                     </div>
-                    <h1>Building static blog with Hugo</h1>
+                    <h1>Installing Drone on Ubuntu</h1>
                     <h2 class="subheading"></h2>
-                    <span  class="meta">Posted by charly3pins on 2018-09-22
+                    <span  class="meta">Posted by charly3pins on 2018-10-10
                         
                     </span>
                 </div>
@@ -174,12 +170,13 @@
                 <nav id="TableOfContents">
 <ul>
 <li><a href="#intro">Intro</a></li>
-<li><a href="#init">Init</a></li>
-<li><a href="#create-site">Create site</a></li>
-<li><a href="#install-theme">Install theme</a></li>
-<li><a href="#create-content">Create content</a></li>
-<li><a href="#run-your-site">Run your site</a></li>
-<li><a href="#host-on-github">Host on GitHub</a></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#drone">Drone</a></li>
+<li><a href="#configure-nginx">Configure Nginx</a></li>
+</ul></li>
+<li><a href="#enjoy">Enjoy</a></li>
+<li><a href="#references">References</a></li>
 </ul>
 </nav>
 		
@@ -187,154 +184,237 @@
 
 <h1 id="intro">Intro</h1>
 
-<p>If you want to create a fast static website I recommend you <a href="https://gohugo.io/">Hugo</a>. It&rsquo;s written in Go and it&rsquo;s really use to configure and adapt to your needs. In addition, you can choose through different <a href="https://themes.gohugo.io/">themes</a> created by the team and others by the community or even create your own one.</p>
+<p>I have to admit that I never liked the systems part of the development process. I always though that it was a job in a dark and creppy place, full of freaks doing a rare things. This vision completely changed when I started using <a href="https://www.docker.com/">Docker</a>. On this point I realized that all the magic done in the sysadmin part was better than I though and then, I started intereseting more an more on this side.</p>
 
-<p>Here I&rsquo;ll explain in some steps how to create one blog with Hugo and how to be hosted &amp; deployed in GitHub and GitHub Pages. If you need more detail visit the official <a href="https://gohugo.io/documentation/">Hugo docs</a>.</p>
+<p>Also, at my job we&rsquo;ve started using <a href="https://jenkins.io/">Jenkins</a> for <a href="https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd">CI/CD</a>, chaning our manual packing-testing-deploying manual task for an automatic process. It was super cool!!! I&rsquo;ve feel very happy because it saves a lot of time and allows you to concentrate in your development tasks not wasting time in the deployment phase. I&rsquo;ve use to spend a lot of time generating my wars, deploying them to sandbox, testing the new features added, deploying again if something need to fix it again and finally releasing a new version of code and deploying to production. All these steps were simiplified with just comitting to a branch and then mergin to master (after testing of course). At this pont I profundized in how the things are being build and deployed, where (in our case in AWS) and how to do that things.</p>
 
-<h1 id="init">Init</h1>
+<p>At this point is when I discovered <a href="https://drone.io/">Drone</a>. Jenkins is really cool and it works, but depending on the project, specially if it&rsquo;s not a Java one, is really bad doing the job (because you need to install a lot of plugins or depenencies to do the task). Also, the configuration of the projects and the installation of Jenkins itself in your server is a bit tedious and complicate. So, Drone is running in a Docker container. You only need to pull the container and run it. AWESOME! It works with a <a href="http://yaml.org/">.yaml</a> defining the server and the agent and thats all. So let&rsquo;s see the steps to install it in an Ubuntu 16.04 server.</p>
 
-<p>First of all you need to install Hugo, in my case using <a href="https://brew.sh/">Homebrew</a>:</p>
+<blockquote>
+<p><b>IMPORTANT</b>: You need to have SSL certificate in your server because Drone runs under https. Read <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04">this article</a> to see how to add SSL in a Nginx with Let&rsquo;s Encrypt.</p>
+</blockquote>
 
-<pre><code class="language-vim">brew install hugo
+<h1 id="installation">Installation</h1>
+
+<h2 id="drone">Drone</h2>
+
+<p>First of all you need to pull the drone image.</p>
+
+<pre><code>docker pull drone/drone:0.8
 </code></pre>
 
-<p>Check the version installed:</p>
+<p>Then create the docker-compose for run it:</p>
 
-<pre><code class="language-vim">hugo version
+<pre><code>$ sudo nano /etc/drone/docker-compose.yml
+version: '2'
+
+services:
+  drone-server:
+    image: drone/drone:0.8
+    ports:
+      - 8000:8000
+      - 9000:9000
+    volumes:
+      - /var/lib/drone:/var/lib/drone/
+    restart: always
+    env_file:
+      - /etc/drone/server.env
+
+  drone-agent:
+    image: drone/agent:0.8
+    command: agent
+    restart: always
+    depends_on:
+      - drone-server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    env_file:
+      - /etc/drone/agent.env
 </code></pre>
 
-<h1 id="create-site">Create site</h1>
+<p><small>In my case I&rsquo;ve used these ports because I have other things in my Nginx, but you can choose your own ones. I&rsquo;ve also stored the server and agent <code>env</code> vars in a specific files.</small></p>
 
-<p>Once you have Hugo installed, you&rsquo;re able to create your website using the command:</p>
+<p>Now it&rsquo;s time to create those files. First we create the server one:</p>
 
-<pre><code class="language-vim">hugo new site your-blog-name
+<pre><code>sudo nano /etc/drone/server.env
 </code></pre>
 
-<p>After that, you&rsquo;ll see a new folder called <code>your-blog-name</code> and if you look inside you&rsquo;ll see the following tree:
-<img src="/img/build-hugo-static-blog/folder-tree-your-blog-name.png" /></p>
+<p>server.env</p>
+
+<pre><code># Service settings 
+DRONE_SECRET=secret_generated_on_command_line
+DRONE_HOST=https://yourDroneURL.com
+
+# Registration settings
+DRONE_OPEN=false
+DRONE_ADMIN=your_github_username
+
+# GitHub Settings
+DRONE_GITHUB=true
+DRONE_GITHUB_CLIENT=Client_ID_from_GitHub
+DRONE_GITHUB_SECRET=Client_Secret_from_GitHub
+</code></pre>
+
+<p>For the GitHub clientID and clientSecret, you must register Drone in your GitHub account to obtain them. Follow <a href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/">these instructions</a>.</p>
+
+<p>And now the agent one:</p>
+
+<pre><code>sudo nano /etc/drone/agent.env
+</code></pre>
+
+<p>agent.env</p>
+
+<pre><code>DRONE_SECRET=secret_generated_on_command_line
+DRONE_SERVER=drone-server:9000
+</code></pre>
+
+<p>To generate the <code>DRONE_SECRET</code> you can ype the following command</p>
+
+<pre><code>LC_ALL=C &lt;/dev/urandom tr -dc A-Za-z0-9 | head -c 65 &amp;&amp; echo
+</code></pre>
+
+<p>Once our Drone is installed and configured, we need to create a systemd unit file to manage the service.</p>
+
+<pre><code>sudo nano /etc/systemd/system/drone.service
+</code></pre>
+
+<p>drone.service</p>
+
+<pre><code>[Unit]
+Description=Drone server
+After=docker.service nginx.service
+
+[Service]
+Restart=always
+ExecStart=/usr/local/bin/docker-compose -f /etc/drone/docker-compose.yml up
+ExecStop=/usr/local/bin/docker-compose -f /etc/drone/docker-compose.yml stop
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<h2 id="configure-nginx">Configure Nginx</h2>
+
+<p>And finally we need to configure our Nginx to proxy requests to our Drone server. First of all find the enabled server blocks with the following command:</p>
+
+<pre><code>grep -R server_name /etc/nginx/sites-enabled
+</code></pre>
+
+<p>You&rsquo;ll see something like this:</p>
+
+<pre><code>Output
+/etc/nginx/sites-enabled/default:   server_name yourDroneURL.com;
+/etc/nginx/sites-enabled/default:   return 301 https://$server_name$request_uri;
+/etc/nginx/sites-enabled/default:   server_name yourDroneURL.com;
+/etc/nginx/sites-enabled/default:#  server_name yourDroneURL.com;
+</code></pre>
+
+<p>After knowing the block that is handling our server, we can edit it typping:</p>
+
+<pre><code>sudo nano /etc/nginx/sites-enabled/default 
+</code></pre>
+
+<p>And adding this text before the <code>server {</code> block:</p>
+
+<pre><code>upstream drone {upstream drone {
+         server 127.0.0.1:8000;server 127.0.0.1:8000;
+ }}
+
+  map $http_upgrade $connection_upgrade {map $http_upgrade $connection_up 
+    default upgrade;
+    ''      close;
+}
+</code></pre>
+
+<p>Next, find the server block with the listen 443 directive inside. Replace the contents of the location block with the following:</p>
+
+<pre><code>server {
+    listen 443 ssl;
+    location / {
+        # try_files $uri $uri/ =404;
+        proxy_pass http://drone;
+
+        include proxy_params;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $connection_upgrade;
+
+        proxy_redirect off;
+        proxy_http_version 1.1;
+        proxy_buffering off;
+        chunked_transfer_encoding off;
+        proxy_read_timeout 86400;
+    }
+}
+</code></pre>
+
+<p>Now it&rsquo;s time to test if our Nginx it&rsquo;s working or not:</p>
+
+<pre><code>sudo nginx -t
+</code></pre>
+
+<p>You should see:</p>
+
+<pre><code>Output
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+</code></pre>
+
+<p>You just need to restart the server and will proxy the requests:</p>
+
+<pre><code>sudo systemctl restart nginx
+</code></pre>
+
+<p>Finally, you need to start the Drone server:</p>
+
+<pre><code>sudo systemctl start drone
+</code></pre>
+
+<p>To check the status of the container you can use the following command:</p>
+
+<pre><code>sudo systemctl status drone
+</code></pre>
+
+<p>You can check the Nginx logs:</p>
+
+<pre><code>sudo less /var/log/nginx/error.log
+</code></pre>
+
+<p>And also you can chcek the Drone logs:</p>
+
+<pre><code>sudo journalctl -u drone
+</code></pre>
+
+<p>If all it&rsquo;s okay, its time to enable Drone:</p>
+
+<pre><code>sudo systemctl enable drone
+</code></pre>
+
+<p>If you want to switch off Drone you can type the following commands:</p>
+
+<pre><code>cd /etc/drone
+sudo /usr/local/bin/docker-compose down
+</code></pre>
+
+<h1 id="enjoy">Enjoy</h1>
+
+<p>Visit your Drone server at your <code>https://yourDroneURL.com</code> and log in with the GitHub account you used for obtain the clientID and client secret.</p>
+
+<h1 id="references">References</h1>
 
 <ul>
-<li>Archetypes are content template files for your project, used when you run <code>hugo new</code> command.</li>
-<li>Content is where all posts and pages are stored. The same structure in this folder will be used for organize the URLs in your rendered site.</li>
-<li>Data is a folder for store additional data for generating your site.</li>
-<li>Layouts is the folder where are stored the template of your site if you&rsquo;re not using a theme.</li>
-<li>Static stores all static files for your site.</li>
-<li>Themes is where the themes you install are stored.</li>
-<li>config.toml stores the main configuration for your site.</li>
+<li>Drone official <a href="http://docs.drone.io/installation/">documentation</a></li>
+<li>Digital Ocean <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-drone-on-ubuntu-16-04">article</a></li>
 </ul>
-
-<h1 id="install-theme">Install theme</h1>
-
-<p>If you want to use a theme already created you can do it in two ways. To check the existing themes visit the official <a href="https://github.com/panr/hugo-theme-hello-friend">Hugo themes</a> website where you can see a demo of each one.</p>
-
-<p>First of all you need to init a git repo inside your project:</p>
-
-<pre><code class="language-vim">cd your-blog-name;\
-git init;
-</code></pre>
-
-<p>Then you can clone the repo inside the <code>themes</code> folder:</p>
-
-<pre><code class="language-vim">git clone https://github.com/panr/hugo-theme-hello-friend.git themes/hello-friend
-</code></pre>
-
-<p>If you don&rsquo;t want to make any changes, it&rsquo;s better to include the theme as a git submodule and you can get new updates when they are available. Do it with:</p>
-
-<pre><code class="language-vim">git submodule add https://github.com/panr/hugo-theme-hello-friend.git themes/hello-friend
-</code></pre>
-
-<h1 id="create-content">Create content</h1>
-
-<p>For generate your first blog post you can use the command <code>hugo new</code> and set the path you want, in my case <code>posts</code>:</p>
-
-<pre><code class="language-vim">hugo new posts/my-first-post.md
-</code></pre>
-
-<p>You will obtain the following file:
-<img src="/img/build-hugo-static-blog/example-post.png" /></p>
-
-<p>The first section is for parameters and the second one is for the content in this case in markdown. Check this <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a> a quick reference and showcase.</p>
-
-<h1 id="run-your-site">Run your site</h1>
-
-<p>Once you have created the post you can build your site using the <code>hugo server</code> command. The flag <code>-D</code> is for render drafts:</p>
-
-<pre><code class="language-vim">hugo server -D
-</code></pre>
-
-<p>And it will appear the rendering logs and at the end message similar to:</p>
-
-<pre><code class="language-vim">Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-</code></pre>
-
-<p>Copy the URL to your browser and you will see your site up and running!</p>
-
-<h1 id="host-on-github">Host on GitHub</h1>
-
-<p>We&rsquo;ll use the User/Organization Pages <code>https://&lt;USERNAME|ORGANIZATION&gt;.github.io/</code>.</p>
-
-<p>Create a <code>&lt;YOUR-PROJECT&gt;</code> repository on GitHub. This repository will contain Hugo’s content and other source files.</p>
-
-<p>Create a <code>&lt;USERNAME&gt;.github.io</code> GitHub repository. This is the repository that will contain the fully rendered version of your Hugo website.</p>
-
-<pre><code class="language-vim">git clone https://github.com/&lt;USERNAME&gt;/&lt;YOUR-PROJECT&gt;
-cd &lt;YOUR-PROJECT&gt;
-</code></pre>
-
-<p>Run your website locally using the command <code>hugo server</code> or if you are using theme <code>hugo server -t &lt;THEME_NAME&gt;</code>. Follow the instructions in console to access it. Web server should be available at  <a href="http://localhost:1313/">http://localhost:1313/</a></p>
-
-<p>Finally you need to add the <code>&lt;USERNAME&gt;.github.io</code> repo inside the <code>public</code> folder as a git submodule in order to update your website once you regenerate the site.</p>
-
-<pre><code class="language-vim">git submodule add -b master git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
-</code></pre>
-
-<p>If you don&rsquo;t have the RSA pair key configured you&rsquo;ll need to add the submodule via HTTP:</p>
-
-<pre><code class="language-vim">git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
-</code></pre>
-
-<p>To automate the next steps you can save it to <code>deploy.sh</code>. Remember to make it executable with:</p>
-
-<pre><code class="language-vim">chmod +x deploy.sh
-</code></pre>
-
-<p>deploy.sh</p>
-
-<pre><code class="language-shell">#!/bin/bash
-
-echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
-
-# Build the project.
-hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
-
-# Go To Public folder
-cd public
-# Add changes to git.
-git add .
-
-# Commit changes.
-msg=&quot;rebuilding site `date`&quot;
-if [ $# -eq 1 ]
-  then msg=&quot;$1&quot;
-fi
-git commit -m &quot;$msg&quot;
-
-# Push source and build repos.
-git push origin master
-
-# Come Back up to the Project Root
-cd ..
-</code></pre>
 
 
                 <hr>
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/post/gophercises-quiz/" data-toggle="tooltip" data-placement="top" title="Gophercises - Quiz game">&larr; Previous Post</a>
-                    </li>
                     
+                    <li class="next">
+                        <a href="/post/gophercises-quiz/" data-toggle="tooltip" data-placement="top" title="Gophercises - Quiz game">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
