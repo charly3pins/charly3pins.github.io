@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Charly3Pins Blog</title>
+    <title>Tags on Charly3Pins, software engineer</title>
     <link>https://charly3pins.github.io/tags/</link>
-    <description>Recent content in Tags on Charly3Pins Blog</description>
+    <description>Recent content in Tags on Charly3Pins, software engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
@@ -12,34 +12,16 @@
     
     
     <item>
-      <title>Ci/cd</title>
-      <link>https://charly3pins.github.io/tags/ci/cd/</link>
+      <title>CI</title>
+      <link>https://charly3pins.github.io/tags/ci/</link>
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://charly3pins.github.io/tags/ci/cd/</guid>
+      <guid>https://charly3pins.github.io/tags/ci/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Cms</title>
-      <link>https://charly3pins.github.io/tags/cms/</link>
-      <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.github.io/tags/cms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Code review</title>
-      <link>https://charly3pins.github.io/tags/code-review/</link>
-      <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.github.io/tags/code-review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Devops</title>
+      <title>devops</title>
       <link>https://charly3pins.github.io/tags/devops/</link>
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
       
@@ -48,7 +30,7 @@
     </item>
     
     <item>
-      <title>Drone</title>
+      <title>drone</title>
       <link>https://charly3pins.github.io/tags/drone/</link>
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
       
@@ -57,7 +39,34 @@
     </item>
     
     <item>
-      <title>Github</title>
+      <title>code review</title>
+      <link>https://charly3pins.github.io/tags/code-review/</link>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.github.io/tags/code-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://charly3pins.github.io/tags/go/</link>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cms</title>
+      <link>https://charly3pins.github.io/tags/cms/</link>
+      <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.github.io/tags/cms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
       <link>https://charly3pins.github.io/tags/github/</link>
       <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
       
@@ -66,29 +75,11 @@
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://charly3pins.github.io/tags/go/</link>
-      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
+      <title>hugo</title>
       <link>https://charly3pins.github.io/tags/hugo/</link>
       <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://charly3pins.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Static-site-generator</title>
-      <link>https://charly3pins.github.io/tags/static-site-generator/</link>
-      <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.github.io/tags/static-site-generator/</guid>
       <description></description>
     </item>
     
