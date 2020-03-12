@@ -6,10 +6,20 @@
     <description>Recent content on Charly3Pins, software engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://charly3pins.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Custom commit messages</title>
+      <link>https://charly3pins.github.io/blog/custom-commit-messages/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.github.io/blog/custom-commit-messages/</guid>
+      <description>I&amp;rsquo;ve been using the CMF tool for the last one year I think and and its simplicity is its potential. Basically it is a terminal tool developd in Go by Walmart Digital that helps you to standarize the commits log of your projects.
+I&amp;rsquo;ve been using for the last year and a half approximatley and all I can say its very useful. We agreed with the team the configuration we want to use and defined a set of changes that applies in our case.</description>
+    </item>
     
     <item>
       <title>Hugo&#39;s content and templates managing</title>
