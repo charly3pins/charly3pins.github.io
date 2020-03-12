@@ -22,15 +22,5 @@
 Gophercises I like playing with Go on this site because each exercise is focused in a set of packages of the language and the way of they are presented is really clear and easy to understand.</description>
     </item>
     
-    <item>
-      <title>Building static blog with Hugo</title>
-      <link>https://charly3pins.github.io/blog/building-static-blog-with-hugo/</link>
-      <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.github.io/blog/building-static-blog-with-hugo/</guid>
-      <description>If you want to create a fast static website I recommend you Hugo. It&amp;rsquo;s written in Go and it&amp;rsquo;s really use to configure and adapt to your needs. In addition, you can choose through different themes created by the team and others by the community or even create your own one.
-Here I&amp;rsquo;ll explain in some steps how to create one blog with Hugo and how to be hosted &amp;amp; deployed in GitHub and GitHub Pages.</description>
-    </item>
-    
   </channel>
 </rss>

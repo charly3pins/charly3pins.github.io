@@ -42,17 +42,15 @@
 				
 				<div class="markdown">
 					<h1>Building static blog with Hugo</h1>
-					<p class="subtitle">Quick steps to create your onw static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages</p>
+					<p class="subtitle">Quick steps to create your own static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages</p>
 					<p class="metadata">
 						
 							
-								<a class="li-tag" href="https://charly3pins.github.io/tags/go/">go</a>
-							
 								<a class="li-tag" href="https://charly3pins.github.io/tags/hugo/">hugo</a>
 							
-								<a class="li-tag" href="https://charly3pins.github.io/tags/github/">github</a>
-							
 								<a class="li-tag" href="https://charly3pins.github.io/tags/cms/">cms</a>
+							
+								<a class="li-tag" href="https://charly3pins.github.io/tags/github/">github</a>
 							
 						
 						4 min read | Posted on 2018-09-22
@@ -73,7 +71,7 @@
 <p>Once you have Hugo installed, you&rsquo;re able to create your website using the command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">site</span> <span style="color:#a6e22e">your</span>-<span style="color:#a6e22e">blog</span>-<span style="color:#a6e22e">name</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>After that, you&rsquo;ll see a new folder called <code>your-blog-name</code> and if you look inside you&rsquo;ll see the following tree:
-<!-- raw HTML omitted --></p>
+<img src="/images/build-hugo-static-blog/folder-tree-your-blog-name.png" alt="Folder tree"></p>
 <ul>
 <li>Archetypes are content template files for your project, used when you run <code>hugo new</code> command.</li>
 <li>Content is where all posts and pages are stored. The same structure in this folder will be used for organize the URLs in your rendered site.</li>
@@ -96,7 +94,7 @@
 <p>For generate your first blog post you can use the command <code>hugo new</code> and set the path you want, in my case <code>posts</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">posts</span>/<span style="color:#a6e22e">my</span>-<span style="color:#a6e22e">first</span>-<span style="color:#a6e22e">post</span>.<span style="color:#a6e22e">md</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>You will obtain the following file:
-<!-- raw HTML omitted --></p>
+<img src="/images/build-hugo-static-blog/example-post.png" alt="Example post"></p>
 <p>The first section is for parameters and the second one is for the content in this case in markdown. Check this <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a> a quick reference and showcase.</p>
 <h1 id="run-your-site">Run your site</h1>
 <p>Once you have created the post you can build your site using the <code>hugo server</code> command. The flag <code>-D</code> is for render drafts:</p>
@@ -156,7 +154,7 @@ cd ..
 			
 			<div class="container">
   <div class="centered" id="index-footer">
-    <p>Last change 2018-10-10</p>
+    <p>Last change 2020-03-03</p>
     <p>© 2018 - 2020 Charly3Pins</p>
   </div>
 </div>

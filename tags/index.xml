@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Charly3Pins, software engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://charly3pins.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cms</title>
+      <link>https://charly3pins.github.io/tags/cms/</link>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.github.io/tags/cms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://charly3pins.github.io/tags/hugo/</link>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>CI</title>
@@ -57,29 +75,11 @@
     </item>
     
     <item>
-      <title>cms</title>
-      <link>https://charly3pins.github.io/tags/cms/</link>
-      <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.github.io/tags/cms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>github</title>
       <link>https://charly3pins.github.io/tags/github/</link>
       <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://charly3pins.github.io/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://charly3pins.github.io/tags/hugo/</link>
-      <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

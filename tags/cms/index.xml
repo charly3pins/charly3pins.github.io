@@ -6,10 +6,22 @@
     <description>Recent content in cms on Charly3Pins, software engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://charly3pins.github.io/tags/cms/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo&#39;s content and templates managing</title>
+      <link>https://charly3pins.github.io/blog/hugo-content-and-templates-managing/</link>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.github.io/blog/hugo-content-and-templates-managing/</guid>
+      <description>After long time without writing&amp;hellip; I&amp;rsquo;m back!
+I was planning to rebuild my site and start creating content again but never found the time until now.
+I wanted to do my theme from scratch instead of using a predefined theme, so I had to learn how the templating and the content managing is done in Hugo.
+Once I did that process, I want to sum up the most important things that I consider you have to know if you wanna do your own theme like I did (this site is the prove of that!</description>
+    </item>
     
     <item>
       <title>Building static blog with Hugo</title>
