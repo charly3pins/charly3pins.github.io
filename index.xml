@@ -63,16 +63,5 @@ Gophercises I like playing with Go on this site because each exercise is focused
 Here I&amp;rsquo;ll explain in some steps how to create one blog with Hugo and how to be hosted &amp;amp; deployed in GitHub and GitHub Pages.</description>
     </item>
     
-    <item>
-      <title>About me</title>
-      <link>https://charly3pins.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.github.io/about/</guid>
-      <description>Hungry for challenges and willing to learn new things every day.
-Focused in best practices.
-Currently in Go.</description>
-    </item>
-    
   </channel>
 </rss>
