@@ -5,10 +5,6 @@
     <link>https://charly3pins.github.io/anime/</link>
     <description>Recent content in My Anime List on Charly3Pins, software engineer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://charly3pins.github.io/anime/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://charly3pins.github.io/anime/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

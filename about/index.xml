@@ -5,10 +5,6 @@
     <link>https://charly3pins.github.io/about/</link>
     <description>Recent content in About Charly3Pins on Charly3Pins, software engineer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://charly3pins.github.io/about/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://charly3pins.github.io/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
