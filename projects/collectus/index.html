@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+
+  <title>Collectus | charly3pins</title>
+  <meta property="og:title" content="Collectus - charly3pins" />
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Collectus" />
+
+  <link rel="stylesheet" href="https://charly3pins.github.io/css/main.css" />
+</head>
+
+	<body>
+		<section id="main">
+
+			<div class="header">
+				<div class="toggle"><input type="checkbox">
+					<span class="bar"></span><span class="bar"></span><span class="bar"></span>
+					<div id="mobile-menu">
+						<span class="menu-item"><a href="/">🏠 home</a></span>
+						<span class="menu-item"><a href="/blog/">📰 blog</a></span>
+						<span class="menu-item"><a href="/about/">👨🏻‍💻 about</a></span>
+						<span class="menu-item"><a href="/projects/">🛠️ projects</a></span>
+					</div>
+				</div>
+				<div id="menu">
+					<span class="menu-item"><a href="/">🏠 home</a></span>
+					<span class="menu-item"><a href="/blog/">📰 blog</a></span>
+					<span class="menu-item"><a href="/about/">👨🏻‍💻 about</a></span>
+					<span class="menu-item"><a href="/projects/">🛠️ projects</a></span>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="markdown">
+					<h1>Collectus</h1>
+					<p class="subtitle">Flexible database for collectibles and any other objects or data the user want to have ordered and classified.</p>
+					<p class="metadata">
+						
+							
+								<a class="li-tag" href="https://charly3pins.github.io/tags/php/">php</a>
+							
+								<a class="li-tag" href="https://charly3pins.github.io/tags/javascript/">javascript</a>
+							
+								<a class="li-tag" href="https://charly3pins.github.io/tags/jquery/">jQuery</a>
+							
+								<a class="li-tag" href="https://charly3pins.github.io/tags/html/">html</a>
+							
+								<a class="li-tag" href="https://charly3pins.github.io/tags/css/">css</a>
+							
+						
+					</p>
+				</div>
+
+				<div class="page-separator"><hr></div>
+
+				<div class="markdown">
+					<p><h2 id="why">WHY</h2>
+<p>The motivation of this project is half personal and half academic. Let me explain it. At home my father always collected a lot of things, from the oldest books you can imagine until the most recent new Funko POP, through Swiss Knives or dices among others. Having that variety of objects and a lot of them (too many to be honest) cataloguing that amount of items always had been a challenge for him.</p>
+<p>He always tried to classify in different ways such as using an Excel, free applications, paid applications, etc. At the end every time happened the same, the handicap of his &ldquo;collection of collections&rdquo; (as he describes it) is too many singular, and it doesn&rsquo;t fit anywhere. He&rsquo;s a developer and I was on my last year at University studying Computer Science so we started to plan how we could solve that problem doing ourselves the application.</p>
+<p>After a few days/weeks I realized that soon I would have to choose a project to present as my final project, so I decided to give it a try this familiar crazy idea and propose it to my tutor. She was excited about the idea we had and she accepted happily.</p>
+<p>Once I had the approval of my tutor, it was an amazing new because the personal project we wanted to develop in our free times, now I had the opportunity to dedicate all my effort to not only solve the problem we had, but to present it as a final project. And that&rsquo;s how all started.</p>
+<p>At the end the project end up being super successfull, my tutor was delighted with the result, and the court liked it a lot, they even told me to send them an email when I put it into production so they can use it and catalog their own collections.</p>
+<h2 id="what">WHAT</h2>
+<p>I called the application Collectus as it&rsquo;s the Latin word meaning &ldquo;gather, collect&rdquo; so in that case it fits perfectly. It is a system flexible database for collectibles and any other objects or data the user want to have ordered and classified. Collectus is though for collectors, allowing them to keep track of any kind of collection they have, using a system database with an open structure adaptable to every need. It also provides two types of login for the users, creating a new one for the platform or using their Facebook account connecting it with the Facebook API.</p>
+<p><img src="/images/projects/collectus/main-app.jpeg" alt="app">
+<img src="/images/projects/collectus/login.jpeg" alt="login"></p>
+<p>Using templates the user can set all kinds of records for such diverse items as stamps or placas of cava, posters or fossils, rag dolls or lottery tickets. Once defined the template (category) for the object or type of object of interest, and the user can enter data immediately.</p>
+<p><img src="/images/projects/collectus/item-edit.jpeg" alt="item edit">
+<img src="/images/projects/collectus/amazon-mapping.jpeg" alt="amazon mapping"></p>
+<p>To facilitate all this task, it incorporates tools to help the user. The most prominent it is provided by the Amazon Product API to automatically read information from its database at the time of data entry.</p>
+<p><img src="/images/projects/collectus/amazon-search.jpeg" alt="amazon search"></p>
+<p>From here users will be able to read information according to various search criteria offered in the application and store them. There is also a price comparison between the various Amazon shops in all countries to find different prices and assist in the purchase of items to users.</p>
+<p><img src="/images/projects/collectus/amazon-results.jpeg" alt="amazon results"></p>
+<p>All this has been developed under an attractive GUI and usability as a main goal.</p>
+<p>Programming languages and tools used for this project:</p>
+<ul>
+<li>PHP 5, JavaScript and jQuery for the backend</li>
+<li>HTML and CSS for the frontend</li>
+<li>AJAX as the way of calling the server side</li>
+<li>Amazon Product API for the product research and price comparision</li>
+<li>Facebook API for the login</li>
+</ul>
+<h2 id="final-thoughts">FINAL THOUGHTS</h2>
+<p>It was my first big project as a software developer building a web and I learned a lot of things like learning new programming languages and architecture of the projects; designing the databases correctly; polish the smallest visual detail; battle with external APIs connectig to them; organize myself in order to deliver small chunks of the project step by step instead of the entire project at once; write appropiate documentation about the functionallity of the project and many others probably.</p>
+<p>I have always wanted to make a second improved version of the project, now with the experience I have and the skills that I have been acquiring throughout these years of work. I&rsquo;ve started several times but never finished&hellip;</p>
+<p>I hope one day to be able to officially launch the application and tell about it here. 🚀</p>
+</p>
+				</div>
+				
+				<div class="page-separator"><hr></div>
+
+				<div class="related">
+					
+					
+				</div>
+
+			</div>
+			
+			<div class="container">
+  <div class="centered" id="index-footer">
+    <p>Last change 2020-03-03</p>
+    <p>© 2018 - 2020 Charly3Pins</p>
+  </div>
+</div>
+			
+		</section>
+	</body>
+</html>
+

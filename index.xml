@@ -59,5 +59,14 @@ Gophercises I like playing with Go on this site because each exercise is focused
 Here I&amp;rsquo;ll explain in some steps how to create one blog with Hugo and how to be hosted &amp;amp; deployed in GitHub and GitHub Pages.</description>
     </item>
     
+    <item>
+      <title>Collectus</title>
+      <link>https://charly3pins.github.io/projects/collectus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.github.io/projects/collectus/</guid>
+      <description>WHY The motivation of this project is half personal and half academic. Let me explain it. At home my father always collected a lot of things, from the oldest books you can imagine until the most recent new Funko POP, through Swiss Knives or dices among others. Having that variety of objects and a lot of them (too many to be honest) cataloguing that amount of items always had been a challenge for him.</description>
+    </item>
+    
   </channel>
 </rss>
