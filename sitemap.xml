@@ -3,6 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://charly3pins.github.io/projects/collectus/</loc>
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.github.io/projects/tournaments-generator/</loc>
+  </url>
+  
+  <url>
     <loc>https://charly3pins.github.io/blog/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
   </url>
@@ -98,30 +106,6 @@
   
   <url>
     <loc>https://charly3pins.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.github.io/projects/collectus/</loc>
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.github.io/tags/css/</loc>
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.github.io/tags/html/</loc>
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.github.io/tags/javascript/</loc>
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.github.io/tags/jquery/</loc>
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.github.io/tags/php/</loc>
   </url>
   
   <url>

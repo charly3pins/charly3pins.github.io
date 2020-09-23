@@ -8,6 +8,24 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://charly3pins.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Collectus</title>
+      <link>https://charly3pins.github.io/projects/collectus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.github.io/projects/collectus/</guid>
+      <description>WHY The motivation of this project is half personal and half academic. Let me explain. At home my father always collected a lot of things, from the oldest books you can imagine until the most recent new Funko POP, through Swiss Knives or dice among others. Having that variety of objects and a lot of them (too many to be honest) cataloguing that amount of items always had been a challenge for him.</description>
+    </item>
+    
+    <item>
+      <title>Tournaments generator (POC)</title>
+      <link>https://charly3pins.github.io/projects/tournaments-generator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.github.io/projects/tournaments-generator/</guid>
+      <description>WHY The motivation for starting this project is not another one than my curiosity about the mobile applications. It is obvious that the way of consuming technology has changed over the last few years and it is increasingly being done through a mobile device. For that reason I wanted to explore how the mobile apps work and how I can build one from scratch. I did some Android tutorials, but as they are changing a lot of things when releasing new versions and my idea was to build something generic for all devices, I decided to give it a try to Flutter.</description>
+    </item>
+    
+    <item>
       <title>Custom commit messages</title>
       <link>https://charly3pins.github.io/blog/custom-commit-messages/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
@@ -57,15 +75,6 @@ Gophercises I like playing with Go on this site because each exercise is focused
       <guid>https://charly3pins.github.io/blog/building-static-blog-with-hugo/</guid>
       <description>If you want to create a fast static website I recommend you Hugo. It&amp;rsquo;s written in Go and it&amp;rsquo;s really use to configure and adapt to your needs. In addition, you can choose through different themes created by the team and others by the community or even create your own one.
 Here I&amp;rsquo;ll explain in some steps how to create one blog with Hugo and how to be hosted &amp;amp; deployed in GitHub and GitHub Pages.</description>
-    </item>
-    
-    <item>
-      <title>Collectus</title>
-      <link>https://charly3pins.github.io/projects/collectus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.github.io/projects/collectus/</guid>
-      <description>WHY The motivation of this project is half personal and half academic. Let me explain it. At home my father always collected a lot of things, from the oldest books you can imagine until the most recent new Funko POP, through Swiss Knives or dices among others. Having that variety of objects and a lot of them (too many to be honest) cataloguing that amount of items always had been a challenge for him.</description>
     </item>
     
   </channel>
