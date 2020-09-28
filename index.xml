@@ -38,7 +38,7 @@ init git-init - Create an empty Git repository or reinitialize an existing one T
     <item>
       <title>Git commands</title>
       <link>https://charly3pins.github.io/blog/git-series/</link>
-      <pubDate>Sun, 27 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://charly3pins.github.io/blog/git-series/</guid>
       <description>Git is a fast, scalable, distributed revision control system. Being a distributed revision control system means that each developer has each own copy of the project’s history locally, not like centralized ones that all developers have to point to the “one and only” server (like SVN). For that reason Git is faster than others, because almost everything is performed locally instead of remote calls to the centralized revision control server. Each repo provides a separato working tree with project files for each developer.</description>
