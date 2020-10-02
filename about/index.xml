@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About Charly3Pins on Charly3Pins, software engineer</title>
-    <link>https://charly3pins.github.io/about/</link>
+    <link>https://charly3pins.dev/about/</link>
     <description>Recent content in About Charly3Pins on Charly3Pins, software engineer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://charly3pins.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://charly3pins.dev/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
