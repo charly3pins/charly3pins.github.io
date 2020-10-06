@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Charly3Pins, software engineer</title>
+    <title>charly3pins.dev</title>
     <link>https://charly3pins.dev/</link>
-    <description>Recent content on Charly3Pins, software engineer</description>
+    <description>Recent content on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://charly3pins.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://charly3pins.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Collectus</title>
       <link>https://charly3pins.dev/projects/collectus/</link>
@@ -23,6 +23,15 @@
       
       <guid>https://charly3pins.dev/projects/tournaments-generator/</guid>
       <description>WHY The motivation for starting this project is not another one than my curiosity about the mobile applications. It is obvious that the way of consuming technology has changed over the last few years and it is increasingly being done through a mobile device. For that reason I wanted to explore how the mobile apps work and how I can build one from scratch. I did some Android tutorials, but as they are changing a lot of things when releasing new versions and my idea was to build something generic for all devices, I decided to give it a try to Flutter.</description>
+    </item>
+    
+    <item>
+      <title>Level up your presentations with Go</title>
+      <link>https://charly3pins.dev/blog/go-present/</link>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.dev/blog/go-present/</guid>
+      <description>If you&amp;rsquo;re a technical person and you don&amp;rsquo;t like to battle with presentation softwares but you want/need to create one, congratulations! you are in the right place. I know that as software engineers we want to be coding or reading or watching things related with software, architecture or devops but not with presentations. Sometimes we are demanded to present something to other team members, to the product owners or even scarier, to the management team!</description>
     </item>
     
     <item>
@@ -50,7 +59,7 @@ init git-init - Create an empty Git repository or reinitialize an existing one T
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://charly3pins.dev/blog/custom-commit-messages/</guid>
-      <description>I&amp;rsquo;ve been using the CMF tool for the last one year I think and and its simplicity is its potential. Basically it is a terminal tool developd in Go by Walmart Digital that helps you to standarize the commits log of your projects.
+      <description>I&amp;rsquo;ve been using the CMF tool for the last one year and I think its simplicity is its potential. Basically it is a terminal tool developd in Go by Walmart Digital that helps you to standarize the commits log of your projects.
 I&amp;rsquo;ve been using for the last year and a half approximatley and all I can say its very useful. We agreed with the team the configuration we want to use and defined a set of changes that applies in our case.</description>
     </item>
     

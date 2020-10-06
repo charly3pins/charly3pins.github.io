@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Charly3Pins, software engineer</title>
+    <title>Tags on charly3pins.dev</title>
     <link>https://charly3pins.dev/tags/</link>
-    <description>Recent content in Tags on Charly3Pins, software engineer</description>
+    <description>Recent content in Tags on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://charly3pins.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://charly3pins.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go</title>
+      <link>https://charly3pins.dev/tags/go/</link>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/go/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>git</title>
       <link>https://charly3pins.dev/tags/git/</link>
@@ -76,15 +85,6 @@
       <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://charly3pins.dev/tags/code-review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://charly3pins.dev/tags/go/</link>
-      <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.dev/tags/go/</guid>
       <description></description>
     </item>
     

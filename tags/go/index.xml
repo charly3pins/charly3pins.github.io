@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>go on Charly3Pins, software engineer</title>
+    <title>go on charly3pins.dev</title>
     <link>https://charly3pins.dev/tags/go/</link>
-    <description>Recent content in go on Charly3Pins, software engineer</description>
+    <description>Recent content in go on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://charly3pins.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://charly3pins.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Level up your presentations with Go</title>
+      <link>https://charly3pins.dev/blog/go-present/</link>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://charly3pins.dev/blog/go-present/</guid>
+      <description>If you&amp;rsquo;re a technical person and you don&amp;rsquo;t like to battle with presentation softwares but you want/need to create one, congratulations! you are in the right place. I know that as software engineers we want to be coding or reading or watching things related with software, architecture or devops but not with presentations. Sometimes we are demanded to present something to other team members, to the product owners or even scarier, to the management team!</description>
+    </item>
+    
     <item>
       <title>Gophercises - Quiz game</title>
       <link>https://charly3pins.dev/blog/gophercises-quiz/</link>
