@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>go on charly3pins.dev</title>
-    <link>https://charly3pins.dev/tags/go/</link>
-    <description>Recent content in go on charly3pins.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://charly3pins.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Level up your presentations with Go</title>
-      <link>https://charly3pins.dev/blog/go-present/</link>
-      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.dev/blog/go-present/</guid>
-      <description>If you&amp;rsquo;re a technical person and you don&amp;rsquo;t like to battle with presentation softwares but you want/need to create one, congratulations! you are in the right place. I know that as software engineers we want to be coding or reading or watching things related with software, architecture or devops but not with presentations. Sometimes we are demanded to present something to other team members, to the product owners or even scarier, to the management team!</description>
-    </item>
-    
-    <item>
-      <title>Gophercises - Quiz game</title>
-      <link>https://charly3pins.dev/blog/gophercises-quiz/</link>
-      <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.dev/blog/gophercises-quiz/</guid>
-      <description>This is the first of a several articles I&amp;rsquo;m planning to write commenting the different exercises that I&amp;rsquo;m doing in Gophercises page.
- It&amp;rsquo;s a FREE course that will help you become more familiar with Go while developing your skills as a programmer. In the course we will build roughly 20 different mini-applications, packages, and tools that are each designed to teach you something different.
-Gophercises I like playing with Go on this site because each exercise is focused in a set of packages of the language and the way of they are presented is really clear and easy to understand.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>go on charly3pins.dev</title>
+		<link>https://charly3pins.dev/tags/go/</link>
+		<description>Recent content in go on charly3pins.dev</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate>
+		
+		<atom:link href="https://charly3pins.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Level up your presentations with Go</title>
+			<link>https://charly3pins.dev/blog/level-up-your-preseentations-with-go/</link>
+			<pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/blog/level-up-your-preseentations-with-go/</guid>
+			<description>
+				
+				Generate easily your presentations with present, the tool powered by Go that generates and renders your slides.
+				
+			</description>
+		</item>
+		<item>
+			<title>Gophercises - Quiz game</title>
+			<link>https://charly3pins.dev/blog/gophercises-quiz/</link>
+			<pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/blog/gophercises-quiz/</guid>
+			<description>
+				
+				Code review of my first exercise in the Gophercises page. It&#39;s focused in the CSV and time packages in addition to an introduction for the goroutines and channels.
+				
+			</description>
+		</item>
+		
+	</channel>
 </rss>
