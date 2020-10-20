@@ -6,16 +6,52 @@
 		<description>Recent content in Tags on charly3pins.dev</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
-		<lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Tue, 20 Oct 2020 00:00:00 +0000</lastBuildDate>
 		
 		<atom:link href="https://charly3pins.dev/tags/index.xml" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>api</title>
+			<link>https://charly3pins.dev/tags/api/</link>
+			<pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/tags/api/</guid>
+			<description>
+				
+				
+				
+			</description>
+		</item>
+		<item>
+			<title>semver</title>
+			<link>https://charly3pins.dev/tags/semver/</link>
+			<pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/tags/semver/</guid>
+			<description>
+				
+				
+				
+			</description>
+		</item>
 		<item>
 			<title>go</title>
 			<link>https://charly3pins.dev/tags/go/</link>
 			<pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
 			
 			<guid>https://charly3pins.dev/tags/go/</guid>
+			<description>
+				
+				
+				
+			</description>
+		</item>
+		<item>
+			<title>life</title>
+			<link>https://charly3pins.dev/tags/life/</link>
+			<pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/tags/life/</guid>
 			<description>
 				
 				
@@ -100,18 +136,6 @@
 			<pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
 			
 			<guid>https://charly3pins.dev/tags/drone/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>code review</title>
-			<link>https://charly3pins.dev/tags/code-review/</link>
-			<pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/code-review/</guid>
 			<description>
 				
 				
