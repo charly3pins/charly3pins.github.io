@@ -6,10 +6,22 @@
 		<description>Recent content in Blog on charly3pins.dev</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
-		<lastBuildDate>Tue, 20 Oct 2020 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate>
 		
 		<atom:link href="https://charly3pins.dev/blog/index.xml" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>Raspberry Pi media player with Plex, Transmission, Sonarr, Bazarr and Jackett</title>
+			<link>https://charly3pins.dev/blog/raspberry-pi-media-player-with-plex-transmission-sonarr-bazarr-and-jackett/</link>
+			<pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/blog/raspberry-pi-media-player-with-plex-transmission-sonarr-bazarr-and-jackett/</guid>
+			<description>
+				
+				Build your own media player using a BitTorrent client (Transmission), a PVR for Usenet and BitTorrent users (Sonarr), an API Support for your the torrent trackers (Jackett), a manager of subtitles in Sonarr &amp; Radarr (Bazarr) and a client–server media player (Plex).
+				
+			</description>
+		</item>
 		<item>
 			<title>Understanding Semantic Versioning 2.0 (SemVer)</title>
 			<link>https://charly3pins.dev/blog/understanding-semantic-versionin-2.0-semver/</link>
@@ -115,6 +127,20 @@
 			<description>
 				
 				Quick steps to create your own static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages.
+				
+			</description>
+		</item>
+		<item>
+			<title></title>
+			<link>https://charly3pins.dev/blog/raspberry-flexget/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/blog/raspberry-flexget/</guid>
+			<description>
+				
+				OPTIONAL : FLEX GET CHECK https://flexget.com/Plugins
+$ sudo apt-get install python-pip
+La instalación en linux se hace ...
 				
 			</description>
 		</item>

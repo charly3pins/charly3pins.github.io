@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Charly3Pins a Software Engineer 👨🏻‍💻 Gamer 🎮 and Dog Walker 🐕">
+
+  <title>charly3pins.dev | Charly3Pins</title>
+
+
+  <meta property="og:title" content="charly3pins.dev - charly3pins" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://charly3pins.dev/blog/raspberry-flexget/">
+  <meta property="og:site_name" content="charly3pins.dev">
+  
+  <meta property="og:image" content="https://charly3pins.dev/images/me.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="charly3pins.dev" />
+
+
+  <meta name="twitter:description" content="OPTIONAL : FLEX GET
+CHECK https://flexget.com/Plugins
+$ sudo apt-get install python-pip
+La instalación en linux se hace por medio de PIP (el repositorio de paquetes de Python), y para hacerlo debes seguir estos pasos:
+sudo apt-get install python-pip
+sudo pip install flexget
+sudo mkdir /home/pi/.flexget
+sudo chown -R pi /home/pi/.flexget
+sudo chgrp -R pi /home/pi/.flexget
+Con esto hemos instalado Flexget y creado el directorio donde almacenaremos su configuración. Para crear el archivo de configuración ejecutamos:
+nano /home/pi/.flexget/config.yml
+Y dentro del archivo pegamos la siguiente configuración:
+web_server: yes
+
+schedules:
+  - tasks: &#39;*&#39;
+    interval:
+      minutes: 30
+
+templates:
+  tv:
+    regexp:
+      reject:
+        - x265: {from: title}
+    series:
+      settings:
+        tv:
+          exact: yes
+          propers: 12 hours
+          quality: 720p&#43;
+      tv:
+      - Adventure Time
+      - Dark Net
+      - Devs
+      - Disenchantment
+      - Fear The Walking Dead
+      - Final Space
+      - Master of None
+      - Mr. Pickles
+      - Rick and Morty
+      - Silicon Valley
+      - Stargate SG-1
+      - &#34;The Walking Dead: World Beyond&#34;
+      - Watchmen
+      - Westworld
+
+    transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission
+
+tasks:
+  showrss:
+    rss: http://showrss.info/user/248291.rss
+    template: tv
+    priority: 2
+#   subtitles:
+#     priority: 4
+#     disable: builtins
+#     find:
+#       path:
+#         - /media/storage/downloads
+#       regexp:  &#39;.*\.(mp4|mkv|avi)$&#39;
+#       recursive: yes
+#     accept_all: yes
+#     regexp:  
+#       reject:
+#        - &#39;.*[sS]ample.*&#39;
+#     periscope:
+#       languages:
+#         - es
+#       overwrite: yes
+  sort_tv:
+    priority: 2
+    no_entries_ok: yes
+    parsing:
+      series: guessit
+    filesystem:
+      path: /media/storage/downloads
+      regexp: &#39;.*\.(avi|mkv|mp4)$&#39;
+      recursive: yes
+    accept_all: yes
+    trakt_lookup: yes
+    require_field: series_name
+    all_series:
+      parse_only: yes
+    exec:
+      auto_escape: yes
+      on_output:
+        for_entries: |
+          if mediainfo &#34;{{ location }}&#34; | grep EAC3; then
+            mkdir -p &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}&#34; &amp;&amp; ffmpeg -hwaccel auto -y -i &#34;{{ location }}&#34; -map 0 -c:s copy -c:v copy -c:a ac3 -b:a 640k &#34;/storage/series/{{ tvdb_series_name }}/Season {{ series_season }}/{{ tvdb_series_name }} - {{ series_id }}{{ location | pathext }}&#34;
+          else
+            mkdir -p &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}&#34; &amp;&amp; cp &#34;{{ location }}&#34; &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}/{{ tvdb_series_name }} - {{ series_id }}{{ location | pathext }}&#34;
+          fi          
+  remove_stale_torrents:
+    from_transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission
+    disable: [seen, seen_info_hash]
+    if:
+      - transmission_progress == 100: accept
+      - not transmission_seed_ratio_ok: reject
+      - not transmission_idle_limit_ok: reject
+    transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission
+      action: purge
+Aquí podemos ver que se especifican varias cosas:
+Los datos de nuestro email para el caso en que qusiéramos recibir un correo cada vez que tengamos un nuevo capítulo descargado en nuestro disco externo, listo para ser visto.
+La URL de ShowRSS de la que se obtendrán los torrents y se descargarán todos los capítulos que aparezcan.
+Usuario y contraseña de Transmission (veremos esto en un momento).
+La ubicación de las descargas.
+El lenguaje y ubicación que se dará a los subtítulos encontrados para cada capítulo, que será junto al archivo de video.
+El orden que debe seguir la estructura de directorios donde almacenaremos los capítulos descargados. En este caso, quedan almacenados en « Disco/Series/NombreDeLaSerie/NombreDeLaSerie - S01E01 - NombreDelCapitulo.avi »
+Eliminar los torrents de Transmission una vez finalizadas las descargas.
+De esta forma, hasta que un capítulo no tenga subtítulos no será movido a la carpeta de la serie y seguirá intentando cada hora encontrar un subtítulo para ella.
+SACAR LISTA DE TRAKT
+web_server: yes
+
+schedules:
+  - tasks: &#39;*&#39;
+    interval:
+      minutes: 30
+
+templates:
+  series:
+    regexp:
+      reject:
+        - x265: {from: title}
+    configure_series:
+      from:
+        trakt_list:
+          account: charly3pins
+          strip_dates: yes
+          list: Series
+          type: shows
+      settings:
+          exact: yes
+          propers: 12 hours
+          quality: 720p&#43; hdtv&#43;
+    seen: local
+    no_entries_ok: yes
+    accept_all: no
+    trakt_lookup: yes
+
+    transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission
+  anime:
+    regexp:
+      reject:
+        - x265: {from: title}
+    configure_series:
+      from:
+        trakt_list:
+          account: charly3pins
+          strip_dates: yes
+          list: Anime
+          type: shows
+      settings:
+          exact: yes
+          propers: 12 hours
+          quality: 720p&#43;
+    seen: local
+    no_entries_ok: yes
+    accept_all: no
+    trakt_lookup: yes
+
+    transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission
+
+tasks:
+  # En las tareas sync-* se generan las listas para que flexget trabaje 
+  # y marca cual fue el último capitulo marcado como visto. Obteniendo el contenido desde trakt
+  sync-series:
+    priority: 1
+    seen: local
+    no_entries_ok: yes
+    trakt_lookup: yes
+    trakt_list:
+          account: charly3pins
+          strip_dates: yes
+          list: Series
+          type: shows
+    accept_all: yes
+    set_series_begin: yes
+    list_remove:
+      - trakt_list:
+          account: charly3pins
+          list: Series
+          type: shows
+    list_add:
+      - trakt_list:
+          account: charly3pins
+          list: Series
+          type: shows
+    next_trakt_episodes:
+        account: charly3pins
+        context: watched
+        list: Series 
+  sync-anime:
+    priority: 1
+    seen: local
+    no_entries_ok: yes
+    trakt_lookup: yes
+    trakt_list:
+          account: charly3pins
+          strip_dates: yes
+          list: Anime
+          type: shows
+    accept_all: yes
+    set_series_begin: yes
+    list_remove:
+      - trakt_list:
+          account: charly3pins
+          list: Anime
+          type: shows
+    list_add:
+      - trakt_list:
+          account: charly3pins
+          list: Anime
+          type: shows
+    next_trakt_episodes:
+        account: charly3pins
+        context: watched
+        list: Anime
+
+# En las tareas discover-* buscamos el contenido de las listas previamente generadas.
+# Usando los templates previamente creados, pasamos la configuración de lo que queremos ver.
+  discover-series:
+    priority: 2
+    template: series
+    discover:
+      what:
+        - next_trakt_episodes:
+            account: charly3pins
+            context: watched
+            list: Series
+      from:
+        - argenteam:
+            force_subtitles: yes
+        - search_rss:
+            url: http://showrss.info/user/248291.rss
+            all_entries: no
+            ascii: yes
+            escape: yes
+            link:
+              - link
+              - magneturi
+        - search_rss:
+            url: https://eztv.ag/ezrss.xml
+            all_entries: no
+            ascii: yes
+            escape: yes
+            link:
+              - link
+              - magneturi
+    list_match:
+              from:
+                - trakt_list:
+                   account: charly3pins
+                   list: Series
+                   type: shows
+    torrent_alive: 10 # Will reject results with less than 10 seeds
+  discover-anime:
+    priority: 2
+    template: anime
+    discover:
+      what:
+        - next_trakt_episodes:
+            account: charly3pins
+            context: watched
+            list: Anime
+      from:
+        - argenteam:
+            force_subtitles: yes
+        - search_rss:
+            url: https://www.animenewsnetwork.com/all/rss.xml?ann-edition=es
+            all_entries: no
+            ascii: yes
+            escape: yes
+            link:
+              - link
+              - magneturi
+        - search_rss:
+            url: https://honeysanime.com/feed/
+            all_entries: no
+            ascii: yes
+            escape: yes
+            link:
+              - link
+              - magneturi
+        - search_rss:
+            url: http://blog.alltheanime.com/feed/
+            all_entries: no
+            ascii: yes
+            escape: yes
+            link:
+              - link
+              - magneturi
+        - search_rss:
+            url: https://feed.animetosho.org/rss2
+            all_entries: no
+            ascii: yes
+            escape: yes
+            link:
+              - link
+              - magneturi
+    list_match:
+              from:
+                - trakt_list:
+                   account: charly3pins
+                   list: Anime
+                   type: shows
+    torrent_alive: 10 # Will reject results with less than 10 seeds
+  sort_tv:
+    priority: 3
+    no_entries_ok: yes
+    parsing:
+      series: guessit
+    filesystem:
+      path: /media/storage/downloads
+      regexp: &#39;.*\.(avi|mkv|mp4)$&#39;
+      recursive: yes
+    accept_all: yes
+    thetvdb_lookup: yes
+    require_field: series_name
+    all_series:
+      parse_only: yes
+    exec:
+      auto_escape: yes
+      on_output:
+        for_entries: |
+          if mediainfo &#34;{{ location }}&#34; | grep EAC3; then
+            mkdir -p &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}&#34; &amp;&amp; ffmpeg -hwaccel auto -y -i &#34;{{ location }}&#34; -map 0 -c:s copy -c:v copy -c:a ac3 -b:a 640k &#34;/storage/series/{{ tvdb_series_name }}/Season {{ series_season }}/{{ tvdb_series_name }} - {{ series_id }}{{ location | pathext }}&#34;
+          else
+            mkdir -p &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}&#34; &amp;&amp; cp &#34;{{ location }}&#34; &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}/{{ tvdb_series_name }} - {{ series_id }}{{ location | pathext }}&#34;
+          fi          
+  remove_stale_torrents:
+    priority: 4
+    from_transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission
+    disable: [seen, seen_info_hash]
+    if:
+      - transmission_progress == 100: accept
+      - not transmission_seed_ratio_ok: reject
+      - not transmission_idle_limit_ok: reject
+    transmission:
+      host: localhost
+      port: 9091
+      username: transmission
+      password: transmission
+      action: purge
+$ flexget trakt auth  (usada en el config)
+ir a https://trakt.tv/activate y poner el código q nos da el command line y aceptar permisos
+quality =&gt; https://flexget.com/Plugins/quality
+template =&gt; https://flexget.com/Plugins/template
+sorting =&gt; https://flexget.com/Cookbook/Series/Sort
+scheduler =&gt; https://flexget.com/Plugins/Daemon/scheduler
+linux schedulig =&gt; https://flexget.com/InstallWizard/Linux/Scheduling
+webserver =&gt; https://flexget.com/API
+
+
+IF ERROR TRANSMISION RPC Transmissionrpc module version 0.11 or higher required. install it
+pip install transmissionrpc
+Todos estos parámetros pueden ser cambiados, y los correspondientes a nombres de usuarios, contraseñas y URL deben ser reemplazados por los tuyos.
+Flexget tiene muchos parámetros útiles para configurar. Se pueden ver en profundidad en su wiki.
+Descarga de subtítulos
+En la configuración que hicimos para Flexget, uno de los parámetros especifica la búsqueda y descarga de subtítulos, pero para que eso funcione, primero debemos instalar Periscope, un módulo programado en python que busca subtítulos en base a los nombres de los archivos de video descargados.
+Busca en varias fuentes y normalmente hace un buen trabajo encontrando los subtítulos correctos.
+Para instalarlo, ejecutamos:
+pip install &ndash;upgrade setuptools
+sudo pip install periscope
+mkdir /home/pi/.config
+El último comando es por un bug de Periscope, que si no tiene la carpeta .config falla.
+Automatización
+Ya tenemos «casi» todo configurado. Lo que debemos hacer ahora es probar si todo funciona correctamente:
+$ flexget execute
+Esto debería consultar nuestro feed de ShowRSS, descargar los torrents de cada capítulo disponible, agregarlos a Transmission y comenzar la descarga dentro del disco externo. Una vez finalizada la descarga, eliminar los torrents de Transmission, buscar los subtítulos para todos los capítulos y moverlos junto a los archivos de video. Finalmente, debe ordenar todos los archivos en directorios separados por nombre de serie y renombrarlos especificando temporada y número de capítulo. MAGIA.
+">
+
+
+  <meta name="twitter:image" content="https://charly3pins.dev/images/me.jpeg">
+
+
+  <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+</head>
+
+	<body>
+		<section id="main">
+
+			<div class="header">
+				<div class="toggle"><input type="checkbox">
+					<span class="bar"></span><span class="bar"></span><span class="bar"></span>
+					<div id="mobile-menu">
+						<span class="menu-item"><a href="/">🏠 home</a></span>
+						<span class="menu-item"><a href="/blog/">📰 blog</a></span>
+						<span class="menu-item"><a href="/about/">👨🏻‍💻 about</a></span>
+						<span class="menu-item"><a href="/projects/">🛠️ projects</a></span>
+						<span class="menu-item"><a id="rss" href="/index.xml" rel="alternate" type="application/rss+xml">📡 RSS</a></span>
+					</div>
+				</div>
+				<div id="menu">
+					<span class="menu-item"><a href="/">🏠 home</a></span>
+					<span class="menu-item"><a href="/blog/">📰 blog</a></span>
+					<span class="menu-item"><a href="/about/">👨🏻‍💻 about</a></span>
+					<span class="menu-item"><a href="/projects/">🛠️ projects</a></span>
+					<span class="menu-item"><a id="rss" href="/index.xml" rel="alternate" type="application/rss+xml">📡 RSS</a></span>
+				</div>
+			</div>
+
+			<div class="container">
+				<div id="cover-image">
+					<img src="https://charly3pins.dev/" alt="cover image">
+				</div>
+				
+				<div class="markdown">
+					<h1></h1>
+					<p class="subtitle"></p>
+					<p class="metadata">
+						
+						7 min read | Posted on 01/01/0001
+					</p>
+				</div>
+
+				<div class="page-separator"><hr></div>
+
+				<div class="markdown">
+					<p><h3 id="optional--flex-get">OPTIONAL : FLEX GET</h3>
+<p>CHECK <a href="https://flexget.com/Plugins">https://flexget.com/Plugins</a></p>
+<p>$ sudo apt-get install python-pip</p>
+<p>La instalación en linux se hace por medio de PIP (el repositorio de paquetes de Python), y para hacerlo debes seguir estos pasos:</p>
+<p>sudo apt-get install python-pip
+sudo pip install flexget
+sudo mkdir /home/pi/.flexget
+sudo chown -R pi /home/pi/.flexget
+sudo chgrp -R pi /home/pi/.flexget
+Con esto hemos instalado Flexget y creado el directorio donde almacenaremos su configuración. Para crear el archivo de configuración ejecutamos:</p>
+<p>nano /home/pi/.flexget/config.yml</p>
+<p>Y dentro del archivo pegamos la siguiente configuración:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">web_server</span>: <span style="color:#66d9ef">yes</span>
+
+<span style="color:#f92672">schedules</span>:
+  - <span style="color:#f92672">tasks</span>: <span style="color:#e6db74">&#39;*&#39;</span>
+    <span style="color:#f92672">interval</span>:
+      <span style="color:#f92672">minutes</span>: <span style="color:#ae81ff">30</span>
+
+<span style="color:#f92672">templates</span>:
+  <span style="color:#f92672">tv</span>:
+    <span style="color:#f92672">regexp</span>:
+      <span style="color:#f92672">reject</span>:
+        - <span style="color:#f92672">x265</span>: {<span style="color:#f92672">from</span>: <span style="color:#ae81ff">title}</span>
+    <span style="color:#f92672">series</span>:
+      <span style="color:#f92672">settings</span>:
+        <span style="color:#f92672">tv</span>:
+          <span style="color:#f92672">exact</span>: <span style="color:#66d9ef">yes</span>
+          <span style="color:#f92672">propers</span>: <span style="color:#ae81ff">12</span> <span style="color:#ae81ff">hours</span>
+          <span style="color:#f92672">quality</span>: <span style="color:#ae81ff">720p+</span>
+      <span style="color:#f92672">tv</span>:
+      - <span style="color:#ae81ff">Adventure Time</span>
+      - <span style="color:#ae81ff">Dark Net</span>
+      - <span style="color:#ae81ff">Devs</span>
+      - <span style="color:#ae81ff">Disenchantment</span>
+      - <span style="color:#ae81ff">Fear The Walking Dead</span>
+      - <span style="color:#ae81ff">Final Space</span>
+      - <span style="color:#ae81ff">Master of None</span>
+      - <span style="color:#ae81ff">Mr. Pickles</span>
+      - <span style="color:#ae81ff">Rick and Morty</span>
+      - <span style="color:#ae81ff">Silicon Valley</span>
+      - <span style="color:#ae81ff">Stargate SG-1</span>
+      - <span style="color:#e6db74">&#34;The Walking Dead: World Beyond&#34;</span>
+      - <span style="color:#ae81ff">Watchmen</span>
+      - <span style="color:#ae81ff">Westworld</span>
+
+    <span style="color:#f92672">transmission</span>:
+      <span style="color:#f92672">host</span>: <span style="color:#ae81ff">localhost</span>
+      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">9091</span>
+      <span style="color:#f92672">username</span>: <span style="color:#ae81ff">transmission</span>
+      <span style="color:#f92672">password</span>: <span style="color:#ae81ff">transmission</span>
+
+<span style="color:#f92672">tasks</span>:
+  <span style="color:#f92672">showrss</span>:
+    <span style="color:#f92672">rss</span>: <span style="color:#ae81ff">http://showrss.info/user/248291.rss</span>
+    <span style="color:#f92672">template</span>: <span style="color:#ae81ff">tv</span>
+    <span style="color:#f92672">priority</span>: <span style="color:#ae81ff">2</span>
+<span style="color:#75715e">#   subtitles:</span>
+<span style="color:#75715e">#     priority: 4</span>
+<span style="color:#75715e">#     disable: builtins</span>
+<span style="color:#75715e">#     find:</span>
+<span style="color:#75715e">#       path:</span>
+<span style="color:#75715e">#         - /media/storage/downloads</span>
+<span style="color:#75715e">#       regexp:  &#39;.*\.(mp4|mkv|avi)$&#39;</span>
+<span style="color:#75715e">#       recursive: yes</span>
+<span style="color:#75715e">#     accept_all: yes</span>
+<span style="color:#75715e">#     regexp:  </span>
+<span style="color:#75715e">#       reject:</span>
+<span style="color:#75715e">#        - &#39;.*[sS]ample.*&#39;</span>
+<span style="color:#75715e">#     periscope:</span>
+<span style="color:#75715e">#       languages:</span>
+<span style="color:#75715e">#         - es</span>
+<span style="color:#75715e">#       overwrite: yes</span>
+  <span style="color:#f92672">sort_tv</span>:
+    <span style="color:#f92672">priority</span>: <span style="color:#ae81ff">2</span>
+    <span style="color:#f92672">no_entries_ok</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">parsing</span>:
+      <span style="color:#f92672">series</span>: <span style="color:#ae81ff">guessit</span>
+    <span style="color:#f92672">filesystem</span>:
+      <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/media/storage/downloads</span>
+      <span style="color:#f92672">regexp</span>: <span style="color:#e6db74">&#39;.*\.(avi|mkv|mp4)$&#39;</span>
+      <span style="color:#f92672">recursive</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">accept_all</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">trakt_lookup</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">require_field</span>: <span style="color:#ae81ff">series_name</span>
+    <span style="color:#f92672">all_series</span>:
+      <span style="color:#f92672">parse_only</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">exec</span>:
+      <span style="color:#f92672">auto_escape</span>: <span style="color:#66d9ef">yes</span>
+      <span style="color:#f92672">on_output</span>:
+        <span style="color:#f92672">for_entries</span>: |<span style="color:#e6db74">
+</span><span style="color:#e6db74">          if mediainfo &#34;{{ location }}&#34; | grep EAC3; then
+</span><span style="color:#e6db74">            mkdir -p &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}&#34; &amp;&amp; ffmpeg -hwaccel auto -y -i &#34;{{ location }}&#34; -map 0 -c:s copy -c:v copy -c:a ac3 -b:a 640k &#34;/storage/series/{{ tvdb_series_name }}/Season {{ series_season }}/{{ tvdb_series_name }} - {{ series_id }}{{ location | pathext }}&#34;
+</span><span style="color:#e6db74">          else
+</span><span style="color:#e6db74">            mkdir -p &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}&#34; &amp;&amp; cp &#34;{{ location }}&#34; &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}/{{ tvdb_series_name }} - {{ series_id }}{{ location | pathext }}&#34;
+</span><span style="color:#e6db74">          fi</span>          
+  <span style="color:#f92672">remove_stale_torrents</span>:
+    <span style="color:#f92672">from_transmission</span>:
+      <span style="color:#f92672">host</span>: <span style="color:#ae81ff">localhost</span>
+      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">9091</span>
+      <span style="color:#f92672">username</span>: <span style="color:#ae81ff">transmission</span>
+      <span style="color:#f92672">password</span>: <span style="color:#ae81ff">transmission</span>
+    <span style="color:#f92672">disable</span>: [<span style="color:#ae81ff">seen, seen_info_hash]</span>
+    <span style="color:#f92672">if</span>:
+      - <span style="color:#f92672">transmission_progress == 100</span>: <span style="color:#ae81ff">accept</span>
+      - <span style="color:#f92672">not transmission_seed_ratio_ok</span>: <span style="color:#ae81ff">reject</span>
+      - <span style="color:#f92672">not transmission_idle_limit_ok</span>: <span style="color:#ae81ff">reject</span>
+    <span style="color:#f92672">transmission</span>:
+      <span style="color:#f92672">host</span>: <span style="color:#ae81ff">localhost</span>
+      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">9091</span>
+      <span style="color:#f92672">username</span>: <span style="color:#ae81ff">transmission</span>
+      <span style="color:#f92672">password</span>: <span style="color:#ae81ff">transmission</span>
+      <span style="color:#f92672">action</span>: <span style="color:#ae81ff">purge</span>
+</code></pre></div><p>Aquí podemos ver que se especifican varias cosas:</p>
+<p>Los datos de nuestro email para el caso en que qusiéramos recibir un correo cada vez que tengamos un nuevo capítulo descargado en nuestro disco externo, listo para ser visto.
+La URL de ShowRSS de la que se obtendrán los torrents y se descargarán todos los capítulos que aparezcan.
+Usuario y contraseña de Transmission (veremos esto en un momento).
+La ubicación de las descargas.
+El lenguaje y ubicación que se dará a los subtítulos encontrados para cada capítulo, que será junto al archivo de video.
+El orden que debe seguir la estructura de directorios donde almacenaremos los capítulos descargados. En este caso, quedan almacenados en « Disco/Series/NombreDeLaSerie/NombreDeLaSerie - S01E01 - NombreDelCapitulo.avi »
+Eliminar los torrents de Transmission una vez finalizadas las descargas.
+De esta forma, hasta que un capítulo no tenga subtítulos no será movido a la carpeta de la serie y seguirá intentando cada hora encontrar un subtítulo para ella.</p>
+<p>SACAR LISTA DE TRAKT</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">web_server</span>: <span style="color:#66d9ef">yes</span>
+
+<span style="color:#f92672">schedules</span>:
+  - <span style="color:#f92672">tasks</span>: <span style="color:#e6db74">&#39;*&#39;</span>
+    <span style="color:#f92672">interval</span>:
+      <span style="color:#f92672">minutes</span>: <span style="color:#ae81ff">30</span>
+
+<span style="color:#f92672">templates</span>:
+  <span style="color:#f92672">series</span>:
+    <span style="color:#f92672">regexp</span>:
+      <span style="color:#f92672">reject</span>:
+        - <span style="color:#f92672">x265</span>: {<span style="color:#f92672">from</span>: <span style="color:#ae81ff">title}</span>
+    <span style="color:#f92672">configure_series</span>:
+      <span style="color:#f92672">from</span>:
+        <span style="color:#f92672">trakt_list</span>:
+          <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+          <span style="color:#f92672">strip_dates</span>: <span style="color:#66d9ef">yes</span>
+          <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Series</span>
+          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shows</span>
+      <span style="color:#f92672">settings</span>:
+          <span style="color:#f92672">exact</span>: <span style="color:#66d9ef">yes</span>
+          <span style="color:#f92672">propers</span>: <span style="color:#ae81ff">12</span> <span style="color:#ae81ff">hours</span>
+          <span style="color:#f92672">quality</span>: <span style="color:#ae81ff">720p+ hdtv+</span>
+    <span style="color:#f92672">seen</span>: <span style="color:#ae81ff">local</span>
+    <span style="color:#f92672">no_entries_ok</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">accept_all</span>: <span style="color:#66d9ef">no</span>
+    <span style="color:#f92672">trakt_lookup</span>: <span style="color:#66d9ef">yes</span>
+
+    <span style="color:#f92672">transmission</span>:
+      <span style="color:#f92672">host</span>: <span style="color:#ae81ff">localhost</span>
+      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">9091</span>
+      <span style="color:#f92672">username</span>: <span style="color:#ae81ff">transmission</span>
+      <span style="color:#f92672">password</span>: <span style="color:#ae81ff">transmission</span>
+  <span style="color:#f92672">anime</span>:
+    <span style="color:#f92672">regexp</span>:
+      <span style="color:#f92672">reject</span>:
+        - <span style="color:#f92672">x265</span>: {<span style="color:#f92672">from</span>: <span style="color:#ae81ff">title}</span>
+    <span style="color:#f92672">configure_series</span>:
+      <span style="color:#f92672">from</span>:
+        <span style="color:#f92672">trakt_list</span>:
+          <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+          <span style="color:#f92672">strip_dates</span>: <span style="color:#66d9ef">yes</span>
+          <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Anime</span>
+          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shows</span>
+      <span style="color:#f92672">settings</span>:
+          <span style="color:#f92672">exact</span>: <span style="color:#66d9ef">yes</span>
+          <span style="color:#f92672">propers</span>: <span style="color:#ae81ff">12</span> <span style="color:#ae81ff">hours</span>
+          <span style="color:#f92672">quality</span>: <span style="color:#ae81ff">720p+</span>
+    <span style="color:#f92672">seen</span>: <span style="color:#ae81ff">local</span>
+    <span style="color:#f92672">no_entries_ok</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">accept_all</span>: <span style="color:#66d9ef">no</span>
+    <span style="color:#f92672">trakt_lookup</span>: <span style="color:#66d9ef">yes</span>
+
+    <span style="color:#f92672">transmission</span>:
+      <span style="color:#f92672">host</span>: <span style="color:#ae81ff">localhost</span>
+      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">9091</span>
+      <span style="color:#f92672">username</span>: <span style="color:#ae81ff">transmission</span>
+      <span style="color:#f92672">password</span>: <span style="color:#ae81ff">transmission</span>
+
+<span style="color:#f92672">tasks</span>:
+  <span style="color:#75715e"># En las tareas sync-* se generan las listas para que flexget trabaje </span>
+  <span style="color:#75715e"># y marca cual fue el último capitulo marcado como visto. Obteniendo el contenido desde trakt</span>
+  <span style="color:#f92672">sync-series</span>:
+    <span style="color:#f92672">priority</span>: <span style="color:#ae81ff">1</span>
+    <span style="color:#f92672">seen</span>: <span style="color:#ae81ff">local</span>
+    <span style="color:#f92672">no_entries_ok</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">trakt_lookup</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">trakt_list</span>:
+          <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+          <span style="color:#f92672">strip_dates</span>: <span style="color:#66d9ef">yes</span>
+          <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Series</span>
+          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shows</span>
+    <span style="color:#f92672">accept_all</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">set_series_begin</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">list_remove</span>:
+      - <span style="color:#f92672">trakt_list</span>:
+          <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+          <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Series</span>
+          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shows</span>
+    <span style="color:#f92672">list_add</span>:
+      - <span style="color:#f92672">trakt_list</span>:
+          <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+          <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Series</span>
+          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shows</span>
+    <span style="color:#f92672">next_trakt_episodes</span>:
+        <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+        <span style="color:#f92672">context</span>: <span style="color:#ae81ff">watched</span>
+        <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Series </span>
+  <span style="color:#f92672">sync-anime</span>:
+    <span style="color:#f92672">priority</span>: <span style="color:#ae81ff">1</span>
+    <span style="color:#f92672">seen</span>: <span style="color:#ae81ff">local</span>
+    <span style="color:#f92672">no_entries_ok</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">trakt_lookup</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">trakt_list</span>:
+          <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+          <span style="color:#f92672">strip_dates</span>: <span style="color:#66d9ef">yes</span>
+          <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Anime</span>
+          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shows</span>
+    <span style="color:#f92672">accept_all</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">set_series_begin</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">list_remove</span>:
+      - <span style="color:#f92672">trakt_list</span>:
+          <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+          <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Anime</span>
+          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shows</span>
+    <span style="color:#f92672">list_add</span>:
+      - <span style="color:#f92672">trakt_list</span>:
+          <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+          <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Anime</span>
+          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shows</span>
+    <span style="color:#f92672">next_trakt_episodes</span>:
+        <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+        <span style="color:#f92672">context</span>: <span style="color:#ae81ff">watched</span>
+        <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Anime</span>
+
+<span style="color:#75715e"># En las tareas discover-* buscamos el contenido de las listas previamente generadas.</span>
+<span style="color:#75715e"># Usando los templates previamente creados, pasamos la configuración de lo que queremos ver.</span>
+  <span style="color:#f92672">discover-series</span>:
+    <span style="color:#f92672">priority</span>: <span style="color:#ae81ff">2</span>
+    <span style="color:#f92672">template</span>: <span style="color:#ae81ff">series</span>
+    <span style="color:#f92672">discover</span>:
+      <span style="color:#f92672">what</span>:
+        - <span style="color:#f92672">next_trakt_episodes</span>:
+            <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+            <span style="color:#f92672">context</span>: <span style="color:#ae81ff">watched</span>
+            <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Series</span>
+      <span style="color:#f92672">from</span>:
+        - <span style="color:#f92672">argenteam</span>:
+            <span style="color:#f92672">force_subtitles</span>: <span style="color:#66d9ef">yes</span>
+        - <span style="color:#f92672">search_rss</span>:
+            <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://showrss.info/user/248291.rss</span>
+            <span style="color:#f92672">all_entries</span>: <span style="color:#66d9ef">no</span>
+            <span style="color:#f92672">ascii</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">escape</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">link</span>:
+              - <span style="color:#ae81ff">link</span>
+              - <span style="color:#ae81ff">magneturi</span>
+        - <span style="color:#f92672">search_rss</span>:
+            <span style="color:#f92672">url</span>: <span style="color:#ae81ff">https://eztv.ag/ezrss.xml</span>
+            <span style="color:#f92672">all_entries</span>: <span style="color:#66d9ef">no</span>
+            <span style="color:#f92672">ascii</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">escape</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">link</span>:
+              - <span style="color:#ae81ff">link</span>
+              - <span style="color:#ae81ff">magneturi</span>
+    <span style="color:#f92672">list_match</span>:
+              <span style="color:#f92672">from</span>:
+                - <span style="color:#f92672">trakt_list</span>:
+                   <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+                   <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Series</span>
+                   <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shows</span>
+    <span style="color:#f92672">torrent_alive</span>: <span style="color:#ae81ff">10</span> <span style="color:#75715e"># Will reject results with less than 10 seeds</span>
+  <span style="color:#f92672">discover-anime</span>:
+    <span style="color:#f92672">priority</span>: <span style="color:#ae81ff">2</span>
+    <span style="color:#f92672">template</span>: <span style="color:#ae81ff">anime</span>
+    <span style="color:#f92672">discover</span>:
+      <span style="color:#f92672">what</span>:
+        - <span style="color:#f92672">next_trakt_episodes</span>:
+            <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+            <span style="color:#f92672">context</span>: <span style="color:#ae81ff">watched</span>
+            <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Anime</span>
+      <span style="color:#f92672">from</span>:
+        - <span style="color:#f92672">argenteam</span>:
+            <span style="color:#f92672">force_subtitles</span>: <span style="color:#66d9ef">yes</span>
+        - <span style="color:#f92672">search_rss</span>:
+            <span style="color:#f92672">url</span>: <span style="color:#ae81ff">https://www.animenewsnetwork.com/all/rss.xml?ann-edition=es</span>
+            <span style="color:#f92672">all_entries</span>: <span style="color:#66d9ef">no</span>
+            <span style="color:#f92672">ascii</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">escape</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">link</span>:
+              - <span style="color:#ae81ff">link</span>
+              - <span style="color:#ae81ff">magneturi</span>
+        - <span style="color:#f92672">search_rss</span>:
+            <span style="color:#f92672">url</span>: <span style="color:#ae81ff">https://honeysanime.com/feed/</span>
+            <span style="color:#f92672">all_entries</span>: <span style="color:#66d9ef">no</span>
+            <span style="color:#f92672">ascii</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">escape</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">link</span>:
+              - <span style="color:#ae81ff">link</span>
+              - <span style="color:#ae81ff">magneturi</span>
+        - <span style="color:#f92672">search_rss</span>:
+            <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://blog.alltheanime.com/feed/</span>
+            <span style="color:#f92672">all_entries</span>: <span style="color:#66d9ef">no</span>
+            <span style="color:#f92672">ascii</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">escape</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">link</span>:
+              - <span style="color:#ae81ff">link</span>
+              - <span style="color:#ae81ff">magneturi</span>
+        - <span style="color:#f92672">search_rss</span>:
+            <span style="color:#f92672">url</span>: <span style="color:#ae81ff">https://feed.animetosho.org/rss2</span>
+            <span style="color:#f92672">all_entries</span>: <span style="color:#66d9ef">no</span>
+            <span style="color:#f92672">ascii</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">escape</span>: <span style="color:#66d9ef">yes</span>
+            <span style="color:#f92672">link</span>:
+              - <span style="color:#ae81ff">link</span>
+              - <span style="color:#ae81ff">magneturi</span>
+    <span style="color:#f92672">list_match</span>:
+              <span style="color:#f92672">from</span>:
+                - <span style="color:#f92672">trakt_list</span>:
+                   <span style="color:#f92672">account</span>: <span style="color:#ae81ff">charly3pins</span>
+                   <span style="color:#f92672">list</span>: <span style="color:#ae81ff">Anime</span>
+                   <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shows</span>
+    <span style="color:#f92672">torrent_alive</span>: <span style="color:#ae81ff">10</span> <span style="color:#75715e"># Will reject results with less than 10 seeds</span>
+  <span style="color:#f92672">sort_tv</span>:
+    <span style="color:#f92672">priority</span>: <span style="color:#ae81ff">3</span>
+    <span style="color:#f92672">no_entries_ok</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">parsing</span>:
+      <span style="color:#f92672">series</span>: <span style="color:#ae81ff">guessit</span>
+    <span style="color:#f92672">filesystem</span>:
+      <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/media/storage/downloads</span>
+      <span style="color:#f92672">regexp</span>: <span style="color:#e6db74">&#39;.*\.(avi|mkv|mp4)$&#39;</span>
+      <span style="color:#f92672">recursive</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">accept_all</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">thetvdb_lookup</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">require_field</span>: <span style="color:#ae81ff">series_name</span>
+    <span style="color:#f92672">all_series</span>:
+      <span style="color:#f92672">parse_only</span>: <span style="color:#66d9ef">yes</span>
+    <span style="color:#f92672">exec</span>:
+      <span style="color:#f92672">auto_escape</span>: <span style="color:#66d9ef">yes</span>
+      <span style="color:#f92672">on_output</span>:
+        <span style="color:#f92672">for_entries</span>: |<span style="color:#e6db74">
+</span><span style="color:#e6db74">          if mediainfo &#34;{{ location }}&#34; | grep EAC3; then
+</span><span style="color:#e6db74">            mkdir -p &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}&#34; &amp;&amp; ffmpeg -hwaccel auto -y -i &#34;{{ location }}&#34; -map 0 -c:s copy -c:v copy -c:a ac3 -b:a 640k &#34;/storage/series/{{ tvdb_series_name }}/Season {{ series_season }}/{{ tvdb_series_name }} - {{ series_id }}{{ location | pathext }}&#34;
+</span><span style="color:#e6db74">          else
+</span><span style="color:#e6db74">            mkdir -p &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}&#34; &amp;&amp; cp &#34;{{ location }}&#34; &#34;/media/storage/Series/{{ tvdb_series_name }}/Season {{ series_season }}/{{ tvdb_series_name }} - {{ series_id }}{{ location | pathext }}&#34;
+</span><span style="color:#e6db74">          fi</span>          
+  <span style="color:#f92672">remove_stale_torrents</span>:
+    <span style="color:#f92672">priority</span>: <span style="color:#ae81ff">4</span>
+    <span style="color:#f92672">from_transmission</span>:
+      <span style="color:#f92672">host</span>: <span style="color:#ae81ff">localhost</span>
+      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">9091</span>
+      <span style="color:#f92672">username</span>: <span style="color:#ae81ff">transmission</span>
+      <span style="color:#f92672">password</span>: <span style="color:#ae81ff">transmission</span>
+    <span style="color:#f92672">disable</span>: [<span style="color:#ae81ff">seen, seen_info_hash]</span>
+    <span style="color:#f92672">if</span>:
+      - <span style="color:#f92672">transmission_progress == 100</span>: <span style="color:#ae81ff">accept</span>
+      - <span style="color:#f92672">not transmission_seed_ratio_ok</span>: <span style="color:#ae81ff">reject</span>
+      - <span style="color:#f92672">not transmission_idle_limit_ok</span>: <span style="color:#ae81ff">reject</span>
+    <span style="color:#f92672">transmission</span>:
+      <span style="color:#f92672">host</span>: <span style="color:#ae81ff">localhost</span>
+      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">9091</span>
+      <span style="color:#f92672">username</span>: <span style="color:#ae81ff">transmission</span>
+      <span style="color:#f92672">password</span>: <span style="color:#ae81ff">transmission</span>
+      <span style="color:#f92672">action</span>: <span style="color:#ae81ff">purge</span>
+</code></pre></div><p>$ flexget trakt auth <!-- raw HTML omitted --> (usada en el config)</p>
+<p>ir a <a href="https://trakt.tv/activate">https://trakt.tv/activate</a> y poner el código q nos da el command line y aceptar permisos</p>
+<p>quality =&gt; <a href="https://flexget.com/Plugins/quality">https://flexget.com/Plugins/quality</a>
+template =&gt; <a href="https://flexget.com/Plugins/template">https://flexget.com/Plugins/template</a>
+sorting =&gt; <a href="https://flexget.com/Cookbook/Series/Sort">https://flexget.com/Cookbook/Series/Sort</a>
+scheduler =&gt; <a href="https://flexget.com/Plugins/Daemon/scheduler">https://flexget.com/Plugins/Daemon/scheduler</a>
+linux schedulig =&gt; <a href="https://flexget.com/InstallWizard/Linux/Scheduling">https://flexget.com/InstallWizard/Linux/Scheduling</a>
+webserver =&gt; <a href="https://flexget.com/API">https://flexget.com/API</a></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>IF ERROR TRANSMISION RPC Transmissionrpc module version 0.11 or higher required. install it
+pip install transmissionrpc</p>
+<p>Todos estos parámetros pueden ser cambiados, y los correspondientes a nombres de usuarios, contraseñas y URL deben ser reemplazados por los tuyos.</p>
+<p>Flexget tiene muchos parámetros útiles para configurar. Se pueden ver en profundidad en su wiki.</p>
+<h4 id="descarga-de-subtítulos">Descarga de subtítulos</h4>
+<p>En la configuración que hicimos para Flexget, uno de los parámetros especifica la búsqueda y descarga de subtítulos, pero para que eso funcione, primero debemos instalar Periscope, un módulo programado en python que busca subtítulos en base a los nombres de los archivos de video descargados.</p>
+<p>Busca en varias fuentes y normalmente hace un buen trabajo encontrando los subtítulos correctos.</p>
+<p>Para instalarlo, ejecutamos:
+pip install &ndash;upgrade setuptools
+sudo pip install periscope
+mkdir /home/pi/.config</p>
+<p>El último comando es por un bug de Periscope, que si no tiene la carpeta .config falla.</p>
+<h3 id="automatización">Automatización</h3>
+<p>Ya tenemos «casi» todo configurado. Lo que debemos hacer ahora es probar si todo funciona correctamente:</p>
+<p>$ flexget execute</p>
+<p>Esto debería consultar nuestro feed de ShowRSS, descargar los torrents de cada capítulo disponible, agregarlos a Transmission y comenzar la descarga dentro del disco externo. Una vez finalizada la descarga, eliminar los torrents de Transmission, buscar los subtítulos para todos los capítulos y moverlos junto a los archivos de video. Finalmente, debe ordenar todos los archivos en directorios separados por nombre de serie y renombrarlos especificando temporada y número de capítulo. MAGIA.</p>
+</p>
+				</div>
+				
+				<div class="page-separator"><hr></div>
+
+				<div class="related">
+					
+					
+				</div>
+
+			</div>
+			
+			<div class="container">
+  <div class="centered" id="index-footer">
+    <p>Last change 05/11/2020</p>
+    <p>© 2018 - 2020 Charly3Pins</p>
+  </div>
+</div>
+			
+		</section>
+	</body>
+</html>
+

@@ -85,20 +85,20 @@
 					<p><p>If you&rsquo;re a technical person and you don&rsquo;t like to battle with presentation softwares but you want/need to create one, congratulations! you are in the right place. I know that as software engineers we want to be coding or reading or watching things related with software, architecture or devops but not with presentations. Sometimes we are demanded to present something to other team members, to the product owners or even scarier, to the management team!</p>
 <p>For that reason I want to introduce you to the Go package <a href="https://godoc.org/golang.org/x/tools/present">present</a>. It&rsquo;s used to create slides in Golang hosted on talks.golang.org or on your private one. I&rsquo;ve used it several times, especially when I want to share something to my colleagues on the team (some code of course), because I don&rsquo;t want to waste time with softwares. I just create the project for the slides, add my slides in markdown, add the images needed and just present them to them. Let&rsquo;s see in detail how it works!</p>
 <p>Assuming you have <a href="https://golang.org/doc/install">Go installed</a> and correctly configured, all you need to install is the package with the following command:</p>
-<pre><code class="language-terminal" data-lang="terminal">go get -u golang.org/x/tools/present
-</code></pre><p>Test if it works typing:</p>
-<pre><code class="language-terminal" data-lang="terminal">present
-</code></pre><p>And it should display a message similar to:</p>
-<pre><code class="language-terminal" data-lang="terminal">2020/10/04 23:23:54 Open your web browser and visit http://127.0.0.1:3999
-</code></pre><p>So you can visit the link, and see the local server ready to host your presentations. Awesome or not? Okay, I know you want to display something other than an empty directory, so let&rsquo;s create an example presentation for that.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">go</span> <span style="color:#a6e22e">get</span> -<span style="color:#a6e22e">u</span> <span style="color:#a6e22e">golang</span>.<span style="color:#a6e22e">org</span><span style="color:#e6db74">/x/</span><span style="color:#a6e22e">tools</span>/<span style="color:#a6e22e">present</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Test if it works typing:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">present</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>And it should display a message similar to:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#ae81ff">2020</span><span style="color:#e6db74">/10/</span><span style="color:#ae81ff">04</span> <span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">54</span> <span style="color:#a6e22e">Open</span> <span style="color:#a6e22e">your</span> <span style="color:#a6e22e">web</span> <span style="color:#a6e22e">browser</span> <span style="color:#a6e22e">and</span> <span style="color:#a6e22e">visit</span> <span style="color:#a6e22e">http</span>:<span style="color:#e6db74">//</span><span style="color:#ae81ff">127</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3999</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>So you can visit the link, and see the local server ready to host your presentations. Awesome or not? Okay, I know you want to display something other than an empty directory, so let&rsquo;s create an example presentation for that.</p>
 <h1 id="format">Format</h1>
 <p>Create a directory for your slides:</p>
-<pre><code class="language-terminal" data-lang="terminal">mkdir go-present-example
-cd go-present-example/
-</code></pre><p>Create your first slide:</p>
-<pre><code class="language-terminal" data-lang="terminal">vim initial.slide
-</code></pre><p>And add the following:</p>
-<pre><code class="language-terminal" data-lang="terminal">Learning Go present
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">mkdir</span> <span style="color:#a6e22e">go</span>-<span style="color:#a6e22e">present</span>-<span style="color:#a6e22e">example</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">cd</span> <span style="color:#a6e22e">go</span>-<span style="color:#a6e22e">present</span>-<span style="color:#a6e22e">example</span>/<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Create your first slide:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">vim</span> <span style="color:#a6e22e">initial</span>.<span style="color:#a6e22e">slide</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>And add the following:</p>
+<pre><code>Learning Go present
 6 October 2020
 
 Crash Bandicoot
@@ -220,11 +220,11 @@ They eat basically plants.
 : typically gnaws the roots of a plant just beneath the soil, so the damage isn’t seen
 </code></pre></div><p><img src="/images/level-up-your-presentations-with-go/present-notes.jpeg" alt="present-notes"></p>
 <p>As you can see the notes aren&rsquo;t present there, so WHY? Because you need to run the presentation in a &ldquo;presenter&rdquo; like that.</p>
-<pre><code class="language-terminal" data-lang="terminal">present -notes
-</code></pre><p>And it should display a message similar to:</p>
-<pre><code class="language-terminal" data-lang="terminal">2020/10/04 23:23:54 Open your web browser and visit http://127.0.0.1:3999
-2020/10/04 Notes are enabled, press 'N' from the browser to display them.
-</code></pre><p>So if you refresh your browser with the presentation and press <code>N</code> you will see a popup displaying the notes of each slide on the bottom. like that:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">present</span> -<span style="color:#a6e22e">notes</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>And it should display a message similar to:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#ae81ff">2020</span><span style="color:#e6db74">/10/</span><span style="color:#ae81ff">04</span> <span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">54</span> <span style="color:#a6e22e">Open</span> <span style="color:#a6e22e">your</span> <span style="color:#a6e22e">web</span> <span style="color:#a6e22e">browser</span> <span style="color:#a6e22e">and</span> <span style="color:#a6e22e">visit</span> <span style="color:#a6e22e">http</span>:<span style="color:#e6db74">//</span><span style="color:#ae81ff">127</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3999</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#ae81ff">2020</span><span style="color:#e6db74">/10/</span><span style="color:#ae81ff">04</span> <span style="color:#a6e22e">Notes</span> <span style="color:#a6e22e">are</span> <span style="color:#a6e22e">enabled</span>, <span style="color:#a6e22e">press</span> <span style="color:#e6db74">&#39;N&#39;</span> <span style="color:#a6e22e">from</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">browser</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">display</span> <span style="color:#a6e22e">them</span>.<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>So if you refresh your browser with the presentation and press <code>N</code> you will see a popup displaying the notes of each slide on the bottom. like that:
 <img src="/images/level-up-your-presentations-with-go/present-notes-popup.jpeg" alt="present-notes-popup"></p>
 <h1 id="conclusion">Conclusion</h1>
 <p>The <code>present</code> tool is super useful for technical presentations, especially in Go. It has its limitations like the format of the slides and the image positioning sometimes tricky, but in general is a great package and for me is the standard for all my presentations. If you wanna dick more in detail about that package check the <a href="https://godoc.org/golang.org/x/tools/present">official documentation</a> and also I would recommend the <a href="https://talks.golang.org/2012/insidepresent.slide#1">presentation</a>: <code>Inside the &quot;present&quot; tool</code> by Andrew Gerrand. Also I&rsquo;ve uploaded the source code for this tutorial on <a href="https://github.com/charly3pins/go-present-example">GitHub</a>.</p>
@@ -260,7 +260,7 @@ They eat basically plants.
 			
 			<div class="container">
   <div class="centered" id="index-footer">
-    <p>Last change 20/10/2020</p>
+    <p>Last change 05/11/2020</p>
     <p>© 2018 - 2020 Charly3Pins</p>
   </div>
 </div>

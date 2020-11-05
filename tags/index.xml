@@ -6,10 +6,46 @@
 		<description>Recent content in Tags on charly3pins.dev</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
-		<lastBuildDate>Tue, 20 Oct 2020 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate>
 		
 		<atom:link href="https://charly3pins.dev/tags/index.xml" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>life</title>
+			<link>https://charly3pins.dev/tags/life/</link>
+			<pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/tags/life/</guid>
+			<description>
+				
+				
+				
+			</description>
+		</item>
+		<item>
+			<title>linux</title>
+			<link>https://charly3pins.dev/tags/linux/</link>
+			<pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/tags/linux/</guid>
+			<description>
+				
+				
+				
+			</description>
+		</item>
+		<item>
+			<title>raspberry-pi</title>
+			<link>https://charly3pins.dev/tags/raspberry-pi/</link>
+			<pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/tags/raspberry-pi/</guid>
+			<description>
+				
+				
+				
+			</description>
+		</item>
 		<item>
 			<title>api</title>
 			<link>https://charly3pins.dev/tags/api/</link>
@@ -40,18 +76,6 @@
 			<pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
 			
 			<guid>https://charly3pins.dev/tags/go/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>life</title>
-			<link>https://charly3pins.dev/tags/life/</link>
-			<pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/life/</guid>
 			<description>
 				
 				

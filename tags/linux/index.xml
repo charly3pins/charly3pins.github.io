@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>life on charly3pins.dev</title>
-		<link>https://charly3pins.dev/tags/life/</link>
-		<description>Recent content in life on charly3pins.dev</description>
+		<title>linux on charly3pins.dev</title>
+		<link>https://charly3pins.dev/tags/linux/</link>
+		<description>Recent content in linux on charly3pins.dev</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate>
 		
-		<atom:link href="https://charly3pins.dev/tags/life/index.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://charly3pins.dev/tags/linux/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
 			<title>Raspberry Pi media player with Plex, Transmission, Sonarr, Bazarr and Jackett</title>
@@ -19,18 +19,6 @@
 			<description>
 				
 				Build your own media player using a BitTorrent client (Transmission), a PVR for Usenet and BitTorrent users (Sonarr), an API Support for your the torrent trackers (Jackett), a manager of subtitles in Sonarr &amp; Radarr (Bazarr) and a client–server media player (Plex).
-				
-			</description>
-		</item>
-		<item>
-			<title>Level up your presentations with Go</title>
-			<link>https://charly3pins.dev/blog/level-up-your-preseentations-with-go/</link>
-			<pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/blog/level-up-your-preseentations-with-go/</guid>
-			<description>
-				
-				Generate easily your presentations with present, the tool powered by Go that generates and renders your slides.
 				
 			</description>
 		</item>
