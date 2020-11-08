@@ -130,20 +130,6 @@
 				
 			</description>
 		</item>
-		<item>
-			<title></title>
-			<link>https://charly3pins.dev/blog/raspberry-flexget/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/blog/raspberry-flexget/</guid>
-			<description>
-				
-				OPTIONAL : FLEX GET CHECK https://flexget.com/Plugins
-$ sudo apt-get install python-pip
-La instalación en linux se hace ...
-				
-			</description>
-		</item>
 		
 	</channel>
 </rss>
