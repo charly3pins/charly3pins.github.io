@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Charly3Pins a Software Engineer 👨🏻‍💻 Gamer 🎮 and Dog Walker 🐕">
+
+  <title>How to add Google Analytics to your Hugo site | Charly3Pins</title>
+
+
+  <meta property="og:title" content="How to add Google Analytics to your Hugo site - charly3pins" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Quick tutorial how to integrate Google Analytics in a Hugo website.">
+  <meta property="og:url" content="https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/">
+  <meta property="og:site_name" content="charly3pins.dev">
+  
+  <meta property="og:image" content="https://charly3pins.dev/images/google-analytics-hugo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="How to add Google Analytics to your Hugo site" />
+
+
+  <meta name="twitter:description" content="Quick tutorial how to integrate Google Analytics in a Hugo website.">
+
+
+  <meta name="twitter:image" content="https://charly3pins.dev/images/google-analytics-hugo.png">
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-126216319-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+</head>
+
+	<body>
+		<section id="main">
+
+			<div class="header">
+				<div class="toggle"><input type="checkbox">
+					<span class="bar"></span><span class="bar"></span><span class="bar"></span>
+					<div id="mobile-menu">
+						<span class="menu-item"><a href="/">🏠 home</a></span>
+						<span class="menu-item"><a href="/blog/">📰 blog</a></span>
+						<span class="menu-item"><a href="/about/">👨🏻‍💻 about</a></span>
+						<span class="menu-item"><a href="/projects/">🛠️ projects</a></span>
+						<span class="menu-item"><a id="rss" href="/index.xml" rel="alternate" type="application/rss+xml">📡 RSS</a></span>
+					</div>
+				</div>
+				<div id="menu">
+					<span class="menu-item"><a href="/">🏠 home</a></span>
+					<span class="menu-item"><a href="/blog/">📰 blog</a></span>
+					<span class="menu-item"><a href="/about/">👨🏻‍💻 about</a></span>
+					<span class="menu-item"><a href="/projects/">🛠️ projects</a></span>
+					<span class="menu-item"><a id="rss" href="/index.xml" rel="alternate" type="application/rss+xml">📡 RSS</a></span>
+				</div>
+			</div>
+
+			<div class="container">
+				<div id="cover-image">
+					<img src="https://charly3pins.dev/images/google-analytics-hugo.png" alt="cover image">
+				</div>
+				
+				<div class="markdown">
+					<h1>How to add Google Analytics to your Hugo site</h1>
+					<p class="subtitle">Quick tutorial how to integrate Google Analytics in a Hugo website.</p>
+					<p class="metadata">
+						
+							
+								<a class="li-tag" href="https://charly3pins.dev/tags/hugo/">hugo</a>
+							
+								<a class="li-tag" href="https://charly3pins.dev/tags/cms/">cms</a>
+							
+						
+						2 min read | Posted on 23/11/2020
+					</p>
+				</div>
+
+				<div class="page-separator"><hr></div>
+
+				<div class="markdown">
+					<p><h2 id="google-analytics">Google Analytics</h2>
+<p>First of all what you need is to obtain a Google Analytics tracking ID. For that you need to sign up at <a href="https://analytics.google.com/analytics/web/">Google Analytics</a>. Then, you need to create a tracking ID following the next steps:</p>
+<ul>
+<li>Click on <code>Admin</code> button (on the bottom left corner).</li>
+<li>Click on <code>Create Account</code> button.</li>
+<li>After all the steps filled, click the <code>Create</code> button and accept the terms and conditions.</li>
+</ul>
+<p>After the completion of these steps you will obtain your tracking ID. Copy it for add to your Hugo site later.</p>
+<h2 id="hugo-configuration">Hugo configuration</h2>
+<p>Now it&rsquo;s turn to add the tracking ID to your site.
+The easiest way for do it is using the Hugo&rsquo;s <a href="https://gohugo.io/templates/internal/#google-analytics">internal template</a> provided by Hugo. You just need to add a new variable called <code>googleAnalytics</code> with the <code>tracking ID</code> obtained from the previous step in your <code>config.toml</code> like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;UA-123-45&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>The next step is to add the following snippet of code in your site:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">{{ <span style="color:#a6e22e">template</span> <span style="color:#e6db74">&#34;_internal/google_analytics.html&#34;</span> . }}<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>You should search for the <code>head</code> partial template and add it inside the <code>&lt;head&gt;&lt;/head&gt;</code> tags.</p>
+<h2 id="checking-the-integration">Checking the integration</h2>
+<p>Before passing that to production you can test it running your site locally performing the next command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">serve</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>The default url on localhost is <code>http://localhost:1313</code>.</p>
+<p>Open again or refresh <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> on a different tab.</p>
+<p>Check the dashboard and you should be able to see the number under the section Active Users right now as 1 like the picture below:
+<img src="/images/google-analytics-active-users.png" alt="active-users"></p>
+</p>
+				</div>
+				
+				<div class="page-separator"><hr></div>
+
+				<div class="related">
+					
+					
+					<div class="markdown highlight"><pre class="chroma">See also the related articles</pre></div>
+					<ul id="list-items">
+						
+						<li>
+							<a class="li-link" href="https://charly3pins.dev/blog/hugo-content-and-templates-managing/">Hugo&#39;s content and templates managing</a>
+							<p class="li-brief">How to organize your content and create your templates to get maximum value from Hugo.</p>
+							<p class="metadata">
+								
+									
+										<a class="li-tag" href="https://charly3pins.dev/tags/hugo/">hugo</a>
+									
+										<a class="li-tag" href="https://charly3pins.dev/tags/cms/">cms</a>
+									
+								
+								5 min read | Posted on 08/03/2020
+							</p>
+						</li>
+						
+						<li>
+							<a class="li-link" href="https://charly3pins.dev/blog/building-static-blog-with-hugo/">Building static blog with Hugo</a>
+							<p class="li-brief">Quick steps to create your own static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages.</p>
+							<p class="metadata">
+								
+									
+										<a class="li-tag" href="https://charly3pins.dev/tags/hugo/">hugo</a>
+									
+										<a class="li-tag" href="https://charly3pins.dev/tags/cms/">cms</a>
+									
+										<a class="li-tag" href="https://charly3pins.dev/tags/github/">github</a>
+									
+								
+								4 min read | Posted on 22/09/2018
+							</p>
+						</li>
+						
+					</ul>
+					
+				</div>
+
+			</div>
+			
+			<div class="container">
+  <div class="centered" id="index-footer">
+    <p>Last change 23/11/2020</p>
+    <p>© 2018 - 2020 Charly3Pins</p>
+  </div>
+</div>
+			
+		</section>
+	</body>
+</html>
+

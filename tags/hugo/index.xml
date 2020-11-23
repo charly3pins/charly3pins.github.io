@@ -6,10 +6,22 @@
 		<description>Recent content in hugo on charly3pins.dev</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
-		<lastBuildDate>Sun, 08 Mar 2020 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate>
 		
 		<atom:link href="https://charly3pins.dev/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>How to add Google Analytics to your Hugo site</title>
+			<link>https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/</link>
+			<pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/</guid>
+			<description>
+				
+				Quick tutorial how to integrate Google Analytics in a Hugo website.
+				
+			</description>
+		</item>
 		<item>
 			<title>Hugo&#39;s content and templates managing</title>
 			<link>https://charly3pins.dev/blog/hugo-content-and-templates-managing/</link>
