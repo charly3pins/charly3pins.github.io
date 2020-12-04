@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Charly3Pins a Software Engineer 👨🏻‍💻 Gamer 🎮 and Dog Walker 🐕">
+  <meta name="description" content="Charly3Pins a Software Engineer 👨🏻‍💻 gamer 🎮 and dog walker 🐕">
 
   <title>Getting and Creating Projects | Charly3Pins</title>
 
@@ -16,7 +16,7 @@
   <meta property="og:title" content="Getting and Creating Projects - charly3pins" />
 
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Initial commands to get and create projects.">
+  <meta property="og:description" content="Mastering Git commands: Initial commands to get and create projects.">
   <meta property="og:url" content="https://charly3pins.dev/blog/mastering-git-commands/getting-and-creating-projects/">
   <meta property="og:site_name" content="charly3pins.dev">
   
@@ -27,7 +27,7 @@
   <meta name="twitter:title" content="Getting and Creating Projects" />
 
 
-  <meta name="twitter:description" content="Initial commands to get and create projects.">
+  <meta name="twitter:description" content="Mastering Git commands: Initial commands to get and create projects.">
 
 
   <meta name="twitter:image" content="https://charly3pins.dev/images/git-tutorial.jpg">
@@ -81,7 +81,7 @@ if (!doNotTrack) {
 				
 				<div class="markdown">
 					<h1>Getting and Creating Projects</h1>
-					<p class="subtitle">Initial commands to get and create projects.</p>
+					<p class="subtitle">Mastering Git commands: Initial commands to get and create projects.</p>
 					<p class="metadata">
 						
 							
@@ -97,16 +97,28 @@ if (!doNotTrack) {
 				<div class="page-separator"><hr></div>
 
 				<div class="markdown">
-					<p><p>Assuming that you already installed git and <a href="https://git-scm.com/docs/git-config">configured</a> it on your computer, let’s start from the beginning and check the initial commands for initialize and download a repository.</p>
+					<p><!-- raw HTML omitted -->
+<p>Assuming that you already installed git and <a href="https://git-scm.com/docs/git-config">configured</a> it on your computer, let’s start from the beginning and check the initial commands for initialize and download a repository.</p>
 <h2 id="init">init</h2>
-<p>git-init - Create an empty Git repository or reinitialize an existing one
-<img src="/images/git-series/git-init.png" alt="git-init"></p>
-<p>This command creates an empty Git repository (a <code>.git</code> directory in the location you executed the command). This folder will contain some files and subdirectories that I will not cover in this post because they are too advanced for what I want to achieve with these articles.
+<p>git-init - Create an empty Git repository or reinitialize an existing one</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">init</span> [-<span style="color:#a6e22e">q</span> | --<span style="color:#a6e22e">quiet</span>] [--<span style="color:#a6e22e">bare</span>] [--<span style="color:#a6e22e">template</span>=&lt;<span style="color:#a6e22e">template_directory</span>&gt;]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [--<span style="color:#a6e22e">separate</span>-<span style="color:#a6e22e">git</span>-<span style="color:#a6e22e">dir</span> &lt;<span style="color:#a6e22e">git</span> <span style="color:#a6e22e">dir</span>&gt;] [--<span style="color:#a6e22e">object</span>-<span style="color:#a6e22e">format</span>=&lt;<span style="color:#a6e22e">format</span>&gt;]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [-<span style="color:#a6e22e">b</span> &lt;<span style="color:#a6e22e">branch</span>-<span style="color:#a6e22e">name</span>&gt; | --<span style="color:#a6e22e">initial</span>-<span style="color:#a6e22e">branch</span>=&lt;<span style="color:#a6e22e">branch</span>-<span style="color:#a6e22e">name</span>&gt;]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [--<span style="color:#a6e22e">shared</span>[=&lt;<span style="color:#a6e22e">permissions</span>&gt;]] [<span style="color:#a6e22e">directory</span>]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>This command creates an empty Git repository (a <code>.git</code> directory in the location you executed the command). This folder will contain some files and subdirectories that I will not cover in this post because they are too advanced for what I want to achieve with these articles.
 On that point you can start the history of the repository by adding files to your Git repository, committing them locally and finally pushing the changes to the remote server. (We will cover all of those commands in next posts).</p>
 <h2 id="clone">clone</h2>
-<p>git-clone - Clone a repository into a new directory
-<img src="/images/git-series/git-clone.png" alt="git-clone"></p>
-<p>This command clones a repository into a new directory copying the remote project into your own repository instance (locally). Git supports ssh, git, http, and https protocols for communication between your local server and the remote server. The choice will depend on the needs and specifications of your project and your access level on it.
+<p>git-clone - Clone a repository into a new directory</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">clone</span> [--<span style="color:#a6e22e">template</span>=&lt;<span style="color:#a6e22e">template_directory</span>&gt;]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [-<span style="color:#a6e22e">l</span>] [-<span style="color:#a6e22e">s</span>] [--<span style="color:#a6e22e">no</span>-<span style="color:#a6e22e">hardlinks</span>] [-<span style="color:#a6e22e">q</span>] [-<span style="color:#a6e22e">n</span>] [--<span style="color:#a6e22e">bare</span>] [--<span style="color:#a6e22e">mirror</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [-<span style="color:#a6e22e">o</span> &lt;<span style="color:#a6e22e">name</span>&gt;] [-<span style="color:#a6e22e">b</span> &lt;<span style="color:#a6e22e">name</span>&gt;] [-<span style="color:#a6e22e">u</span> &lt;<span style="color:#a6e22e">upload</span>-<span style="color:#a6e22e">pack</span>&gt;] [--<span style="color:#a6e22e">reference</span> &lt;<span style="color:#a6e22e">repository</span>&gt;]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [--<span style="color:#a6e22e">dissociate</span>] [--<span style="color:#a6e22e">separate</span>-<span style="color:#a6e22e">git</span>-<span style="color:#a6e22e">dir</span> &lt;<span style="color:#a6e22e">git</span> <span style="color:#a6e22e">dir</span>&gt;]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [--<span style="color:#a6e22e">depth</span> &lt;<span style="color:#a6e22e">depth</span>&gt;] [--[<span style="color:#a6e22e">no</span>-]<span style="color:#a6e22e">single</span>-<span style="color:#a6e22e">branch</span>] [--<span style="color:#a6e22e">no</span>-<span style="color:#a6e22e">tags</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [--<span style="color:#a6e22e">recurse</span>-<span style="color:#a6e22e">submodules</span>[=&lt;<span style="color:#a6e22e">pathspec</span>&gt;]] [--[<span style="color:#a6e22e">no</span>-]<span style="color:#a6e22e">shallow</span>-<span style="color:#a6e22e">submodules</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [--[<span style="color:#a6e22e">no</span>-]<span style="color:#a6e22e">remote</span>-<span style="color:#a6e22e">submodules</span>] [--<span style="color:#a6e22e">jobs</span> &lt;<span style="color:#a6e22e">n</span>&gt;] [--<span style="color:#a6e22e">sparse</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [--<span style="color:#a6e22e">filter</span>=&lt;<span style="color:#a6e22e">filter</span>&gt;] [--] &lt;<span style="color:#a6e22e">repository</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>	  [&lt;<span style="color:#a6e22e">directory</span>&gt;]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>This command clones a repository into a new directory copying the remote project into your own repository instance (locally). Git supports ssh, git, http, and https protocols for communication between your local server and the remote server. The choice will depend on the needs and specifications of your project and your access level on it.
 After performing that, you have all the code downloaded and the history from remote copied to your local Git, so you can continue from there and write your own one.</p>
 </p>
 				</div>
@@ -131,19 +143,6 @@ After performing that, you have all the code downloaded and the history from rem
 									
 								
 								2 min read | Posted on 10/03/2020
-							</p>
-						</li>
-						
-						<li>
-							<a class="li-link" href="https://charly3pins.dev/blog/mastering-git-commands/">Mastering Git commands</a>
-							<p class="li-brief">Index of a series of posts published with the intention to explain in a friendly way the most used Git commands.</p>
-							<p class="metadata">
-								
-									
-										<a class="li-tag" href="https://charly3pins.dev/tags/git/">git</a>
-									
-								
-								2 min read | Posted on 28/09/2020
 							</p>
 						</li>
 						
