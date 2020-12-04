@@ -6,10 +6,22 @@
 		<description>Recent content on charly3pins.dev</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
-		<lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate>
 		
 		<atom:link href="https://charly3pins.dev/index.xml" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>Basic Snapshotting</title>
+			<link>https://charly3pins.dev/blog/mastering-git-commands/basic-snapshotting/</link>
+			<pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+			
+			<guid>https://charly3pins.dev/blog/mastering-git-commands/basic-snapshotting/</guid>
+			<description>
+				
+				Mastering Git commands: Initial commands to make the basic snapshots of projects.
+				
+			</description>
+		</item>
 		<item>
 			<title>How to add Google Analytics to your Hugo site</title>
 			<link>https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/</link>
