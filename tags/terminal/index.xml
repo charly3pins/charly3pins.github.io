@@ -6,34 +6,10 @@
 		<description>Recent content in terminal on charly3pins.dev</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
-		<lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
 		
 		<atom:link href="https://charly3pins.dev/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
 		
-		<item>
-			<title>Basic Snapshotting</title>
-			<link>https://charly3pins.dev/blog/mastering-git-commands/basic-snapshotting/</link>
-			<pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/blog/mastering-git-commands/basic-snapshotting/</guid>
-			<description>
-				
-				Mastering Git commands: Initial commands to make the basic snapshots of projects.
-				
-			</description>
-		</item>
-		<item>
-			<title>Getting and Creating Projects</title>
-			<link>https://charly3pins.dev/blog/mastering-git-commands/getting-and-creating-projects/</link>
-			<pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/blog/mastering-git-commands/getting-and-creating-projects/</guid>
-			<description>
-				
-				Mastering Git commands: Initial commands to get and create projects.
-				
-			</description>
-		</item>
 		<item>
 			<title>Custom commit messages</title>
 			<link>https://charly3pins.dev/blog/custom-commit-messages/</link>
