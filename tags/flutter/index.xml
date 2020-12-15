@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flutter on charly3pins.dev</title>
+    <link>https://charly3pins.dev/tags/flutter/</link>
+    <description>Recent content in flutter on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 May 2020</lastBuildDate><atom:link href="https://charly3pins.dev/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tournaments generator</title>
+      <link>https://charly3pins.dev/code/tournaments-generator/</link>
+      <pubDate>Fri, 01 May 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/code/tournaments-generator/</guid>
+      <description>Proof of concept building an application for managing FIFA 20 tournaments between different people using Flutter for building a mobile app and Go for building an API acting as a server. Also used Python to build simple scrapers.</description>
+      <content>&lt;h2 id=&#34;why&#34;&gt;WHY&lt;/h2&gt;
+&lt;p&gt;The motivation for starting this project is not another one than my curiosity about the mobile applications. It is obvious that the way of consuming technology has changed over the last few years and it is increasingly being done through a mobile device. For that reason I wanted to explore how the mobile apps work and how I can build one from scratch.
+I did some Android tutorials, but as they are changing a lot of things when releasing new versions and my idea was to build something generic for all devices, I decided to give it a try to &lt;a href=&#34;https://flutter.dev/&#34;&gt;Flutter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was between &lt;a href=&#34;https://reactnative.dev/&#34;&gt;React Native&lt;/a&gt; or Flutter, but after reading some pros and cons, I&amp;rsquo;ve decided to ally myself with Flutter. I started reading their &lt;a href=&#34;https://flutter.dev/docs&#34;&gt;documentation&lt;/a&gt; and it was super similar to Android (they are using Dart in the bottom) and I started remembering my old days on the Android tutorials and I like, so I continued. After a few days reading only technical documentation, I continued with the &amp;ldquo;hello world&amp;rdquo; app &lt;a href=&#34;https://flutter.dev/docs/get-started/codelab&#34;&gt;tutorial&lt;/a&gt; they provide in the website. And finally, I was ready to start my own project.&lt;/p&gt;
+&lt;p&gt;For the time the global pandemic started, me and my friends started a FIFA 20 league on PS4 to distract ourselves in the afternoons/nights. Initially it was just playing and nothing else, but then we started having a Power BI dashboard for statistics, a YouTube channel to share the games live and then store them there and a Twitter to tweet the updates in the classification every week. The first league was created manually and a bit of pain and super static, so I&amp;rsquo;ve decided to use that topic to create an app that helps us to manage the second league creating the league, managing our teams and matches there, notifying the results and showing more detailed statistics inside.&lt;/p&gt;
+&lt;h2 id=&#34;what&#34;&gt;WHAT&lt;/h2&gt;
+&lt;p&gt;First of all I wanted to put all the real FIFA 20 information inside the website related with leagues, teams and players. For that I found a few websites that have that information open and free, but they haven&amp;rsquo;t an API for consuming it. The idea of copying manually was tempting a lot, but I preferred to write a simple crawler in &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt; using the library &lt;a href=&#34;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors&#34;&gt;BeautifulSoup&lt;/a&gt; with the css-selectors it provides. Doing some tweaks here and there, at the end I ended up having 3 json files, one for each topic I wanted initially so all perfect!&lt;/p&gt;
+&lt;p&gt;Then in order to introduce all that information in the database the idea was to create a command line tool that reads those files and generates the corresponding SQL statements and then generate the corresponding migration files.
+I&amp;rsquo;ve chosen &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; as the programming language for the API and I&amp;rsquo;ve created a &lt;code&gt;cmd&lt;/code&gt; that allows me to do the desired idea. The database would be &lt;a href=&#34;https://www.postgresql.org/&#34;&gt;PostgreSQL&lt;/a&gt; so the &amp;ldquo;inserts&amp;rdquo; have to be according to its syntax.&lt;/p&gt;
+&lt;p&gt;With all the initial data ready, I&amp;rsquo;ve started to design the rest of the Database and the possible endpoints need it for manage all that information. I&amp;rsquo;ve chosen &lt;a href=&#34;https://github.com/gorilla/mux&#34;&gt;mux&lt;/a&gt; for the HTTP for it&amp;rsquo;s simplicity but powerful in comparison with the standard lib one (just only for the parameter parsing it&amp;rsquo;s worth it&amp;hellip;). As I wanted to explore more the mobile app side than the server side, I just organized the code using the &lt;a href=&#34;https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html&#34;&gt;Layered Architecture&lt;/a&gt; grouping the items by function and used &lt;a href=&#34;https://gorm.io/index.html&#34;&gt;GORM&lt;/a&gt; as the ORM for simplify the query and the mappings between the database and my models.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/api-structure.jpeg&#34; alt=&#34;api structure&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Inside the &lt;code&gt;cmd&lt;/code&gt; folder I&amp;rsquo;ve created different commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;migration: manages the migrations in the database&lt;/li&gt;
+&lt;li&gt;parser: translates the json from the crawler into sql statements&lt;/li&gt;
+&lt;li&gt;server: runs the server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Inside the &lt;code&gt;pkg&lt;/code&gt; folder it&amp;rsquo;s easy to identify what the folders are doing by it&amp;rsquo;s own name.&lt;/p&gt;
+&lt;p&gt;For the mobile app, I started putting all files inside a &lt;code&gt;components&lt;/code&gt; folder but when it started growing it was a complete kaos to manage. After adding more complexity to the app I end up finding a clean way to organize the code, dividing it into two separate folders; one for the core and another one for the ui. Then inside of each one I also categorized the different type of components depending on their responsibilities and at the end the code (at least for me that I&amp;rsquo;m not a Flutter expert) ended up looking super clean and (without no doubt) more maintainable. Below the folder organization in a general view:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/app-structure.jpeg&#34; alt=&#34;app structure&#34;&gt;&lt;/p&gt;
+&lt;p&gt;At the beginning when I started coding and watching the results all was super fancy and I thought it was easier than expected. Connecting the app with the API was just a matter of knowing how to use the &lt;code&gt;http&lt;/code&gt; library and the &lt;code&gt;get&lt;/code&gt; or &lt;code&gt;post&lt;/code&gt; methods was connected with no problems.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; client &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; http.Client();
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt; jsonBody &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json.encode(user.toJson());
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; client.post(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;$&lt;/span&gt;_baseUrl&lt;span style=&#34;color:#e6db74&#34;&gt;/token&amp;#34;&lt;/span&gt;,
+        headers: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;application/json&amp;#39;&lt;/span&gt;}, body: jsonBody);
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (response.statusCode &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;) {
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; User.fromJson(json.decode(response.body));
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The unique problem I&amp;rsquo;ve faced there is that I was running the apps from the Android Emulator; that means it was running in a virtual machine so the IP was not my local one and cannot access the &lt;code&gt;localhost&lt;/code&gt;. After a bit of research I&amp;rsquo;ve found the correct one and all worked correctly.&lt;/p&gt;
+&lt;p&gt;The problems started when I wanted to pass information between components, and refresh the view depending on that information, or even better, not refresh if nothing changed when I enter again into a view (for example going from a list to a detail view, and coming back again to the list). After a day reading in forums about the same problem that I was facing, I&amp;rsquo;ve found the package &lt;a href=&#34;https://pub.dev/packages/provider&#34;&gt;Provider&lt;/a&gt; and all seemed easy and the holy grail for everything, but it wasn&amp;rsquo;t.&lt;/p&gt;
+&lt;p&gt;The real pain just started there! It took me some days to really understand how it works. The initial Provider it&amp;rsquo;s easy to understand and you use it and it works, but then you want to change just a small part of the view, or you want to rebuild the entire one, or you want to modify some values in a view A and then go to view B and see the changes there, and all that examples it&amp;rsquo;s coded completely different and you have to know first of all that there are one way for each case of doing things and second you have to know how to do it. At the end I used the Provider, the ProxyProvider, the StreamProvider and the ChangeNotifierProvider.&lt;/p&gt;
+&lt;p&gt;The project is not finished but for now is On Hold with the following functionalities:&lt;/p&gt;
+&lt;p&gt;Initially the user can switch between the signup/login views.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/signup.png&#34; alt=&#34;signup&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/login.png&#34; alt=&#34;login&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Once the user is inside the application it has different tabs where the next &lt;code&gt;Matches&lt;/code&gt; he has to play, the &lt;code&gt;Tournaments&lt;/code&gt; that he is playing and the &lt;code&gt;Groups&lt;/code&gt; where he is present and the members inside. On the top it has a navbar with a profile picture, a bell icon for the notifications, a lens icon for search other members and adding as his friends and the logout button to disconnect.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/home.png&#34; alt=&#34;home&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If he clicks on the profile picture it goes directly to the user&amp;rsquo;s profile where it displays the friends and where he can edit his personal information (name, username, profile picture):
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/profile.png&#34; alt=&#34;profile&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pressing the lens icon, changes the view to the super searcher functionality which allows the user to find other people already in the platform, add them as his friends and then create groups, generate tournaments and play matches together. The searcher is a &amp;ldquo;like&amp;rdquo; search, so if any of the letters it introduces appears in some username, then it&amp;rsquo;s displayed there.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/searcher.png&#34; alt=&#34;searcher&#34;&gt;&lt;/p&gt;
+&lt;p&gt;After that, if the user enters one profile that is not a friend, it will appear the button to add it and if it&amp;rsquo;s clicked, it will hide that button and display the information that there is already a request sent, waiting for the other user to answer it.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/add-friend.png&#34; alt=&#34;add friend&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/add-friend-requested.png&#34; alt=&#34;add friend requested&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Acting as the other user, when logging in, the bell icon will display a new notification. Going inside appears as a friend notification and it can be answered from the list directly or going inside the &amp;ldquo;requester&amp;rdquo; profile and accepting/declining there. If the friend request is accepted, it will appear as a new friend in the user&amp;rsquo;s profile.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/friend-request-notification.png&#34; alt=&#34;friend request notification&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/friend-request-notification-answer.png&#34; alt=&#34;friend request notification answer&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/profile-multifriends.png&#34; alt=&#34;profile multi friends&#34;&gt;&lt;/p&gt;
+&lt;p&gt;After a user has some friends, is the moment when he can create a group. For that the application has the third tab called &lt;code&gt;Groups&lt;/code&gt; and a (+) button.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group.png&#34; alt=&#34;new group&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Inside the groups generator it will display the list of the friends on the top. As they are selected, they are placed in the list below, where they can be removed if desired; when all friends are selected it&amp;rsquo;s time to move to the next screen using the (&amp;ndash;&amp;gt;) button.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-selected.png&#34; alt=&#34;new group selected&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The next step is to put a good name for that group and then press the tick one to create the group.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-name.png&#34; alt=&#34;new group name&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When the user is returned to the home view it appears the new group created and the members of it in the list.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-created.png&#34; alt=&#34;new group created&#34;&gt;&lt;/p&gt;
+&lt;p&gt;From here what is missing is to create the &lt;code&gt;Tournaments&lt;/code&gt; selecting the group and the members of that group that want to play, the number of teams for each member, the teams, the rounds, the type of tournament, etc. and then generate the calendar. Display the calendar in the &lt;code&gt;Matches&lt;/code&gt; tab and inside each match allow the users to add the results. Also provide a classification and the statistics for each match and a grouped one for each fixture and a generic one.&lt;/p&gt;
+&lt;h2 id=&#34;final-thoughts&#34;&gt;FINAL THOUGHTS&lt;/h2&gt;
+&lt;p&gt;With this proof of concept I had the opportunity to work in a complex application in terms of designing reusable components in a mobile application, calling to an external API to manage the information displayed in the app and learning how to use the Provider package for moving information between multiple views and control the state of the application in a simpler and effective way.&lt;/p&gt;
+&lt;p&gt;There is a lot more to learn regarding mobile development but I consider this project as an initial step to start with. I will do the missing views someday in order we can use it in real world, but I hope it&amp;rsquo;s not because we have another pandemic 😏&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

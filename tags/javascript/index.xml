@@ -1,18 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>javascript on Charly3Pins, software engineer</title>
-    <link>https://charly3pins.github.io/tags/javascript/</link>
-    <description>Recent content in javascript on Charly3Pins, software engineer</description>
+    <title>javascript on charly3pins.dev</title>
+    <link>https://charly3pins.dev/tags/javascript/</link>
+    <description>Recent content in javascript on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://charly3pins.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Sep 2018</lastBuildDate><atom:link href="https://charly3pins.dev/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Collectus</title>
-      <link>https://charly3pins.github.io/projects/collectus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>https://charly3pins.dev/code/collectus/</link>
+      <pubDate>Sat, 22 Sep 2018</pubDate>
       
-      <guid>https://charly3pins.github.io/projects/collectus/</guid>
-      <description>WHY The motivation of this project is half personal and half academic. Let me explain it. At home my father always collected a lot of things, from the oldest books you can imagine until the most recent new Funko POP, through Swiss Knives or dices among others. Having that variety of objects and a lot of them (too many to be honest) cataloguing that amount of items always had been a challenge for him.</description>
+      <guid>https://charly3pins.dev/code/collectus/</guid>
+      <description>As my Final Year Project for Computer Science Engineering I builded a flexible database for collectibles and any other objects or data that any user wants to have ordered and classified in a simple and effective way.</description>
+      <content>&lt;h2 id=&#34;why&#34;&gt;WHY&lt;/h2&gt;
+&lt;p&gt;The motivation of this project is half personal and half academic. Let me explain. At home my father always collected a lot of things, from the oldest books you can imagine until the most recent new Funko POP, through Swiss Knives or dice among others. Having that variety of objects and a lot of them (too many to be honest) cataloguing that amount of items always had been a challenge for him.&lt;/p&gt;
+&lt;p&gt;He always tried to classify in different ways such as using an Excel, free applications, paid applications, etc. At the end every time something similar happens, the handicap of his &amp;ldquo;collection of collections&amp;rdquo; (as he describes it) is too singular, and it doesn&amp;rsquo;t fit anywhere. He&amp;rsquo;s a developer and I was in my last year at University studying Computer Science Engineering so we started to plan how we could solve that problem by doing ourselves the application.&lt;/p&gt;
+&lt;p&gt;After a few days/weeks I realized that soon I would have to choose a project to present as my Final Year Project, so I decided to give it a try this familiar crazy idea and propose it to my tutor. She was excited about the idea we had and she accepted happily.&lt;/p&gt;
+&lt;p&gt;Once I had the approval of my tutor, it was an amazing new because the personal project we wanted to develop in our free times, now I had the opportunity to dedicate all my effort to not only solve the problem we had, but to present it as a final project. And that&amp;rsquo;s how all started.&lt;/p&gt;
+&lt;p&gt;At the end the project ended up being super successful, my tutor was delighted with the result, and the court liked it a lot, they even told me to send them an email when I put it into production so they can use it and catalog their own collections.&lt;/p&gt;
+&lt;h2 id=&#34;what&#34;&gt;WHAT&lt;/h2&gt;
+&lt;p&gt;I called the application Collectus as it&amp;rsquo;s the Latin word meaning &amp;ldquo;gather, collect&amp;rdquo; so in that case it fits perfectly. It is a system flexible database for collectibles and any other objects or data the user wants to have ordered and classified. Collectus is thought for collectors, allowing them to keep track of any kind of collection they have, using a system database with an open structure adaptable to every need. It also provides two types of login for the users, creating a new one for the platform or using their Facebook account connecting it with the Facebook API.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/main-app.jpeg&#34; alt=&#34;app&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/login.jpeg&#34; alt=&#34;login&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Using templates the user can set all kinds of records for such diverse items as stamps or placas of cava, posters or fossils, rag dolls or lottery tickets. Once defined the template (category) for the object or type of object of interest, and the user can enter data immediately.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/item-edit.jpeg&#34; alt=&#34;item edit&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/amazon-mapping.jpeg&#34; alt=&#34;amazon mapping&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To facilitate all this task, it incorporates tools to help the user. The most prominent it is provided by the Amazon Product API to automatically read information from its database at the time of data entry.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/amazon-search.jpeg&#34; alt=&#34;amazon search&#34;&gt;&lt;/p&gt;
+&lt;p&gt;From here users will be able to read information according to various search criteria offered in the application and store them. There is also a price comparison between the various Amazon shops in all countries to find different prices and assist in the purchase of items to users.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/amazon-results.jpeg&#34; alt=&#34;amazon results&#34;&gt;&lt;/p&gt;
+&lt;p&gt;All this has been developed under an attractive GUI and usability as a main goal.&lt;/p&gt;
+&lt;p&gt;Programming languages and tools used for this project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PHP 5, JavaScript and jQuery for the backend&lt;/li&gt;
+&lt;li&gt;HTML and CSS for the frontend&lt;/li&gt;
+&lt;li&gt;AJAX as the way of calling the server side&lt;/li&gt;
+&lt;li&gt;Amazon Product API for the product research and price comparison&lt;/li&gt;
+&lt;li&gt;Facebook API for the login&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;final-thoughts&#34;&gt;FINAL THOUGHTS&lt;/h2&gt;
+&lt;p&gt;It was my first big project as a software developer building a web and I learned a lot of things like learning new programming languages and architecture of the projects; designing the databases correctly; polish the smallest visual detail; battle with external APIs connecting to them; organize myself in order to deliver small chunks of the project step by step instead of the entire project at once; write appropriate documentation about the functionality of the project and many others probably.&lt;/p&gt;
+&lt;p&gt;I have always wanted to make a second improved version of the project, now with the experience I have and the skills that I have been acquiring throughout these years of work. I&amp;rsquo;ve started several times but never finished&amp;hellip;&lt;/p&gt;
+&lt;p&gt;I hope one day to be able to officially launch the application and tell you about it here. 🚀&lt;/p&gt;
+</content>
     </item>
     
   </channel>

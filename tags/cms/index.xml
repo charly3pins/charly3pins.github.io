@@ -1,51 +1,199 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>cms on charly3pins.dev</title>
-		<link>https://charly3pins.dev/tags/cms/</link>
-		<description>Recent content in cms on charly3pins.dev</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate>
-		
-		<atom:link href="https://charly3pins.dev/tags/cms/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>How to add Google Analytics to your Hugo site</title>
-			<link>https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/</link>
-			<pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/</guid>
-			<description>
-				
-				Quick tutorial how to integrate Google Analytics in a Hugo website.
-				
-			</description>
-		</item>
-		<item>
-			<title>Hugo&#39;s content and templates managing</title>
-			<link>https://charly3pins.dev/blog/hugo-content-and-templates-managing/</link>
-			<pubDate>Sun, 08 Mar 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/blog/hugo-content-and-templates-managing/</guid>
-			<description>
-				
-				How to organize your content and create your templates to get maximum value from Hugo.
-				
-			</description>
-		</item>
-		<item>
-			<title>Building static blog with Hugo</title>
-			<link>https://charly3pins.dev/blog/building-static-blog-with-hugo/</link>
-			<pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/blog/building-static-blog-with-hugo/</guid>
-			<description>
-				
-				Quick steps to create your own static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages.
-				
-			</description>
-		</item>
-		
-	</channel>
+  <channel>
+    <title>cms on charly3pins.dev</title>
+    <link>https://charly3pins.dev/tags/cms/</link>
+    <description>Recent content in cms on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Nov 2020</lastBuildDate><atom:link href="https://charly3pins.dev/tags/cms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to add Google Analytics to your Hugo site</title>
+      <link>https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/</link>
+      <pubDate>Mon, 23 Nov 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/</guid>
+      <description>Quick tutorial how to integrate Google Analytics in a Hugo website.</description>
+      <content>&lt;h2 id=&#34;google-analytics&#34;&gt;Google Analytics&lt;/h2&gt;
+&lt;p&gt;First of all what you need is to obtain a Google Analytics tracking ID. For that you need to sign up at &lt;a href=&#34;https://analytics.google.com/analytics/web/&#34;&gt;Google Analytics&lt;/a&gt;. Then, you need to create a tracking ID following the next steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Click on &lt;code&gt;Admin&lt;/code&gt; button (on the bottom left corner).&lt;/li&gt;
+&lt;li&gt;Click on &lt;code&gt;Create Account&lt;/code&gt; button.&lt;/li&gt;
+&lt;li&gt;After all the steps filled, click the &lt;code&gt;Create&lt;/code&gt; button and accept the terms and conditions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After the completion of these steps you will obtain your tracking ID. Copy it for add to your Hugo site later.&lt;/p&gt;
+&lt;h2 id=&#34;hugo-configuration&#34;&gt;Hugo configuration&lt;/h2&gt;
+&lt;p&gt;Now it&amp;rsquo;s turn to add the tracking ID to your site.
+The easiest way for do it is using the Hugo&amp;rsquo;s &lt;a href=&#34;https://gohugo.io/templates/internal/#google-analytics&#34;&gt;internal template&lt;/a&gt; provided by Hugo. You just need to add a new variable called &lt;code&gt;googleAnalytics&lt;/code&gt; with the &lt;code&gt;tracking ID&lt;/code&gt; obtained from the previous step in your &lt;code&gt;config.toml&lt;/code&gt; like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;googleAnalytics&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UA-123-45&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The next step is to add the following snippet of code in your site:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;{{ &lt;span style=&#34;color:#a6e22e&#34;&gt;template&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_internal/google_analytics.html&amp;#34;&lt;/span&gt; . }}&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should search for the &lt;code&gt;head&lt;/code&gt; partial template and add it inside the &lt;code&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+&lt;h2 id=&#34;checking-the-integration&#34;&gt;Checking the integration&lt;/h2&gt;
+&lt;p&gt;Before passing that to production you can test it running your site locally performing the next command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;serve&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The default url on localhost is &lt;code&gt;http://localhost:1313&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Open again or refresh &lt;a href=&#34;https://analytics.google.com/analytics/web/&#34;&gt;Google Analytics&lt;/a&gt; on a different tab.&lt;/p&gt;
+&lt;p&gt;Check the dashboard and you should be able to see the number under the section Active Users right now as 1 like the picture below:
+&lt;img src=&#34;https://charly3pins.dev/images/google-analytics-active-users.png&#34; alt=&#34;active-users&#34;&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Hugo&#39;s content and templates managing</title>
+      <link>https://charly3pins.dev/blog/hugo-content-and-templates-managing/</link>
+      <pubDate>Sun, 08 Mar 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/blog/hugo-content-and-templates-managing/</guid>
+      <description>How to organize your content and create your templates to get maximum value from Hugo.</description>
+      <content>&lt;p&gt;After long time without writing&amp;hellip; I&amp;rsquo;m back!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/hugo-content-templates-managing/im-back-terminator.jpg&#34; alt=&#34;I&amp;rsquo;m back&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I was planning to rebuild my site and start creating content again but never found the time until now.&lt;/p&gt;
+&lt;p&gt;I wanted to do my theme from scratch instead of using a predefined &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;theme&lt;/a&gt;, so I had to learn how the templating and the content managing is done in Hugo.&lt;/p&gt;
+&lt;p&gt;Once I did that process, I want to sum up the most important things that I consider you have to know if you wanna do your own theme like I did (this site is the prove of that!).&lt;/p&gt;
+&lt;h2 id=&#34;content-management&#34;&gt;Content management&lt;/h2&gt;
+&lt;p&gt;First of all let&amp;rsquo;s talk about the &lt;a href=&#34;https://gohugo.io/content-management/organization/&#34;&gt;content organization&lt;/a&gt; in Hugo.&lt;/p&gt;
+&lt;p&gt;All the content you wanna have in your site have to be inside the &lt;code&gt;content/&lt;/code&gt; directory. You simply put your posts inside &lt;code&gt;content/posts&lt;/code&gt; and your description in &lt;code&gt;content/about&lt;/code&gt; and Hugo will do the magic for you. Sounds easy right? Continue then.&lt;/p&gt;
+&lt;p&gt;Hugo has mainly two types of pages, the &amp;ldquo;unique&amp;rdquo; and the &amp;ldquo;multi&amp;rdquo; ones. The first ones are used for example for an &lt;code&gt;about&lt;/code&gt; or for a &lt;code&gt;faq&lt;/code&gt; or a &lt;code&gt;contribute&lt;/code&gt; or a &lt;code&gt;landing&lt;/code&gt;&amp;hellip; The second ones are used when you want to group under a same category different content. For example your different publications for your &lt;code&gt;posts&lt;/code&gt; or a catalogue for your &lt;code&gt;products&lt;/code&gt;. Being said that, there is another difference that you have to know when you create your different pages.&lt;/p&gt;
+&lt;p&gt;The unique ones have to be named like &lt;code&gt;index.md&lt;/code&gt;, the list ones don&amp;rsquo;t. This at the end indicates to Hugo how to manage the content inside the directories and how to generate the URLs to access them. The following schema demonstrates how that works:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;└── content
+    └── about
+    |   └── index.md        (https://mysite.com/about)
+    ├── posts
+    |   ├── first-post.md   (https://mysite.com/posts/first-post)
+    |   └── second-post.md  (https://mysite.com/posts/second-post)
+    |   └── trips
+    |       └── pandora.md  (https://mysite.com/posts/trips/pandora)
+    └── faq
+        └── index.md        (https://mysite.com/faq)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Also there is a possibility to specify the URL using the property &lt;code&gt;slug&lt;/code&gt; like slug=&amp;ldquo;my-custom-url&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;templates-management&#34;&gt;Templates management&lt;/h2&gt;
+&lt;p&gt;Now you know how to organize your content, it&amp;rsquo;s time to talk about the &lt;a href=&#34;https://gohugo.io/templates/&#34;&gt;templates&lt;/a&gt;. They are the HTML code that generates the pages of your site. There are a few tricks and tips that I want to share with you like I did with the content on the previous section.&lt;/p&gt;
+&lt;p&gt;The different templates have to be placed inside the &lt;code&gt;layouts/&lt;/code&gt; directory. On the root must be the main template called &lt;code&gt;index.html&lt;/code&gt; used to render the homepage. Same way as the content, the templates can be organized in folders if you want to display in different ways the content depending on the route. Like the content, the templates can be organized between unique and multi. Taking the content organization described before, considering that you want to specify different templates for each content folder, one of the possible template organization can be:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;└── layouts
+    └── _default_
+    |   ├── list.html
+    |   └── single.html
+    └── posts
+        ├── list.html
+        └── single.html
+        └── trips
+            ├── list.html
+            └── single.html
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Analyzing in detail, you can see a similar tree like the content but with a particularity that no &lt;code&gt;about&lt;/code&gt; and no &lt;code&gt;faq&lt;/code&gt; folders but it appeared a &lt;code&gt;_default&lt;/code&gt; one. This special folder is used by Hugo to render the pages that doesn&amp;rsquo;t have their own template. On that case the about and the faq, both unique types, will be rendered using the &lt;code&gt;layouts/_default/single.html&lt;/code&gt; template. If the &lt;code&gt;trips&lt;/code&gt; directory didn&amp;rsquo;t exist, the templates used will be the &lt;code&gt;_default&lt;/code&gt; ones.&lt;/p&gt;
+&lt;p&gt;At this point you know about content organization and template managing, but you are thinking:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;How Hugo know when I want to use a single or a list page?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The answer is depending on the URL and the content there. Using again the example above for the content organization, if you notice the &lt;code&gt;about&lt;/code&gt; contains a &lt;code&gt;index.md&lt;/code&gt; so that indicates Hugo is a &amp;ldquo;unique&amp;rdquo; page. As we didn&amp;rsquo;t defined any particular template for that, the one that will be used is the generic &lt;code&gt;_default/single.thml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;On the other hand, inside the &lt;code&gt;posts&lt;/code&gt; there are three posts but no &lt;code&gt;index.md&lt;/code&gt; one, so that indicates Hugo that it&amp;rsquo;s a &amp;ldquo;multi&amp;rdquo; page, so you will use both templates, the &lt;code&gt;list.html&lt;/code&gt; one like an &amp;ldquo;index&amp;rdquo; of your posts, and the &lt;code&gt;single.html&lt;/code&gt; for each post. To render the &lt;code&gt;list.html&lt;/code&gt; one you have to go to the URL of the directory (&lt;a href=&#34;https://mysite.com/posts/)&#34;&gt;https://mysite.com/posts/)&lt;/a&gt;. For the posts (&lt;a href=&#34;https://mysite.com/posts/first-post&#34;&gt;https://mysite.com/posts/first-post&lt;/a&gt;) and (&lt;a href=&#34;https://mysite.com/posts/second-post&#34;&gt;https://mysite.com/posts/second-post&lt;/a&gt;) the template used will be &lt;code&gt;single.html&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;page-variables&#34;&gt;Page variables&lt;/h3&gt;
+&lt;p&gt;The Pages have a set of useful variables that are good to know:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title: the title of the post&lt;/li&gt;
+&lt;li&gt;Description: a short/long description of the post&lt;/li&gt;
+&lt;li&gt;Content: the body of the post&lt;/li&gt;
+&lt;li&gt;ReadingTime: the mins that Hugo autocalculates will take to read the post&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For accessing to the custom parameters that you can create on each post you should access them by name inside the &lt;code&gt;Params&lt;/code&gt; object (Params.yourParam).&lt;/p&gt;
+&lt;p&gt;You can display a related posts reading the results of the &lt;code&gt;.Site.RegularPages.Related&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;See the full list on the &lt;a href=&#34;https://gohugo.io/variables/page/&#34;&gt;documentation&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;list.html&lt;/code&gt; template is used to display a short description of the posts like a book index with the links to the actual post. For doing that, you have to access to the &lt;code&gt;$.Paginator.Pages&lt;/code&gt; variable and loop over the results. The variables are the same described above with a one more &lt;code&gt;Permalink&lt;/code&gt;, the one you need to use for access the post (and call the &lt;code&gt;single.html&lt;/code&gt; template) for that content.&lt;/p&gt;
+&lt;p&gt;Also there are the &lt;code&gt;PrevInSection&lt;/code&gt; and &lt;code&gt;NextInSection&lt;/code&gt; variables for paginate the results.&lt;/p&gt;
+&lt;h3 id=&#34;partial-templates&#34;&gt;Partial templates&lt;/h3&gt;
+&lt;p&gt;The last tip I want to explain you is that you don&amp;rsquo;t need to repeat all time all the parts of the templates, you can extract the common part in a template and then reuse it anywhere you want. These are the &lt;a href=&#34;https://gohugo.io/templates/partials/&#34;&gt;partial templates&lt;/a&gt;. Its particularity is you need to place that part inside a &lt;code&gt;partials/&lt;/code&gt; directory and call it like &lt;code&gt;{{ partial &amp;quot;name.html&amp;quot; . }}&lt;/code&gt;. They are useful for the &lt;code&gt;header&lt;/code&gt;, &lt;code&gt;footer&lt;/code&gt;, &lt;code&gt;navbar&lt;/code&gt; and other generic parts as well as for a list template that you wanna reuse for your posts and for your trips for example.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Building static blog with Hugo</title>
+      <link>https://charly3pins.dev/blog/building-static-blog-with-hugo/</link>
+      <pubDate>Sat, 22 Sep 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/blog/building-static-blog-with-hugo/</guid>
+      <description>Quick steps to create your own static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages.</description>
+      <content>&lt;p&gt;If you want to create a fast static website I recommend you &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. It&amp;rsquo;s written in Go and it&amp;rsquo;s really use to configure and adapt to your needs. In addition, you can choose through different &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;themes&lt;/a&gt; created by the team and others by the community or even create your own one.&lt;/p&gt;
+&lt;p&gt;Here I&amp;rsquo;ll explain in some steps how to create one blog with Hugo and how to be hosted &amp;amp; deployed in GitHub and GitHub Pages. If you need more detail visit the official &lt;a href=&#34;https://gohugo.io/documentation/&#34;&gt;Hugo docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;init&#34;&gt;Init&lt;/h1&gt;
+&lt;p&gt;First of all you need to install Hugo, in my case using &lt;a href=&#34;https://brew.sh/&#34;&gt;Homebrew&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;brew&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check the version installed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-site&#34;&gt;Create site&lt;/h1&gt;
+&lt;p&gt;Once you have Hugo installed, you&amp;rsquo;re able to create your website using the command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;site&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;blog&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After that, you&amp;rsquo;ll see a new folder called &lt;code&gt;your-blog-name&lt;/code&gt; and if you look inside you&amp;rsquo;ll see the following tree:
+&lt;img src=&#34;https://charly3pins.dev/images/build-hugo-static-blog/folder-tree-your-blog-name.png&#34; alt=&#34;Folder tree&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Archetypes are content template files for your project, used when you run &lt;code&gt;hugo new&lt;/code&gt; command.&lt;/li&gt;
+&lt;li&gt;Content is where all posts and pages are stored. The same structure in this folder will be used for organize the URLs in your rendered site.&lt;/li&gt;
+&lt;li&gt;Data is a folder for store additional data for generating your site.&lt;/li&gt;
+&lt;li&gt;Layouts is the folder where are stored the template of your site if you&amp;rsquo;re not using a theme.&lt;/li&gt;
+&lt;li&gt;Static stores all static files for your site.&lt;/li&gt;
+&lt;li&gt;Themes is where the themes you install are stored.&lt;/li&gt;
+&lt;li&gt;config.toml stores the main configuration for your site.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;install-theme&#34;&gt;Install theme&lt;/h1&gt;
+&lt;p&gt;If you want to use a theme already created you can do it in two ways. To check the existing themes visit the official &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34;&gt;Hugo themes&lt;/a&gt; website where you can see a demo of each one.&lt;/p&gt;
+&lt;p&gt;First of all you need to init a git repo inside your project:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;blog&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;;\&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;init&lt;/span&gt;;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then you can clone the repo inside the &lt;code&gt;themes&lt;/code&gt; folder:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;clone&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/panr/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;themes&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you don&amp;rsquo;t want to make any changes, it&amp;rsquo;s better to include the theme as a git submodule and you can get new updates when they are available. Do it with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submodule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/panr/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;themes&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;create-content&#34;&gt;Create content&lt;/h1&gt;
+&lt;p&gt;For generate your first blog post you can use the command &lt;code&gt;hugo new&lt;/code&gt; and set the path you want, in my case &lt;code&gt;posts&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;posts&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;my&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;first&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;post&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;md&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You will obtain the following file:
+&lt;img src=&#34;https://charly3pins.dev/images/build-hugo-static-blog/example-post.png&#34; alt=&#34;Example post&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The first section is for parameters and the second one is for the content in this case in markdown. Check this &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;Markdown Cheatsheet&lt;/a&gt; a quick reference and showcase.&lt;/p&gt;
+&lt;h1 id=&#34;run-your-site&#34;&gt;Run your site&lt;/h1&gt;
+&lt;p&gt;Once you have created the post you can build your site using the &lt;code&gt;hugo server&lt;/code&gt; command. The flag &lt;code&gt;-D&lt;/code&gt; is for render drafts:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And it will appear the rendering logs and at the end message similar to:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Web&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Server&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;available&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;at&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;localhost&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;1313&lt;/span&gt;/ (&lt;span style=&#34;color:#a6e22e&#34;&gt;bind&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;address&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;127&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Copy the URL to your browser and you will see your site up and running!&lt;/p&gt;
+&lt;h1 id=&#34;host-on-github&#34;&gt;Host on GitHub&lt;/h1&gt;
+&lt;p&gt;We&amp;rsquo;ll use the User/Organization Pages &lt;code&gt;https://&amp;lt;USERNAME|ORGANIZATION&amp;gt;.github.io/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Create a &lt;code&gt;&amp;lt;YOUR-PROJECT&amp;gt;&lt;/code&gt; repository on GitHub. This repository will contain Hugo’s content and other source files.&lt;/p&gt;
+&lt;p&gt;Create a &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&lt;/code&gt; GitHub repository. This is the repository that will contain the fully rendered version of your Hugo website.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;clone&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/&amp;lt;USERNAME&amp;gt;/&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;YOUR&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;PROJECT&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;YOUR&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;PROJECT&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run your website locally using the command &lt;code&gt;hugo server&lt;/code&gt; or if you are using theme &lt;code&gt;hugo server -t &amp;lt;THEME_NAME&amp;gt;&lt;/code&gt;. Follow the instructions in console to access it. Web server should be available at  http://localhost:1313/&lt;/p&gt;
+&lt;p&gt;Finally you need to add the &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&lt;/code&gt; repo inside the &lt;code&gt;public&lt;/code&gt; folder as a git submodule in order to update your website once you regenerate the site.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submodule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;master&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt;@&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;:&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USERNAME&lt;/span&gt;&amp;gt;/&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USERNAME&lt;/span&gt;&amp;gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;io&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you don&amp;rsquo;t have the RSA pair key configured you&amp;rsquo;ll need to add the submodule via HTTP:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submodule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;master&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/&amp;lt;USERNAME&amp;gt;/&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USERNAME&lt;/span&gt;&amp;gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;io&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To automate the next steps you can save it to &lt;code&gt;deploy.sh&lt;/code&gt;. Remember to make it executable with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;chmod&lt;/span&gt; +&lt;span style=&#34;color:#a6e22e&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;deploy&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;sh&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;deploy.sh&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+echo -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Build the project.&lt;/span&gt;
+hugo &lt;span style=&#34;color:#75715e&#34;&gt;# if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;`&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Go To Public folder&lt;/span&gt;
+cd public
+&lt;span style=&#34;color:#75715e&#34;&gt;# Add changes to git.&lt;/span&gt;
+git add .
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Commit changes.&lt;/span&gt;
+msg&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rebuilding site `date`&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; $# -eq &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt; msg&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$1&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$msg&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Push source and build repos.&lt;/span&gt;
+git push origin master
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Come Back up to the Project Root&lt;/span&gt;
+cd ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
 </rss>

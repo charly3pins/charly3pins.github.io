@@ -1,183 +1,191 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Tags on charly3pins.dev</title>
-		<link>https://charly3pins.dev/tags/</link>
-		<description>Recent content in Tags on charly3pins.dev</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate>
-		
-		<atom:link href="https://charly3pins.dev/tags/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>cms</title>
-			<link>https://charly3pins.dev/tags/cms/</link>
-			<pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/cms/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>hugo</title>
-			<link>https://charly3pins.dev/tags/hugo/</link>
-			<pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/hugo/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>life</title>
-			<link>https://charly3pins.dev/tags/life/</link>
-			<pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/life/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>linux</title>
-			<link>https://charly3pins.dev/tags/linux/</link>
-			<pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/linux/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>raspberry-pi</title>
-			<link>https://charly3pins.dev/tags/raspberry-pi/</link>
-			<pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/raspberry-pi/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>api</title>
-			<link>https://charly3pins.dev/tags/api/</link>
-			<pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/api/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>semver</title>
-			<link>https://charly3pins.dev/tags/semver/</link>
-			<pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/semver/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>go</title>
-			<link>https://charly3pins.dev/tags/go/</link>
-			<pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/go/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>git</title>
-			<link>https://charly3pins.dev/tags/git/</link>
-			<pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/git/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>terminal</title>
-			<link>https://charly3pins.dev/tags/terminal/</link>
-			<pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/terminal/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>CI</title>
-			<link>https://charly3pins.dev/tags/ci/</link>
-			<pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/ci/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>devops</title>
-			<link>https://charly3pins.dev/tags/devops/</link>
-			<pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/devops/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>drone</title>
-			<link>https://charly3pins.dev/tags/drone/</link>
-			<pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/drone/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		<item>
-			<title>github</title>
-			<link>https://charly3pins.dev/tags/github/</link>
-			<pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
-			
-			<guid>https://charly3pins.dev/tags/github/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		
-	</channel>
+  <channel>
+    <title>Tags on charly3pins.dev</title>
+    <link>https://charly3pins.dev/tags/</link>
+    <description>Recent content in Tags on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Nov 2020</lastBuildDate><atom:link href="https://charly3pins.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cms</title>
+      <link>https://charly3pins.dev/tags/cms/</link>
+      <pubDate>Mon, 23 Nov 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/cms/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://charly3pins.dev/tags/hugo/</link>
+      <pubDate>Mon, 23 Nov 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/hugo/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://charly3pins.dev/tags/life/</link>
+      <pubDate>Thu, 05 Nov 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/life/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://charly3pins.dev/tags/linux/</link>
+      <pubDate>Thu, 05 Nov 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/linux/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>raspberry-pi</title>
+      <link>https://charly3pins.dev/tags/raspberry-pi/</link>
+      <pubDate>Thu, 05 Nov 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/raspberry-pi/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>https://charly3pins.dev/tags/api/</link>
+      <pubDate>Tue, 20 Oct 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/api/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>semver</title>
+      <link>https://charly3pins.dev/tags/semver/</link>
+      <pubDate>Tue, 20 Oct 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/semver/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://charly3pins.dev/tags/go/</link>
+      <pubDate>Tue, 06 Oct 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/go/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>flutter</title>
+      <link>https://charly3pins.dev/tags/flutter/</link>
+      <pubDate>Fri, 01 May 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/flutter/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://charly3pins.dev/tags/python/</link>
+      <pubDate>Fri, 01 May 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/python/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://charly3pins.dev/tags/git/</link>
+      <pubDate>Tue, 10 Mar 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/git/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>terminal</title>
+      <link>https://charly3pins.dev/tags/terminal/</link>
+      <pubDate>Tue, 10 Mar 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/terminal/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>ci</title>
+      <link>https://charly3pins.dev/tags/ci/</link>
+      <pubDate>Wed, 10 Oct 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/ci/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://charly3pins.dev/tags/devops/</link>
+      <pubDate>Wed, 10 Oct 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/devops/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>drone</title>
+      <link>https://charly3pins.dev/tags/drone/</link>
+      <pubDate>Wed, 10 Oct 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/drone/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://charly3pins.dev/tags/github/</link>
+      <pubDate>Sat, 22 Sep 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/github/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://charly3pins.dev/tags/javascript/</link>
+      <pubDate>Sat, 22 Sep 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/javascript/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://charly3pins.dev/tags/php/</link>
+      <pubDate>Sat, 22 Sep 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/php/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+  </channel>
 </rss>

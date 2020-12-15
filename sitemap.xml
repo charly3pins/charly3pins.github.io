@@ -3,11 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://charly3pins.dev/projects/collectus/</loc>
+    <loc>https://charly3pins.dev/code/collectus/</loc>
+    <lastmod>2018-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://charly3pins.dev/projects/tournaments-generator/</loc>
+    <loc>https://charly3pins.dev/code/tournaments-generator/</loc>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -86,6 +88,21 @@
   </url>
   
   <url>
+    <loc>https://charly3pins.dev/code/</loc>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/tags/flutter/</loc>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/tags/python/</loc>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://charly3pins.dev/blog/custom-commit-messages/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
   </url>
@@ -141,7 +158,13 @@
   </url>
   
   <url>
-    <loc>https://charly3pins.dev/about/</loc>
+    <loc>https://charly3pins.dev/tags/javascript/</loc>
+    <lastmod>2018-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/tags/php/</loc>
+    <lastmod>2018-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -149,7 +172,11 @@
   </url>
   
   <url>
-    <loc>https://charly3pins.dev/projects/</loc>
+    <loc>https://charly3pins.dev/notes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/about/</loc>
   </url>
   
 </urlset>

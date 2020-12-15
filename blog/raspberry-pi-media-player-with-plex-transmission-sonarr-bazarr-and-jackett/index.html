@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Charly3Pins a Software Engineer 👨🏻‍💻 gamer 🎮 and dog walker 🐕">
+  <meta name="description" content="Software Engineer, gamer and dog walker">
 
   <title>Raspberry Pi media player with Plex, Transmission, Sonarr, Bazarr and Jackett | Charly3Pins</title>
 
@@ -33,7 +33,7 @@
   <meta name="twitter:image" content="https://charly3pins.dev/images/raspberry-media-player/cover.png">
 
 
-  
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -49,30 +49,115 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<section id="main">
+		<div id="main">
 
-			<div class="header">
-				<div class="toggle"><input type="checkbox">
-					<span class="bar"></span><span class="bar"></span><span class="bar"></span>
-					<div id="mobile-menu">
-						<span class="menu-item"><a href="/">🏠 home</a></span>
-						<span class="menu-item"><a href="/blog/">📰 blog</a></span>
-						<span class="menu-item"><a href="/about/">👨🏻‍💻 about</a></span>
-						<span class="menu-item"><a href="/projects/">🛠️ projects</a></span>
-						<span class="menu-item"><a id="rss" href="/index.xml" rel="alternate" type="application/rss+xml">📡 RSS</a></span>
-					</div>
-				</div>
-				<div id="menu">
-					<span class="menu-item"><a href="/">🏠 home</a></span>
-					<span class="menu-item"><a href="/blog/">📰 blog</a></span>
-					<span class="menu-item"><a href="/about/">👨🏻‍💻 about</a></span>
-					<span class="menu-item"><a href="/projects/">🛠️ projects</a></span>
-					<span class="menu-item"><a id="rss" href="/index.xml" rel="alternate" type="application/rss+xml">📡 RSS</a></span>
-				</div>
-			</div>
+			
+<div class="container centered no-padd">
+    <div class="toggle">
+        <input type="checkbox">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <div id="mobile-menu">
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/" class="">~</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/blog/" class="active">/blog</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/code/" class="">/code</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/notes/" class="">/notes</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/about/" class="">$USER</a>
+                </span>
+            
+        </div>
+    </div>
+    <div id="menu">
+        
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/" class="">~</a>
+            </span>
+        
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/blog/" class="active">/blog</a>
+            </span>
+        
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/code/" class="">/code</a>
+            </span>
+        
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/notes/" class="">/notes</a>
+            </span>
+        
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/about/" class="">$USER</a>
+            </span>
+        
+    </div>
+</div>
 
 			<div class="container">
 				<div id="cover-image">
@@ -82,21 +167,20 @@ if (!doNotTrack) {
 				<div class="markdown">
 					<h1>Raspberry Pi media player with Plex, Transmission, Sonarr, Bazarr and Jackett</h1>
 					<p class="subtitle">Build your own media player using a BitTorrent client (Transmission), a PVR for Usenet and BitTorrent users (Sonarr), an API Support for your the torrent trackers (Jackett), a manager of subtitles in Sonarr &amp; Radarr (Bazarr) and a client–server media player (Plex).</p>
+					
 					<p class="metadata">
-						
-							
-								<a class="li-tag" href="https://charly3pins.dev/tags/raspberry-pi/">raspberry-pi</a>
-							
-								<a class="li-tag" href="https://charly3pins.dev/tags/linux/">linux</a>
-							
-								<a class="li-tag" href="https://charly3pins.dev/tags/life/">life</a>
-							
-						
-						11 min read | Posted on 05/11/2020
-					</p>
+    
+        
+            <a class="button tag" href="https://charly3pins.dev/tags/raspberry-pi/"><span class="tag-prefix">#</span>raspberry-pi</a>
+        
+            <a class="button tag" href="https://charly3pins.dev/tags/linux/"><span class="tag-prefix">#</span>linux</a>
+        
+            <a class="button tag" href="https://charly3pins.dev/tags/life/"><span class="tag-prefix">#</span>life</a>
+        
+    
+    · 05/11/2020 · 11 min read ·
+</p>
 				</div>
-
-				<div class="page-separator"><hr></div>
 
 				<div class="markdown">
 					<p><p>So you have a Raspberry Pi abandoned and always wanted to use it for something useful. Also you like to see series but there are too many providers and you don&rsquo;t know which one subscribes to it. Don&rsquo;t worry with this tutorial you will have both problems solved at once; You will use the Raspberry Pi for watching your favourite series with no limits!</p>
@@ -371,43 +455,84 @@ if (!doNotTrack) {
 </p>
 				</div>
 				
-				<div class="page-separator"><hr></div>
-
+				
 				<div class="related">
 					
 					
-					<div class="markdown highlight"><pre class="chroma">See also the related articles</pre></div>
+					<div class="page-separator"><hr></div>
+					
 					<ul id="list-items">
 						
 						<li>
 							<a class="li-link" href="https://charly3pins.dev/blog/level-up-your-preseentations-with-go/">Level up your presentations with Go</a>
 							<p class="li-brief">Generate easily your presentations with present, the tool powered by Go that generates and renders your slides.</p>
+							
 							<p class="metadata">
-								
-									
-										<a class="li-tag" href="https://charly3pins.dev/tags/go/">go</a>
-									
-										<a class="li-tag" href="https://charly3pins.dev/tags/life/">life</a>
-									
-								
-								7 min read | Posted on 06/10/2020
-							</p>
+    
+        
+            <a class="button tag" href="https://charly3pins.dev/tags/go/"><span class="tag-prefix">#</span>go</a>
+        
+            <a class="button tag" href="https://charly3pins.dev/tags/life/"><span class="tag-prefix">#</span>life</a>
+        
+    
+    · 06/10/2020 · 7 min read ·
+</p>
 						</li>
 						
 					</ul>
 					
 				</div>
+				
+				<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "charly3pins" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 			</div>
+
+			<div class="page-separator centered"><hr></div>
 			
-			<div class="container">
-  <div class="centered" id="index-footer">
-    <p>Last change 23/11/2020</p>
-    <p>© 2018 - 2020 Charly3Pins</p>
-  </div>
-</div>
+			<footer class="container centered">
+	<section class="social">
+		<ul class="social-set">
+			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+			</li>
+			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+			</li>
+			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+			</li>
+			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+			</li>
+			<li><a class="sociali" href="https://charly3pins.dev//index.xml" target="_blank" aria-label="LinkedIn">
+				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+			</li>
+	</ul>
+	</section>
+	<p>Last change 23/11/2020</p>
+	<p>© 2018 - 2020 Charly3Pins</p>
+</footer>
 			
-		</section>
+		</div>
 	</body>
 </html>
 
