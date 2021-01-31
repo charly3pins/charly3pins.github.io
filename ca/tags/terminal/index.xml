@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>terminal on charly3pins.dev</title>
+    <link>https://charly3pins.dev/ca/tags/terminal/</link>
+    <description>Recent content in terminal on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Mar 2020</lastBuildDate><atom:link href="https://charly3pins.dev/ca/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Missatges de commit personalitzats de Git</title>
+      <link>https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/</link>
+      <pubDate>Tue, 10 Mar 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/</guid>
+      <description>Genera missatges de commit personalitzats per al vostre repositori i estandarditzeu el registre de commits.</description>
+      <content>&lt;p&gt;He estat utilitzant l&amp;rsquo;eina &lt;a href=&#34;https://github.com/walmartdigital/commit-message-formatter&#34;&gt;CMF&lt;/a&gt; durant l&amp;rsquo;últim any i crec que la seva simplicitat és el seu potencial. Bàsicament és una eina terminal desenvolupada a Go by &lt;a href=&#34;https://github.com/walmartdigital&#34;&gt;Walmart Digital&lt;/a&gt; que us ajuda a normalitzar el registre de compromisos dels vostres projectes.&lt;/p&gt;
+&lt;p&gt;He estat utilitzant durant l&amp;rsquo;últim any i mig aproximadament i tot el que puc dir és molt útil. Vam acordar amb l&amp;rsquo;equip la configuració que volem utilitzar i vam definir un conjunt de canvis que s&amp;rsquo;apliquen en el nostre cas. També escollim el &lt;a href=&#34;https://github.com/walmartdigital/commit-message-formatter#jira-flow&#34;&gt;Jira flow&lt;/a&gt; i varem canviar els valors del &amp;ldquo;canvi&amp;rdquo; afegint un emojis per fer que els compromisos siguin una mica més divertits per comprovar-los al registre.&lt;/p&gt;
+&lt;p&gt;Podeu instal·lar-lo mitjançant npm:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;npm&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;g&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;go&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;cmf&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;o des de Go:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;go&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/walmartdigital/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;commit&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;formatter&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Després, obriu un terminal i aneu a l&amp;rsquo;arrel del projecte que vulgueu utilitzar. A continuació, escriviu:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cmf&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;init&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Haureu de seleccionar un dels fluxos i crearà un fitxer &lt;code&gt;.cmf.yaml&lt;/code&gt; amb la plantilla del seleccionat. Podeu editar aquest fitxer de la manera que vulgueu. La condició única és que qualsevol variable que vulgueu utilitzar s&amp;rsquo;hagi de definir mitjançant &lt;code&gt;{{}}&lt;/code&gt;. Exemple: &amp;ldquo;{{CHANGE}}&amp;rdquo; us demanarà que demaneu el &amp;ldquo;CANVI&amp;rdquo; que heu fet i que mostreu les opcions que heu definit a la plantilla.&lt;/p&gt;
+&lt;p&gt;Aquí teniu el fitxer &lt;code&gt;.cmf.yaml&lt;/code&gt; que estic fent servir en aquest lloc:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;PROMPT:
+    - KEY: &amp;quot;CHANGE&amp;quot;
+      LABEL: &amp;quot;Type of change&amp;quot;
+      OPTIONS:
+        - VALUE: &amp;quot;feat :sparkles:&amp;quot;
+          DESC: &amp;quot;A new feature&amp;quot;
+        - VALUE: &amp;quot;fix :bug:&amp;quot;
+          DESC: &amp;quot;A bug fix&amp;quot;
+        - VALUE: &amp;quot;test :rotating_light:&amp;quot;
+          DESC: &amp;quot;Adding missing tests or correcting wrong ones&amp;quot;
+        - VALUE: &amp;quot;style :lipstick:&amp;quot;
+          DESC: &amp;quot;A code change to improve clean code&amp;quot;
+        - VALUE: &amp;quot;build-ci :construction_worker_man:&amp;quot;
+          DESC: &amp;quot;Changes that affect the build system and/or CI configuration files and scripts&amp;quot;
+        - VALUE: &amp;quot;refactor :hammer:&amp;quot;
+          DESC: &amp;quot;A code change&amp;quot;
+        - VALUE: &amp;quot;docs :books:&amp;quot;
+          DESC: &amp;quot;Documentation only changes&amp;quot;
+        - VALUE: &amp;quot;chore :card_index:&amp;quot;
+          DESC: &amp;quot;Changes that don&#39;t fit any of the options above&amp;quot;
+    - KEY: &amp;quot;MESSAGE&amp;quot;
+      LABEL: &amp;quot;Commit message&amp;quot;
+TEMPLATE: &amp;quot;{{CHANGE}}: {{MESSAGE}}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

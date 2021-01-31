@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Software Engineer, gamer and dog walker">
+  <meta name="description" content="Software Engineer, Japan lover, video gamer and dog walker">
 
   <title>Building static blog with Hugo | Charly3Pins</title>
 
@@ -56,7 +56,7 @@ if (!doNotTrack) {
 		<div id="main">
 
 			
-<div class="container centered no-padd">
+<div class="centered no-padd">
     <div class="toggle">
         <input type="checkbox">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -107,6 +107,25 @@ if (!doNotTrack) {
                     <a href="/about/" class="">$USER</a>
                 </span>
             
+            
+            <span class="menu-item">
+                <div class="sl-nav">
+                    <ul>
+                        <li>
+                            <b>English</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <div class="triangle"></div>
+                            <ul>
+                            
+                                <a href="https://charly3pins.dev/es/blog/construyendo-un-blog-est%C3%A1tico-con-hugo/">Spanish</a>
+                            
+                                <a href="https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/">Catalan</a>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            
         </div>
     </div>
     <div id="menu">
@@ -116,10 +135,15 @@ if (!doNotTrack) {
             
             
             
+            
+            
             <span class="menu-item">
                 <a href="/" class="">~</a>
             </span>
+            
         
+            
+            
             
             
             
@@ -128,7 +152,10 @@ if (!doNotTrack) {
             <span class="menu-item">
                 <a href="/blog/" class="active">/blog</a>
             </span>
+            
         
+            
+            
             
             
             
@@ -137,7 +164,10 @@ if (!doNotTrack) {
             <span class="menu-item">
                 <a href="/code/" class="">/code</a>
             </span>
+            
         
+            
+            
             
             
             
@@ -146,7 +176,10 @@ if (!doNotTrack) {
             <span class="menu-item">
                 <a href="/notes/" class="">/notes</a>
             </span>
+            
         
+            
+            
             
             
             
@@ -155,9 +188,30 @@ if (!doNotTrack) {
             <span class="menu-item">
                 <a href="/about/" class="">$USER</a>
             </span>
+            
+        
+        
+        <span class="menu-item">
+            <div class="sl-nav">
+                <ul>
+                    <li>
+                        <b>English</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="triangle"></div>
+                        <ul>
+                        
+                            <a href="https://charly3pins.dev/es/blog/construyendo-un-blog-est%C3%A1tico-con-hugo/">Spanish</a>
+                        
+                            <a href="https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/">Catalan</a>
+                        
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </span>
         
     </div>
 </div>
+
 
 			<div class="container">
 				<div id="cover-image">
@@ -178,19 +232,19 @@ if (!doNotTrack) {
             <a class="button tag" href="https://charly3pins.dev/tags/github/"><span class="tag-prefix">#</span>github</a>
         
     
-    · 22/09/2018 · 4 min read ·
+    · 22/09/2018 · 4 minutes to read ·
 </p>
 				</div>
 
 				<div class="markdown">
 					<p><p>If you want to create a fast static website I recommend you <a href="https://gohugo.io/">Hugo</a>. It&rsquo;s written in Go and it&rsquo;s really use to configure and adapt to your needs. In addition, you can choose through different <a href="https://themes.gohugo.io/">themes</a> created by the team and others by the community or even create your own one.</p>
 <p>Here I&rsquo;ll explain in some steps how to create one blog with Hugo and how to be hosted &amp; deployed in GitHub and GitHub Pages. If you need more detail visit the official <a href="https://gohugo.io/documentation/">Hugo docs</a>.</p>
-<h1 id="init">Init</h1>
+<h2 id="start">Start</h2>
 <p>First of all you need to install Hugo, in my case using <a href="https://brew.sh/">Homebrew</a>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">brew</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">hugo</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>Check the version installed:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">version</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h1 id="create-site">Create site</h1>
+</span></code></pre></div><h2 id="create-site">Create site</h2>
 <p>Once you have Hugo installed, you&rsquo;re able to create your website using the command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">site</span> <span style="color:#a6e22e">your</span>-<span style="color:#a6e22e">blog</span>-<span style="color:#a6e22e">name</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>After that, you&rsquo;ll see a new folder called <code>your-blog-name</code> and if you look inside you&rsquo;ll see the following tree:
@@ -204,7 +258,7 @@ if (!doNotTrack) {
 <li>Themes is where the themes you install are stored.</li>
 <li>config.toml stores the main configuration for your site.</li>
 </ul>
-<h1 id="install-theme">Install theme</h1>
+<h2 id="install-theme">Install theme</h2>
 <p>If you want to use a theme already created you can do it in two ways. To check the existing themes visit the official <a href="https://github.com/panr/hugo-theme-hello-friend">Hugo themes</a> website where you can see a demo of each one.</p>
 <p>First of all you need to init a git repo inside your project:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">cd</span> <span style="color:#a6e22e">your</span>-<span style="color:#a6e22e">blog</span>-<span style="color:#a6e22e">name</span>;\<span style="color:#960050;background-color:#1e0010">
@@ -213,19 +267,19 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">clone</span> <span style="color:#a6e22e">https</span>:<span style="color:#e6db74">//</span><span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#e6db74">/panr/</span><span style="color:#a6e22e">hugo</span>-<span style="color:#a6e22e">theme</span>-<span style="color:#a6e22e">hello</span>-<span style="color:#a6e22e">friend</span>.<span style="color:#a6e22e">git</span> <span style="color:#a6e22e">themes</span>/<span style="color:#a6e22e">hello</span>-<span style="color:#a6e22e">friend</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>If you don&rsquo;t want to make any changes, it&rsquo;s better to include the theme as a git submodule and you can get new updates when they are available. Do it with:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">submodule</span> <span style="color:#a6e22e">add</span> <span style="color:#a6e22e">https</span>:<span style="color:#e6db74">//</span><span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#e6db74">/panr/</span><span style="color:#a6e22e">hugo</span>-<span style="color:#a6e22e">theme</span>-<span style="color:#a6e22e">hello</span>-<span style="color:#a6e22e">friend</span>.<span style="color:#a6e22e">git</span> <span style="color:#a6e22e">themes</span>/<span style="color:#a6e22e">hello</span>-<span style="color:#a6e22e">friend</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h1 id="create-content">Create content</h1>
+</span></code></pre></div><h2 id="create-content">Create content</h2>
 <p>For generate your first blog post you can use the command <code>hugo new</code> and set the path you want, in my case <code>posts</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">posts</span>/<span style="color:#a6e22e">my</span>-<span style="color:#a6e22e">first</span>-<span style="color:#a6e22e">post</span>.<span style="color:#a6e22e">md</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>You will obtain the following file:
 <img src="/images/build-hugo-static-blog/example-post.png" alt="Example post"></p>
 <p>The first section is for parameters and the second one is for the content in this case in markdown. Check this <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a> a quick reference and showcase.</p>
-<h1 id="run-your-site">Run your site</h1>
+<h2 id="run-your-site">Run your site</h2>
 <p>Once you have created the post you can build your site using the <code>hugo server</code> command. The flag <code>-D</code> is for render drafts:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> -<span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>And it will appear the rendering logs and at the end message similar to:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">Web</span> <span style="color:#a6e22e">Server</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">available</span> <span style="color:#a6e22e">at</span> <span style="color:#a6e22e">http</span>:<span style="color:#e6db74">//</span><span style="color:#a6e22e">localhost</span>:<span style="color:#ae81ff">1313</span>/ (<span style="color:#a6e22e">bind</span> <span style="color:#a6e22e">address</span> <span style="color:#ae81ff">127</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">1</span>)<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>Copy the URL to your browser and you will see your site up and running!</p>
-<h1 id="host-on-github">Host on GitHub</h1>
+<h2 id="host-on-github">Host on GitHub</h2>
 <p>We&rsquo;ll use the User/Organization Pages <code>https://&lt;USERNAME|ORGANIZATION&gt;.github.io/</code>.</p>
 <p>Create a <code>&lt;YOUR-PROJECT&gt;</code> repository on GitHub. This repository will contain Hugo’s content and other source files.</p>
 <p>Create a <code>&lt;USERNAME&gt;.github.io</code> GitHub repository. This is the repository that will contain the fully rendered version of your Hugo website.</p>
@@ -317,8 +371,8 @@ cd ..
 			</li>
 	</ul>
 	</section>
-	<p>Last change 23/11/2020</p>
-	<p>© 2018 - 2020 Charly3Pins</p>
+	<p>Last post published on 23/11/2020</p>
+	<p>© 2018 - 2021 Charly3Pins</p>
 </footer>
 			
 		</div>

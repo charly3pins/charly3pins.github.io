@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on charly3pins.dev</title>
+    <link>https://charly3pins.dev/ca/tags/go/</link>
+    <description>Recent content in go on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Oct 2020</lastBuildDate><atom:link href="https://charly3pins.dev/ca/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tournaments generator</title>
+      <link>https://charly3pins.dev/ca/code/tournaments-generator/</link>
+      <pubDate>Fri, 01 May 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/code/tournaments-generator/</guid>
+      <description>Prova del concepte de creació d&#39;una aplicació per gestionar tornejos FIFA 20 entre diferents persones que utilitzen Flutter per crear una aplicació mòbil i Go per crear una API que actua com a servidor. També es va utilitzar Python per construir rascadors senzills.</description>
+      <content>&lt;h2 id=&#34;per-què&#34;&gt;PER QUÈ&lt;/h2&gt;
+&lt;p&gt;La motivació per iniciar aquest projecte no és una altra que la meva curiositat per les aplicacions mòbils. És obvi que la forma de consumir tecnologia ha canviat en els darrers anys i que cada vegada es fa més a través d’un dispositiu mòbil. Per aquest motiu, volia explorar com funcionen les aplicacions mòbils i com en puc crear una des de zero.
+Vaig fer alguns tutorials d&amp;rsquo;Android, però com que canvien moltes coses en publicar noves versions i la meva idea era construir quelcom genèric per a tots els dispositius, vaig decidir provar-ho amb &lt;a href=&#34;https://flutter.dev/&#34;&gt;Flutter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Estava entre &lt;a href=&#34;https://reactnative.dev/&#34;&gt;React Native&lt;/a&gt; o Flutter, però després de llegir alguns pros i contres, he decidit aliar-me amb Flutter. Vaig començar a llegir la seva &lt;a href=&#34;https://flutter.dev/docs&#34;&gt;documentació&lt;/a&gt; i era molt similar a Android (utilitzen Dart a la part inferior) i vaig començar a recordar els meus vells temps als tutorials d&amp;rsquo;Android i m&amp;rsquo;agrada, així que Vaig continuar. Després d’uns dies llegint només documentació tècnica, vaig continuar amb l’aplicació &amp;ldquo;hello world&amp;rdquo; &lt;a href=&#34;https://flutter.dev/docs/get-started/codelab&#34;&gt;tutorial&lt;/a&gt; que ofereixen al lloc web. I, finalment, estava preparat per començar el meu propi projecte.&lt;/p&gt;
+&lt;p&gt;Durant el moment que va començar la pandèmia mundial, jo i els meus amics vam iniciar una lliga FIFA 20 a PS4 per distreure’ns a les tardes / nits. Inicialment només es jugava i res més, però després vam començar a tenir un tauler de Power BI per a estadístiques, un canal de YouTube per compartir els jocs en directe i després emmagatzemar-los allà i un Twitter per publicar les actualitzacions de la classificació cada setmana. La primera lliga es va crear manualment, una mica de dolor i súper estàtica, així que he decidit utilitzar aquest tema per crear una aplicació que ens ajudi a gestionar la segona lliga creant la lliga, gestionant els nostres equips i partits allà, notificant els resultats i mostrant estadístiques més detallades a l&amp;rsquo;interior.&lt;/p&gt;
+&lt;h2 id=&#34;què&#34;&gt;QUÈ&lt;/h2&gt;
+&lt;p&gt;Primer de tot, volia posar tota la informació real de FIFA 20 al lloc web relacionada amb lligues, equips i jugadors. Per a això, he trobat alguns llocs web que tenen aquesta informació oberta i gratuïta, però que no tenen cap API per consumir-la. La idea de copiar manualment era molt temptadora, però vaig preferir escriure un rastrejador senzill a &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt; mitjançant la biblioteca &lt;a href=&#34;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors&#34;&gt;BeautifulSoup&lt;/a&gt; amb els selectors css que proporciona. Fent alguns ajustaments aquí i allà, al final vaig acabar tenint 3 fitxers JSON, un per a cada tema que volia inicialment, així que tot perfecte.&lt;/p&gt;
+&lt;p&gt;A continuació, per introduir tota aquesta informació a la base de dades, la idea era crear una eina de línia d&amp;rsquo;ordres que llegeixi aquests fitxers i generi les sentències SQL corresponents i, a continuació, generar els fitxers de migració corresponents.
+He triat &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; com a llenguatge de programació per a l&amp;rsquo;API i he creat un &lt;code&gt;cmd&lt;/code&gt; que em permet fer la idea desitjada. La base de dades seria &lt;a href=&#34;https://www.postgresql.org/&#34;&gt;PostgreSQL&lt;/a&gt;, de manera que les &amp;ldquo;insercions&amp;rdquo; han de ser segons la seva sintaxi.&lt;/p&gt;
+&lt;p&gt;Amb totes les dades inicials a punt, he començat a dissenyar la resta de la base de dades i els possibles punts finals ho necessiten per gestionar tota aquesta informació. He triat &lt;a href=&#34;https://github.com/gorilla/mux&#34;&gt;mux&lt;/a&gt; per a l&amp;rsquo;HTTP, ja que és senzill però potent en comparació amb el lib estàndard (només per a l&amp;rsquo;anàlisi de paràmetres val la pena &amp;hellip;). Com que volia explorar més el costat de l’aplicació mòbil que el servidor, només vaig organitzar el codi amb &lt;a href=&#34;https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html&#34;&gt;Arquitectura per capes&lt;/a&gt; com a ORM per simplificar la consulta i els mapejos entre la base de dades i els meus models.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/api-structure.jpeg&#34; alt=&#34;api structure&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Dins de la carpeta &lt;code&gt;cmd&lt;/code&gt; he creat diferents ordres:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;migració: gestiona les migracions a la base de dades&lt;/li&gt;
+&lt;li&gt;analitzador: tradueix el json del rastrejador a sentències sql&lt;/li&gt;
+&lt;li&gt;servidor: executa el servidor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dins de la carpeta &lt;code&gt;pkg&lt;/code&gt; és fàcil identificar el que fan les carpetes pel seu propi nom.&lt;/p&gt;
+&lt;p&gt;Per a l&amp;rsquo;aplicació mòbil, vaig començar a posar tots els fitxers dins d&amp;rsquo;una carpeta de &amp;ldquo;components&amp;rdquo;, però quan va començar a créixer era un kaos complet per gestionar. Després d’afegir més complexitat a l’aplicació, acabo trobant una manera neta d’organitzar el codi, dividint-lo en dues carpetes separades; un per al nucli i un altre per a la interfície d’usuari. Després, dins de cadascun, també vaig classificar els diferents tipus de components en funció de les seves responsabilitats i, al final, el codi (almenys per a mi que no sóc expert en Flutter) va quedar molt net i (sens dubte) més mantenible . A sota de l&amp;rsquo;organització de la carpeta en una vista general:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/app-structure.jpeg&#34; alt=&#34;app structure&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Al principi, quan vaig començar a codificar i a veure els resultats, tot era fantàstic i vaig pensar que era més fàcil del que s&amp;rsquo;esperava. La connexió de l’aplicació amb l’API només era qüestió de saber utilitzar la biblioteca &lt;code&gt;http&lt;/code&gt; i els mètodes&lt;code&gt; get&lt;/code&gt; o &lt;code&gt;post&lt;/code&gt; es van connectar sense problemes.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; client &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; http.Client();
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt; jsonBody &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json.encode(user.toJson());
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; client.post(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;$&lt;/span&gt;_baseUrl&lt;span style=&#34;color:#e6db74&#34;&gt;/token&amp;#34;&lt;/span&gt;,
+        headers: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;application/json&amp;#39;&lt;/span&gt;}, body: jsonBody);
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (response.statusCode &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;) {
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; User.fromJson(json.decode(response.body));
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;L’únic problema que m’he enfrontat és que estava executant les aplicacions des de l’Android Emulator; això vol dir que s&amp;rsquo;estava executant en una màquina virtual, de manera que la IP no era la meva local i no pot accedir al &lt;code&gt;localhost&lt;/code&gt;. Després d&amp;rsquo;una mica d&amp;rsquo;investigació, he trobat el correcte i tot ha funcionat correctament.&lt;/p&gt;
+&lt;p&gt;Els problemes van començar quan volia transmetre informació entre components i actualitzar la vista en funció d’aquesta informació, o millor encara, no actualitzar si no canvia res quan torno a entrar a una vista (per exemple, passar d’una llista a una vista de detall, i tornar a la llista). Després d’un dia llegint als fòrums sobre el mateix problema que m’enfrontava, he trobat el paquet &lt;a href=&#34;https://pub.dev/packages/provider&#34;&gt;Proveïdor&lt;/a&gt; i tot semblava fàcil i el sant grial de tot, però no ho era.&lt;/p&gt;
+&lt;p&gt;El veritable dolor acaba de començar aquí! Vaig trigar uns dies a entendre realment el seu funcionament. El proveïdor inicial és fàcil d’entendre, l’utilitzeu i funciona, però només voleu canviar només una petita part de la vista, o bé reconstruir-ne la completa, o bé modificar alguns valors en una vista A i a continuació, aneu a veure B i vegeu els canvis que hi ha, i tots aquests exemples estan completament codificats i primer heu de saber que hi ha una manera de fer cada cas i, en segon lloc, heu de saber com fer-ho. Al final he utilitzat el proveïdor, el ProxyProvider, el StreamProvider i el ChangeNotifierProvider.&lt;/p&gt;
+&lt;p&gt;El projecte no està acabat, però ara com ara està en espera amb les funcions següents:&lt;/p&gt;
+&lt;p&gt;Inicialment, l&amp;rsquo;usuari pot canviar entre les vistes d&amp;rsquo;inscripció/inici de sessió.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/signup.png&#34; alt=&#34;signup&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/login.png&#34; alt=&#34;login&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Un cop l’usuari es troba dins de l’aplicació, hi ha diferents pestanyes on han de jugar els següents &lt;code&gt;Partits&lt;/code&gt;, els &lt;code&gt;Torneigs&lt;/code&gt; que juga i els &amp;ldquo;Grups&amp;rdquo; on és present i els membres que hi ha. A la part superior té una barra de navegació amb una imatge de perfil, una icona de campana per a les notificacions, una icona d’objectiu per buscar altres membres i afegir com a amics i el botó de tancament de sessió per desconnectar.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/home.png&#34; alt=&#34;home&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Si fa clic a la foto de perfil, es dirigeix directament al perfil de l&amp;rsquo;usuari on mostra els amics i on pot editar la seva informació personal (nom, nom d&amp;rsquo;usuari, foto de perfil):
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/profile.png&#34; alt=&#34;profile&#34;&gt;&lt;/p&gt;
+&lt;p&gt;En prémer la icona de la lent, canvia la visualització a la funcionalitat de supercercador que permet a l&amp;rsquo;usuari trobar altres persones que ja estan a la plataforma, afegir-les com a amics i després crear grups, generar torneigs i jugar partits junts. El cercador és una cerca &amp;ldquo;m&amp;rsquo;agrada&amp;rdquo;, de manera que si alguna de les lletres que introdueix apareix en algun nom d&amp;rsquo;usuari, es mostrarà allà.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/searcher.png&#34; alt=&#34;searcher&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Després, si l’usuari introdueix un perfil que no és un amic, apareixerà el botó per afegir-lo i, si es fa clic, ocultarà aquest botó i mostrarà la informació que ja hi ha una sol·licitud enviada, esperant l’altre usuari. per respondre-ho.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/add-friend.png&#34; alt=&#34;add friend&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/add-friend-requested.png&#34; alt=&#34;add friend requested&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Actuant com a altre usuari, en iniciar la sessió, la icona de campana mostrarà una nova notificació. Accedir a l&amp;rsquo;interior apareix com una notificació d&amp;rsquo;amistat i es pot respondre directament des de la llista o entrar al perfil de &amp;ldquo;sol·licitant&amp;rdquo; i acceptar-lo o rebutjar-lo. Si s’accepta la sol·licitud d’amistat, apareixerà com a nou amic al perfil de l’usuari.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/friend-request-notification.png&#34; alt=&#34;friend request notification&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/friend-request-notification-answer.png&#34; alt=&#34;friend request notification answer&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/profile-multifriends.png&#34; alt=&#34;profile multi friends&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Després que un usuari tingui alguns amics, és el moment en què pot crear un grup. Per a això, l&amp;rsquo;aplicació té la tercera pestanya anomenada &lt;code&gt;Grups&lt;/code&gt; i un botó (+).
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group.png&#34; alt=&#34;new group&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Dins del generador de grups es mostrarà la llista dels amics a la part superior. A mesura que es seleccionen, es col·loquen a la llista següent, on es poden eliminar si es vol; quan tots els amics estiguin seleccionats, és hora de passar a la pantalla següent mitjançant el botó (&amp;ndash;&amp;gt;).
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-selected.png&#34; alt=&#34;new group selected&#34;&gt;&lt;/p&gt;
+&lt;p&gt;El següent pas és posar un bon nom per a aquest grup i, a continuació, prémer la marca per crear el grup.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-name.png&#34; alt=&#34;new group name&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Quan l&amp;rsquo;usuari torna a la visualització inicial, apareix el grup nou creat i els membres d&amp;rsquo;aquest a la llista.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-created.png&#34; alt=&#34;new group created&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A partir d’aquí el que falta és crear els &lt;code&gt;Torneigs&lt;/code&gt; seleccionant el grup i els membres d’aquest grup que volen jugar, el nombre d’equips per a cada membre, els equips, les rondes, el tipus de torneig, etc. i després generar el calendari. Mostra el calendari a la pestanya &amp;ldquo;Coincidències&amp;rdquo; i dins de cada coincidència permetrà als usuaris afegir els resultats. També proporcioneu una classificació i les estadístiques de cada partit i una agrupada per a cada partit i una de genèrica.&lt;/p&gt;
+&lt;h2 id=&#34;pensaments-finals&#34;&gt;PENSAMENTS FINALS&lt;/h2&gt;
+&lt;p&gt;Amb aquesta prova de concepte, vaig tenir l&amp;rsquo;oportunitat de treballar en una aplicació complexa en termes de disseny de components reutilitzables en una aplicació mòbil, trucar a una API externa per gestionar la informació que es mostra a l&amp;rsquo;aplicació i aprendre a utilitzar el paquet de proveïdor per moure informació. entre vistes múltiples i controlar l’estat de l’aplicació d’una manera més senzilla i eficaç.&lt;/p&gt;
+&lt;p&gt;Hi ha molt més a aprendre sobre el desenvolupament de mòbils, però considero aquest projecte com un pas inicial per començar. Algun dia faré les vistes que falten per tal de poder utilitzar-les al món real, però espero que no sigui perquè tenim una altra pandèmia 😏&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Pujeu de nivell les vostres presentacions amb Go</title>
+      <link>https://charly3pins.dev/ca/blog/pujeu-de-nivell-les-vostres-presentacions-amb-go/</link>
+      <pubDate>Tue, 06 Oct 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/pujeu-de-nivell-les-vostres-presentacions-amb-go/</guid>
+      <description>Genera fàcilment les teves presentacions amb &#34;present&#34;, l&#39;eina impulsada per Go que genera i renderitza les teves diapositives.</description>
+      <content>&lt;p&gt;Si sou una persona tècnica i no us agrada lluitar amb els programes de presentació però voleu / necessiteu crear-ne un, enhorabona! estàs al lloc correcte. Sé que, com a enginyers de programari, volem codificar, llegir o mirar coses relacionades amb programari, arquitectura o devops, però no amb presentacions. De vegades, se’ns exigeix ​​que presentem alguna cosa a altres membres de l’equip, als propietaris de productes o fins i tot més aterridors, a l’equip directiu.&lt;/p&gt;
+&lt;p&gt;Per aquest motiu, vull presentar-vos el paquet Go &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present&#34;&gt;present&lt;/a&gt;. S&amp;rsquo;utilitza per crear diapositives a Golang allotjades a discussions.golang.org o a la vostra privada. L’he utilitzat diverses vegades, sobretot quan vull compartir alguna cosa amb els meus companys de l’equip (algun codi, és clar), perquè no vull perdre el temps amb els programes. Acabo de crear el projecte per a les diapositives, afegeixo les meves diapositives a la marca, afegeixo les imatges necessàries i les presento. Vegem detalladament com funciona!&lt;/p&gt;
+&lt;p&gt;Suposant que teniu Go &lt;a href=&#34;https://golang.org/doc/install&#34;&gt;instal·lat&lt;/a&gt; i configurat correctament, tot el que heu d’instal·lar és el paquet amb la comanda següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;go&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;u&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;golang&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/x/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;tools&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;present&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Comproveu si funciona escrivint:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;present&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hauria de mostrar un missatge similar a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/10/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;04&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;54&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Open&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;web&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;browser&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;visit&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;127&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;3999&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per tant, podeu visitar l’enllaç i veure el servidor local preparat per allotjar les vostres presentacions. Increïble o no? D’acord, sé que voleu mostrar alguna cosa que no sigui un directori buit, així que anem a crear un exemple de presentació per a això.&lt;/p&gt;
+&lt;h2 id=&#34;format&#34;&gt;Format&lt;/h2&gt;
+&lt;p&gt;Creeu un directori per a les diapositives:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;go&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;present&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;example&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;go&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;present&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;example&lt;/span&gt;/&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Creeu la primera diapositiva:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vim&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;initial&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;slide&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I afegiu el següent contingut:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Learning Go present
+6 October 2020
+
+Crash Bandicoot
+crash.bandicoot@gmail.com
+
+* Hello World
+
+I&#39;m a slide
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Per tant, si torneu a executar la comanda &lt;code&gt;present&lt;/code&gt; dins de la vostra carpeta i aneu de nou al navegador hauríeu de poder veure la pantalla següent:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/initial-slide.jpeg&#34; alt=&#34;initial slide&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Feu clic a l’enllaç &lt;code&gt;initial.slide&lt;/code&gt; i admireu la vostra presentació.
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/initial-presentation.jpeg&#34; alt=&#34;initial presentation&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Com podeu veure, la primera línia és el títol, la segona la data i després la segueix l’autor. A la segona diapositiva, en realitat la primera, apareix el títol de la diapositiva i el text d’aquesta. L&amp;rsquo;últim mostra un títol d&amp;rsquo;agraïment i el vostre nom i contacte (correu electrònic, twitter, etc.) que heu afegit a la diapositiva. Vegeu-ho a continuació:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/end-presentation.jpeg&#34; alt=&#34;end presentation&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sintaxi-heretat-de-present&#34;&gt;Sintaxi heretat de present&lt;/h2&gt;
+&lt;p&gt;És compatible amb Markdown, però aquí explorarem la &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present#hdr-Legacy_Present_Syntax&#34;&gt;sintaxi heretat de present&lt;/a&gt;, ja que el Markdown té molts recursos on podeu comprovar . Així que explorem una mica les funcions que ofereix &amp;ldquo;present&amp;rdquo; per formatar i mostrar text a les nostres diapositives.&lt;/p&gt;
+&lt;p&gt;Primer són les opcions clàssiques per formatar el text:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;normal vs `highlighted`
+*bold*
+_italic_
+*multiple*bold*text*
+_multiple_italic_text_
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I el resultat és:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/text-formatting.jpeg&#34; alt=&#34;text formatting&#34;&gt;&lt;/p&gt;
+&lt;p&gt;També pot afegir una llista:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;Grocery list for the gopher:
+
+- go routines
+- garbage collector
+- Rust
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/text-formatting-list.jpeg&#34; alt=&#34;text formatting list&#34;&gt;&lt;/p&gt;
+&lt;p&gt;O un nivell diferent de subseccions així:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;** Subsection
+
+Gopher is diving the subsection.
+
+*** Sub-subsection
+
+Another Gopher is diving more into the sub-subsection!
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I veureu la diapositiva com aquesta bogeria:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/text-formatting-subsections.jpeg&#34; alt=&#34;text formatting subsections&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/gophers.gif&#34; alt=&#34;gophers&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;invocacions-de-comandes&#34;&gt;Invocacions de comandes&lt;/h2&gt;
+&lt;p&gt;A part del format de text, hi ha una &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present#hdr-Command_Invocations&#34;&gt;invocacions de comandes especials&lt;/a&gt; que podeu invocar per portar la vostra presentació a un altre nivell.&lt;/p&gt;
+&lt;h3 id=&#34;imatges-i-vídeos&#34;&gt;imatges i vídeos&lt;/h3&gt;
+&lt;p&gt;La comanda &lt;code&gt;.image&lt;/code&gt; injecta una imatge a la diapositiva. Accepta 1 o 3 arguments (nom, alçada, amplada). El nom és obligatori, altres dos han d&amp;rsquo;estar presents o substituïts per un &lt;code&gt;_&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.image /images/gopher.jpeg 200 200
+.image /images/gopher.jpeg _ 300
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/images.jpeg&#34; alt=&#34;images&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Igual que les imatges, podeu fer el mateix amb un vídeo mitjançant la comanda &lt;code&gt;.video&lt;/code&gt;. Accepta 2 o 4 arguments (nom, tipus de contingut del fitxer, alçada, amplada). El nom i el tipus de contingut del fitxer són obligatoris; altres dos han d’estar presents o substituïts per i &lt;code&gt;_&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.video videos/gopher-dance.mp4 video/mp4 400 600
+.video videos/gopher-dance.mkv video/mkv 500 _
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De manera similar a les imatges, també té la comanda &lt;code&gt;.background&lt;/code&gt; per configurar la imatge de fons d&amp;rsquo;una diapositiva. Només té un argument com a nom de fitxer de la imatge.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.background images/susan.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;enllaços&#34;&gt;enllaços&lt;/h3&gt;
+&lt;p&gt;Si heu d&amp;rsquo;inserir un enllaç a la presentació, podeu utilitzar la comanda &lt;code&gt;.link&lt;/code&gt;. Accepta 1 o 2 arguments (URL HTTP, etiqueta de text). L&amp;rsquo;URL HTTP és obligatori, el segon és opcional.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.link https://charly3pins.dev charly3pins website
+.link https://charly3pins.dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/links.jpeg&#34; alt=&#34;links&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;codi&#34;&gt;codi&lt;/h3&gt;
+&lt;p&gt;La millor comanda en la meva opinió és la de &lt;code&gt;.code&lt;/code&gt;. Us permet posar codi extret dels fitxers font i injectar-los com a blocs &lt;!-- raw HTML omitted --&gt; escapats per HTML. Accepta un argument com a nom de fitxer seguit d’una adreça opcional que especifica quina secció del fitxer es mostrarà.&lt;/p&gt;
+&lt;p&gt;Per exemple, prenent Hello world a Go com a codi font:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hem d’especificar com a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.code hello.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I es mostrarà així:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code.jpeg&#34; alt=&#34;code&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Però, què passa si voleu ressaltar alguna part del codi? No us preocupeu, present té aquest &amp;ldquo;present&amp;rdquo; i podeu afegir-hi les &amp;ldquo;adreces opcionals&amp;rdquo; que hem comentat a continuació. Per tant, modifiqueu el codi així per ressaltar la trucada &lt;code&gt;Printf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// HL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I utilitzeu la mateixa comanda a la diapositiva:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.code hello-hl.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per veure el codi ressaltat:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-hl.jpeg&#34; alt=&#34;code-hl&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Un pas més! Si només voleu mostrar una part del vostre codi, per exemple, amagar el paquet i les importacions del fitxer, també podeu afegir els fragments següents:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;//START OMIT
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// HL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}
+&lt;span style=&#34;color:#75715e&#34;&gt;//END OMIT
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Torneu a utilitzar la mateixa ordre però afegint el fragment següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.code hello-hl-partial.go /START OMIT/,/END OMIT/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I vegeu el codi parcialment mostrat:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-hl-partial.jpeg&#34; alt=&#34;code-hl-partial&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;play&#34;&gt;play&lt;/h4&gt;
+&lt;p&gt;Aquesta ordre és superpotent per ajudar-vos a presentar algun codi i ressaltar o amagar algunes parts. Però l’espectacle ha de continuar i la millor part és la següent. La comanda &lt;code&gt;.play&lt;/code&gt; és com el del &lt;code&gt;.code&lt;/code&gt;, però posa un botó a la font descatalogada i podeu executar el programa des del navegador. És màgia o no?
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/magic.gif&#34; alt=&#34;magic&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Utilitzem el mateix codi font que estem utilitzant i afegim la nova ordre a les diapositives així:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.play hello.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Apareixerà com el del &amp;ldquo;codi&amp;rdquo;, però si observeu a l&amp;rsquo;extrem inferior dret, apareixerà un petit botó &lt;code&gt;Run&lt;/code&gt;.
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-play.jpeg&#34; alt=&#34;code-play&#34;&gt;&lt;/p&gt;
+&lt;p&gt;En executar el codi es mostrarà una petita finestra negra a la pantalla on es mostrarà la sortida del codi:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-played.jpeg&#34; alt=&#34;code-played&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;notes-del-presentador&#34;&gt;Notes del presentador&lt;/h2&gt;
+&lt;p&gt;Per últim, però no menys important, és una cosa interessant que també proporcionen. És ben sabut que als programes de PowerPoint o similars podeu afegir les vostres notes només per a vosaltres quan presenteu la presentació i de vegades són molt útils. Així doncs, &amp;ldquo;present&amp;rdquo; també ho té en compte i podeu afegir les vostres notes de presentació només afegint un &lt;code&gt;:&lt;/code&gt; al començament de la frase i aquest text es tractarà com una nota de presentador.&lt;/p&gt;
+&lt;p&gt;Per exemple:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;* Presenter notes
+
+The gophers like to eat a lot.
+
+: they eat more than half their body weight in food each day
+
+They eat basically plants.
+
+: typically gnaws the roots of a plant just beneath the soil, so the damage isn’t seen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/present-notes.jpeg&#34; alt=&#34;present-notes&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Com podeu veure, les notes no hi són presents, per què? Perquè necessiteu executar la presentació en un &amp;ldquo;presentador&amp;rdquo; així.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;present&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;notes&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I hauria de mostrar un missatge similar a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/10/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;04&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;54&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Open&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;web&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;browser&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;visit&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;127&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;3999&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/10/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;04&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Notes&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;are&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;enabled&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;press&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;N&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;browser&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;display&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;them&lt;/span&gt;.&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per tant, si actualitzeu el navegador amb la presentació i premeu &lt;code&gt;N&lt;/code&gt;, veureu una finestra emergent que mostra les notes de cada diapositiva a la part inferior de la manera següent:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/present-notes-popup.jpeg&#34; alt=&#34;present-notes-popup&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusió&#34;&gt;Conclusió&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;eina &lt;code&gt;present&lt;/code&gt; és molt útil per a presentacions tècniques, especialment en Go. Té limitacions com el format de les diapositives i el posicionament de la imatge de vegades difícil, però en general és un paquet fantàstic i per a mi és l&amp;rsquo;estàndard de totes les meves presentacions. Si voleu aprofundir en aquest paquet, consulteu la &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present&#34;&gt;documentació oficial&lt;/a&gt; i també us recomanaria la &lt;a href=&#34;https://discussions.golang.org/2012/insidepresent.slide#1&#34;&gt;presentació&lt;/a&gt;: &lt;code&gt;Inside the &amp;quot;present&amp;quot; tool&lt;/code&gt; d&amp;rsquo;Andrew Gerrand. També he penjat el codi font d’aquest tutorial a &lt;a href=&#34;https://github.com/charly3pins/go-present-example&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

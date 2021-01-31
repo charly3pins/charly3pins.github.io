@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>api on charly3pins.dev</title>
+    <link>https://charly3pins.dev/es/tags/api/</link>
+    <description>Recent content in api on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Oct 2020</lastBuildDate><atom:link href="https://charly3pins.dev/es/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comprensión del Control de Versiones Semántico 2.0 (SemVer)</title>
+      <link>https://charly3pins.dev/es/blog/comprensi%C3%B3n-del-control-de-versiones-sem%C3%A1ntico-2.0-semver/</link>
+      <pubDate>Tue, 20 Oct 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/es/blog/comprensi%C3%B3n-del-control-de-versiones-sem%C3%A1ntico-2.0-semver/</guid>
+      <description>¿Qué es el control de versiones semántico? ¿Por qué es importante utilizarlo en tus proyectos como desarrollador? ¿Qué significa para un usuario que usa su biblioteca?</description>
+      <content>&lt;p&gt;Cuando desee usar una biblioteca en su proyecto, probablemente notó que necesita especificar una versión. La mayoría de las veces, esas versiones tienen el formato de 3 números separados por puntos entre ellos. Ese formato es indicativo de que la biblioteca está utilizando el &lt;a href=&#34;https://semver.org&#34;&gt;Control de versiones semántico&lt;/a&gt; también conocido como SemVer. Ese documento especifica el formato y la forma de etiquetar sus proyectos durante todo el ciclo de vida del mismo. Es solo una convención para que pueda definir el número de versión de la manera que desee, pero la verdad es que otros desarrolladores de todas las industrias acordaron usarlo y se convirtió en un estándar para el control de versiones.&lt;/p&gt;
+&lt;p&gt;El objetivo es tener diferentes versiones de su paquete siguiendo la regla de que cada vez que actualice el paquete, actualice la versión. Con eso lo que logras es tener un nombre y una versión únicos para cada paquete público. Para usar SemVer, debe declarar una API pública. Esto se debe a que el control de versiones propuesto se basa en los cambios en la versión anterior de la API, por lo que si no especifica uno (incluso codificado o simplemente documentado) no es posible aplicar esas reglas.&lt;/p&gt;
+&lt;p&gt;El formato de SemVer es como se mencionó anteriormente, 3 números separados por un punto entre ellos:
+&lt;code&gt;PRINCIPAL.MINOR.PATCH&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;La forma de incrementar cada número se describe en el documento. Como un resumen:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Las nuevas funciones con versiones de comportamiento incompatibles (rompe la API) incrementa el MAJOR;&lt;/li&gt;
+&lt;li&gt;Las nuevas funciones compatibles con versiones anteriores (no rompe la API) incrementa el MINOR;&lt;/li&gt;
+&lt;li&gt;La corrección de errores incrementa el PATCH;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NOTA: El desarrollo inicial utiliza una versión principal 0.
+NOTA 2: Cuando se aumenta MINOR, el PATCH se restablece a 0; Cuando se aumenta MAJOR, MINOR y PATCH se restablecen a 0.&lt;/p&gt;
+&lt;p&gt;Como caso especial puede utilizar las versiones preliminares. Se indican añadiendo un guión y las siguientes cadenas aceptadas globalmente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;alpha;&lt;/li&gt;
+&lt;li&gt;beta;&lt;/li&gt;
+&lt;li&gt;rc (release candidates);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Seguido del número de versión necesario. Entonces, las versiones preliminares deberían seguir un orden similar como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.0.0-alpha&lt;/li&gt;
+&lt;li&gt;1.0.0-alpha-1&lt;/li&gt;
+&lt;li&gt;1.0.0-beta&lt;/li&gt;
+&lt;li&gt;1.0.0-beta.2&lt;/li&gt;
+&lt;li&gt;1.0.0-beta.10&lt;/li&gt;
+&lt;li&gt;1.0.0-rc.1&lt;/li&gt;
+&lt;li&gt;1.0.0-rc.40&lt;/li&gt;
+&lt;li&gt;1.0.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NOTA: Una API se considera publicada a partir de la version 1.0.0.&lt;/p&gt;
+&lt;p&gt;Cuando desee utilizar SemVer, puede especificar una versión exacta o no. Para eso puede utilizar las siguientes herramientas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Si desea una versión exacta, indique la dependencia con: X.Y.Z;&lt;/li&gt;
+&lt;li&gt;Si desea utilizar la versión actual o una superior, incluso con cambios importantes en la API, puede utilizar el &lt;code&gt;&amp;gt;&lt;/code&gt; como:&amp;gt; X.Y.Z;&lt;/li&gt;
+&lt;li&gt;Si desea tener la versión actual o las actualizadas pero con compatibilidades con versiones anteriores, puede usar el &lt;code&gt;^&lt;/code&gt; como: ^ X.Y.Z (donde X es fijo);&lt;/li&gt;
+&lt;li&gt;Si desea tener la versión actual o las actualizadas solo con correcciones de errores con cambios de nivel menor, puede usar el &lt;code&gt;~&lt;/code&gt; como: ~ X.Y.Z (donde X e Y son fijos);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Entonces, después de leer este artículo como desarrollador usando la biblioteca de otro, puede saber qué tipo de cambios hicieron al presentarle la nueva versión siguiendo las reglas descritas anteriormente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nueva versión 0.2.3 → Los cambios pueden ser solo correcciones de errores;&lt;/li&gt;
+&lt;li&gt;Nueva versión 0.5.0 → Algunas funcionalidades agregadas pero compatibles con la API;&lt;/li&gt;
+&lt;li&gt;Nueva versión 5.0.0 → Puede haber un problema porque introdujo cambios importantes en la API;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Como conclusión, el beneficio de usar SemVer contra no:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compatibilidad / dependencias más claras;&lt;/li&gt;
+&lt;li&gt;Fomenta API bien definidas;&lt;/li&gt;
+&lt;li&gt;Hace que las decisiones de actualización sean más claras;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

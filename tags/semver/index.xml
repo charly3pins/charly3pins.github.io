@@ -51,7 +51,7 @@ NOTE2: When the MINOR is increased the PATCH is reseted to 0; When the MAJOR is 
 &lt;li&gt;If you want to have the current version or updated ones but with backward-compatibilities you can use the &lt;code&gt;^&lt;/code&gt; like: ^X.Y.Z (where X is fixed);&lt;/li&gt;
 &lt;li&gt;If you want to have the current version or updated ones only with bug fixes with minor-level changes you can use the &lt;code&gt;~&lt;/code&gt; like: ~X.Y.Z (where X and Y are fixed);&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;So after reading this article as a developer using another&amp;rsquo;s library you can know what type of changes they did when presenting to you the new version following the rules described above:¡. As a practical example let&amp;rsquo;s see 3 package upgrades:&lt;/p&gt;
+&lt;p&gt;So after reading this article as a developer using another&amp;rsquo;s library you can know what type of changes they did when presenting to you the new version following the rules described above:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;New version 0.2.3 → The changes might be just bug fixes;&lt;/li&gt;
 &lt;li&gt;New version 0.5.0 → Some functionalities added but backwards-compatible with the API;&lt;/li&gt;

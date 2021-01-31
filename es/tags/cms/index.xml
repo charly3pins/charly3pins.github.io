@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cms on charly3pins.dev</title>
+    <link>https://charly3pins.dev/es/tags/cms/</link>
+    <description>Recent content in cms on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Nov 2020</lastBuildDate><atom:link href="https://charly3pins.dev/es/tags/cms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cómo añadir Google Analytics a su sitio con Hugo</title>
+      <link>https://charly3pins.dev/es/blog/c%C3%B3mo-a%C3%B1adir-google-analytics-a-su-sitio-hugo/</link>
+      <pubDate>Mon, 23 Nov 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/es/blog/c%C3%B3mo-a%C3%B1adir-google-analytics-a-su-sitio-hugo/</guid>
+      <description>Tutorial rápido sobre cómo integrar Google Analytics en un sitio web de Hugo.</description>
+      <content>&lt;h2 id=&#34;google-analytics&#34;&gt;Google Analytics&lt;/h2&gt;
+&lt;p&gt;En primer lugar, lo que necesita es obtener un ID de seguimiento de Google Analytics. Para eso, debe registrarse en &lt;a href=&#34;https://analytics.google.com/analytics/web/&#34;&gt;Google Analytics&lt;/a&gt;. Luego, debe crear un ID de seguimiento siguiendo los siguientes pasos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Haga clic en el botón &lt;code&gt;Admin&lt;/code&gt; (en la esquina inferior izquierda).&lt;/li&gt;
+&lt;li&gt;Haga clic en el botón &amp;ldquo;Crear cuenta&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Después de completar todos los pasos, haga clic en el botón &amp;ldquo;Crear&amp;rdquo; y acepte los términos y condiciones.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Después de completar estos pasos, obtendrá su ID de seguimiento. Cópielo para agregarlo a su sitio de Hugo más tarde.&lt;/p&gt;
+&lt;h2 id=&#34;configuración-de-hugo&#34;&gt;Configuración de Hugo&lt;/h2&gt;
+&lt;p&gt;Ahora es el turno de agregar el ID de seguimiento a su sitio.
+La forma más sencilla de hacerlo es utilizando la [plantilla interna] de Hugo (&lt;a href=&#34;https://gohugo.io/templates/internal/#google-analytics&#34;&gt;https://gohugo.io/templates/internal/#google-analytics&lt;/a&gt;) proporcionada por Hugo. Solo necesita agregar una nueva variable llamada &lt;code&gt;googleAnalytics&lt;/code&gt; con el &lt;code&gt;tracking ID&lt;/code&gt; obtenido del paso anterior en su &lt;code&gt;config.toml&lt;/code&gt; como:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;googleAnalytics&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UA-123-45&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El siguiente paso es agregar el siguiente fragmento de código en su sitio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;{{ &lt;span style=&#34;color:#a6e22e&#34;&gt;template&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_internal/google_analytics.html&amp;#34;&lt;/span&gt; . }}&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Debería buscar la plantilla parcial &lt;code&gt;head&lt;/code&gt; y agregarla dentro de las etiquetas &lt;code&gt;&amp;lt;head&amp;gt; &amp;lt;/head&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;comprobando-la-integración&#34;&gt;Comprobando la integración&lt;/h2&gt;
+&lt;p&gt;Antes de pasar eso a producción, puede probarlo ejecutando su sitio localmente realizando el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;serve&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La URL predeterminada en localhost es &lt;code&gt;http://localhost:1313&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Vuelva a abrir o actualice &lt;a href=&#34;https://analytics.google.com/analytics/web/&#34;&gt;Google Analytics&lt;/a&gt; en una pestaña diferente.&lt;/p&gt;
+&lt;p&gt;Verifique el tablero y debería poder ver el número en la sección Usuarios activos en este momento como 1 como la imagen a continuación:
+&lt;img src=&#34;https://charly3pins.dev/images/google-analytics-active-users.png&#34; alt=&#34;active-users&#34;&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Gestión de contenidos y plantillas de Hugo</title>
+      <link>https://charly3pins.dev/es/blog/gesti%C3%B3n-de-contenidos-y-plantillas-de-hugo/</link>
+      <pubDate>Sun, 08 Mar 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/es/blog/gesti%C3%B3n-de-contenidos-y-plantillas-de-hugo/</guid>
+      <description>Cómo organizar su contenido y crear sus plantillas para obtener el máximo valor de Hugo.</description>
+      <content>&lt;p&gt;Después de mucho tiempo sin escribir&amp;hellip; ¡estoy de vuelta!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/hugo-content-templates-managing/im-back-terminator.jpg&#34; alt=&#34;I&amp;rsquo;m back&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Estaba planeando reconstruir mi sitio y comenzar a crear contenido nuevamente, pero nunca encontré el tiempo hasta ahora.&lt;/p&gt;
+&lt;p&gt;Quería hacer mi tema desde cero en lugar de usar un &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;tema predefinido&lt;/a&gt;, así que tuve que aprender cómo se realizan las plantillas y la gestión de contenido en Hugo.&lt;/p&gt;
+&lt;p&gt;Una vez que hice ese proceso, quiero resumir las cosas más importantes que considero que debes saber si quieres hacer tu propio tema como lo hice yo (¡este sitio es la prueba de eso!).&lt;/p&gt;
+&lt;h2 id=&#34;gestión-de-contenido&#34;&gt;Gestión de contenido&lt;/h2&gt;
+&lt;p&gt;Primero que nada hablemos de la &lt;a href=&#34;https://gohugo.io/content-management/organization/&#34;&gt;organización de contenido&lt;/a&gt; en Hugo.&lt;/p&gt;
+&lt;p&gt;Todo el contenido que desee tener en su sitio debe estar dentro del directorio &lt;code&gt;content/&lt;/code&gt;. Simplemente coloque sus publicaciones dentro de &lt;code&gt;content/posts&lt;/code&gt; y su descripción en &lt;code&gt;content/about&lt;/code&gt; y Hugo hará la magia por usted. Suena fácil, ¿verdad? Continúe entonces.&lt;/p&gt;
+&lt;p&gt;Hugo tiene principalmente dos tipos de páginas, las &amp;ldquo;únicas&amp;rdquo; y las &amp;ldquo;múltiples&amp;rdquo;. Los primeros se utilizan por ejemplo para un &lt;code&gt;about&lt;/code&gt; o para un &lt;code&gt;faq&lt;/code&gt; o una &lt;code&gt;contrib&lt;/code&gt; o un &lt;code&gt;landing&lt;/code&gt;&amp;hellip; Los segundos se utilizan cuando se desea agrupar en una misma categoría diferentes contenidos. Por ejemplo, sus diferentes publicaciones para sus &amp;ldquo;publicaciones&amp;rdquo; o un catálogo para sus &amp;ldquo;productos&amp;rdquo;. Dicho esto, hay otra diferencia que debes conocer cuando creas tus diferentes páginas.&lt;/p&gt;
+&lt;p&gt;Los únicos tienen que ser nombrados como &lt;code&gt;index.md&lt;/code&gt;, los de la lista no. Esto al final le indica a Hugo cómo administrar el contenido dentro de los directorios y cómo generar las URL para acceder a ellos. El siguiente esquema demuestra cómo funciona:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;└── content
+    └── about
+    |   └── index.md        (https://mysite.com/about)
+    ├── posts
+    |   ├── first-post.md   (https://mysite.com/posts/first-post)
+    |   └── second-post.md  (https://mysite.com/posts/second-post)
+    |   └── trips
+    |       └── pandora.md  (https://mysite.com/posts/trips/pandora)
+    └── faq
+        └── index.md        (https://mysite.com/faq)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;También existe la posibilidad de especificar la URL usando la propiedad &lt;code&gt;slug&lt;/code&gt; como slug=&amp;quot; my-custom-url &amp;ldquo;.&lt;/p&gt;
+&lt;h2 id=&#34;gestión-de-plantillas&#34;&gt;Gestión de plantillas&lt;/h2&gt;
+&lt;p&gt;Ahora que sabes cómo organizar tu contenido, es hora de hablar sobre las &lt;a href=&#34;https://gohugo.io/templates/&#34;&gt;plantillas&lt;/a&gt;. Son el código HTML que genera las páginas de su sitio. Hay algunos trucos y consejos que quiero compartir con ustedes como lo hice con el contenido de la sección anterior.&lt;/p&gt;
+&lt;p&gt;Las diferentes plantillas deben colocarse dentro del directorio &lt;code&gt;layouts/&lt;/code&gt;. En la raíz debe estar la plantilla principal llamada &lt;code&gt;index.html&lt;/code&gt; utilizada para representar la página de inicio. De la misma forma que el contenido, las plantillas se pueden organizar en carpetas si desea mostrar de diferentes formas el contenido según la ruta. Al igual que el contenido, las plantillas se pueden organizar entre únicas y múltiples. Tomando la organización de contenido descrita anteriormente, considerando que desea especificar diferentes plantillas para cada carpeta de contenido, una de las posibles organizaciones de plantillas puede ser:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;└── layouts
+    └── _default_
+    |   ├── list.html
+    |   └── single.html
+    └── posts
+        ├── list.html
+        └── single.html
+        └── trips
+            ├── list.html
+            └── single.html
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Analizando en detalle, se puede ver un árbol similar al contenido pero con la particularidad de que no hay carpetas &lt;code&gt;about&lt;/code&gt; ni&lt;code&gt; faq&lt;/code&gt; pero que parecía una &lt;code&gt;_default&lt;/code&gt;. Hugo usa esta carpeta especial para renderizar las páginas que no tienen su propia plantilla. En ese caso, el about y el faq, ambos tipos únicos, se renderizarán utilizando la plantilla &lt;code&gt;layouts/_default/single.html&lt;/code&gt;. Si el directorio &lt;code&gt;trips&lt;/code&gt; no existiera, las plantillas utilizadas serán las de &lt;code&gt;_default&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En este punto, ya conoce la organización de contenido y la gestión de plantillas, pero está pensando:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;¿Cómo sabe Hugo cuando quiero usar una página única o una lista?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;La respuesta depende de la URL y el contenido allí. Utilizando de nuevo el ejemplo anterior para la organización del contenido, si observa que &lt;code&gt;about&lt;/code&gt; contiene un&lt;code&gt; index.md&lt;/code&gt;, eso indica que Hugo es una página &amp;ldquo;única&amp;rdquo;. Como no definimos ninguna plantilla en particular para eso, la que se utilizará es la genérica &lt;code&gt;_default/single.thml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Por otro lado, dentro de las &lt;code&gt;posts&lt;/code&gt; hay tres publicaciones pero ninguna &lt;code&gt;index.md&lt;/code&gt; una, lo que indica a Hugo que es una página &amp;ldquo;múltiple&amp;rdquo;, por lo que usarás ambas plantillas, la &lt;code&gt;list.html&lt;/code&gt; como un &amp;ldquo;índice&amp;rdquo; de tus publicaciones y el &lt;code&gt;single.html&lt;/code&gt; para cada publicación. Para renderizar el &lt;code&gt;list.html&lt;/code&gt; tienes que ir a la URL del directorio (&lt;a href=&#34;https://mysite.com/posts/)&#34;&gt;https://mysite.com/posts/)&lt;/a&gt;. Para las publicaciones (&lt;a href=&#34;https://mysite.com/posts/first-post&#34;&gt;https://mysite.com/posts/first-post&lt;/a&gt;) y (&lt;a href=&#34;https://mysite.com/posts/second-post&#34;&gt;https://mysite.com/posts/second-post&lt;/a&gt;) la plantilla utilizada será &lt;code&gt;single.html&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;variables-de-página&#34;&gt;Variables de página&lt;/h3&gt;
+&lt;p&gt;Las páginas tienen un conjunto de variables útiles que es bueno conocer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title: el título de la publicación&lt;/li&gt;
+&lt;li&gt;Description: una descripción corta o larga de la publicación&lt;/li&gt;
+&lt;li&gt;Content: el cuerpo de la publicación.&lt;/li&gt;
+&lt;li&gt;ReadingTime: los minutos que Hugo autocalcula para leer la publicación&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para acceder a los parámetros personalizados que puede crear en cada publicación, debe acceder a ellos por su nombre dentro del objeto &lt;code&gt;Params&lt;/code&gt; (Params.yourParam).&lt;/p&gt;
+&lt;p&gt;Puede mostrar publicaciones relacionadas leyendo los resultados del &lt;code&gt;.Site.RegularPages.Related&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Consulte la lista completa en la página &lt;a href=&#34;https://gohugo.io/variables/page/&#34;&gt;documentación&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La plantilla &lt;code&gt;list.html&lt;/code&gt; se usa para mostrar una breve descripción de las publicaciones como un índice de libros con los enlaces a la publicación real. Para hacer eso, tienes que acceder a la variable &lt;code&gt;$.Paginator.Pages&lt;/code&gt; y recorrer los resultados. Las variables son las mismas descritas anteriormente con un &lt;code&gt;Permalink&lt;/code&gt; más, el que necesitas usar para acceder a la publicación (y llamar a la plantilla &lt;code&gt;single.html&lt;/code&gt;) para ese contenido.&lt;/p&gt;
+&lt;p&gt;También existen las variables &lt;code&gt;PrevInSection&lt;/code&gt; y&lt;code&gt; NextInSection&lt;/code&gt; para paginar los resultados.&lt;/p&gt;
+&lt;h3 id=&#34;plantillas-parciales&#34;&gt;Plantillas parciales&lt;/h3&gt;
+&lt;p&gt;El último consejo que quiero explicarte es que no necesitas repetir todo el tiempo todas las partes de las plantillas, puedes extraer la parte común en una plantilla y luego reutilizarla donde quieras. Estas son las [plantillas parciales] (&lt;a href=&#34;https://gohugo.io/templates/partials/)&#34;&gt;https://gohugo.io/templates/partials/)&lt;/a&gt;. Su particularidad es que necesitas colocar esa parte dentro de un directorio &lt;code&gt;partials/&lt;/code&gt; y llamarlo como &lt;code&gt;{{partial&amp;quot; nombre.html &amp;quot;. }} &lt;/code&gt;. Son útiles para el &lt;code&gt;header&lt;/code&gt;,&lt;code&gt;footer&lt;/code&gt;, &lt;code&gt;navbar&lt;/code&gt; y otras partes genéricas, así como para una plantilla de lista que desea reutilizar para sus publicaciones y para sus viajes, por ejemplo.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Construyendo un blog estático con Hugo</title>
+      <link>https://charly3pins.dev/es/blog/construyendo-un-blog-est%C3%A1tico-con-hugo/</link>
+      <pubDate>Sat, 22 Sep 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/es/blog/construyendo-un-blog-est%C3%A1tico-con-hugo/</guid>
+      <description>Pasos rápidos para crear su propio blog estático con Hugo e instalar un tema del catálogo. Después de eso, envíe su sitio a GitHub e impleméntelo con las páginas de GitHub.</description>
+      <content>&lt;p&gt;Si quieres crear un sitio web estático rápido te recomiendo &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. Está escrito en Go y es muy útil para configurar y adaptarse a sus necesidades. Además, puedes elegir entre diferentes &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;temas&lt;/a&gt; creados por el equipo y otros por la comunidad o incluso crear uno propio.&lt;/p&gt;
+&lt;p&gt;Aquí explicaré en algunos pasos cómo crear un blog con Hugo y cómo ser alojado e implementado en GitHub y GitHub Pages. Si necesita más detalles visite los [documentos de Hugo] oficiales (&lt;a href=&#34;https://gohugo.io/documentation/)&#34;&gt;https://gohugo.io/documentation/)&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;inicio&#34;&gt;Inicio&lt;/h2&gt;
+&lt;p&gt;Primero que nada necesitas instalar Hugo, en mi caso usando &lt;a href=&#34;https://brew.sh/&#34;&gt;Homebrew&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;brew&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Verifique la versión instalada:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;crear-sitio&#34;&gt;Crear sitio&lt;/h2&gt;
+&lt;p&gt;Una vez que haya instalado Hugo, podrá crear su sitio web usando el comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;site&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;blog&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Después de eso, verá una nueva carpeta llamada &lt;code&gt;your-blog-name&lt;/code&gt; y si mira dentro verá el siguiente árbol:
+&lt;img src=&#34;https://charly3pins.dev/images/build-hugo-static-blog/folder-tree-your-blog-name.png&#34; alt=&#34;Folder tree&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Archetypes son archivos de plantilla de contenido para su proyecto, que se utilizan cuando ejecuta el comando &lt;code&gt;hugo new&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Content es donde se almacenan todas las publicaciones y páginas. La misma estructura en esta carpeta se utilizará para organizar las URL en su sitio renderizado.&lt;/li&gt;
+&lt;li&gt;Data es una carpeta para almacenar datos adicionales para generar su sitio.&lt;/li&gt;
+&lt;li&gt;Layouts es la carpeta donde se almacena la plantilla de tu sitio si no estás usando un tema.&lt;/li&gt;
+&lt;li&gt;Static almacena todos los archivos estáticos de su sitio.&lt;/li&gt;
+&lt;li&gt;Themes es donde se almacenan los temas que instalas.&lt;/li&gt;
+&lt;li&gt;config.toml almacena la configuración principal de su sitio.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;instalar-el-tema&#34;&gt;Instalar el tema&lt;/h2&gt;
+&lt;p&gt;Si quieres utilizar un tema ya creado puedes hacerlo de dos formas. Para comprobar los temas existentes, visite el sitio web oficial de &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34;&gt;temas de Hugo&lt;/a&gt; donde puede ver una demostración de cada uno.&lt;/p&gt;
+&lt;p&gt;En primer lugar, debe iniciar un repositorio de git dentro de su proyecto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;blog&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;;\&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;init&lt;/span&gt;;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Luego puede clonar el repositorio dentro de la carpeta &lt;code&gt;themes&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;clone&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/panr/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;themes&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si no desea realizar ningún cambio, es mejor incluir el tema como un submódulo de git y puede obtener nuevas actualizaciones cuando estén disponibles. Hágalo con:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submodule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/panr/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;themes&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;crear-contenido&#34;&gt;Crear contenido&lt;/h2&gt;
+&lt;p&gt;Para generar su primera publicación de blog, puede usar el comando &lt;code&gt;hugo new&lt;/code&gt; y establecer la ruta que desee, en mi caso &lt;code&gt;posts&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;posts&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;my&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;first&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;post&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;md&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Obtendrá el siguiente archivo:
+&lt;img src=&#34;https://charly3pins.dev/images/build-hugo-static-blog/example-post.png&#34; alt=&#34;Example post&#34;&gt;&lt;/p&gt;
+&lt;p&gt;La primera sección es para los parámetros y la segunda es para el contenido en este caso en markdown. Consulte esta &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;Hoja de referencia de Markdown&lt;/a&gt; una referencia rápida y un escaparate.&lt;/p&gt;
+&lt;h2 id=&#34;ejecute-su-sitio&#34;&gt;Ejecute su sitio&lt;/h2&gt;
+&lt;p&gt;Una vez que haya creado la publicación, puede construir su sitio usando el comando &lt;code&gt;hugo server&lt;/code&gt;. La bandera &lt;code&gt;-D&lt;/code&gt; es para renderizar borradores:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y aparecerán los registros de renderizado y al final un mensaje similar a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Web&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Server&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;available&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;at&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;localhost&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;1313&lt;/span&gt;/ (&lt;span style=&#34;color:#a6e22e&#34;&gt;bind&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;address&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;127&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Copie la URL en su navegador y verá su sitio en funcionamiento.&lt;/p&gt;
+&lt;h2 id=&#34;host-en-github&#34;&gt;Host en GitHub&lt;/h2&gt;
+&lt;p&gt;Usaremos las páginas de usuario / organización &lt;code&gt;https://&amp;lt;USERNAME|ORGANIZATION&amp;gt;.github.io/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Cree un repositorio &lt;code&gt;&amp;lt;YOUR-PROJECT&amp;gt;&lt;/code&gt; en GitHub. Este repositorio contendrá el contenido de Hugo y otros archivos fuente.&lt;/p&gt;
+&lt;p&gt;Cree un repositorio de GitHub &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&lt;/code&gt;. Este es el repositorio que contendrá la versión completamente renderizada de su sitio web Hugo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;clone&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/&amp;lt;USERNAME&amp;gt;/&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;YOUR&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;PROJECT&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;YOUR&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;PROJECT&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ejecute su sitio web localmente usando el comando &lt;code&gt;hugo server&lt;/code&gt; o si está usando el tema &lt;code&gt;hugo server -t &amp;lt;THEME_NAME&amp;gt;&lt;/code&gt;. Siga las instrucciones en la consola para acceder a él. El servidor web debe estar disponible en http: // localhost: 1313 /&lt;/p&gt;
+&lt;p&gt;Finalmente, debe agregar el repositorio &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&lt;/code&gt; dentro de la carpeta &lt;code&gt;public&lt;/code&gt; como un submódulo de git para actualizar su sitio web una vez que lo regenere.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submodule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;master&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt;@&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;:&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USERNAME&lt;/span&gt;&amp;gt;/&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USERNAME&lt;/span&gt;&amp;gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;io&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si no tiene configurada la clave de par RSA, deberá agregar el submódulo a través de HTTP:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submodule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;master&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/&amp;lt;USERNAME&amp;gt;/&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USERNAME&lt;/span&gt;&amp;gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;io&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para automatizar los siguientes pasos, puede guardarlo en &lt;code&gt;deploy.sh&lt;/code&gt;. Recuerde hacerlo ejecutable con:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;chmod&lt;/span&gt; +&lt;span style=&#34;color:#a6e22e&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;deploy&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;sh&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;deploy.sh&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+echo -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Build the project.&lt;/span&gt;
+hugo &lt;span style=&#34;color:#75715e&#34;&gt;# if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;`&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Go To Public folder&lt;/span&gt;
+cd public
+&lt;span style=&#34;color:#75715e&#34;&gt;# Add changes to git.&lt;/span&gt;
+git add .
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Commit changes.&lt;/span&gt;
+msg&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rebuilding site `date`&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; $# -eq &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt; msg&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$1&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$msg&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Push source and build repos.&lt;/span&gt;
+git push origin master
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Come Back up to the Project Root&lt;/span&gt;
+cd ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

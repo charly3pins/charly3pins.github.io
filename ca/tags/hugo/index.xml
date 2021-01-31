@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on charly3pins.dev</title>
+    <link>https://charly3pins.dev/ca/tags/hugo/</link>
+    <description>Recent content in hugo on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Nov 2020</lastBuildDate><atom:link href="https://charly3pins.dev/ca/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Com afegir Google Analytics al vostre lloc amb Hugo</title>
+      <link>https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/</link>
+      <pubDate>Mon, 23 Nov 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/</guid>
+      <description>Quick tutorial how to integrate Google Analytics in a Hugo website.</description>
+      <content>&lt;h2 id=&#34;google-analytics&#34;&gt;Google Analytics&lt;/h2&gt;
+&lt;p&gt;En primer lloc, el que necessiteu és obtenir un identificador de seguiment de Google Analytics. Per a això, cal que us inscriviu a &lt;a href=&#34;https://analytics.google.com/analytics/web/&#34;&gt;Google Analytics&lt;/a&gt;. A continuació, heu de crear un identificador de seguiment seguint els passos següents:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feu clic al botó &lt;code&gt;Admin&lt;/code&gt; (a l&amp;rsquo;extrem inferior esquerre).&lt;/li&gt;
+&lt;li&gt;Feu clic al botó &lt;code&gt;Create Account&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Després de completar tots els passos, feu clic al botó &lt;code&gt;Create&lt;/code&gt; i accepteu els termes i condicions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Després de completar aquests passos, obtindreu el vostre identificador de seguiment. Copieu-lo per afegir-lo al vostre lloc Hugo més endavant.&lt;/p&gt;
+&lt;h2 id=&#34;configuració-hugo&#34;&gt;Configuració Hugo&lt;/h2&gt;
+&lt;p&gt;Ara és el torn d&amp;rsquo;afegir l&amp;rsquo;identificador de seguiment al vostre lloc.
+La forma més senzilla de fer-ho és mitjançant la &lt;a href=&#34;https://gohugo.io/templates/internal/#google-analytics&#34;&gt;plantilla interna d&amp;rsquo;Hugo&lt;/a&gt; proporcionada per Hugo. Només cal afegir una nova variable anomenada &lt;code&gt;googleAnalytics&lt;/code&gt; amb el &lt;code&gt;tracking ID&lt;/code&gt; obtingut del pas anterior del vostre &lt;code&gt;config.toml&lt;/code&gt;, com ara:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;googleAnalytics&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UA-123-45&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El següent pas és afegir el fragment de codi següent al vostre lloc:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;{{ &lt;span style=&#34;color:#a6e22e&#34;&gt;template&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_internal/google_analytics.html&amp;#34;&lt;/span&gt; . }}&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Heu de buscar la plantilla parcial &lt;code&gt;head&lt;/code&gt; i afegir-la dins de les etiquetes &lt;code&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;comprovació-de-la-integració&#34;&gt;Comprovació de la integració&lt;/h2&gt;
+&lt;p&gt;Abans de passar-ho a la producció, podeu provar-lo executant el vostre lloc localment realitzant l&amp;rsquo;ordre següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;serve&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;L&amp;rsquo;URL per defecte a localhost és &lt;code&gt;http://localhost:1313&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Obriu de nou o actualitzeu &lt;a href=&#34;https://analytics.google.com/analytics/web/&#34;&gt;Google Analytics&lt;/a&gt; en una pestanya diferent.&lt;/p&gt;
+&lt;p&gt;Consulteu el tauler i podríeu veure el número a la secció Usuaris actius ara mateix com 1 com la imatge següent:
+&lt;img src=&#34;https://charly3pins.dev/images/google-analytics-active-users.png&#34; alt=&#34;active-users&#34;&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Gestió de plantilles i contingut d&#39;Hugo</title>
+      <link>https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/</link>
+      <pubDate>Sun, 08 Mar 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/</guid>
+      <description>Com organitzar el vostre contingut i crear les vostres plantilles per obtenir el màxim valor d’Hugo.</description>
+      <content>&lt;p&gt;Després de molt de temps sense escriure&amp;hellip; he tornat!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/hugo-content-templates-managing/im-back-terminator.jpg&#34; alt=&#34;I&amp;rsquo;m back&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Tenia previst reconstruir el meu lloc i començar a crear contingut de nou, però mai no he trobat el temps fins ara.&lt;/p&gt;
+&lt;p&gt;Volia fer el meu tema des de zero en lloc d’utilitzar un &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;tema predefinit&lt;/a&gt;, així que vaig haver d’aprendre com es fan les plantilles i la gestió del contingut a Hugo.&lt;/p&gt;
+&lt;p&gt;Un cop fet aquest procés, vull resumir les coses més importants que considero que heu de saber si voleu fer el vostre propi tema com ho vaig fer jo (aquest lloc ho demostra!).&lt;/p&gt;
+&lt;h2 id=&#34;gestió-de-continguts&#34;&gt;Gestió de continguts&lt;/h2&gt;
+&lt;p&gt;Primer de tot, parlem de la [organització de contingut] (&lt;a href=&#34;https://gohugo.io/content-management/organization/&#34;&gt;https://gohugo.io/content-management/organization/&lt;/a&gt;) a Hugo.&lt;/p&gt;
+&lt;p&gt;Tot el contingut que vulgueu tenir al vostre lloc ha d&amp;rsquo;estar dins del directori &lt;code&gt;content/&lt;/code&gt;. Simplement poseu les vostres publicacions dins de &lt;code&gt;content/posts&lt;/code&gt; i la vostra descripció a &lt;code&gt;content/about&lt;/code&gt; i Hugo us farà la màgia. Sembla fàcil oi? Continueu llavors.&lt;/p&gt;
+&lt;p&gt;Hugo té principalment dos tipus de pàgines, les &amp;ldquo;úniques&amp;rdquo; i les &amp;ldquo;múltiples&amp;rdquo;. Els primers s&amp;rsquo;utilitzen, per exemple, per a un &amp;ldquo;about&amp;rdquo; o per a un &amp;ldquo;faq&amp;rdquo; o un &amp;ldquo;contribuir&amp;rdquo; o un &amp;ldquo;landing&amp;rdquo; &amp;hellip; Els segons s&amp;rsquo;utilitzen quan es vol agrupar contingut en una mateixa categoria. Per exemple, les vostres diferents publicacions per a les vostres publicacions o un catàleg per als vostres productes. Dit això, hi ha una altra diferència que heu de saber quan creeu les vostres diferents pàgines.&lt;/p&gt;
+&lt;p&gt;Els únics s&amp;rsquo;han de nomenar com a &amp;ldquo;index.md&amp;rdquo;, els de la llista no. Això al final indica a Hugo com gestionar el contingut dins dels directoris i com generar les URL per accedir-hi. L&amp;rsquo;esquema següent mostra com funciona això:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;└── content
+    └── about
+    |   └── index.md        (https://mysite.com/about)
+    ├── posts
+    |   ├── first-post.md   (https://mysite.com/posts/first-post)
+    |   └── second-post.md  (https://mysite.com/posts/second-post)
+    |   └── trips
+    |       └── pandora.md  (https://mysite.com/posts/trips/pandora)
+    └── faq
+        └── index.md        (https://mysite.com/faq)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;També hi ha la possibilitat d&amp;rsquo;especificar l&amp;rsquo;URL mitjançant la propietat &lt;code&gt;slug&lt;/code&gt; com slug =&amp;ldquo;my-custom-url&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;gestió-de-plantilles&#34;&gt;Gestió de plantilles&lt;/h2&gt;
+&lt;p&gt;Ara ja sabeu com organitzar el vostre contingut, és hora de parlar de les &lt;a href=&#34;https://gohugo.io/templates/&#34;&gt;plantilles&lt;/a&gt;. Són el codi HTML que genera les pàgines del vostre lloc. Hi ha alguns trucs i consells que vull compartir amb vosaltres, com he fet amb el contingut de la secció anterior.&lt;/p&gt;
+&lt;p&gt;Les diferents plantilles s&amp;rsquo;han de col·locar dins del directori &lt;code&gt;layouts/&lt;/code&gt;. A l&amp;rsquo;arrel ha d&amp;rsquo;haver-hi la plantilla principal anomenada &lt;code&gt;index.html&lt;/code&gt; que s&amp;rsquo;utilitza per representar la pàgina d&amp;rsquo;inici. De la mateixa manera que el contingut, les plantilles es poden organitzar en carpetes si voleu mostrar de diferents maneres el contingut en funció de la ruta. Igual que el contingut, les plantilles es poden organitzar entre exclusives i múltiples. Prenent l&amp;rsquo;organització de contingut descrita anteriorment, tenint en compte que voleu especificar plantilles diferents per a cada carpeta de contingut, una de les organitzacions de plantilla possibles pot ser:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;└── layouts
+    └── _default_
+    |   ├── list.html
+    |   └── single.html
+    └── posts
+        ├── list.html
+        └── single.html
+        └── trips
+            ├── list.html
+            └── single.html
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Analitzant-ho en detall, podeu veure un arbre similar al contingut, però amb una particularitat que no inclou cap carpeta &lt;code&gt;about&lt;/code&gt; ni &lt;code&gt;faq&lt;/code&gt;, però apareixia com a &lt;code&gt;_default&lt;/code&gt;. Hugo utilitza aquesta carpeta especial per representar les pàgines que no tenen la seva pròpia plantilla. En aquest cas, sobre i les preguntes freqüents, ambdós tipus únics, es representaran mitjançant la plantilla &lt;code&gt;layouts / _default / single.html&lt;/code&gt;. Si el directori &lt;code&gt;viatges&lt;/code&gt; no existia, les plantilles utilitzades seran les &lt;code&gt;_default&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En aquest moment ja sabeu sobre l&amp;rsquo;organització del contingut i la gestió de plantilles, però esteu pensant:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Com sap Hugo quan vull utilitzar una sola pàgina o una llista?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;La resposta depèn de la URL i del contingut que hi hagi. Si torneu a utilitzar l&amp;rsquo;exemple anterior per a l&amp;rsquo;organització del contingut, si observeu que &lt;code&gt;about&lt;/code&gt; conté un &lt;code&gt;index.md&lt;/code&gt;, de manera que indica que Hugo és una pàgina &amp;ldquo;única&amp;rdquo;. Com que no vam definir cap plantilla en concret, la que s&amp;rsquo;utilitzarà és el genèric &lt;code&gt;_default/single.thml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;altra banda, dins de &lt;code&gt;posts&lt;/code&gt; hi ha tres publicacions, però no hi ha cap &amp;ldquo;index.md&amp;rdquo;, de manera que indica a Hugo que és una pàgina &amp;ldquo;multi&amp;rdquo;, de manera que faràs servir les dues plantilles, la &lt;code&gt;list.html&lt;/code&gt; com un &amp;ldquo;índex&amp;rdquo; de les vostres publicacions i el &lt;code&gt;single.html&lt;/code&gt; de cada publicació. Per representar el &lt;code&gt;list.html&lt;/code&gt;, heu d&amp;rsquo;anar a l&amp;rsquo;URL del directori (&lt;a href=&#34;https://mysite.com/posts/)&#34;&gt;https://mysite.com/posts/)&lt;/a&gt;. Per a les publicacions (&lt;a href=&#34;https://mysite.com/posts/first-post&#34;&gt;https://mysite.com/posts/first-post&lt;/a&gt;) i (&lt;a href=&#34;https://mysite.com/posts/second-post&#34;&gt;https://mysite.com/posts/second-post&lt;/a&gt;) la plantilla utilitzada serà &lt;code&gt;single.html&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;variables-de-pàgina&#34;&gt;Variables de pàgina&lt;/h3&gt;
+&lt;p&gt;Les pàgines tenen un conjunt de variables útils que és bo saber:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title: el títol del missatge&lt;/li&gt;
+&lt;li&gt;Description: una descripció breu o llarga del missatge&lt;/li&gt;
+&lt;li&gt;Content: el cos de la publicació&lt;/li&gt;
+&lt;li&gt;ReadingTime: els minuts que Hugo calcularà automàticament trigaran a llegir la publicació&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Per accedir als paràmetres personalitzats que podeu crear a cada publicació, haureu d’accedir-hi per nom dins de l’objecte &lt;code&gt;Params&lt;/code&gt; (Params.yourParam).&lt;/p&gt;
+&lt;p&gt;Podeu mostrar publicacions relacionades llegint els resultats de la pàgina &lt;code&gt;.Site.RegularPages.Related&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Consulteu la llista completa a la pàgina &lt;a href=&#34;https://gohugo.io/variables/page/&#34;&gt;documentació&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La plantilla &lt;code&gt;list.html&lt;/code&gt; s’utilitza per mostrar una breu descripció de les publicacions, com ara un índex de llibre, amb els enllaços a la publicació real. Per fer-ho, heu d’accedir a la variable &lt;code&gt;$.Paginator.Pages&lt;/code&gt; i fer un recorregut pels resultats. Les variables són les mateixes descrites anteriorment amb un &lt;code&gt;PermaLink&lt;/code&gt; més, el que heu d&amp;rsquo;utilitzar per accedir a la publicació (i truqueu a la plantilla &lt;code&gt;single.html&lt;/code&gt;) per a aquest contingut.&lt;/p&gt;
+&lt;p&gt;També hi ha les variables &lt;code&gt;PrevInSection&lt;/code&gt; i &lt;code&gt;NextInSection&lt;/code&gt; per a paginar els resultats.&lt;/p&gt;
+&lt;h3 id=&#34;plantilles-parcials&#34;&gt;Plantilles parcials&lt;/h3&gt;
+&lt;p&gt;L&amp;rsquo;últim consell que vull explicar-vos és que no cal que repetiu totes les parts de les plantilles, podeu extreure la part comuna en una plantilla i tornar-la a utilitzar a qualsevol lloc que vulgueu. Aquestes són les &lt;a href=&#34;https://gohugo.io/templates/partials/&#34;&gt;plantilles parcials&lt;/a&gt;. La seva particularitat és que heu de col·locar aquesta part dins d&amp;rsquo;un directori &lt;code&gt;partials/&lt;/code&gt; i anomenar-la com a &lt;code&gt;{{partial &amp;quot;name.html&amp;quot; . }}&lt;/code&gt;. Són útils per al &lt;code&gt;header&lt;/code&gt;, &lt;code&gt;footer&lt;/code&gt;, &lt;code&gt;navbar&lt;/code&gt; i altres parts genèriques, així com per a una plantilla de llista que voleu reutilitzar per a les vostres publicacions i per als vostres viatges, per exemple.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Construint un bloc estàtic amb Hugo</title>
+      <link>https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/</link>
+      <pubDate>Sat, 22 Sep 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/</guid>
+      <description>Passos ràpids per crear el vostre propi bloc estàtic amb Hugo i instal·lar un tema del catàleg. Després, empenyeu el vostre lloc a GitHub i implementeu-lo amb GitHub Pages.</description>
+      <content>&lt;p&gt;Si voleu crear un lloc web estàtic ràpid us recomano &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. Està escrit a Go i és realment útil per configurar i adaptar-se a les vostres necessitats. A més, podeu triar a través de diferents &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;temes&lt;/a&gt; creats per l’equip i altres per la comunitat o fins i tot crear el vostre propi.&lt;/p&gt;
+&lt;p&gt;Aquí explicaré en alguns passos com crear un bloc amb Hugo i com allotjar-se i desplegar-se a GitHub i GitHub Pages. Si necessiteu més detalls, visiteu els &lt;a href=&#34;https://gohugo.io/documentation/&#34;&gt;documents Hugo oficials&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;inici&#34;&gt;Inici&lt;/h2&gt;
+&lt;p&gt;Primer de tot, heu d’instal·lar Hugo, en el meu cas amb &lt;a href=&#34;https://brew.sh/&#34;&gt;Homebrew&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;brew&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Comproveu la versió instal·lada:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;crea-un-lloc&#34;&gt;Crea un lloc&lt;/h2&gt;
+&lt;p&gt;Un cop hàgiu instal·lat Hugo, podreu crear el vostre lloc web mitjançant l&amp;rsquo;ordre:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;site&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;blog&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Després d&amp;rsquo;això, veureu una nova carpeta anomenada &lt;code&gt;your-blog-name&lt;/code&gt; i, si mireu a l&amp;rsquo;interior, veureu l&amp;rsquo;arbre següent:
+&lt;img src=&#34;https://charly3pins.dev/images/build-hugo-static-blog/folder-tree-your-blog-name.png&#34; alt=&#34;Folder tree&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Archetypes són fitxers de plantilla de contingut per al vostre projecte, que s&amp;rsquo;utilitzen quan s&amp;rsquo;executa l&amp;rsquo;ordre &lt;code&gt;hugo new&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Content és on s’emmagatzemen totes les publicacions i pàgines. La mateixa estructura d’aquesta carpeta s’utilitzarà per organitzar els URL del vostre lloc renderitzat.&lt;/li&gt;
+&lt;li&gt;Data són una carpeta per emmagatzemar dades addicionals per generar el vostre lloc.&lt;/li&gt;
+&lt;li&gt;Layouts és la carpeta on s&amp;rsquo;emmagatzema la plantilla del vostre lloc si no utilitzeu un tema.&lt;/li&gt;
+&lt;li&gt;Static emmagatzema tots els fitxers estàtics del vostre lloc.&lt;/li&gt;
+&lt;li&gt;Themes són on s’emmagatzemen els temes que instal·leu.&lt;/li&gt;
+&lt;li&gt;config.toml emmagatzema la configuració principal del vostre lloc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installa-el-tema&#34;&gt;Instal·la el tema&lt;/h2&gt;
+&lt;p&gt;Si voleu utilitzar un tema ja creat, podeu fer-ho de dues maneres. Per comprovar els temes existents, visiteu el lloc web oficial de &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34;&gt;Temes d&amp;rsquo;Hugo&lt;/a&gt; on podeu veure una demostració de cadascun.&lt;/p&gt;
+&lt;p&gt;Primer de tot, heu d&amp;rsquo;iniciar un repositori de git dins del vostre projecte:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;blog&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;;\&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;init&lt;/span&gt;;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A continuació, podeu clonar la reposició a la carpeta &lt;code&gt;themes&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;clone&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/panr/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;themes&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si no voleu fer cap canvi, és millor incloure el tema com a submòdul git i podeu obtenir noves actualitzacions quan estiguin disponibles. Feu-ho amb:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submodule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/panr/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;themes&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;friend&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;crea-contingut&#34;&gt;Crea contingut&lt;/h2&gt;
+&lt;p&gt;Per generar la vostra primera publicació al bloc, podeu utilitzar l&amp;rsquo;ordre &lt;code&gt;hugo new&lt;/code&gt; i establir el camí que vulgueu, en el meu cas&lt;code&gt; publicacions&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;posts&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;my&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;first&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;post&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;md&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Obtindreu el fitxer següent:
+&lt;img src=&#34;https://charly3pins.dev/images/build-hugo-static-blog/example-post.png&#34; alt=&#34;Example post&#34;&gt;&lt;/p&gt;
+&lt;p&gt;La primera secció és per a paràmetres i la segona per al contingut en aquest cas en el marcatge. Consulteu aquest &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;Full de trucs de Markdown&lt;/a&gt; com a referència i aparador ràpid.&lt;/p&gt;
+&lt;h2 id=&#34;executeu-el-vostre-lloc&#34;&gt;Executeu el vostre lloc&lt;/h2&gt;
+&lt;p&gt;Un cop hàgiu creat la publicació, podeu crear el vostre lloc mitjançant l&amp;rsquo;ordre &lt;code&gt;hugo server&lt;/code&gt;. La bandera &lt;code&gt;-D&lt;/code&gt; és per als esborranys de renderització:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;hugo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;server&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I apareixeran els registres de representació i, al final, un missatge similar a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Web&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Server&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;available&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;at&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;localhost&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;1313&lt;/span&gt;/ (&lt;span style=&#34;color:#a6e22e&#34;&gt;bind&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;address&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;127&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Copieu l&amp;rsquo;URL al navegador i veureu el vostre lloc en funcionament.&lt;/p&gt;
+&lt;h2 id=&#34;host-a-github&#34;&gt;Host a GitHub&lt;/h2&gt;
+&lt;p&gt;Utilitzarem les pàgines d&amp;rsquo;usuari/organització &lt;code&gt;https://&amp;lt;USERNAME|ORGANIZATION&amp;gt;.github.io/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Creeu un dipòsit &lt;code&gt;&amp;lt;YOUR-PROJECT&amp;gt;&lt;/code&gt; a GitHub. Aquest dipòsit inclourà el contingut d’Hugo i altres fitxers font.&lt;/p&gt;
+&lt;p&gt;Creeu un dipòsit GitHub &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&lt;/code&gt;. Aquest és el dipòsit que contindrà la versió totalment renderitzada del vostre lloc web Hugo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;clone&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/&amp;lt;USERNAME&amp;gt;/&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;YOUR&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;PROJECT&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;YOUR&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;PROJECT&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Executeu el vostre lloc web localment mitjançant l&amp;rsquo;ordre &lt;code&gt;hugo server&lt;/code&gt; o si feu servir el tema &lt;code&gt;hugo server -t &amp;lt;THEME_NAME&amp;gt;&lt;/code&gt;. Seguiu les instruccions de la consola per accedir-hi. El servidor web hauria d’estar disponible a http://localhost:1313/&lt;/p&gt;
+&lt;p&gt;Finalment, haureu d&amp;rsquo;afegir el repositori &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&lt;/code&gt; dins de la carpeta &lt;code&gt;public&lt;/code&gt; com a submòdul git per tal d&amp;rsquo;actualitzar el vostre lloc web un cop el regeneu.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submodule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;master&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt;@&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;:&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USERNAME&lt;/span&gt;&amp;gt;/&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USERNAME&lt;/span&gt;&amp;gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;io&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si no teniu configurada la clau de parell RSA, haureu d&amp;rsquo;afegir el submòdul mitjançant HTTP:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submodule&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;master&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/&amp;lt;USERNAME&amp;gt;/&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USERNAME&lt;/span&gt;&amp;gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;io&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per automatitzar els passos següents, podeu desar-lo a &lt;code&gt;deploy.sh&lt;/code&gt;. Recordeu fer-lo executable amb:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;chmod&lt;/span&gt; +&lt;span style=&#34;color:#a6e22e&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;deploy&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;sh&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;deploy.sh&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+echo -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Build the project.&lt;/span&gt;
+hugo &lt;span style=&#34;color:#75715e&#34;&gt;# if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;`&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Go To Public folder&lt;/span&gt;
+cd public
+&lt;span style=&#34;color:#75715e&#34;&gt;# Add changes to git.&lt;/span&gt;
+git add .
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Commit changes.&lt;/span&gt;
+msg&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rebuilding site `date`&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; $# -eq &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt; msg&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$1&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$msg&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Push source and build repos.&lt;/span&gt;
+git push origin master
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Come Back up to the Project Root&lt;/span&gt;
+cd ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

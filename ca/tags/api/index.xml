@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>api on charly3pins.dev</title>
+    <link>https://charly3pins.dev/ca/tags/api/</link>
+    <description>Recent content in api on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Oct 2020</lastBuildDate><atom:link href="https://charly3pins.dev/ca/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comprensió de la Versió Semàntica 2.0 (SemVer)</title>
+      <link>https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/</link>
+      <pubDate>Tue, 20 Oct 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/</guid>
+      <description>Què és la versió semàntica? Per què és important utilitzar-lo en els vostres projectes com a desenvolupador? Què significa per a un usuari que utilitza la vostra biblioteca?</description>
+      <content>&lt;p&gt;Quan vulgueu utilitzar una biblioteca al vostre projecte, probablement haureu notat que cal especificar una versió. La majoria de les vegades, aquestes versions tenen el format de 3 nombres separats amb punts entre ells. Aquest format és indicatiu que la biblioteca utilitza el &lt;a href=&#34;https://semver.org&#34;&gt;Versió semàntica&lt;/a&gt; també conegut com SemVer. Aquest document especifica el format i la forma d’etiquetar els vostres projectes durant tot el cicle de vida dels mateixos. És només una convenció perquè pugueu definir el número de versió tal com vulgueu, però el cert és que altres desenvolupadors de totes les indústries van acordar utilitzar-lo i es va convertir en un estàndard per a la versió.&lt;/p&gt;
+&lt;p&gt;L’objectiu és tenir diferents versions del paquet seguint la regla que cada vegada que actualitzeu el paquet, actualitzeu la versió. Amb això, el que s&amp;rsquo;aconsegueix és tenir un nom i una versió únics per a cada paquet públic. Per utilitzar SemVer, heu de declarar una API pública. Això es deu al fet que la versió de versions proposada es basa en els canvis respecte a la versió anterior de l&amp;rsquo;API, de manera que si no n&amp;rsquo;especifiqueu cap (fins i tot codificada o només documentada) no és possible aplicar aquestes regles.&lt;/p&gt;
+&lt;p&gt;El format del SemVer és l’esmentat abans de 3 números separats amb un punt entre ells:
+&lt;code&gt;MAJOR.MINOR.PATCH&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;La forma d’incrementar cada número es descriu al document. Com a resum:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Les noves funcions amb versions de comportament incompatibles (trenca l&amp;rsquo;API) augmenten la MAJOR;&lt;/li&gt;
+&lt;li&gt;Les noves funcions compatibles amb la versió anterior (no trenca l&amp;rsquo;API) augmenten el MINOR;&lt;/li&gt;
+&lt;li&gt;Les correccions d&amp;rsquo;errors augmenten el PATCH;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NOTA: El desenvolupament inicial utilitza una versió principal 0.
+NOTA2: Quan s&amp;rsquo;incrementa el MENOR, el PATCH es restableix a 0; Quan s&amp;rsquo;incrementa el valor MAJOR, el MENOR i el PATCH es restableixen a 0.&lt;/p&gt;
+&lt;p&gt;Com a cas especial, podeu utilitzar les versions prèvies a la versió. Es denoten afegint un guionet i les següents cadenes acceptades a nivell mundial:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;alpha;&lt;/li&gt;
+&lt;li&gt;beta;&lt;/li&gt;
+&lt;li&gt;rc (release candidates);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Seguit del número de versió necessari. Per tant, les versions anteriors al llançament haurien de seguir un ordre similar com:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.0.0-alpha&lt;/li&gt;
+&lt;li&gt;1.0.0-alpha-1&lt;/li&gt;
+&lt;li&gt;1.0.0-beta&lt;/li&gt;
+&lt;li&gt;1.0.0-beta.2&lt;/li&gt;
+&lt;li&gt;1.0.0-beta.10&lt;/li&gt;
+&lt;li&gt;1.0.0-rc.1&lt;/li&gt;
+&lt;li&gt;1.0.0-rc.40&lt;/li&gt;
+&lt;li&gt;1.0.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NOTA: Una API es considera publicada a partir del 1.0.0.&lt;/p&gt;
+&lt;p&gt;Quan vulgueu utilitzar el SemVer, podeu especificar una versió exacta o no. Per a això, podeu utilitzar les eines següents:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Si voleu una versió exacta, indiqueu la dependència amb: X.Y.Z;&lt;/li&gt;
+&lt;li&gt;Si voleu utilitzar la versió actual o versions superiors, fins i tot amb canvis de ruptura a l&amp;rsquo;API, podeu utilitzar el tipus &lt;code&gt;&amp;gt;&lt;/code&gt; com:&amp;gt; X.Y.Z;&lt;/li&gt;
+&lt;li&gt;Si voleu tenir la versió actual o actualitzada, però amb compatibilitats anteriors, podeu utilitzar el format &lt;code&gt;^&lt;/code&gt; com: ^ X.Y.Z (on es fixa X);&lt;/li&gt;
+&lt;li&gt;Si voleu tenir la versió actual o actualitzada només amb correccions d&amp;rsquo;errors amb canvis de nivell menor, podeu utilitzar el tipus &lt;code&gt;~&lt;/code&gt; com: ~ X.Y.Z (on es fixen X i Y);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Per tant, després de llegir aquest article com a desenvolupador que utilitza la biblioteca d&amp;rsquo;un altre, podeu saber quin tipus de canvis van fer quan us van presentar la nova versió seguint les regles descrites anteriorment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nova versió 0.2.3 → Els canvis poden ser només correccions d&amp;rsquo;errors;&lt;/li&gt;
+&lt;li&gt;Nova versió 0.5.0 → S&amp;rsquo;han afegit algunes funcionalitats, però compatibles amb l&amp;rsquo;API;&lt;/li&gt;
+&lt;li&gt;Nova versió 5.0.0 → Pot ser que hi hagi un problema perquè va introduir canvis trencats amb l&amp;rsquo;API;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Com a conclusió, l’avantatge d’utilitzar SemVer contra no:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compatibilitat / dependències més clares;&lt;/li&gt;
+&lt;li&gt;Fomenta les API ben definides;&lt;/li&gt;
+&lt;li&gt;Aclareix les decisions d’actualització;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

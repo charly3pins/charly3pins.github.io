@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cd ~/codi on charly3pins.dev</title>
+    <link>https://charly3pins.dev/ca/code/</link>
+    <description>Recent content in cd ~/codi on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 May 2020</lastBuildDate><atom:link href="https://charly3pins.dev/ca/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Collectus</title>
+      <link>https://charly3pins.dev/ca/code/collectus/</link>
+      <pubDate>Sat, 22 Sep 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/code/collectus/</guid>
+      <description>Com a projecte final de carrera en enginyeria informàtica, vaig crear una base de dades flexible per a col·leccionisme i qualsevol altre objecte o dada que qualsevol usuari vulgui ordenar i classificar d&#39;una manera senzilla i eficaç.</description>
+      <content>&lt;h2 id=&#34;per-què&#34;&gt;PER QUÈ&lt;/h2&gt;
+&lt;p&gt;La motivació d’aquest projecte és mig personal i meitat acadèmica. Deixa&amp;rsquo;m explicar. A casa, el meu pare sempre va recollir moltes coses, des dels llibres més antics que es poden imaginar fins al nou Funko POP més recent, passant per ganivets suïssos o daus, entre d’altres. Tenir aquesta varietat d’objectes i molts d’ells (massa per ser honest) catalogar aquella quantitat d’elements sempre havia estat un repte per a ell.&lt;/p&gt;
+&lt;p&gt;Sempre va intentar classificar de diferents maneres, com ara fer servir un Excel, aplicacions gratuïtes, aplicacions de pagament, etc. Al final, cada vegada que passa alguna cosa similar, el handicap de la seva &amp;ldquo;col·lecció de col·leccions&amp;rdquo; (tal com el descriu) és massa singular, i no encaixa enlloc. Ell és desenvolupador i jo vaig estar el darrer any a la Universitat estudiant Enginyeria Informàtica, així que vam començar a planificar com podríem resoldre aquest problema fent-nos nosaltres mateixos l’aplicació.&lt;/p&gt;
+&lt;p&gt;Al cap d’uns dies / setmanes em vaig adonar que aviat hauria de triar un projecte per presentar-lo com a Projecte de Final de Carrera, així que vaig decidir provar aquesta boja idea familiar i proposar-la al meu tutor. Estava emocionada amb la idea que teníem i va acceptar feliç.&lt;/p&gt;
+&lt;p&gt;Un cop vaig tenir l’aprovació del meu tutor, va ser una novetat increïble, ja que el projecte personal que volíem desenvolupar en els nostres temps lliures, ara vaig tenir l’oportunitat de dedicar tot el meu esforç no només a resoldre el problema que teníem, sinó a presentar-lo. com a projecte final. I així va començar tot.&lt;/p&gt;
+&lt;p&gt;Al final, el projecte va acabar tenint un gran èxit, el meu tutor va quedar encantat amb el resultat, i al tribunal li va agradar molt, fins i tot em van dir que els enviés un correu electrònic quan el posés en producció perquè el poguessin utilitzar i catalogar col·leccions pròpies.&lt;/p&gt;
+&lt;h2 id=&#34;què&#34;&gt;QUÈ&lt;/h2&gt;
+&lt;p&gt;Vaig trucar a l&amp;rsquo;aplicació Collectus, ja que és la paraula llatina que significa &amp;ldquo;reunir, recollir&amp;rdquo;, de manera que en aquest cas s&amp;rsquo;adapta perfectament. És una base de dades flexible del sistema per a col·leccionables i qualsevol altre objecte o dada que l&amp;rsquo;usuari vulgui ordenar i classificar. Collectus està pensat per a col·leccionistes, cosa que els permet fer un seguiment de qualsevol tipus de col·lecció que tinguin, mitjançant una base de dades del sistema amb una estructura oberta adaptable a totes les necessitats. També proporciona dos tipus d’inici de sessió per als usuaris, creant-ne un de nou per a la plataforma o utilitzant el seu compte de Facebook que el connecta amb l’API de Facebook.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/main-app.jpeg&#34; alt=&#34;app&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/login.jpeg&#34; alt=&#34;login&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Mitjançant plantilles l’usuari pot establir tot tipus de registres per a articles tan diversos com segells o places de cava, pòsters o fòssils, ninots de drap o bitllets de loteria. Un cop definida la plantilla (categoria) per a l&amp;rsquo;objecte o el tipus d&amp;rsquo;objecte d&amp;rsquo;interès, l&amp;rsquo;usuari pot introduir dades immediatament.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/item-edit.jpeg&#34; alt=&#34;item edit&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/amazon-mapping.jpeg&#34; alt=&#34;amazon mapping&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Per facilitar tota aquesta tasca, incorpora eines per ajudar l’usuari. El més destacat que proporciona l&amp;rsquo;API del producte Amazon per llegir automàticament la informació de la seva base de dades en el moment de l&amp;rsquo;entrada de dades.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/amazon-search.jpeg&#34; alt=&#34;amazon search&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A partir d’aquí els usuaris podran llegir informació segons diversos criteris de cerca que s’ofereixen a l’aplicació i emmagatzemar-la. També hi ha una comparació de preus entre les diverses botigues d’Amazon de tots els països per trobar preus diferents i ajudar a comprar articles als usuaris.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/amazon-results.jpeg&#34; alt=&#34;amazon results&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Tot això s’ha desenvolupat sota una atractiva interfície gràfica d’usuari i la usabilitat com a objectiu principal.&lt;/p&gt;
+&lt;p&gt;Llenguatges de programació i eines utilitzades per a aquest projecte:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PHP 5, JavaScript i jQuery per al backend&lt;/li&gt;
+&lt;li&gt;HTML i CSS per al frontend&lt;/li&gt;
+&lt;li&gt;AJAX com la forma de trucar al costat del servidor&lt;/li&gt;
+&lt;li&gt;API del producte Amazon per a la investigació de productes i la comparació de preus&lt;/li&gt;
+&lt;li&gt;API de Facebook per a l&amp;rsquo;inici de sessió&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pensaments-finals&#34;&gt;PENSAMENTS FINALS&lt;/h2&gt;
+&lt;p&gt;Va ser el meu primer gran projecte com a desenvolupador de programari construint una web i vaig aprendre moltes coses com aprendre nous llenguatges de programació i arquitectura dels projectes; dissenyar correctament les bases de dades; polir el mínim detall visual; batalla amb API externes que es connecten a elles; organitzar-me per tal de lliurar petits trossos del projecte pas a pas en lloc de fer-ho tot al mateix temps; escriviu la documentació adequada sobre la funcionalitat del projecte i moltes altres probablement.&lt;/p&gt;
+&lt;p&gt;Sempre he volgut fer una segona versió millorada del projecte, ara amb l’experiència que tinc i les habilitats que he anat adquirint al llarg d’aquests anys de treball. He començat diverses vegades però mai he acabat &amp;hellip;&lt;/p&gt;
+&lt;p&gt;Espero que algun dia pugueu llançar oficialment l’aplicació i parlar-ne aquí. 🚀&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Tournaments generator</title>
+      <link>https://charly3pins.dev/ca/code/tournaments-generator/</link>
+      <pubDate>Fri, 01 May 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/code/tournaments-generator/</guid>
+      <description>Prova del concepte de creació d&#39;una aplicació per gestionar tornejos FIFA 20 entre diferents persones que utilitzen Flutter per crear una aplicació mòbil i Go per crear una API que actua com a servidor. També es va utilitzar Python per construir rascadors senzills.</description>
+      <content>&lt;h2 id=&#34;per-què&#34;&gt;PER QUÈ&lt;/h2&gt;
+&lt;p&gt;La motivació per iniciar aquest projecte no és una altra que la meva curiositat per les aplicacions mòbils. És obvi que la forma de consumir tecnologia ha canviat en els darrers anys i que cada vegada es fa més a través d’un dispositiu mòbil. Per aquest motiu, volia explorar com funcionen les aplicacions mòbils i com en puc crear una des de zero.
+Vaig fer alguns tutorials d&amp;rsquo;Android, però com que canvien moltes coses en publicar noves versions i la meva idea era construir quelcom genèric per a tots els dispositius, vaig decidir provar-ho amb &lt;a href=&#34;https://flutter.dev/&#34;&gt;Flutter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Estava entre &lt;a href=&#34;https://reactnative.dev/&#34;&gt;React Native&lt;/a&gt; o Flutter, però després de llegir alguns pros i contres, he decidit aliar-me amb Flutter. Vaig començar a llegir la seva &lt;a href=&#34;https://flutter.dev/docs&#34;&gt;documentació&lt;/a&gt; i era molt similar a Android (utilitzen Dart a la part inferior) i vaig començar a recordar els meus vells temps als tutorials d&amp;rsquo;Android i m&amp;rsquo;agrada, així que Vaig continuar. Després d’uns dies llegint només documentació tècnica, vaig continuar amb l’aplicació &amp;ldquo;hello world&amp;rdquo; &lt;a href=&#34;https://flutter.dev/docs/get-started/codelab&#34;&gt;tutorial&lt;/a&gt; que ofereixen al lloc web. I, finalment, estava preparat per començar el meu propi projecte.&lt;/p&gt;
+&lt;p&gt;Durant el moment que va començar la pandèmia mundial, jo i els meus amics vam iniciar una lliga FIFA 20 a PS4 per distreure’ns a les tardes / nits. Inicialment només es jugava i res més, però després vam començar a tenir un tauler de Power BI per a estadístiques, un canal de YouTube per compartir els jocs en directe i després emmagatzemar-los allà i un Twitter per publicar les actualitzacions de la classificació cada setmana. La primera lliga es va crear manualment, una mica de dolor i súper estàtica, així que he decidit utilitzar aquest tema per crear una aplicació que ens ajudi a gestionar la segona lliga creant la lliga, gestionant els nostres equips i partits allà, notificant els resultats i mostrant estadístiques més detallades a l&amp;rsquo;interior.&lt;/p&gt;
+&lt;h2 id=&#34;què&#34;&gt;QUÈ&lt;/h2&gt;
+&lt;p&gt;Primer de tot, volia posar tota la informació real de FIFA 20 al lloc web relacionada amb lligues, equips i jugadors. Per a això, he trobat alguns llocs web que tenen aquesta informació oberta i gratuïta, però que no tenen cap API per consumir-la. La idea de copiar manualment era molt temptadora, però vaig preferir escriure un rastrejador senzill a &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt; mitjançant la biblioteca &lt;a href=&#34;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors&#34;&gt;BeautifulSoup&lt;/a&gt; amb els selectors css que proporciona. Fent alguns ajustaments aquí i allà, al final vaig acabar tenint 3 fitxers JSON, un per a cada tema que volia inicialment, així que tot perfecte.&lt;/p&gt;
+&lt;p&gt;A continuació, per introduir tota aquesta informació a la base de dades, la idea era crear una eina de línia d&amp;rsquo;ordres que llegeixi aquests fitxers i generi les sentències SQL corresponents i, a continuació, generar els fitxers de migració corresponents.
+He triat &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; com a llenguatge de programació per a l&amp;rsquo;API i he creat un &lt;code&gt;cmd&lt;/code&gt; que em permet fer la idea desitjada. La base de dades seria &lt;a href=&#34;https://www.postgresql.org/&#34;&gt;PostgreSQL&lt;/a&gt;, de manera que les &amp;ldquo;insercions&amp;rdquo; han de ser segons la seva sintaxi.&lt;/p&gt;
+&lt;p&gt;Amb totes les dades inicials a punt, he començat a dissenyar la resta de la base de dades i els possibles punts finals ho necessiten per gestionar tota aquesta informació. He triat &lt;a href=&#34;https://github.com/gorilla/mux&#34;&gt;mux&lt;/a&gt; per a l&amp;rsquo;HTTP, ja que és senzill però potent en comparació amb el lib estàndard (només per a l&amp;rsquo;anàlisi de paràmetres val la pena &amp;hellip;). Com que volia explorar més el costat de l’aplicació mòbil que el servidor, només vaig organitzar el codi amb &lt;a href=&#34;https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html&#34;&gt;Arquitectura per capes&lt;/a&gt; com a ORM per simplificar la consulta i els mapejos entre la base de dades i els meus models.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/api-structure.jpeg&#34; alt=&#34;api structure&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Dins de la carpeta &lt;code&gt;cmd&lt;/code&gt; he creat diferents ordres:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;migració: gestiona les migracions a la base de dades&lt;/li&gt;
+&lt;li&gt;analitzador: tradueix el json del rastrejador a sentències sql&lt;/li&gt;
+&lt;li&gt;servidor: executa el servidor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dins de la carpeta &lt;code&gt;pkg&lt;/code&gt; és fàcil identificar el que fan les carpetes pel seu propi nom.&lt;/p&gt;
+&lt;p&gt;Per a l&amp;rsquo;aplicació mòbil, vaig començar a posar tots els fitxers dins d&amp;rsquo;una carpeta de &amp;ldquo;components&amp;rdquo;, però quan va començar a créixer era un kaos complet per gestionar. Després d’afegir més complexitat a l’aplicació, acabo trobant una manera neta d’organitzar el codi, dividint-lo en dues carpetes separades; un per al nucli i un altre per a la interfície d’usuari. Després, dins de cadascun, també vaig classificar els diferents tipus de components en funció de les seves responsabilitats i, al final, el codi (almenys per a mi que no sóc expert en Flutter) va quedar molt net i (sens dubte) més mantenible . A sota de l&amp;rsquo;organització de la carpeta en una vista general:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/app-structure.jpeg&#34; alt=&#34;app structure&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Al principi, quan vaig començar a codificar i a veure els resultats, tot era fantàstic i vaig pensar que era més fàcil del que s&amp;rsquo;esperava. La connexió de l’aplicació amb l’API només era qüestió de saber utilitzar la biblioteca &lt;code&gt;http&lt;/code&gt; i els mètodes&lt;code&gt; get&lt;/code&gt; o &lt;code&gt;post&lt;/code&gt; es van connectar sense problemes.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; client &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; http.Client();
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt; jsonBody &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json.encode(user.toJson());
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; client.post(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;$&lt;/span&gt;_baseUrl&lt;span style=&#34;color:#e6db74&#34;&gt;/token&amp;#34;&lt;/span&gt;,
+        headers: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;application/json&amp;#39;&lt;/span&gt;}, body: jsonBody);
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (response.statusCode &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;) {
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; User.fromJson(json.decode(response.body));
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;L’únic problema que m’he enfrontat és que estava executant les aplicacions des de l’Android Emulator; això vol dir que s&amp;rsquo;estava executant en una màquina virtual, de manera que la IP no era la meva local i no pot accedir al &lt;code&gt;localhost&lt;/code&gt;. Després d&amp;rsquo;una mica d&amp;rsquo;investigació, he trobat el correcte i tot ha funcionat correctament.&lt;/p&gt;
+&lt;p&gt;Els problemes van començar quan volia transmetre informació entre components i actualitzar la vista en funció d’aquesta informació, o millor encara, no actualitzar si no canvia res quan torno a entrar a una vista (per exemple, passar d’una llista a una vista de detall, i tornar a la llista). Després d’un dia llegint als fòrums sobre el mateix problema que m’enfrontava, he trobat el paquet &lt;a href=&#34;https://pub.dev/packages/provider&#34;&gt;Proveïdor&lt;/a&gt; i tot semblava fàcil i el sant grial de tot, però no ho era.&lt;/p&gt;
+&lt;p&gt;El veritable dolor acaba de començar aquí! Vaig trigar uns dies a entendre realment el seu funcionament. El proveïdor inicial és fàcil d’entendre, l’utilitzeu i funciona, però només voleu canviar només una petita part de la vista, o bé reconstruir-ne la completa, o bé modificar alguns valors en una vista A i a continuació, aneu a veure B i vegeu els canvis que hi ha, i tots aquests exemples estan completament codificats i primer heu de saber que hi ha una manera de fer cada cas i, en segon lloc, heu de saber com fer-ho. Al final he utilitzat el proveïdor, el ProxyProvider, el StreamProvider i el ChangeNotifierProvider.&lt;/p&gt;
+&lt;p&gt;El projecte no està acabat, però ara com ara està en espera amb les funcions següents:&lt;/p&gt;
+&lt;p&gt;Inicialment, l&amp;rsquo;usuari pot canviar entre les vistes d&amp;rsquo;inscripció/inici de sessió.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/signup.png&#34; alt=&#34;signup&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/login.png&#34; alt=&#34;login&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Un cop l’usuari es troba dins de l’aplicació, hi ha diferents pestanyes on han de jugar els següents &lt;code&gt;Partits&lt;/code&gt;, els &lt;code&gt;Torneigs&lt;/code&gt; que juga i els &amp;ldquo;Grups&amp;rdquo; on és present i els membres que hi ha. A la part superior té una barra de navegació amb una imatge de perfil, una icona de campana per a les notificacions, una icona d’objectiu per buscar altres membres i afegir com a amics i el botó de tancament de sessió per desconnectar.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/home.png&#34; alt=&#34;home&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Si fa clic a la foto de perfil, es dirigeix directament al perfil de l&amp;rsquo;usuari on mostra els amics i on pot editar la seva informació personal (nom, nom d&amp;rsquo;usuari, foto de perfil):
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/profile.png&#34; alt=&#34;profile&#34;&gt;&lt;/p&gt;
+&lt;p&gt;En prémer la icona de la lent, canvia la visualització a la funcionalitat de supercercador que permet a l&amp;rsquo;usuari trobar altres persones que ja estan a la plataforma, afegir-les com a amics i després crear grups, generar torneigs i jugar partits junts. El cercador és una cerca &amp;ldquo;m&amp;rsquo;agrada&amp;rdquo;, de manera que si alguna de les lletres que introdueix apareix en algun nom d&amp;rsquo;usuari, es mostrarà allà.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/searcher.png&#34; alt=&#34;searcher&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Després, si l’usuari introdueix un perfil que no és un amic, apareixerà el botó per afegir-lo i, si es fa clic, ocultarà aquest botó i mostrarà la informació que ja hi ha una sol·licitud enviada, esperant l’altre usuari. per respondre-ho.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/add-friend.png&#34; alt=&#34;add friend&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/add-friend-requested.png&#34; alt=&#34;add friend requested&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Actuant com a altre usuari, en iniciar la sessió, la icona de campana mostrarà una nova notificació. Accedir a l&amp;rsquo;interior apareix com una notificació d&amp;rsquo;amistat i es pot respondre directament des de la llista o entrar al perfil de &amp;ldquo;sol·licitant&amp;rdquo; i acceptar-lo o rebutjar-lo. Si s’accepta la sol·licitud d’amistat, apareixerà com a nou amic al perfil de l’usuari.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/friend-request-notification.png&#34; alt=&#34;friend request notification&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/friend-request-notification-answer.png&#34; alt=&#34;friend request notification answer&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/profile-multifriends.png&#34; alt=&#34;profile multi friends&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Després que un usuari tingui alguns amics, és el moment en què pot crear un grup. Per a això, l&amp;rsquo;aplicació té la tercera pestanya anomenada &lt;code&gt;Grups&lt;/code&gt; i un botó (+).
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group.png&#34; alt=&#34;new group&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Dins del generador de grups es mostrarà la llista dels amics a la part superior. A mesura que es seleccionen, es col·loquen a la llista següent, on es poden eliminar si es vol; quan tots els amics estiguin seleccionats, és hora de passar a la pantalla següent mitjançant el botó (&amp;ndash;&amp;gt;).
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-selected.png&#34; alt=&#34;new group selected&#34;&gt;&lt;/p&gt;
+&lt;p&gt;El següent pas és posar un bon nom per a aquest grup i, a continuació, prémer la marca per crear el grup.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-name.png&#34; alt=&#34;new group name&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Quan l&amp;rsquo;usuari torna a la visualització inicial, apareix el grup nou creat i els membres d&amp;rsquo;aquest a la llista.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-created.png&#34; alt=&#34;new group created&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A partir d’aquí el que falta és crear els &lt;code&gt;Torneigs&lt;/code&gt; seleccionant el grup i els membres d’aquest grup que volen jugar, el nombre d’equips per a cada membre, els equips, les rondes, el tipus de torneig, etc. i després generar el calendari. Mostra el calendari a la pestanya &amp;ldquo;Coincidències&amp;rdquo; i dins de cada coincidència permetrà als usuaris afegir els resultats. També proporcioneu una classificació i les estadístiques de cada partit i una agrupada per a cada partit i una de genèrica.&lt;/p&gt;
+&lt;h2 id=&#34;pensaments-finals&#34;&gt;PENSAMENTS FINALS&lt;/h2&gt;
+&lt;p&gt;Amb aquesta prova de concepte, vaig tenir l&amp;rsquo;oportunitat de treballar en una aplicació complexa en termes de disseny de components reutilitzables en una aplicació mòbil, trucar a una API externa per gestionar la informació que es mostra a l&amp;rsquo;aplicació i aprendre a utilitzar el paquet de proveïdor per moure informació. entre vistes múltiples i controlar l’estat de l’aplicació d’una manera més senzilla i eficaç.&lt;/p&gt;
+&lt;p&gt;Hi ha molt més a aprendre sobre el desenvolupament de mòbils, però considero aquest projecte com un pas inicial per començar. Algun dia faré les vistes que falten per tal de poder utilitzar-les al món real, però espero que no sigui perquè tenim una altra pandèmia 😏&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Software Engineer, gamer and dog walker">
+  <meta name="description" content="Software Engineer, Japan lover, video gamer and dog walker">
 
   <title>Raspberry Pi media player with Plex, Transmission, Sonarr, Bazarr and Jackett | Charly3Pins</title>
 
@@ -56,7 +56,7 @@ if (!doNotTrack) {
 		<div id="main">
 
 			
-<div class="container centered no-padd">
+<div class="centered no-padd">
     <div class="toggle">
         <input type="checkbox">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -107,6 +107,25 @@ if (!doNotTrack) {
                     <a href="/about/" class="">$USER</a>
                 </span>
             
+            
+            <span class="menu-item">
+                <div class="sl-nav">
+                    <ul>
+                        <li>
+                            <b>English</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <div class="triangle"></div>
+                            <ul>
+                            
+                                <a href="https://charly3pins.dev/es/blog/reproductor-multimedia-en-una-raspberry-pi-con-plex-transmission-sonarr-bazarr-y-jackett/">Spanish</a>
+                            
+                                <a href="https://charly3pins.dev/ca/blog/reproductor-multim%C3%A8dia-a-un-raspberry-pi-amb-plex-transmission-sonarr-bazarr-i-jackett/">Catalan</a>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            
         </div>
     </div>
     <div id="menu">
@@ -116,10 +135,15 @@ if (!doNotTrack) {
             
             
             
+            
+            
             <span class="menu-item">
                 <a href="/" class="">~</a>
             </span>
+            
         
+            
+            
             
             
             
@@ -128,7 +152,10 @@ if (!doNotTrack) {
             <span class="menu-item">
                 <a href="/blog/" class="active">/blog</a>
             </span>
+            
         
+            
+            
             
             
             
@@ -137,7 +164,10 @@ if (!doNotTrack) {
             <span class="menu-item">
                 <a href="/code/" class="">/code</a>
             </span>
+            
         
+            
+            
             
             
             
@@ -146,7 +176,10 @@ if (!doNotTrack) {
             <span class="menu-item">
                 <a href="/notes/" class="">/notes</a>
             </span>
+            
         
+            
+            
             
             
             
@@ -155,9 +188,30 @@ if (!doNotTrack) {
             <span class="menu-item">
                 <a href="/about/" class="">$USER</a>
             </span>
+            
+        
+        
+        <span class="menu-item">
+            <div class="sl-nav">
+                <ul>
+                    <li>
+                        <b>English</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="triangle"></div>
+                        <ul>
+                        
+                            <a href="https://charly3pins.dev/es/blog/reproductor-multimedia-en-una-raspberry-pi-con-plex-transmission-sonarr-bazarr-y-jackett/">Spanish</a>
+                        
+                            <a href="https://charly3pins.dev/ca/blog/reproductor-multim%C3%A8dia-a-un-raspberry-pi-amb-plex-transmission-sonarr-bazarr-i-jackett/">Catalan</a>
+                        
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </span>
         
     </div>
 </div>
+
 
 			<div class="container">
 				<div id="cover-image">
@@ -178,7 +232,7 @@ if (!doNotTrack) {
             <a class="button tag" href="https://charly3pins.dev/tags/life/"><span class="tag-prefix">#</span>life</a>
         
     
-    · 05/11/2020 · 11 min read ·
+    · 05/11/2020 · 11 minutes to read ·
 </p>
 				</div>
 
@@ -395,7 +449,7 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">cd</span> <span style="color:#e6db74">/opt/</span><span style="color:#a6e22e">bazarr</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">python3</span> -<span style="color:#a6e22e">m</span> <span style="color:#a6e22e">pip</span> <span style="color:#a6e22e">install</span> -<span style="color:#a6e22e">r</span> <span style="color:#a6e22e">requirements</span>.<span style="color:#a6e22e">txt</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>ℹ️ NOTE: Don&rsquo;t worry about <code>lxml</code> not being installed at this step, you have installed the module through apt-get anyway.</p>
-<p>Change the ownership to `pi`` user:</p>
+<p>Change the ownership to <code>pi</code> user:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">chown</span> -<span style="color:#a6e22e">R</span> <span style="color:#a6e22e">pi</span>:<span style="color:#a6e22e">pi</span> <span style="color:#e6db74">/opt/</span><span style="color:#a6e22e">bazarr</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>And we can start and test Bazarr:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">python3</span> <span style="color:#a6e22e">bazarr</span>.<span style="color:#a6e22e">py</span> <span style="color:#960050;background-color:#1e0010">
@@ -438,7 +492,7 @@ if (!doNotTrack) {
 </span></code></pre></div><p>The web interface is already available at the address http://192.168.1.131:6767 (replace the IP address with the one used by the Raspberry Pi in your network).</p>
 <h2 id="install-plex">Install Plex</h2>
 <p><a href="https://www.plex.tv/">Plex</a> brings together all the media that matters to you. Your personal collection will look beautiful alongside stellar streaming content. Enjoy Live TV &amp; DVR, a growing catalog of great web shows, news, and podcasts. It&rsquo;s finally possible to enjoy all the media you love in a single app, on any device, no matter where you are.</p>
-<p>First of all we need to add a new repository and it&rsquo;s key. This will add to the Raspberr&rsquo;s OS the repositories where we need to download the installation and the future updates. It&rsquo;s like a list of links where the system reads automatically the programs it needs for the installation and the updates.</p>
+<p>First of all we need to add a new repository and it&rsquo;s key. This will add to the Raspberry&rsquo;s OS the repositories where we need to download the installation and the future updates. It&rsquo;s like a list of links where the system reads automatically the programs it needs for the installation and the updates.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">echo</span> <span style="color:#a6e22e">deb</span> <span style="color:#a6e22e">https</span>:<span style="color:#e6db74">//</span><span style="color:#a6e22e">downloads</span>.<span style="color:#a6e22e">plex</span>.<span style="color:#a6e22e">tv</span><span style="color:#e6db74">/repo/</span><span style="color:#a6e22e">deb</span> <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">main</span> | <span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">tee</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">apt</span><span style="color:#e6db74">/sources.list.d/</span><span style="color:#a6e22e">plexmediaserver</span>.<span style="color:#a6e22e">list</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>Next step is adding the signatures of the repos. The system has to be sure that the repos we added manually are correct and they don&rsquo;t have malware. For that we need to add the key and helps system to verify those repos.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">curl</span> <span style="color:#a6e22e">https</span>:<span style="color:#e6db74">//</span><span style="color:#a6e22e">downloads</span>.<span style="color:#a6e22e">plex</span>.<span style="color:#a6e22e">tv</span><span style="color:#e6db74">/plex-keys/</span><span style="color:#a6e22e">PlexSign</span>.<span style="color:#a6e22e">key</span> | <span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span>-<span style="color:#a6e22e">key</span> <span style="color:#a6e22e">add</span><span style="color:#960050;background-color:#1e0010">
@@ -465,7 +519,7 @@ if (!doNotTrack) {
 						
 						<li>
 							<a class="li-link" href="https://charly3pins.dev/blog/level-up-your-preseentations-with-go/">Level up your presentations with Go</a>
-							<p class="li-brief">Generate easily your presentations with present, the tool powered by Go that generates and renders your slides.</p>
+							<p class="li-brief">Generate easily your presentations with &#34;present&#34;, the tool powered by Go that generates and renders your slides.</p>
 							
 							<p class="metadata">
     
@@ -475,7 +529,7 @@ if (!doNotTrack) {
             <a class="button tag" href="https://charly3pins.dev/tags/life/"><span class="tag-prefix">#</span>life</a>
         
     
-    · 06/10/2020 · 7 min read ·
+    · 06/10/2020 · 7 minutes to read ·
 </p>
 						</li>
 						
@@ -528,8 +582,8 @@ if (!doNotTrack) {
 			</li>
 	</ul>
 	</section>
-	<p>Last change 23/11/2020</p>
-	<p>© 2018 - 2020 Charly3Pins</p>
+	<p>Last post published on 23/11/2020</p>
+	<p>© 2018 - 2021 Charly3Pins</p>
 </footer>
 			
 		</div>

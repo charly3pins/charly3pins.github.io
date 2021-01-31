@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on charly3pins.dev</title>
+    <link>https://charly3pins.dev/es/tags/go/</link>
+    <description>Recent content in go on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Oct 2020</lastBuildDate><atom:link href="https://charly3pins.dev/es/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tournaments generator</title>
+      <link>https://charly3pins.dev/es/code/tournaments-generator/</link>
+      <pubDate>Fri, 01 May 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/es/code/tournaments-generator/</guid>
+      <description>Proof of concept building an application for managing FIFA 20 tournaments between different people using Flutter for building a mobile app and Go for building an API acting as a server. Also used Python to build simple scrapers.</description>
+      <content>&lt;h2 id=&#34;why&#34;&gt;WHY&lt;/h2&gt;
+&lt;p&gt;The motivation for starting this project is not another one than my curiosity about the mobile applications. It is obvious that the way of consuming technology has changed over the last few years and it is increasingly being done through a mobile device. For that reason I wanted to explore how the mobile apps work and how I can build one from scratch.
+I did some Android tutorials, but as they are changing a lot of things when releasing new versions and my idea was to build something generic for all devices, I decided to give it a try to &lt;a href=&#34;https://flutter.dev/&#34;&gt;Flutter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was between &lt;a href=&#34;https://reactnative.dev/&#34;&gt;React Native&lt;/a&gt; or Flutter, but after reading some pros and cons, I&amp;rsquo;ve decided to ally myself with Flutter. I started reading their &lt;a href=&#34;https://flutter.dev/docs&#34;&gt;documentation&lt;/a&gt; and it was super similar to Android (they are using Dart in the bottom) and I started remembering my old days on the Android tutorials and I like, so I continued. After a few days reading only technical documentation, I continued with the &amp;ldquo;hello world&amp;rdquo; app &lt;a href=&#34;https://flutter.dev/docs/get-started/codelab&#34;&gt;tutorial&lt;/a&gt; they provide in the website. And finally, I was ready to start my own project.&lt;/p&gt;
+&lt;p&gt;For the time the global pandemic started, me and my friends started a FIFA 20 league on PS4 to distract ourselves in the afternoons/nights. Initially it was just playing and nothing else, but then we started having a Power BI dashboard for statistics, a YouTube channel to share the games live and then store them there and a Twitter to tweet the updates in the classification every week. The first league was created manually and a bit of pain and super static, so I&amp;rsquo;ve decided to use that topic to create an app that helps us to manage the second league creating the league, managing our teams and matches there, notifying the results and showing more detailed statistics inside.&lt;/p&gt;
+&lt;h2 id=&#34;what&#34;&gt;WHAT&lt;/h2&gt;
+&lt;p&gt;First of all I wanted to put all the real FIFA 20 information inside the website related with leagues, teams and players. For that I found a few websites that have that information open and free, but they haven&amp;rsquo;t an API for consuming it. The idea of copying manually was tempting a lot, but I preferred to write a simple crawler in &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt; using the library &lt;a href=&#34;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors&#34;&gt;BeautifulSoup&lt;/a&gt; with the css-selectors it provides. Doing some tweaks here and there, at the end I ended up having 3 json files, one for each topic I wanted initially so all perfect!&lt;/p&gt;
+&lt;p&gt;Then in order to introduce all that information in the database the idea was to create a command line tool that reads those files and generates the corresponding SQL statements and then generate the corresponding migration files.
+I&amp;rsquo;ve chosen &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; as the programming language for the API and I&amp;rsquo;ve created a &lt;code&gt;cmd&lt;/code&gt; that allows me to do the desired idea. The database would be &lt;a href=&#34;https://www.postgresql.org/&#34;&gt;PostgreSQL&lt;/a&gt; so the &amp;ldquo;inserts&amp;rdquo; have to be according to its syntax.&lt;/p&gt;
+&lt;p&gt;With all the initial data ready, I&amp;rsquo;ve started to design the rest of the Database and the possible endpoints need it for manage all that information. I&amp;rsquo;ve chosen &lt;a href=&#34;https://github.com/gorilla/mux&#34;&gt;mux&lt;/a&gt; for the HTTP for it&amp;rsquo;s simplicity but powerful in comparison with the standard lib one (just only for the parameter parsing it&amp;rsquo;s worth it&amp;hellip;). As I wanted to explore more the mobile app side than the server side, I just organized the code using the &lt;a href=&#34;https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html&#34;&gt;Layered Architecture&lt;/a&gt; grouping the items by function and used &lt;a href=&#34;https://gorm.io/index.html&#34;&gt;GORM&lt;/a&gt; as the ORM for simplify the query and the mappings between the database and my models.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/api-structure.jpeg&#34; alt=&#34;api structure&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Inside the &lt;code&gt;cmd&lt;/code&gt; folder I&amp;rsquo;ve created different commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;migration: manages the migrations in the database&lt;/li&gt;
+&lt;li&gt;parser: translates the json from the crawler into sql statements&lt;/li&gt;
+&lt;li&gt;server: runs the server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Inside the &lt;code&gt;pkg&lt;/code&gt; folder it&amp;rsquo;s easy to identify what the folders are doing by it&amp;rsquo;s own name.&lt;/p&gt;
+&lt;p&gt;For the mobile app, I started putting all files inside a &lt;code&gt;components&lt;/code&gt; folder but when it started growing it was a complete kaos to manage. After adding more complexity to the app I end up finding a clean way to organize the code, dividing it into two separate folders; one for the core and another one for the ui. Then inside of each one I also categorized the different type of components depending on their responsibilities and at the end the code (at least for me that I&amp;rsquo;m not a Flutter expert) ended up looking super clean and (without no doubt) more maintainable. Below the folder organization in a general view:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/app-structure.jpeg&#34; alt=&#34;app structure&#34;&gt;&lt;/p&gt;
+&lt;p&gt;At the beginning when I started coding and watching the results all was super fancy and I thought it was easier than expected. Connecting the app with the API was just a matter of knowing how to use the &lt;code&gt;http&lt;/code&gt; library and the &lt;code&gt;get&lt;/code&gt; or &lt;code&gt;post&lt;/code&gt; methods was connected with no problems.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; client &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; http.Client();
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt; jsonBody &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json.encode(user.toJson());
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; client.post(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;$&lt;/span&gt;_baseUrl&lt;span style=&#34;color:#e6db74&#34;&gt;/token&amp;#34;&lt;/span&gt;,
+        headers: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;application/json&amp;#39;&lt;/span&gt;}, body: jsonBody);
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (response.statusCode &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;) {
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; User.fromJson(json.decode(response.body));
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The unique problem I&amp;rsquo;ve faced there is that I was running the apps from the Android Emulator; that means it was running in a virtual machine so the IP was not my local one and cannot access the &lt;code&gt;localhost&lt;/code&gt;. After a bit of research I&amp;rsquo;ve found the correct one and all worked correctly.&lt;/p&gt;
+&lt;p&gt;The problems started when I wanted to pass information between components, and refresh the view depending on that information, or even better, not refresh if nothing changed when I enter again into a view (for example going from a list to a detail view, and coming back again to the list). After a day reading in forums about the same problem that I was facing, I&amp;rsquo;ve found the package &lt;a href=&#34;https://pub.dev/packages/provider&#34;&gt;Provider&lt;/a&gt; and all seemed easy and the holy grail for everything, but it wasn&amp;rsquo;t.&lt;/p&gt;
+&lt;p&gt;The real pain just started there! It took me some days to really understand how it works. The initial Provider it&amp;rsquo;s easy to understand and you use it and it works, but then you want to change just a small part of the view, or you want to rebuild the entire one, or you want to modify some values in a view A and then go to view B and see the changes there, and all that examples it&amp;rsquo;s coded completely different and you have to know first of all that there are one way for each case of doing things and second you have to know how to do it. At the end I used the Provider, the ProxyProvider, the StreamProvider and the ChangeNotifierProvider.&lt;/p&gt;
+&lt;p&gt;The project is not finished but for now is On Hold with the following functionalities:&lt;/p&gt;
+&lt;p&gt;Initially the user can switch between the signup/login views.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/signup.png&#34; alt=&#34;signup&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/login.png&#34; alt=&#34;login&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Once the user is inside the application it has different tabs where the next &lt;code&gt;Matches&lt;/code&gt; he has to play, the &lt;code&gt;Tournaments&lt;/code&gt; that he is playing and the &lt;code&gt;Groups&lt;/code&gt; where he is present and the members inside. On the top it has a navbar with a profile picture, a bell icon for the notifications, a lens icon for search other members and adding as his friends and the logout button to disconnect.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/home.png&#34; alt=&#34;home&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If he clicks on the profile picture it goes directly to the user&amp;rsquo;s profile where it displays the friends and where he can edit his personal information (name, username, profile picture):
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/profile.png&#34; alt=&#34;profile&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pressing the lens icon, changes the view to the super searcher functionality which allows the user to find other people already in the platform, add them as his friends and then create groups, generate tournaments and play matches together. The searcher is a &amp;ldquo;like&amp;rdquo; search, so if any of the letters it introduces appears in some username, then it&amp;rsquo;s displayed there.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/searcher.png&#34; alt=&#34;searcher&#34;&gt;&lt;/p&gt;
+&lt;p&gt;After that, if the user enters one profile that is not a friend, it will appear the button to add it and if it&amp;rsquo;s clicked, it will hide that button and display the information that there is already a request sent, waiting for the other user to answer it.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/add-friend.png&#34; alt=&#34;add friend&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/add-friend-requested.png&#34; alt=&#34;add friend requested&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Acting as the other user, when logging in, the bell icon will display a new notification. Going inside appears as a friend notification and it can be answered from the list directly or going inside the &amp;ldquo;requester&amp;rdquo; profile and accepting/declining there. If the friend request is accepted, it will appear as a new friend in the user&amp;rsquo;s profile.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/friend-request-notification.png&#34; alt=&#34;friend request notification&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/friend-request-notification-answer.png&#34; alt=&#34;friend request notification answer&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/profile-multifriends.png&#34; alt=&#34;profile multi friends&#34;&gt;&lt;/p&gt;
+&lt;p&gt;After a user has some friends, is the moment when he can create a group. For that the application has the third tab called &lt;code&gt;Groups&lt;/code&gt; and a (+) button.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group.png&#34; alt=&#34;new group&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Inside the groups generator it will display the list of the friends on the top. As they are selected, they are placed in the list below, where they can be removed if desired; when all friends are selected it&amp;rsquo;s time to move to the next screen using the (&amp;ndash;&amp;gt;) button.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-selected.png&#34; alt=&#34;new group selected&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The next step is to put a good name for that group and then press the tick one to create the group.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-name.png&#34; alt=&#34;new group name&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When the user is returned to the home view it appears the new group created and the members of it in the list.
+&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-created.png&#34; alt=&#34;new group created&#34;&gt;&lt;/p&gt;
+&lt;p&gt;From here what is missing is to create the &lt;code&gt;Tournaments&lt;/code&gt; selecting the group and the members of that group that want to play, the number of teams for each member, the teams, the rounds, the type of tournament, etc. and then generate the calendar. Display the calendar in the &lt;code&gt;Matches&lt;/code&gt; tab and inside each match allow the users to add the results. Also provide a classification and the statistics for each match and a grouped one for each fixture and a generic one.&lt;/p&gt;
+&lt;h2 id=&#34;final-thoughts&#34;&gt;FINAL THOUGHTS&lt;/h2&gt;
+&lt;p&gt;With this proof of concept I had the opportunity to work in a complex application in terms of designing reusable components in a mobile application, calling to an external API to manage the information displayed in the app and learning how to use the Provider package for moving information between multiple views and control the state of the application in a simpler and effective way.&lt;/p&gt;
+&lt;p&gt;There is a lot more to learn regarding mobile development but I consider this project as an initial step to start with. I will do the missing views someday in order we can use it in real world, but I hope it&amp;rsquo;s not because we have another pandemic 😏&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Suba de nivel sus presentaciones con Go</title>
+      <link>https://charly3pins.dev/es/blog/suba-de-nivel-sus-presentaciones-con-go/</link>
+      <pubDate>Tue, 06 Oct 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/es/blog/suba-de-nivel-sus-presentaciones-con-go/</guid>
+      <description>Genera fácilmente tus presentaciones con &#34;present&#34;, la herramienta impulsada por Go que genera y renderiza tus diapositivas.</description>
+      <content>&lt;p&gt;Si es una persona técnica y no te gusta luchar con los programas de presentación pero quiere / necesita crear uno, enhorabuena! estás en el lugar correcto. Sé que, como ingenieros de software, queremos codificar, leer o mirar cosas relacionadas con software, arquitectura o devops, pero no con presentaciones. A veces, se nos exige que presentamos algo a otros miembros del equipo, a los propietarios de productos o incluso más aterradores, al equipo directivo.&lt;/p&gt;
+&lt;p&gt;Por este motivo, quiero presentaros el paquete &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present&#34;&gt;present&lt;/a&gt; de Go. Se utiliza para crear diapositivas a Golang alojadas en discussions.golang.org o tu privada. La he utilizado varias veces, sobre todo cuando quiero compartir algo con mis compañeros del equipo (algún código, claro), porque no quiero perder el tiempo con los programas. Acabo de crear el proyecto para las diapositivas, añado mis diapositivas a la marca, añado las imágenes necesarias y las presento. Veamos detalladamente cómo funciona!&lt;/p&gt;
+&lt;p&gt;Suponiendo que tiene Go &lt;a href=&#34;https://golang.org/doc/install&#34;&gt;instalado&lt;/a&gt; y configurado correctamente, todo lo que debe instalar es el paquete con el siguiente orden:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;go&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;u&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;golang&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;org&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/x/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;tools&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;present&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Comprueba si funciona escribiendo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;present&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Debería de mostrar un mensaje similar a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/10/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;04&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;54&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Open&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;web&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;browser&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;visit&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;127&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;3999&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por lo tanto, puede visitar el enlace y ver el servidor local preparado para alojar sus presentaciones. Increíble, ¿o no? De acuerdo, sé que desea mostrar algo que no sea un directorio vacío, así que vamos a crear un ejemplo de presentación para ello.&lt;/p&gt;
+&lt;h2 id=&#34;formato&#34;&gt;Formato&lt;/h2&gt;
+&lt;p&gt;Cree un directorio para las diapositivas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;go&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;present&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;example&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;go&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;present&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;example&lt;/span&gt;/&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Cree la primera diapositiva:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vim&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;initial&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;slide&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y añada el siguiente contenido:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Learning Go present
+6 October 2020
+
+Crash Bandicoot
+crash.bandicoot@gmail.com
+
+* Hello World
+
+I&#39;m a slide
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Por lo tanto, si vuelve a ejecutar el comando &lt;code&gt;present&lt;/code&gt; dentro de su carpeta y va de nuevo al navegador debería ver la pantalla siguiente:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/initial-slide.jpeg&#34; alt=&#34;initial slide&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Haga clic en el enlace &lt;code&gt;initial.slide&lt;/code&gt; y admire su presentación.
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/initial-presentation.jpeg&#34; alt=&#34;initial presentation&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Como puede ver, la primera línea es el título, la segunda la fecha y luego la sigue el autor. En la segunda diapositiva, en realidad la primera, aparece el título de la diapositiva y el texto de la misma. El último muestra un título de agradecimiento y su nombre y contacto (correo electrónico, twitter, etc.) que ha agregado a la diapositiva. Ver a continuación:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/end-presentation.jpeg&#34; alt=&#34;end presentation&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sintaxis-heredada-del-comando-present&#34;&gt;Sintaxis heredada del comando present&lt;/h2&gt;
+&lt;p&gt;Es compatible con Markdown, pero aquí exploraremos la &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present#hdr-Legacy_Present_Syntax&#34;&gt;sintaxis heredada de present&lt;/a&gt;, ya que el Markdown tiene muchos recursos sobre cómo comprobar. Así que vamos a explorar un poco las funciones que ofrece &amp;ldquo;presente&amp;rdquo; para formatear y añadir texto a nuestros diapositivas.&lt;/p&gt;
+&lt;p&gt;Primero son las opciones clásicas para formatear el texto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;normal vs `highlighted`
+*bold*
+_italic_
+*multiple*bold*text*
+_multiple_italic_text_
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y el resultado es:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/text-formatting.jpeg&#34; alt=&#34;text formatting&#34;&gt;&lt;/p&gt;
+&lt;p&gt;También se puede añadir una lista:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;Grocery list for the gopher:
+
+- go routines
+- garbage collector
+- Rust
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/text-formatting-list.jpeg&#34; alt=&#34;text formatting list&#34;&gt;&lt;/p&gt;
+&lt;p&gt;O un nivel diferente de subsecciones así:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;** Subsection
+
+Gopher is diving the subsection.
+
+*** Sub-subsection
+
+Another Gopher is diving more into the sub-subsection!
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Y verá la diapositiva como esta locura:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/text-formatting-subsections.jpeg&#34; alt=&#34;text formatting subsections&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/gophers.gif&#34; alt=&#34;gophers&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;invocaciones-de-comandos&#34;&gt;Invocaciones de comandos&lt;/h2&gt;
+&lt;p&gt;Aparte del formato de texto, hay una &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present#hdr-Command_Invocations&#34;&gt;invocaciones de comandos especiales&lt;/a&gt; que puede invocar para llevar su presentación a otro nivel.&lt;/p&gt;
+&lt;h3 id=&#34;imágenes-y-vídeos&#34;&gt;imágenes y vídeos&lt;/h3&gt;
+&lt;p&gt;El comando &lt;code&gt;.image&lt;/code&gt; inyecta una imagen en la diapositiva. Acepta 1 o 3 argumentos (nombre, altura, anchura). El nombre es obligatorio, los otros dos deben estar presentes o sustituidos por un &lt;code&gt;_&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.image /images/gopher.jpeg 200 200
+.image /images/gopher.jpeg _ 300
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/images.jpeg&#34; alt=&#34;images&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Al igual que las imágenes, puede hacer lo mismo con un vídeo mediante el comando &lt;code&gt;.video&lt;/code&gt;. Acepta 2 o 4 argumentos (nombre, tipo de contenido del archivo, altura, anchura). El nombre y el tipo de contenido del archivo son obligatorios; los otros dos deben estar presentes o sustituidos por y &lt;code&gt;_&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.video videos/gopher-dance.mp4 video/mp4 400 600
+.video videos/gopher-dance.mkv video/mkv 500 _
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De manera similar a las imágenes, también tiene el pedido &lt;code&gt;.background&lt;/code&gt; para configurar la imagen de fondo de una diapositiva. Sólo tiene un argumento como nombre de archivo de la imagen.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.background images/susan.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;enlaces&#34;&gt;enlaces&lt;/h3&gt;
+&lt;p&gt;Si va a insertar un enlace a la presentación, puede utilizar la orden &lt;code&gt;.link&lt;/code&gt;. Acepta 1 o 2 argumentos (URL HTTP, etiqueta de texto). La URL HTTP es obligatorio, el segundo es opcional.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.link https://charly3pins.dev charly3pins website
+.link https://charly3pins.dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/links.jpeg&#34; alt=&#34;links&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;código&#34;&gt;código&lt;/h3&gt;
+&lt;p&gt;La mejor pedido en mi opinión es la de &lt;code&gt;.code&lt;/code&gt;. Le permite poner código extraído de los archivos fuente y inyectarles como bloques &lt;!-- raw HTML omitted --&gt; escapados por HTML. Acepta un argumento como nombre de archivo seguido de una dirección opcional que especifica qué sección del archivo se mostrará.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, tomando Hello world a Go como código fuente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Debemos especificar como:```text
+.code hello.go&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+Y se mostrará así:
+![code](/images/level-up-your-presentations-with-go/code.jpeg)
+
+Pero, ¿qué ocurre si desea resaltar alguna parte del código? No se preocupe, presente tiene este &amp;quot;presente&amp;quot; y puede añadir las &amp;quot;direcciones opcionales&amp;quot; que hemos comentado a continuación. Por lo tanto, cambie el código así para resaltar la llamada `Printf`:
+```go
+package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main() {
+	fmt.Println(&amp;quot;Hello world!&amp;quot;) // HL
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Y utilice el mismo comando en la diapositiva:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.code hello-hl.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para ver el código resaltado:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-hl.jpeg&#34; alt=&#34;code-hl&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Un paso más! Si sólo desea mostrar una parte de su código, por ejemplo, ocultar el paquete y las importaciones de archivo, también puede agregar los siguientes fragmentos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;//START OMIT
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// HL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}
+&lt;span style=&#34;color:#75715e&#34;&gt;//END OMIT
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Vuelva a utilizar el mismo comando pero añadiendo el siguiente fragmento:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.code hello-hl-partial.go /START OMIT/,/END OMIT/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y véase el código parcialmente mostrado:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-hl-partial.jpeg&#34; alt=&#34;code-hl-partial&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;play&#34;&gt;play&lt;/h4&gt;
+&lt;p&gt;Esto comando es superpotente para ayudarle a presentar algún código y resaltar u ocultar algunas partes. Pero el espectáculo debe continuar y la mejor parte es la siguiente. El comando &lt;code&gt;.play&lt;/code&gt; es como el del &lt;code&gt;.code&lt;/code&gt;, pero pone un botón a la fuente descatalogada y puede ejecutar el programa desde el navegador. Es magia o no?
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/magic.gif&#34; alt=&#34;magic&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Utilizamos el mismo código fuente que estamos utilizando y añadimos el nuevo comando en las diapositivas así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.play hello.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aparecerá como el del &amp;ldquo;código&amp;rdquo;, pero si observa en el extremo inferior derecho, aparecerá un pequeño botón &lt;code&gt;Run&lt;/code&gt;.
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-play.jpeg&#34; alt=&#34;code-play&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Al ejecutar el código se mostrará una pequeña ventana negra en la pantalla donde se mostrará la salida del código:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-played.jpeg&#34; alt=&#34;code-played&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;notas-del-presentador&#34;&gt;Notas del presentador&lt;/h2&gt;
+&lt;p&gt;Por último, pero no menos importante, es algo interesante que también proporcionan. Es bien sabido que los programas de PowerPoint o similares puede añadir sus notas sólo para vosotros cuando presentas la presentación ya veces son muy útiles. Así pues, &amp;ldquo;presente&amp;rdquo; también lo tiene en cuenta y puedes añadir tus notas de presentación sólo añadiendo un &lt;code&gt;:&lt;/code&gt; al comienzo de la frase y este texto se tratará como una nota de presentador.&lt;/p&gt;
+&lt;p&gt;Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;* Presenter notes
+
+The gophers like to eat a lot.
+
+: they eat more than half their body weight in food each day
+
+They eat basically plants.
+
+: typically gnaws the roots of a plant just beneath the soil, so the damage isn’t seen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/present-notes.jpeg&#34; alt=&#34;present-notes&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Como puede ver, las notas no están presentes, ¿por qué? Porque necesita ejecutar la presentación en un &amp;ldquo;presentador&amp;rdquo; así.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;present&lt;/span&gt; -&lt;span style=&#34;color:#a6e22e&#34;&gt;notes&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y debería mostrar un mensaje similar a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/10/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;04&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;54&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Open&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;web&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;browser&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;visit&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;http&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;//&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;127&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;3999&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/10/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;04&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Notes&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;are&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;enabled&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;press&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;N&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;browser&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;display&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;them&lt;/span&gt;.&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por lo tanto, si actualiza el navegador con la presentación y pulse &lt;code&gt;N&lt;/code&gt;, verá una ventana emergente que muestra las notas de cada diapositiva en la parte inferior de la siguiente manera:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/present-notes-popup.jpeg&#34; alt=&#34;present-notes-popup&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+&lt;p&gt;La herramienta &lt;code&gt;present&lt;/code&gt; es muy útil para presentaciones técnicas, especialmente en Go. Tiene limitaciones como el formato de las diapositivas y el posicionamiento de la imagen a veces difícil, pero en general es un paquete fantástico y para mí es el estándar de todas mis presentaciones. Si desea profundizar en este paquete, consulte la &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present&#34;&gt;documentación oficial&lt;/a&gt; y también os recomendaría la &lt;a href=&#34;https://discussions.golang.org/2012/insidepresent.slide#1&#34;&gt;presentación&lt;/a&gt;: &lt;code&gt;Inside the&amp;quot; presente &amp;quot;tool&lt;/code&gt; de Andrew Gerrand. También he colgado el código fuente de este tutorial en &lt;a href=&#34;https://github.com/charly3pins/go-present-example&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
