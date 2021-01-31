@@ -125,7 +125,7 @@ Elegí &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; como lenguaje de
       <pubDate>Mon, 23 Nov 2020</pubDate>
       
       <guid>https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/</guid>
-      <description>Quick tutorial how to integrate Google Analytics in a Hugo website.</description>
+      <description>Tutorial ràpid sobre com integrar Google Analytics en un lloc web Hugo.</description>
       <content>&lt;h2 id=&#34;google-analytics&#34;&gt;Google Analytics&lt;/h2&gt;
 &lt;p&gt;First of all what you need is to obtain a Google Analytics tracking ID. For that you need to sign up at &lt;a href=&#34;https://analytics.google.com/analytics/web/&#34;&gt;Google Analytics&lt;/a&gt;. Then, you need to create a tracking ID following the next steps:&lt;/p&gt;
 &lt;ul&gt;
