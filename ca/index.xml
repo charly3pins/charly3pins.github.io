@@ -125,7 +125,7 @@ He triat &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; com a llenguat
       <pubDate>Mon, 23 Nov 2020</pubDate>
       
       <guid>https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/</guid>
-      <description>Quick tutorial how to integrate Google Analytics in a Hugo website.</description>
+      <description>Tutorial ràpid sobre com integrar Google Analytics en un lloc web Hugo.</description>
       <content>&lt;h2 id=&#34;google-analytics&#34;&gt;Google Analytics&lt;/h2&gt;
 &lt;p&gt;En primer lloc, el que necessiteu és obtenir un identificador de seguiment de Google Analytics. Per a això, cal que us inscriviu a &lt;a href=&#34;https://analytics.google.com/analytics/web/&#34;&gt;Google Analytics&lt;/a&gt;. A continuació, heu de crear un identificador de seguiment seguint els passos següents:&lt;/p&gt;
 &lt;ul&gt;
