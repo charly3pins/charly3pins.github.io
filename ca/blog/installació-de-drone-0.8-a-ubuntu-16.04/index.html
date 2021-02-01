@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ca">
+	
+	<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Enginyer de Software, amant de Japó, jugador de videojocs i passejador de gossos">
+
+  <title>Instal·lació de Drone 0.8 a Ubuntu 16.04 | Charly3Pins</title>
+
+
+  <meta property="og:title" content="Instal·lació de Drone 0.8 a Ubuntu 16.04 - charly3pins" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Publicació senzilla que explica com instal·lar Drone al servidor Ubuntu 16.04.">
+  <meta property="og:url" content="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/">
+  <meta property="og:site_name" content="charly3pins.dev">
+  
+  <meta property="og:image" content="https://charly3pins.dev/images/droneio-0.8.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="Instal·lació de Drone 0.8 a Ubuntu 16.04" />
+
+
+  <meta name="twitter:description" content="Publicació senzilla que explica com instal·lar Drone al servidor Ubuntu 16.04.">
+
+
+  <meta name="twitter:image" content="https://charly3pins.dev/images/droneio-0.8.png">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-126216319-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+	<body>
+		<div id="main">
+
+			
+<div class="centered no-padd">
+    <div class="toggle">
+        <input type="checkbox">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <div id="mobile-menu">
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/ca/" class="">~</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/ca/blog/" class="">/bloc</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/ca/code/" class="">/codi</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/ca/notes/" class="">/apunts</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/ca/about/" class="">$USUARI</a>
+                </span>
+            
+            
+            <span class="menu-item">
+                <div class="sl-nav">
+                    <ul>
+                        <li>
+                            <b>Català</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <div class="triangle"></div>
+                            <ul>
+                            
+                                <a href="https://charly3pins.dev/blog/installing-drone-0.8-on-ubuntu-16.04/">Anglès</a>
+                            
+                                <a href="https://charly3pins.dev/es/blog/instalaci%C3%B3n-de-drone-0.8-en-ubuntu-16.04/">Castellà</a>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            
+        </div>
+    </div>
+    <div id="menu">
+        
+            
+            
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/ca/" class="">~</a>
+            </span>
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/ca/blog/" class="">/bloc</a>
+            </span>
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/ca/code/" class="">/codi</a>
+            </span>
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/ca/notes/" class="">/apunts</a>
+            </span>
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/ca/about/" class="">$USUARI</a>
+            </span>
+            
+        
+        
+        <span class="menu-item">
+            <div class="sl-nav">
+                <ul>
+                    <li>
+                        <b>Català</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="triangle"></div>
+                        <ul>
+                        
+                            <a href="https://charly3pins.dev/blog/installing-drone-0.8-on-ubuntu-16.04/">Anglès</a>
+                        
+                            <a href="https://charly3pins.dev/es/blog/instalaci%C3%B3n-de-drone-0.8-en-ubuntu-16.04/">Castellà</a>
+                        
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </span>
+        
+    </div>
+</div>
+
+
+			<div class="container">
+				<div id="cover-image">
+					<img src="https://charly3pins.dev/images/droneio-0.8.png" alt="cover image">
+				</div>
+				
+				<div class="markdown">
+					<h1>Instal·lació de Drone 0.8 a Ubuntu 16.04</h1>
+					<p class="subtitle">Publicació senzilla que explica com instal·lar Drone al servidor Ubuntu 16.04.</p>
+					
+					<p class="metadata">
+    
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/drone/"><span class="tag-prefix">#</span>drone</a>
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/ci/"><span class="tag-prefix">#</span>ci</a>
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/devops/"><span class="tag-prefix">#</span>devops</a>
+        
+    
+    · 10/10/2018 · 5 minuts per llegir ·
+</p>
+				</div>
+
+				<div class="markdown">
+					<p><p>He de reconèixer que mai no m’han agradat la part dels sistemes del procés de desenvolupament. Sempre, però, que era una feina en un lloc fosc i esgarrifós, ple de monstres que feien coses rares. Aquesta visió va canviar completament quan vaig començar a utilitzar <a href="https://www.docker.com/">Docker</a>. En aquest punt em vaig adonar que tota la màgia feta a la part de sysadmin era millor que jo i, aleshores, vaig començar a interessar-me més per aquest costat.</p>
+<p>A més, a la meva feina hem començat a utilitzar <a href="https://jenkins.io/">Jenkins</a> per a <a href="https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd">CI/CD</a>, canviant la nostra tasca manual d’embalatge-proves-desplegament per a un procés automàtic. Va ser super xulo !!! Em sento molt content perquè estalvia molt de temps i us permet concentrar-vos en les tasques de desenvolupament sense perdre temps en la fase de desplegament. Solia dedicar molt de temps a generar les meves guerres, desplegar-les a la caixa de sorra, provar les noves funcions afegides, tornar-les a desplegar si alguna cosa necessita solucionar-les de nou i finalment alliberar una nova versió de codi i implementar-les a la producció. Tots aquests passos es van simplificar amb només accedir a una branca i després fusionar-se amb el mestre (després de provar, per descomptat). En aquest pont vaig aprofundir en com s&rsquo;estan construint i desplegant les coses, on (en el nostre cas a AWS) i com fer-ho.</p>
+<p>En aquest moment és quan vaig descobrir <a href="https://drone.io/">Drone</a>. Jenkins és molt divertit i funciona, però depenent del projecte, sobretot si no és Java, és molt dolent fer la feina (perquè heu d’instal·lar molts connectors o dependències per fer la tasca). A més, la configuració dels projectes i la instal·lació de Jenkins al vostre servidor és una mica tediós i complicat. Per tant, Drone s’executa en un contenidor Docker. Només cal estirar el contenidor i fer-lo funcionar. IMPRESSIONANT! Funciona amb un <a href="http://yaml.org/">.yaml</a> que defineix el servidor i l&rsquo;agent i això és tot. Vegem els passos per instal·lar-lo en un servidor Ubuntu 16.04.</p>
+<blockquote>
+<p><!-- raw HTML omitted --> IMPORTANT <!-- raw HTML omitted -->: heu de tenir certificat SSL al vostre servidor perquè Drone funciona amb https. Llegiu <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04">aquest article</a> per veure com afegir SSL en un Nginx amb Let&rsquo;s Encrypt.</p>
+</blockquote>
+<h2 id="installació">Instal·lació</h2>
+<p>Primer de tot, cal tirar de la imatge del dron.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">docker</span> <span style="color:#a6e22e">pull</span> <span style="color:#a6e22e">drone</span>/<span style="color:#a6e22e">drone</span>:<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>A continuació, creeu el docker-compose per executar-lo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">nano</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">drone</span>/<span style="color:#a6e22e">docker</span>-<span style="color:#a6e22e">compose</span>.<span style="color:#a6e22e">yml</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>I copieu el següent:</p>
+<pre><code>version: '2'
+
+services:
+  drone-server:
+    image: drone/drone:0.8
+    ports:
+      - 8000:8000
+      - 9000:9000
+    volumes:
+      - /var/lib/drone:/var/lib/drone/
+    restart: always
+    env_file:
+      - /etc/drone/server.env
+
+  drone-agent:
+    image: drone/agent:0.8
+    command: agent
+    restart: always
+    depends_on:
+      - drone-server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    env_file:
+      - /etc/drone/agent.env
+</code></pre><p><!-- raw HTML omitted --> En el meu cas, he utilitzat aquests ports perquè tinc altres coses al meu Nginx, però podeu triar-ne de vostres. També he emmagatzemat el servidor i l&rsquo;agent <code>env</code> vars en fitxers específics. <!-- raw HTML omitted --></p>
+<p>Ara és hora de crear aquests fitxers. Primer creem el servidor:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">nano</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">drone</span>/<span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">env</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>I copieu el següent:</p>
+<pre><code># Service settings 
+DRONE_SECRET=secret_generated_on_command_line
+DRONE_HOST=https://yourDroneURL.com
+
+# Registration settings
+DRONE_OPEN=false
+DRONE_ADMIN=your_github_username
+
+# GitHub Settings
+DRONE_GITHUB=true
+DRONE_GITHUB_CLIENT=Client_ID_from_GitHub
+DRONE_GITHUB_SECRET=Client_Secret_from_GitHub
+</code></pre><p>Per a l’identificador de client i clientSecret de GitHub, heu de registrar Drone al vostre compte de GitHub per obtenir-los. Seguiu <a href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/">aquestes instruccions</a>.</p>
+<p>I ara l’agent:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">nano</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">drone</span>/<span style="color:#a6e22e">agent</span>.<span style="color:#a6e22e">env</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>I copieu el següent:</p>
+<pre><code>DRONE_SECRET=secret_generated_on_command_line
+DRONE_SERVER=drone-server:9000
+</code></pre><p>Per generar el <code>DRONE_SECRET</code> podeu escriure l&rsquo;ordre següent</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">LC_ALL</span>=<span style="color:#a6e22e">C</span> &lt;<span style="color:#e6db74">/dev/</span><span style="color:#a6e22e">urandom</span> <span style="color:#a6e22e">tr</span> -<span style="color:#a6e22e">dc</span> <span style="color:#a6e22e">A</span>-<span style="color:#a6e22e">Za</span>-<span style="color:#a6e22e">z0</span><span style="color:#ae81ff">-9</span> | <span style="color:#a6e22e">head</span> -<span style="color:#a6e22e">c</span> <span style="color:#ae81ff">65</span> &amp;&amp; <span style="color:#a6e22e">echo</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Un cop instal·lat i configurat el Drone, hem de crear un fitxer d’unitat systemd per gestionar el servei.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">nano</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">systemd</span><span style="color:#e6db74">/system/</span><span style="color:#a6e22e">drone</span>.<span style="color:#a6e22e">service</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>I copieu el següent:</p>
+<pre><code>[Unit]
+Description=Drone server
+After=docker.service nginx.service
+
+[Service]
+Restart=always
+ExecStart=/usr/local/bin/docker-compose -f /etc/drone/docker-compose.yml up
+ExecStop=/usr/local/bin/docker-compose -f /etc/drone/docker-compose.yml stop
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><h2 id="configureu-nginx">Configureu Nginx</h2>
+<p>I, finalment, hem de configurar el Nginx per sol·licitar proxy al nostre servidor Drone. Primer de tot, cerqueu els blocs de servidor habilitats amb l&rsquo;ordre següent:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">grep</span> -<span style="color:#a6e22e">R</span> <span style="color:#a6e22e">server_name</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span>/<span style="color:#a6e22e">sites</span>-<span style="color:#a6e22e">enabled</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Veureu alguna cosa així:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">Output</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span><span style="color:#e6db74">/sites-enabled/</span><span style="color:#a6e22e">default</span>:   <span style="color:#a6e22e">server_name</span> <span style="color:#a6e22e">yourDroneURL</span>.<span style="color:#a6e22e">com</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span><span style="color:#e6db74">/sites-enabled/</span><span style="color:#a6e22e">default</span>:   <span style="color:#a6e22e">return</span> <span style="color:#ae81ff">301</span> <span style="color:#a6e22e">https</span>:<span style="color:#e6db74">//</span>$<span style="color:#a6e22e">server_name</span>$<span style="color:#a6e22e">request_uri</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span><span style="color:#e6db74">/sites-enabled/</span><span style="color:#a6e22e">default</span>:   <span style="color:#a6e22e">server_name</span> <span style="color:#a6e22e">yourDroneURL</span>.<span style="color:#a6e22e">com</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span><span style="color:#e6db74">/sites-enabled/</span><span style="color:#a6e22e">default</span>:#  <span style="color:#a6e22e">server_name</span> <span style="color:#a6e22e">yourDroneURL</span>.<span style="color:#a6e22e">com</span>;<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Després de conèixer el bloc que gestiona el nostre servidor, podem editar-lo escrivint:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">nano</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span><span style="color:#e6db74">/sites-enabled/</span><span style="color:#a6e22e">default</span> <span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>I afegint aquest text abans del bloc <code>servidor {</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">upstream</span> <span style="color:#a6e22e">drone</span> {<span style="color:#a6e22e">upstream</span> <span style="color:#a6e22e">drone</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>         <span style="color:#a6e22e">server</span> <span style="color:#ae81ff">127</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">8000</span>;<span style="color:#a6e22e">server</span> <span style="color:#ae81ff">127</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">8000</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span> }}<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>  <span style="color:#a6e22e">map</span> $<span style="color:#a6e22e">http_upgrade</span> $<span style="color:#a6e22e">connection_upgrade</span> {<span style="color:#a6e22e">map</span> $<span style="color:#a6e22e">http_upgrade</span> $<span style="color:#a6e22e">connection_up</span> <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#a6e22e">default</span> <span style="color:#a6e22e">upgrade</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#e6db74">&#39;&#39;</span>      <span style="color:#a6e22e">close</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>A continuació, cerqueu el bloc de servidor amb la directiva listen 443 a dins. Substituïu el contingut del bloc d&rsquo;ubicació pel següent:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">server</span> {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#a6e22e">listen</span> <span style="color:#ae81ff">443</span> <span style="color:#a6e22e">ssl</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#a6e22e">location</span> / {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        # <span style="color:#a6e22e">try_files</span> $<span style="color:#a6e22e">uri</span> $<span style="color:#a6e22e">uri</span>/ =<span style="color:#ae81ff">404</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">proxy_pass</span> <span style="color:#a6e22e">http</span>:<span style="color:#e6db74">//</span><span style="color:#a6e22e">drone</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">include</span> <span style="color:#a6e22e">proxy_params</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">proxy_set_header</span> <span style="color:#a6e22e">Upgrade</span> $<span style="color:#a6e22e">http_upgrade</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">proxy_set_header</span> <span style="color:#a6e22e">Connection</span> $<span style="color:#a6e22e">connection_upgrade</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">proxy_redirect</span> <span style="color:#a6e22e">off</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">proxy_http_version</span> <span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">1</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">proxy_buffering</span> <span style="color:#a6e22e">off</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">chunked_transfer_encoding</span> <span style="color:#a6e22e">off</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#a6e22e">proxy_read_timeout</span> <span style="color:#ae81ff">86400</span>;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>}<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Ara és hora de provar si el nostre Nginx funciona o no:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">nginx</span> -<span style="color:#a6e22e">t</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Hauríeu de veure:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">Output</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">nginx</span>: <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">configuration</span> <span style="color:#a6e22e">file</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span>/<span style="color:#a6e22e">nginx</span>.<span style="color:#a6e22e">conf</span> <span style="color:#a6e22e">syntax</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">ok</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">nginx</span>: <span style="color:#a6e22e">configuration</span> <span style="color:#a6e22e">file</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span>/<span style="color:#a6e22e">nginx</span>.<span style="color:#a6e22e">conf</span> <span style="color:#a6e22e">test</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">successful</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Només haureu de reiniciar el servidor i substituireu les peticions:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">restart</span> <span style="color:#a6e22e">nginx</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Finalment, cal iniciar el servidor Drone:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">start</span> <span style="color:#a6e22e">drone</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Per comprovar l&rsquo;estat del contenidor, podeu utilitzar l&rsquo;ordre següent:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">status</span> <span style="color:#a6e22e">drone</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Podeu consultar els logs de Nginx:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">less</span> <span style="color:#e6db74">/var/</span><span style="color:#a6e22e">log</span><span style="color:#e6db74">/nginx/</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">log</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>I també podeu consultar els logs de Drone:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">journalctl</span> -<span style="color:#a6e22e">u</span> <span style="color:#a6e22e">drone</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Si tot està bé, és hora d’activar Drone:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">enable</span> <span style="color:#a6e22e">drone</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Si voleu apagar Drone, podeu escriure les ordres següents:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">cd</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">drone</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">sudo</span> <span style="color:#e6db74">/usr/</span><span style="color:#a6e22e">local</span><span style="color:#e6db74">/bin/</span><span style="color:#a6e22e">docker</span>-<span style="color:#a6e22e">compose</span> <span style="color:#a6e22e">down</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Visiteu el servidor Drone al vostre https: // yourDroneURL.com i inicieu la sessió amb el compte GitHub que heu utilitzat per obtenir l’identificador de client i el secret del client.</p>
+<h2 id="referències">Referències</h2>
+<ul>
+<li>Drone <a href="http://docs.drone.io/installation/">documentació oficial</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-drone-on-ubuntu-16-04">Article</a> de Digital Ocean</li>
+</ul>
+</p>
+				</div>
+				
+				
+				<div class="related">
+					
+					
+				</div>
+				
+				<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "charly3pins" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+			</div>
+
+			<div class="page-separator centered"><hr></div>
+			
+			<footer class="container centered">
+	<section class="social">
+		<ul class="social-set">
+			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+			</li>
+			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+			</li>
+			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+			</li>
+			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+			</li>
+			<li><a class="sociali" href="https://charly3pins.dev//index.xml" target="_blank" aria-label="LinkedIn">
+				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+			</li>
+	</ul>
+	</section>
+	<p>Últim post publicat el 23/11/2020</p>
+	<p>© 2018 - 2021 Charly3Pins</p>
+</footer>
+			
+		</div>
+	</body>
+</html>
+

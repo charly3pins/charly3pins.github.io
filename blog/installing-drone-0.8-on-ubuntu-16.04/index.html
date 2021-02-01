@@ -116,6 +116,10 @@ if (!doNotTrack) {
                             <div class="triangle"></div>
                             <ul>
                             
+                                <a href="https://charly3pins.dev/es/blog/instalaci%C3%B3n-de-drone-0.8-en-ubuntu-16.04/">Spanish</a>
+                            
+                                <a href="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/">Catalan</a>
+                            
                             </ul>
                         </li>
                     </ul>
@@ -195,6 +199,10 @@ if (!doNotTrack) {
                         <div class="triangle"></div>
                         <ul>
                         
+                            <a href="https://charly3pins.dev/es/blog/instalaci%C3%B3n-de-drone-0.8-en-ubuntu-16.04/">Spanish</a>
+                        
+                            <a href="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/">Catalan</a>
+                        
                         </ul>
                     </li>
                 </ul>
@@ -235,8 +243,7 @@ if (!doNotTrack) {
 <blockquote>
 <p><!-- raw HTML omitted -->IMPORTANT<!-- raw HTML omitted -->: You need to have SSL certificate in your server because Drone runs under https. Read <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04">this article</a> to see how to add SSL in a Nginx with Let&rsquo;s Encrypt.</p>
 </blockquote>
-<h1 id="installation">Installation</h1>
-<h2 id="drone">Drone</h2>
+<h2 id="installation">Installation</h2>
 <p>First of all you need to pull the drone image.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">docker</span> <span style="color:#a6e22e">pull</span> <span style="color:#a6e22e">drone</span>/<span style="color:#a6e22e">drone</span>:<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">8</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>Then create the docker-compose for run it:</p>
@@ -283,7 +290,7 @@ DRONE_GITHUB=true
 DRONE_GITHUB_CLIENT=Client_ID_from_GitHub
 DRONE_GITHUB_SECRET=Client_Secret_from_GitHub
 </code></pre><p>For the GitHub clientID and clientSecret, you must register Drone in your GitHub account to obtain them. Follow <a href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/">these instructions</a>.</p>
-<p>And now the agent one:</p>
+<p>And now the agent:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">nano</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">drone</span>/<span style="color:#a6e22e">agent</span>.<span style="color:#a6e22e">env</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>And copy the following:</p>
 <pre><code>DRONE_SECRET=secret_generated_on_command_line
@@ -313,7 +320,7 @@ WantedBy=multi-user.target
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span><span style="color:#e6db74">/sites-enabled/</span><span style="color:#a6e22e">default</span>:   <span style="color:#a6e22e">return</span> <span style="color:#ae81ff">301</span> <span style="color:#a6e22e">https</span>:<span style="color:#e6db74">//</span>$<span style="color:#a6e22e">server_name</span>$<span style="color:#a6e22e">request_uri</span>;<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span><span style="color:#e6db74">/sites-enabled/</span><span style="color:#a6e22e">default</span>:   <span style="color:#a6e22e">server_name</span> <span style="color:#a6e22e">yourDroneURL</span>.<span style="color:#a6e22e">com</span>;<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span><span style="color:#e6db74">/sites-enabled/</span><span style="color:#a6e22e">default</span>:#  <span style="color:#a6e22e">server_name</span> <span style="color:#a6e22e">yourDroneURL</span>.<span style="color:#a6e22e">com</span>;<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>After knowing the block that is handling our server, we can edit it typping:</p>
+</span></code></pre></div><p>After knowing the block that is handling our server, we can edit it typing:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">nano</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">nginx</span><span style="color:#e6db74">/sites-enabled/</span><span style="color:#a6e22e">default</span> <span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>And adding this text before the <code>server {</code> block:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">upstream</span> <span style="color:#a6e22e">drone</span> {<span style="color:#a6e22e">upstream</span> <span style="color:#a6e22e">drone</span> {<span style="color:#960050;background-color:#1e0010">
@@ -356,19 +363,18 @@ WantedBy=multi-user.target
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">status</span> <span style="color:#a6e22e">drone</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>You can check the Nginx logs:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">less</span> <span style="color:#e6db74">/var/</span><span style="color:#a6e22e">log</span><span style="color:#e6db74">/nginx/</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">log</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>And also you can chcek the Drone logs:</p>
+</span></code></pre></div><p>And also you can check the Drone logs:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">journalctl</span> -<span style="color:#a6e22e">u</span> <span style="color:#a6e22e">drone</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>If all it&rsquo;s okay, its time to enable Drone:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">enable</span> <span style="color:#a6e22e">drone</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>If you want to switch off Drone you can type the following commands:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">cd</span> <span style="color:#e6db74">/etc/</span><span style="color:#a6e22e">drone</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">sudo</span> <span style="color:#e6db74">/usr/</span><span style="color:#a6e22e">local</span><span style="color:#e6db74">/bin/</span><span style="color:#a6e22e">docker</span>-<span style="color:#a6e22e">compose</span> <span style="color:#a6e22e">down</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h1 id="enjoy">Enjoy</h1>
-<p>Visit your Drone server at your <code>https://yourDroneURL.com</code> and log in with the GitHub account you used for obtain the clientID and client secret.</p>
-<h1 id="references">References</h1>
+</span></code></pre></div><p>Visit your Drone server at your <code>https://yourDroneURL.com</code> and log in with the GitHub account you used for obtain the clientID and client secret.</p>
+<h2 id="references">References</h2>
 <ul>
 <li>Drone official <a href="http://docs.drone.io/installation/">documentation</a></li>
-<li>Digital Ocean <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-drone-on-ubuntu-16-04">article</a></li>
+<li>Digital Ocean&rsquo;s <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-drone-on-ubuntu-16-04">article</a></li>
 </ul>
 </p>
 				</div>

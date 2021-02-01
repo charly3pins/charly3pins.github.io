@@ -483,6 +483,86 @@
   </url>
   
   <url>
+    <loc>https://charly3pins.dev/ca/tags/ci/</loc>
+    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/ci/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/ci/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/ci/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/ca/tags/devops/</loc>
+    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/devops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/devops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/devops/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/ca/tags/drone/</loc>
+    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/drone/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/drone/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/drone/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/</loc>
+    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/installing-drone-0.8-on-ubuntu-16.04/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/instalaci%C3%B3n-de-drone-0.8-en-ubuntu-16.04/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/"
+                />
+  </url>
+  
+  <url>
     <loc>https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/</loc>
     <lastmod>2018-09-22T00:00:00+00:00</lastmod>
     <xhtml:link
