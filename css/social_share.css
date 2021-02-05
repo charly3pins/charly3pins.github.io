@@ -1,52 +1,26 @@
-.social-share {
-	position: relative;
-	top: -0.5em;
-}
- 
-.social-share ul {
-	margin: 0;
-}
- 
-.social-share ul li p {
-	display: none;
-}
- 
-.social-share .share-icons li {
-	padding: 0 !important;
-	padding-bottom: 10px !important;
-}
- 
-.social-share .share-btn {
-	padding: 0.25em;
-	width: 3em;
-}
- 
-.social-share-nav .share-btn h3{
-	color: #ffffff;
-}
-
-ul.share-icons {
+/** Social Share Button**/
+ul.icons {
 	cursor: default;
 	list-style: none;
 	padding-left: 0;
-	margin-top: 1em;
+	margin: 0em !important;
 }
 
-ul.share-icons li {
+ul.icons li {
 	display: inline-block;
-	padding: 0 1em 0 0;
+	padding: 0 0.25em 0 0;
 }
 
-ul.share-icons li:last-child {
+ul.icons li:last-child {
 	padding-right: 0;
 }
 
-ul.share-icons li > * {
+ul.icons li > * {
 	text-decoration: none;
 	border: 0;
 }
 
-ul.share-icons li > *:before {
+ul.icons li > *:before {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-family: FontAwesome;
@@ -55,10 +29,37 @@ ul.share-icons li > *:before {
 	text-transform: none !important;
 }
 
-ul.share-icons li > * .label {
+ul.icons li > * .label {
 	display: none;
 }
- 
+
+#social-share {
+	position: relative;
+	top: -0.5em;
+}
+
+#social-share ul {
+	margin: 0;
+}
+
+#social-share ul li p {
+	display: none;
+}
+
+#social-share .icons li {
+	padding: 0 !important;
+	padding-bottom: 10px !important;
+}
+
+#social-share .share-btn {
+	padding: 0.5em;
+	width: 4em;
+}
+
+#social-share-nav .share-btn h3{
+	color: #ffffff;
+}
+
 .share-btn {
 	display: inline-block;
 	color: #ffffff;
@@ -68,8 +69,9 @@ ul.share-icons li > * .label {
 	outline: none;
 	text-align: center;
 	text-decoration: none;
+	width:1.5em;
 }
- 
+
 .share-btn:hover {
 	color: #ffffff !important;
 }
@@ -81,20 +83,15 @@ ul.share-icons li > * .label {
 	color: #e2e2e2;
 	outline: none;
 }
-.share-btn .widget-social__link-icon {
-	margin: 0;
-}
- 
+
 .share-btn.twitter     { background: #55acee; }
 .share-btn.google-plus { background: #dd4b39; }
 .share-btn.facebook    { background: #3B5998; }
 .share-btn.linkedin    { background: #4875B4; }
 .share-btn.stumbleupon { background: #EB4823; }
-.share-btn.pinterest   { background: #BD081C; }
+.share-btn.pinterest	 { background: #BD081C; }
 .share-btn.reddit      { background: #ff5700; }
 .share-btn.email       { background: #444444; }
-.share-btn.whatsapp    { background: #25d366; }
-
 
 .share-btn.twitter:hover     { background: #4c9ad6; }
 .share-btn.google-plus:hover { background: #c64333; }
