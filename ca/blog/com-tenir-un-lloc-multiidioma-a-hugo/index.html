@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ca">
+	
+	<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Enginyer de Software, amant de Japó, jugador de videojocs i passejador de gossos">
+
+  <title>Com tenir un lloc multiidioma a Hugo | Charly3Pins</title>
+
+
+  <meta property="og:title" content="Com tenir un lloc multiidioma a Hugo - charly3pins" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Conegueu les configuracions i els trucs per convertir el vostre lloc d&#39;un sol idioma en Hugo a un lloc multiidioma en només uns quants passos.">
+  <meta property="og:url" content="https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiidioma-a-hugo/">
+  <meta property="og:site_name" content="charly3pins.dev">
+  
+  <meta property="og:image" content="https://charly3pins.dev/images/gohugoio-card.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="Com tenir un lloc multiidioma a Hugo" />
+
+
+  <meta name="twitter:description" content="Conegueu les configuracions i els trucs per convertir el vostre lloc d&#39;un sol idioma en Hugo a un lloc multiidioma en només uns quants passos.">
+
+
+  <meta name="twitter:image" content="https://charly3pins.dev/images/gohugoio-card.png">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-126216319-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+	<body>
+		<div id="main">
+
+			
+<div class="centered no-padd">
+    <div class="toggle">
+        <input type="checkbox">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <div id="mobile-menu">
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/ca/" class="">~</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/ca/blog/" class="">/bloc</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/ca/code/" class="">/codi</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/ca/notes/" class="">/apunts</a>
+                </span>
+            
+                
+                
+                
+                
+                
+                <span class="menu-item">
+                    <a href="/ca/about/" class="">$USUARI</a>
+                </span>
+            
+            
+            <span class="menu-item">
+                <div class="sl-nav">
+                    <ul>
+                        <li>
+                            <b>Català</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <div class="triangle"></div>
+                            <ul>
+                            
+                                <a href="https://charly3pins.dev/blog/how-to-have-a-multilingual-site-in-hugo/">Anglès</a>
+                            
+                                <a href="https://charly3pins.dev/es/blog/c%C3%B3mo-tener-un-sitio-multiidioma-en-hugo/">Castellà</a>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            
+        </div>
+    </div>
+    <div id="menu">
+        
+            
+            
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/ca/" class="">~</a>
+            </span>
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/ca/blog/" class="">/bloc</a>
+            </span>
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/ca/code/" class="">/codi</a>
+            </span>
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/ca/notes/" class="">/apunts</a>
+            </span>
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <span class="menu-item">
+                <a href="/ca/about/" class="">$USUARI</a>
+            </span>
+            
+        
+        
+        <span class="menu-item">
+            <div class="sl-nav">
+                <ul>
+                    <li>
+                        <b>Català</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="triangle"></div>
+                        <ul>
+                        
+                            <a href="https://charly3pins.dev/blog/how-to-have-a-multilingual-site-in-hugo/">Anglès</a>
+                        
+                            <a href="https://charly3pins.dev/es/blog/c%C3%B3mo-tener-un-sitio-multiidioma-en-hugo/">Castellà</a>
+                        
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </span>
+        
+    </div>
+</div>
+
+
+			<div class="container">
+				<div id="cover-image">
+					<img src="https://charly3pins.dev/images/gohugoio-card.png" alt="cover image">
+				</div>
+				
+				<div class="markdown">
+					<h1>Com tenir un lloc multiidioma a Hugo</h1>
+					<p class="subtitle">Conegueu les configuracions i els trucs per convertir el vostre lloc d&#39;un sol idioma en Hugo a un lloc multiidioma en només uns quants passos.</p>
+					
+					<p class="metadata">
+    
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/hugo/"><span class="tag-prefix">#</span>hugo</a>
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/cms/"><span class="tag-prefix">#</span>cms</a>
+        
+    
+    · 05/02/2021 · 4 minuts per llegir ·
+</p>
+				</div>
+
+				<div class="markdown">
+					<p><p>Com es pot apreciar des d&rsquo;aquesta setmana aquesta humil pàgina web s&rsquo;ha remodelat una mica tant visualment com internament, i és que no només hi ha nous colors, imatges i seccions, sinó que també ofereix tot el seu contingut en 2 nous idiomes! M&rsquo;he decidit a fer aquest pas perquè primer de tot volia provar com funcionava el tema dels multiidiomes en Hugo i també per intentar fer més còmoda la lectura dels articles a la gent que la visita, sense que l&rsquo;idioma fos un obstacle i oferint el major confort i plaer als lectors.</p>
+<p>Els idiomes com podeu veure a la barra superior són el Castellà i el Català. Així que per canviar l&rsquo;idioma en el que esteu veient la pàgina, és tan senzill com escollir al gestor quin idioma prefereixes i automàticament es traduirà tot. Si trobeu alguna errada en la traducció o algun lloc que no està traduïda per favor Poseu-me un comentari en el post en qüestió o comenta-pels meus xarxes socials (links a la part baixa de la web).</p>
+<p>Després d&rsquo;aquesta &ldquo;xapa&rdquo;, veurem com es podeu tenir els vostres llocs en Hugo en diversos idiomes de forma fàcil, senzilla i per a tota la família. Som-hi!</p>
+<h2 id="configura-idiomes">Configura Idiomes</h2>
+<p>El primer que cal fer per tenir un lloc multiidioma, és definir en el <code>config.toml</code> els idiomes que es volen oferir. En el meu cas he decidit anglès, castellà i català de la manera següent:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">[<span style="color:#a6e22e">Languages</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>[<span style="color:#a6e22e">Languages</span>.<span style="color:#a6e22e">en</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#34;English&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>[<span style="color:#a6e22e">Languages</span>.<span style="color:#a6e22e">es</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#34;Spanish&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>[<span style="color:#a6e22e">Languages</span>.<span style="color:#a6e22e">ca</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#34;Catalan&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>El <code>languageName</code> s&rsquo;utilitza per definir el text que es veurà a la web al comprovar quins idiomes hi ha disponibles. Spoiler alert! Més endavant veurem com traduir també aquests textos.</p>
+<h2 id="menús">Menús</h2>
+<p>Per traduir els menús en els diferents idiomes s&rsquo;han de declarar de la forma següent:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim">[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;home&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;about me&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">es</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;inicio&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">es</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;sobre mí&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ca</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;inici&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>[[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ca</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;sobre mi&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h2 id="contingut">Contingut</h2>
+<p>Si per exemple volem traduir la pàgina <code>Sobre mí</code>, podem fer-ho simplement amb replicar aquest fitxer tantes vegades com idiomes tinguem, en aquest cas 3, afegint l&rsquo;ISO de l&rsquo;idioma en el nom de la següent manera:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#e6db74">/content/</span><span style="color:#a6e22e">about</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">md</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/content/</span><span style="color:#a6e22e">about</span>.<span style="color:#a6e22e">es</span>.<span style="color:#a6e22e">md</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/content/</span><span style="color:#a6e22e">about</span>.<span style="color:#a6e22e">ca</span>.<span style="color:#a6e22e">md</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>En el nostre cas l&rsquo;idioma anglès és el per defecte, de manera que fins i tot podríem fer-ho tal que així:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#e6db74">/content/</span><span style="color:#a6e22e">about</span>.<span style="color:#a6e22e">md</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/content/</span><span style="color:#a6e22e">about</span>.<span style="color:#a6e22e">es</span>.<span style="color:#a6e22e">md</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#e6db74">/content/</span><span style="color:#a6e22e">about</span>.<span style="color:#a6e22e">ca</span>.<span style="color:#a6e22e">md</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h2 id="contingut-traduït">Contingut traduït</h2>
+<p>Per trobar les traduccions de la pàgina en concret es pot fer servir el tros de codi proporcionat en la documentació oficial:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{<span style="color:#a6e22e">If</span> .<span style="color:#a6e22e">IsTranslated</span>}}
+&lt;<span style="color:#a6e22e">H4</span>&gt; {{<span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;translations&#34;</span>}} &lt;<span style="color:#f92672">/</span> <span style="color:#a6e22e">h4</span>&gt;
+&lt;<span style="color:#a6e22e">Ul</span>&gt;
+    {{<span style="color:#a6e22e">Range</span> .<span style="color:#a6e22e">Translations</span>}}
+    &lt;<span style="color:#a6e22e">Li</span>&gt;
+        &lt;<span style="color:#a6e22e">a</span> <span style="color:#a6e22e">href</span>=<span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt; {{.<span style="color:#a6e22e">Lang</span>}}: {{.<span style="color:#a6e22e">Title</span>}} {{<span style="color:#66d9ef">if</span> .<span style="color:#a6e22e">IsPage</span>}} ({{<span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;wordCount&#34;</span>.}}) {{<span style="color:#a6e22e">end</span>}} &lt; <span style="color:#f92672">/</span> <span style="color:#a6e22e">a</span>&gt;
+    &lt;<span style="color:#f92672">/</span> <span style="color:#a6e22e">Li</span>&gt;
+    {{<span style="color:#a6e22e">End</span>}}
+&lt;<span style="color:#f92672">/</span> <span style="color:#a6e22e">Ul</span>&gt;
+{{<span style="color:#a6e22e">End</span>}}
+</code></pre></div><p>A la plantilla on inserim aquest codi, un cop es renderitzi el contingut per aquesta, apareixerà si hi ha traducció o no d&rsquo;aquest contingut.</p>
+<h2 id="traducció-de-textos">Traducció de textos</h2>
+<p>En el codi anterior ja podem veure que apareix la funció <code>i18n</code> que Hugo utilitza per traduir els textos definits en els arxius d&rsquo;idiomes dins el directori arrel com <code>/ i18n</code>. El format dels arxius de dins ha de ser per exemple:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">i18n</span>/<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">toml</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">i18n</span>/<span style="color:#a6e22e">es</span>.<span style="color:#a6e22e">toml</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">i18n</span>/<span style="color:#a6e22e">ca</span>.<span style="color:#a6e22e">toml</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Per a cada idioma anteriorment descrit respectivament.</p>
+<p>El contingut de l&rsquo;arxiu serà semblant a:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">readMore</span>]
+<span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Llegir més&#34;</span>
+</code></pre></div><p>Per l&rsquo;arxiu en anglès.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">readMore</span>]
+<span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Llegir més&#34;</span>
+</code></pre></div><p>Per l&rsquo;arxiu en castellà.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">readMore</span>]
+<span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;Llegir més&#34;</span>
+</code></pre></div><p>Per l&rsquo;arxiu en català.</p>
+<p>Un cop definida la traducció per <code>Llegir més</code>, s&rsquo;utilitza en la nostra plantilla d&rsquo;Hugo com:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{<span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;readMore&#34;</span>}}
+</code></pre></div><p>I el resultat serà el text definit en els <code>.toml</code> segons l&rsquo;idioma escollit per l&rsquo;usuari per veure la pàgina web.</p>
+<h2 id="traducció-singular-io-plural">Traducció singular i/o plural</h2>
+<p>Es poden definir traduccions singulars o plurals depenent d&rsquo;un &ldquo;comptador&rdquo;, ja que la funció <code>i18n</code> ofereix aquesta possibilitat. Per exemple per al <code>Temps de lectura</code> d&rsquo;un article, podem definir-lo tal que així en el <code>.toml</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">readingTime</span>]
+<span style="color:#a6e22e">one</span> = <span style="color:#e6db74">&#34;One minute to read&#34;</span>
+<span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#34;{{.Count}} minutes to read&#34;</span>
+</code></pre></div><p>Veiem que li passem el <code>.Count</code> a la traducció pel que haurem de invocar la funció de la següent manera:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{<span style="color:#a6e22e">i18n</span> <span style="color:#e6db74">&#34;readingTime&#34;</span> .<span style="color:#a6e22e">ReadingTime</span>}}
+</code></pre></div><blockquote>
+<p>Nota: la propietat <code>.ReadingTime</code> és un comptador que retorna Hugo segons el nombre de paraules dels articles que creiem.</p>
+</blockquote>
+<h2 id="referències">Referències</h2>
+<p>Per a més detalls consulteu la pàgina oficial de la <a href="https://gohugo.io/content-management/multilingual/">documentació d&rsquo;Hugo</a>.</p>
+</p>
+				</div>
+				
+				
+				<div class="related">
+					
+					
+					<div class="page-separator"><hr></div>
+					
+					<ul id="list-items">
+						
+						<li>
+							<a class="li-link" href="https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/">Com afegir Google Analytics al vostre lloc amb Hugo</a>
+							<p class="li-brief">Tutorial ràpid sobre com integrar Google Analytics en un lloc web Hugo.</p>
+							
+							<p class="metadata">
+    
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/hugo/"><span class="tag-prefix">#</span>hugo</a>
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/cms/"><span class="tag-prefix">#</span>cms</a>
+        
+    
+    · 23/11/2020 · 2 minuts per llegir ·
+</p>
+						</li>
+						
+						<li>
+							<a class="li-link" href="https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/">Gestió de plantilles i contingut d&#39;Hugo</a>
+							<p class="li-brief">Com organitzar el vostre contingut i crear les vostres plantilles per obtenir el màxim valor d’Hugo.</p>
+							
+							<p class="metadata">
+    
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/hugo/"><span class="tag-prefix">#</span>hugo</a>
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/cms/"><span class="tag-prefix">#</span>cms</a>
+        
+    
+    · 08/03/2020 · 5 minuts per llegir ·
+</p>
+						</li>
+						
+						<li>
+							<a class="li-link" href="https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/">Construint un bloc estàtic amb Hugo</a>
+							<p class="li-brief">Passos ràpids per crear el vostre propi bloc estàtic amb Hugo i instal·lar un tema del catàleg. Després, empenyeu el vostre lloc a GitHub i implementeu-lo amb GitHub Pages.</p>
+							
+							<p class="metadata">
+    
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/hugo/"><span class="tag-prefix">#</span>hugo</a>
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/cms/"><span class="tag-prefix">#</span>cms</a>
+        
+            <a class="button tag" href="https://charly3pins.dev/ca/tags/github/"><span class="tag-prefix">#</span>github</a>
+        
+    
+    · 22/09/2018 · 4 minuts per llegir ·
+</p>
+						</li>
+						
+					</ul>
+					
+				</div>
+				
+				<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-charly3pins-dev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+			</div>
+
+			<div class="page-separator centered"><hr></div>
+			
+			<footer class="container centered">
+	<section class="social">
+		<ul class="social-set">
+			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+			</li>
+			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+			</li>
+			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+			</li>
+			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+			</li>
+			<li><a class="sociali" href="https://charly3pins.dev//index.xml" target="_blank" aria-label="LinkedIn">
+				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+			</li>
+	</ul>
+	</section>
+	<p>Últim post publicat el 05/02/2021</p>
+	<p>© 2018 - 2021 Charly3Pins</p>
+</footer>
+			
+		</div>
+	</body>
+</html>
+

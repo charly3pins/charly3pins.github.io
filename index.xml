@@ -6,7 +6,7 @@
     <description>Recent content on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2020</lastBuildDate><atom:link href="https://charly3pins.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Feb 2021</lastBuildDate><atom:link href="https://charly3pins.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Collectus</title>
       <link>https://charly3pins.dev/code/collectus/</link>
@@ -116,6 +116,115 @@ Elegí &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; como lenguaje de
 &lt;h2 id=&#34;pensamientos-finales&#34;&gt;PENSAMIENTOS FINALES&lt;/h2&gt;
 &lt;p&gt;Con esta prueba de concepto tuve la oportunidad de trabajar en una aplicación compleja en términos de diseño de componentes reutilizables en una aplicación móvil, llamar a una API externa para administrar la información que se muestra en la aplicación y aprender a usar el paquete Provider para mover información. entre múltiples vistas y controlar el estado de la aplicación de una forma más sencilla y eficaz.&lt;/p&gt;
 &lt;p&gt;Hay mucho más que aprender con respecto al desarrollo móvil, pero considero este proyecto como un paso inicial para empezar. Algún día haré las vistas que faltan para que podamos usarlas en el mundo real, pero espero que no sea porque tengamos otra pandemia 😏&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>How to have a multilingual site in Hugo</title>
+      <link>https://charly3pins.dev/blog/how-to-have-a-multilingual-site-in-hugo/</link>
+      <pubDate>Fri, 05 Feb 2021</pubDate>
+      
+      <guid>https://charly3pins.dev/blog/how-to-have-a-multilingual-site-in-hugo/</guid>
+      <description>Know the configurations and the tricks to convert your single language site in Hugo to a multilingual site in just a few steps.</description>
+      <content>&lt;p&gt;As you can see since this week this humble website has been remodeled a bit both visually and internally, and it is that not only there are new colors, images and sections, but it also offers all its content in 2 new languages! I have decided to do this step because first of all I wanted to test how the multilingual thing worked in Hugo and also to try to make reading the articles more comfortable for people who visit it, without the language being an obstacle and offering the greatest comfort and pleasure to readers.&lt;/p&gt;
+&lt;p&gt;The languages ​​as you can see in the navbar are Spanish and Catalan. So to change the language in which you are viewing the page, it is as simple as choosing in the dropdown selector which language you prefer and everything will automatically be translated. If you find any misprints in the translation or any part that is not translated, please put a comment on the post in question or comment on my social networks (links at the bottom of the web).&lt;/p&gt;
+&lt;p&gt;After this long text, we are going to see how you can have your sites in Hugo in several languages ​​easily, simply and for the whole family. Let&amp;rsquo;s go there!&lt;/p&gt;
+&lt;h2 id=&#34;set-languages&#34;&gt;Set Languages&lt;/h2&gt;
+&lt;p&gt;The first thing to do to have a multi-language site is to define in the &lt;code&gt;config.toml&lt;/code&gt; the languages ​​that you want to offer. In my case I have decided English, Spanish and Catalan in the following way:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;English&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;weight&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;es&lt;/span&gt;]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Spanish&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;weight&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ca&lt;/span&gt;]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Catalan&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;weight&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;languageName&lt;/code&gt; it is used to define the text that will be seen on the web when checking which languages ​​are available. Spoiler alert! Later we will see how to translate these texts as well.&lt;/p&gt;
+&lt;h2 id=&#34;menus&#34;&gt;Menus&lt;/h2&gt;
+&lt;p&gt;To translate the menus in the different languages, they must be declared as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;home&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;about me&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/about&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;es&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;inicio&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;es&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sobre mí&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/about&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ca&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;inici&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ca&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sobre mi&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/about&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;
+&lt;p&gt;If for example we want to translate the page of &lt;code&gt;About me&lt;/code&gt;, we can do it simply by replicating that file as many times as we have languages, in this case 3, adding the ISO of the language in the filename as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/content/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;about&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;md&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/content/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;about&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;es&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;md&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/content/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;about&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ca&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;md&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In our case, the English language is the default, so we could even do it like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/content/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;about&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;md&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/content/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;about&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;es&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;md&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/content/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;about&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ca&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;md&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;translated-content&#34;&gt;Translated content&lt;/h2&gt;
+&lt;p&gt;To find the translations for the specific page you can use the code snippet provided in the official documentation:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;{{&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; .&lt;span style=&#34;color:#a6e22e&#34;&gt;IsTranslated&lt;/span&gt;}}
+&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;h4&lt;/span&gt;&amp;gt; {{&lt;span style=&#34;color:#a6e22e&#34;&gt;i18n&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;translations&amp;#34;&lt;/span&gt;}} &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;h4&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ul&lt;/span&gt;&amp;gt;
+    {{&lt;span style=&#34;color:#66d9ef&#34;&gt;range&lt;/span&gt; .&lt;span style=&#34;color:#a6e22e&#34;&gt;Translations&lt;/span&gt;}}
+    &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;li&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[{ .Permalink }-lex.europa.eu&amp;#34;&lt;/span&gt;&amp;gt; {{.&lt;span style=&#34;color:#a6e22e&#34;&gt;Lang&lt;/span&gt;}}: {{.&lt;span style=&#34;color:#a6e22e&#34;&gt;Title&lt;/span&gt;}} {{&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; .&lt;span style=&#34;color:#a6e22e&#34;&gt;IsPage&lt;/span&gt;}} ({{&lt;span style=&#34;color:#a6e22e&#34;&gt;i18n&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;wordCount&amp;#34;&lt;/span&gt;.}}) {{&lt;span style=&#34;color:#a6e22e&#34;&gt;end&lt;/span&gt;}} &amp;lt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt;&amp;gt;
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;li&lt;/span&gt;&amp;gt;
+    {{&lt;span style=&#34;color:#a6e22e&#34;&gt;end&lt;/span&gt;}}
+&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ul&lt;/span&gt;&amp;gt;
+{{&lt;span style=&#34;color:#a6e22e&#34;&gt;end&lt;/span&gt;}}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the template where we insert this code, once the content for it is rendered, it will appear if there is a translation or not of that content.&lt;/p&gt;
+&lt;h2 id=&#34;translation-of-texts&#34;&gt;Translation of texts&lt;/h2&gt;
+&lt;p&gt;In the previous code we can already see that the &lt;code&gt;i18n&lt;/code&gt; function appears that Hugo uses to translate the texts defined in the language files within the root directory as &lt;code&gt;/i18n&lt;/code&gt;. The format of the files inside must be for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i18n&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;toml&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i18n&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;es&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;toml&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i18n&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;ca&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;toml&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For each language described above respectively.&lt;/p&gt;
+&lt;p&gt;The file content will be similar to:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;readMore&lt;/span&gt;]
+&lt;span style=&#34;color:#a6e22e&#34;&gt;other&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Llegir més&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For the English file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;readMore&lt;/span&gt;]
+&lt;span style=&#34;color:#a6e22e&#34;&gt;other&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Llegir més&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For the Spanish file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;readMore&lt;/span&gt;]
+&lt;span style=&#34;color:#a6e22e&#34;&gt;other&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Llegir més&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For the Catalan file.&lt;/p&gt;
+&lt;p&gt;Once the translation for &lt;code&gt;Read more&lt;/code&gt; is defined, it is used in our Hugo template as:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;{{&lt;span style=&#34;color:#a6e22e&#34;&gt;i18n&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;readMore&amp;#34;&lt;/span&gt;}}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And the result will be the text defined in the &lt;code&gt;.toml&lt;/code&gt; according to the language chosen by the user to view the web page.&lt;/p&gt;
+&lt;h2 id=&#34;singular-andor-plural-translation&#34;&gt;Singular and/or plural translation&lt;/h2&gt;
+&lt;p&gt;Singular or plural translations can be defined depending on a &amp;ldquo;counter&amp;rdquo;, as the &lt;code&gt;i18n&lt;/code&gt; function offers this possibility. For example for the &lt;code&gt;Reading time&lt;/code&gt; of an article, we can define it as such in the &lt;code&gt;.toml&lt;/code&gt;:
+toml
+[readingTime]
+one = &amp;ldquo;One minute to read&amp;rdquo;
+other = &amp;ldquo;{{.Count}} minutes to read&amp;rdquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+We see that we pass the `.Count` to the translation so we will have to invoke it in the following way:
+```go
+{{i18n &amp;quot;readingTime&amp;quot; .ReadingTime}}
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;Note: the &lt;code&gt;.ReadingTime&lt;/code&gt; property is a counter that Hugo returns according to the number of words of the articles we create.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;For more details, consult the official page of &lt;a href=&#34;https://gohugo.io/content-management/multilingual/&#34;&gt;Hugo&amp;rsquo;s documentation&lt;/a&gt;.&lt;/p&gt;
 </content>
     </item>
     

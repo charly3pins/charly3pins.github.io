@@ -44,7 +44,7 @@
   
   <url>
     <loc>https://charly3pins.dev/es/blog/</loc>
-    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -64,7 +64,7 @@
   
   <url>
     <loc>https://charly3pins.dev/es/</loc>
-    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -84,7 +84,7 @@
   
   <url>
     <loc>https://charly3pins.dev/es/tags/cms/</loc>
-    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -99,6 +99,66 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://charly3pins.dev/es/tags/cms/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/blog/c%C3%B3mo-tener-un-sitio-multiidioma-en-hugo/</loc>
+    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/how-to-have-a-multilingual-site-in-hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiidioma-a-hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/c%C3%B3mo-tener-un-sitio-multiidioma-en-hugo/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/tags/hugo/</loc>
+    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/hugo/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/tags/</loc>
+    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
                 />
   </url>
   
@@ -119,46 +179,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://charly3pins.dev/es/blog/c%C3%B3mo-a%C3%B1adir-google-analytics-a-su-sitio-hugo/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/es/tags/hugo/</loc>
-    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/hugo/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/es/tags/</loc>
-    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
                 />
   </url>
   
