@@ -8,17 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Feb 2021</lastBuildDate><atom:link href="https://charly3pins.dev/ca/tags/cms/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Com tenir un lloc multiidioma a Hugo</title>
-      <link>https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiidioma-a-hugo/</link>
+      <title>Com tenir un lloc multilingüe a Hugo</title>
+      <link>https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiling%C3%BCe-a-hugo/</link>
       <pubDate>Fri, 05 Feb 2021</pubDate>
       
-      <guid>https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiidioma-a-hugo/</guid>
-      <description>Conegueu les configuracions i els trucs per convertir el vostre lloc d&#39;un sol idioma en Hugo a un lloc multiidioma en només uns quants passos.</description>
+      <guid>https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiling%C3%BCe-a-hugo/</guid>
+      <description>Conegueu les configuracions i els trucs per convertir el vostre lloc d&#39;un sol idioma en Hugo a un lloc multilingüe en només uns quants passos.</description>
       <content>&lt;p&gt;Com es pot apreciar des d&amp;rsquo;aquesta setmana aquesta humil pàgina web s&amp;rsquo;ha remodelat una mica tant visualment com internament, i és que no només hi ha nous colors, imatges i seccions, sinó que també ofereix tot el seu contingut en 2 nous idiomes! M&amp;rsquo;he decidit a fer aquest pas perquè primer de tot volia provar com funcionava el tema dels multiidiomes en Hugo i també per intentar fer més còmoda la lectura dels articles a la gent que la visita, sense que l&amp;rsquo;idioma fos un obstacle i oferint el major confort i plaer als lectors.&lt;/p&gt;
 &lt;p&gt;Els idiomes com podeu veure a la barra superior són el Castellà i el Català. Així que per canviar l&amp;rsquo;idioma en el que esteu veient la pàgina, és tan senzill com escollir al gestor quin idioma prefereixes i automàticament es traduirà tot. Si trobeu alguna errada en la traducció o algun lloc que no està traduïda per favor Poseu-me un comentari en el post en qüestió o comenta-pels meus xarxes socials (links a la part baixa de la web).&lt;/p&gt;
 &lt;p&gt;Després d&amp;rsquo;aquesta &amp;ldquo;xapa&amp;rdquo;, veurem com es podeu tenir els vostres llocs en Hugo en diversos idiomes de forma fàcil, senzilla i per a tota la família. Som-hi!&lt;/p&gt;
 &lt;h2 id=&#34;configura-idiomes&#34;&gt;Configura Idiomes&lt;/h2&gt;
-&lt;p&gt;El primer que cal fer per tenir un lloc multiidioma, és definir en el &lt;code&gt;config.toml&lt;/code&gt; els idiomes que es volen oferir. En el meu cas he decidit anglès, castellà i català de la manera següent:&lt;/p&gt;
+&lt;p&gt;El primer que cal fer per tenir un lloc multilingüe, és definir en el &lt;code&gt;config.toml&lt;/code&gt; els idiomes que es volen oferir. En el meu cas he decidit anglès, castellà i català de la manera següent:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;Languages&lt;/span&gt;]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;Languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;English&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
