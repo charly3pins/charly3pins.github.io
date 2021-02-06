@@ -44,7 +44,7 @@
   
   <url>
     <loc>https://charly3pins.dev/blog/</loc>
-    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -64,7 +64,7 @@
   
   <url>
     <loc>https://charly3pins.dev/</loc>
-    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -84,7 +84,7 @@
   
   <url>
     <loc>https://charly3pins.dev/tags/cms/</loc>
-    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -99,6 +99,86 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/tags/cms/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/tags/github/</loc>
+    <lastmod>2021-02-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/github/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/github/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/github/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/tags/hugo/</loc>
+    <lastmod>2021-02-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/hugo/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/blog/review-anime-test/</loc>
+    <lastmod>2021-02-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/rese%C3%B1a-del-anime-one-piece/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/blog/ressenya-de-lanime-one-piece/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/review-anime-test/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/tags/</loc>
+    <lastmod>2021-02-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
                 />
   </url>
   
@@ -119,46 +199,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/blog/how-to-have-a-multilingual-site-in-hugo/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/tags/hugo/</loc>
-    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/hugo/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/tags/</loc>
-    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/"
                 />
   </url>
   
@@ -604,26 +644,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/blog/building-static-blog-with-hugo/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/tags/github/</loc>
-    <lastmod>2018-09-22T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/github/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/github/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/github/"
                 />
   </url>
   
