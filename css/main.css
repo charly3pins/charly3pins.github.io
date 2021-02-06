@@ -453,8 +453,8 @@ a.sociali {
 .metadata{
     font-size:.9em;
     color:var(--light-blue)!important;
-    margin: 0px;
-    margin-top: 2px;
+    margin: 0px !important;
+    margin-top: 2px !important;
 }
 /*
         R   E   L   A   T   E   D
