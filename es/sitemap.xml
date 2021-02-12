@@ -44,7 +44,7 @@
   
   <url>
     <loc>https://charly3pins.dev/es/blog/</loc>
-    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -64,7 +64,7 @@
   
   <url>
     <loc>https://charly3pins.dev/es/</loc>
-    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -79,6 +79,66 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://charly3pins.dev/es/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/blog/cree-un-readme-incre%C3%ADble-para-su-perfil-de-github/</loc>
+    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/build-an-awesome-github-profile-readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/blog/crei-un-readme-incre%C3%AFble-pel-su-perfil-de-github/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/cree-un-readme-incre%C3%ADble-para-su-perfil-de-github/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/tags/github/</loc>
+    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/github/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/github/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/github/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/tags/</loc>
+    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
                 />
   </url>
   
@@ -139,26 +199,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://charly3pins.dev/es/tags/hugo/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/es/tags/</loc>
-    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
                 />
   </url>
   
@@ -599,26 +639,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://charly3pins.dev/es/blog/construyendo-un-blog-est%C3%A1tico-con-hugo/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/es/tags/github/</loc>
-    <lastmod>2018-09-22T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/github/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/github/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/github/"
                 />
   </url>
   

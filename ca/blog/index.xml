@@ -6,7 +6,33 @@
     <description>Recent content in cd ~/bloc on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Feb 2021</lastBuildDate><atom:link href="https://charly3pins.dev/ca/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021</lastBuildDate><atom:link href="https://charly3pins.dev/ca/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crei un README increïble pel su perfil de GitHub</title>
+      <link>https://charly3pins.dev/ca/blog/crei-un-readme-incre%C3%AFble-pel-su-perfil-de-github/</link>
+      <pubDate>Fri, 12 Feb 2021</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/crei-un-readme-incre%C3%AFble-pel-su-perfil-de-github/</guid>
+      <description>Passos ràpids i senzills per crear un portfoli a la seva pàgina de perfil de GitHub amb un repositori especial i amb estadístiques dinàmiques de GitHub.</description>
+      <content>&lt;p&gt;GitHub va llançar una &lt;a href=&#34;https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme&#34;&gt;nova funcionalitat&lt;/a&gt; que permet als usuaris crear un portfoli usant un &lt;code&gt;README&lt;/code&gt; en un repositori especial amb el mateix nom que el nom d&amp;rsquo;usuari i mostrar-lo en el perfil de l&amp;rsquo;usuari com la imatge de portada d&amp;rsquo;aquesta publicació. Aquest article explica com crear aquest repositori pas a pas i afegeix alguns consells i trucs que pot utilitzar per modificar el seu.&lt;/p&gt;
+&lt;h2 id=&#34;com-crear-el-fitxer-readme-pel-meu-perfil&#34;&gt;Com crear el fitxer README pel meu perfil?&lt;/h2&gt;
+&lt;p&gt;Com he comentat abans, el README del perfil es crea quan l&amp;rsquo;usuari crea un nou repositori amb el mateix nom que el seu nom d&amp;rsquo;usuari. Per exemple, el meu nom d&amp;rsquo;usuari de GitHub és charly3pins, així que he creat un nou repositori anomenat &lt;code&gt;charly3pins&lt;/code&gt;. Els passos són els següents:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Crear un nou repositori amb el mateix nom que el nom d&amp;rsquo;usuari de GitHub anant &lt;a href=&#34;https://github.com/new&#34;&gt;aquí&lt;/a&gt;. Marcar  l&amp;rsquo;opció &lt;code&gt;Afegir un arxiu README&lt;/code&gt;.
+&lt;img src=&#34;https://charly3pins.dev/images/github-readme/new-repo.png&#34; alt=&#34;crear repositori&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Obriu el fitxer README.md generat i veurà la següent plantilla:
+&lt;img src=&#34;https://charly3pins.dev/images/github-readme/template.png&#34; alt=&#34;plantilla de repositori&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Descomentar els comentaris i afegir contingut com a text, GIF, imatges, emojis, etc. El que es vulgui mentre sigui acceptat per Markdown&amp;hellip; No hi ha límit! 🚀  Consultar &lt;a href=&#34;https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf&#34;&gt;aquest&lt;/a&gt; Full de referència de Markdown si es necessita repassar la sintaxi de Markdown.&lt;/li&gt;
+&lt;li&gt;Comittejar el nou arxiu README. Recordar que els canvis han d&amp;rsquo;estar en la branca &lt;code&gt;master&lt;/code&gt; o&lt;code&gt; main&lt;/code&gt;; en cas contrari, no seran visibles en el perfil fins que mergee els canvis en una d&amp;rsquo;aquestes dues branques.&lt;/li&gt;
+&lt;li&gt;Pusheejar els canvis a GitHub (si s&amp;rsquo;han realitzat localment).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;sigues-creatiu&#34;&gt;Sigues creatiu&lt;/h2&gt;
+&lt;p&gt;Pot consultar el meu &lt;a href=&#34;https://github.com/charly3pins&#34;&gt;perfil de GitHub&lt;/a&gt; i el &lt;a href=&#34;https://github.com/charly3pins/charly3pins&#34;&gt;repositori&lt;/a&gt; que allotja el meu arxiu README. He afegit les meves estadístiques dinàmiques de GitHub usant &lt;a href=&#34;https://github.com/anuraghazra/github-readme-stats&#34;&gt;aquest&lt;/a&gt; repositori, hi ha molta més informació que es pot afegir als perfils. També he fet servir &lt;a href=&#34;https://shields.io/&#34;&gt;aquest&lt;/a&gt; lloc per fer les insígnies de les xarxes socials i les tecnologies i eines.
+La meva recomanació és donar un cop d&amp;rsquo;ull al repositori &lt;a href=&#34;https://github.com/abhisheknaiidu/awesome-github-profile-readme&#34;&gt;següent&lt;/a&gt; per veure diversos perfils de GitHub i obtenir una mica d&amp;rsquo;inspiració.
+No dubtis a comentar aquí o contactar-me en les meves xarxes socials per a qualsevol comentari, pregunta o suggeriment.&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Com tenir un lloc multilingüe a Hugo</title>
       <link>https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiling%C3%BCe-a-hugo/</link>

@@ -6,7 +6,33 @@
     <description>Recent content in cd ~/blog on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Feb 2021</lastBuildDate><atom:link href="https://charly3pins.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021</lastBuildDate><atom:link href="https://charly3pins.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build an awesome GitHub&#39;s profile README</title>
+      <link>https://charly3pins.dev/blog/build-an-awesome-github-profile-readme/</link>
+      <pubDate>Fri, 12 Feb 2021</pubDate>
+      
+      <guid>https://charly3pins.dev/blog/build-an-awesome-github-profile-readme/</guid>
+      <description>Quick and simple steps to create a portfolio in your GitHub profile page with a special repository and with dynamic GitHub stats.</description>
+      <content>&lt;p&gt;GitHub released a &lt;a href=&#34;https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme&#34;&gt;new feature&lt;/a&gt; that allows users to create a portfolio using a &lt;code&gt;README&lt;/code&gt; in a special repository with same name as the username and display it in the user&amp;rsquo;s profile like the cover picture of this post. This article explains how to create that repo step by step and add some tips and tricks that you can use to tweak your own.&lt;/p&gt;
+&lt;h2 id=&#34;how-do-i-create-a-profile-readme&#34;&gt;How do I create a profile README?&lt;/h2&gt;
+&lt;p&gt;As I&amp;rsquo;ve mentioned before, the profile README is created when the user creates a new repository with the same name as its username. For example, my GitHub username is charly3pins so I created a new repository named &lt;code&gt;charly3pins&lt;/code&gt;. The steps are the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new repository with the same name as your GitHub username going &lt;a href=&#34;https://github.com/new&#34;&gt;here&lt;/a&gt;. Tick the &lt;code&gt;Add a README file option&lt;/code&gt;.
+&lt;img src=&#34;https://charly3pins.dev/images/github-profile-readme/new-repo.png&#34; alt=&#34;create repo&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Open the generated README.md and you will see the following template:
+&lt;img src=&#34;https://charly3pins.dev/images/github-profile-readme/repo-template.png&#34; alt=&#34;repo template&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Uncomment the comments and add some content like text, GIFs, images, emojis, etc. Whatever you want and Markdown accepts it&amp;rsquo;s okay&amp;hellip; Sky is the limit! 🚀 Check out &lt;a href=&#34;https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf&#34;&gt;this&lt;/a&gt; Markdown Cheatsheet if you need to brush up on Markdown syntax.&lt;/li&gt;
+&lt;li&gt;Commit your new README. Note that the changes must be in &lt;code&gt;master&lt;/code&gt; or &lt;code&gt;main&lt;/code&gt; branch, otherwise will not be visible on your profile until you merge the changes in one of those branches.&lt;/li&gt;
+&lt;li&gt;Push changes to GitHub (if you made changes locally).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;be-creative&#34;&gt;Be creative&lt;/h2&gt;
+&lt;p&gt;You can check my &lt;a href=&#34;https://github.com/charly3pins&#34;&gt;GitHub profile&lt;/a&gt; and the &lt;a href=&#34;https://github.com/charly3pins/charly3pins&#34;&gt;repo&lt;/a&gt; that hosts my README. I&amp;rsquo;ve added my dynamic GitHub stats using &lt;a href=&#34;https://github.com/anuraghazra/github-readme-stats&#34;&gt;this&lt;/a&gt; repo, there are a lot of more information that you can add in your profiles. Also I&amp;rsquo;ve used &lt;a href=&#34;https://shields.io/&#34;&gt;this&lt;/a&gt; site to make the badges displayed for the social networks and the technologies and tools.&lt;/p&gt;
+&lt;p&gt;My recommendation is to check check &lt;a href=&#34;https://github.com/abhisheknaiidu/awesome-github-profile-readme&#34;&gt;this&lt;/a&gt; repo to see a lot of GitHub profiles and get some inspiration.&lt;/p&gt;
+&lt;p&gt;Feel free to comment here or contact me in my social networks for any comment, question or suggestion.&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>How to have a multilingual site in Hugo</title>
       <link>https://charly3pins.dev/blog/how-to-have-a-multilingual-site-in-hugo/</link>

@@ -6,7 +6,7 @@
     <description>Recent content on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Feb 2021</lastBuildDate><atom:link href="https://charly3pins.dev/es/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021</lastBuildDate><atom:link href="https://charly3pins.dev/es/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Collectus</title>
       <link>https://charly3pins.dev/es/code/collectus/</link>
@@ -116,6 +116,32 @@ I&amp;rsquo;ve chosen &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; a
 &lt;h2 id=&#34;final-thoughts&#34;&gt;FINAL THOUGHTS&lt;/h2&gt;
 &lt;p&gt;With this proof of concept I had the opportunity to work in a complex application in terms of designing reusable components in a mobile application, calling to an external API to manage the information displayed in the app and learning how to use the Provider package for moving information between multiple views and control the state of the application in a simpler and effective way.&lt;/p&gt;
 &lt;p&gt;There is a lot more to learn regarding mobile development but I consider this project as an initial step to start with. I will do the missing views someday in order we can use it in real world, but I hope it&amp;rsquo;s not because we have another pandemic 😏&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Cree un README  increíble para su perfil de GitHub</title>
+      <link>https://charly3pins.dev/es/blog/cree-un-readme-incre%C3%ADble-para-su-perfil-de-github/</link>
+      <pubDate>Fri, 12 Feb 2021</pubDate>
+      
+      <guid>https://charly3pins.dev/es/blog/cree-un-readme-incre%C3%ADble-para-su-perfil-de-github/</guid>
+      <description>Pasos rápidos y sencillos para crear un portfolio en su página de perfil de GitHub con un repositorio especial y con estadísticas dinámicas de GitHub.</description>
+      <content>&lt;p&gt;GitHub lanzó una &lt;a href=&#34;https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme&#34;&gt;nueva funcionalidad&lt;/a&gt; que permite a los usuarios crear un portfolio usando un &lt;code&gt;README&lt;/code&gt; en un repositorio especial con el mismo nombre que el nombre de usuario y mostrarlo en el perfil del usuario como la imagen de portada de esta publicación. Este artículo explica cómo crear ese repositorio paso a paso y agrega algunos consejos y trucos que puede usar para modificar el suyo.&lt;/p&gt;
+&lt;h2 id=&#34;cómo-creo-el-archivo-readme-de-mi-perfil&#34;&gt;¿Cómo creo el archivo README de mi perfil?&lt;/h2&gt;
+&lt;p&gt;Como mencioné antes, el README del perfil se crea cuando el usuario crea un nuevo repositorio con el mismo nombre que su nombre de usuario. Por ejemplo, mi nombre de usuario de GitHub es charly3pins, así que creé un nuevo repositorio llamado &lt;code&gt;charly3pins&lt;/code&gt;. Los pasos son los siguientes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Crear un nuevo repositorio con el mismo nombre que su nombre de usuario de GitHub yendo &lt;a href=&#34;https://github.com/new&#34;&gt;aquí&lt;/a&gt;. Marcar la opción &lt;code&gt;Agregar un archivo README&lt;/code&gt;.
+&lt;img src=&#34;https://charly3pins.dev/images/github-profile-readme/new-repo.png&#34; alt=&#34;crear repositorio&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Abrir el archivo README.md generado y verá la siguiente plantilla:
+&lt;img src=&#34;https://charly3pins.dev/images/github-profile-readme/repo-template.png&#34; alt=&#34;plantilla de repositorio&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Descomentar los comentarios y agregar contenido como texto, GIF, imágenes, emojis, etc. Lo que se quiera mientras sea aceptado por Markdown&amp;hellip; ¡El límite lo pone el usuario! 🚀 Consultar  &lt;a href=&#34;https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf&#34;&gt;esta&lt;/a&gt; Hoja de referencia de Markdown si se necesita repasar la sintaxis de Markdown.&lt;/li&gt;
+&lt;li&gt;Comittear el nuevo archivo README. Tener en cuenta que los cambios deben estar en la rama &lt;code&gt;master&lt;/code&gt; o &lt;code&gt;main&lt;/code&gt;; de lo contrario, no serán visibles en el perfil hasta que se mergeen los cambios en una de esas dos ramas.&lt;/li&gt;
+&lt;li&gt;Pusheear los cambios a GitHub (si se realizaron los cambios localmente).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;sé-creativo&#34;&gt;Sé creativo&lt;/h2&gt;
+&lt;p&gt;Puede consultar mi &lt;a href=&#34;https://github.com/charly3pins&#34;&gt;perfil de GitHub&lt;/a&gt; y el &lt;a href=&#34;https://github.com/charly3pins/charly3pins&#34;&gt;repositorio&lt;/a&gt; que aloja mi archivo README. Agregué mis estadísticas dinámicas de GitHub usando &lt;a href=&#34;https://github.com/anuraghazra/github-readme-stats&#34;&gt;este&lt;/a&gt; repositorio, hay mucha más información que puede agregar en sus perfiles. También he usado &lt;a href=&#34;https://shields.io/&#34;&gt;este&lt;/a&gt; sitio para hacer que las insignias se muestren para las redes sociales y las tecnologías y herramientas.
+Mi recomendación es dar un vistazo al repositorio &lt;a href=&#34;https://github.com/abhisheknaiidu/awesome-github-profile-readme&#34;&gt;siguiente&lt;/a&gt; para ver varios perfiles de GitHub y obtener un poco de inspiración.
+No dudes en comentar aquí o contactarme en mis redes sociales para cualquier comentario, pregunta o sugerencia.&lt;/p&gt;
 </content>
     </item>
     
