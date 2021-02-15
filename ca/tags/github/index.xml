@@ -21,7 +21,7 @@
 &lt;li&gt;Crear un nou repositori amb el mateix nom que el nom d&amp;rsquo;usuari de GitHub anant &lt;a href=&#34;https://github.com/new&#34;&gt;aquí&lt;/a&gt;. Marcar  l&amp;rsquo;opció &lt;code&gt;Afegir un arxiu README&lt;/code&gt;.
 &lt;img src=&#34;https://charly3pins.dev/images/github-profile-readme/new-repo.png&#34; alt=&#34;crear repositori&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Obriu el fitxer README.md generat i veurà la següent plantilla:
-&lt;img src=&#34;https://charly3pins.dev/images/github-profile-readme/template.png&#34; alt=&#34;plantilla de repositori&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/github-profile-readme/repo-template.png&#34; alt=&#34;plantilla de repositori&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Descomentar els comentaris i afegir contingut com a text, GIF, imatges, emojis, etc. El que es vulgui mentre sigui acceptat per Markdown&amp;hellip; No hi ha límit! 🚀  Consultar &lt;a href=&#34;https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf&#34;&gt;aquest&lt;/a&gt; Full de referència de Markdown si es necessita repassar la sintaxi de Markdown.&lt;/li&gt;
 &lt;li&gt;Comittejar el nou arxiu README. Recordar que els canvis han d&amp;rsquo;estar en la branca &lt;code&gt;master&lt;/code&gt; o&lt;code&gt; main&lt;/code&gt;; en cas contrari, no seran visibles en el perfil fins que mergee els canvis en una d&amp;rsquo;aquestes dues branques.&lt;/li&gt;
 &lt;li&gt;Pusheejar els canvis a GitHub (si s&amp;rsquo;han realitzat localment).&lt;/li&gt;
