@@ -707,25 +707,6 @@
   </url>
   
   <url>
-    <loc>https://charly3pins.dev/notes/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/notes/"
-                />
-  </url>
-  
-  <url>
     <loc>https://charly3pins.dev/about/</loc>
     <xhtml:link
                 rel="alternate"
