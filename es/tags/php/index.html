@@ -50,6 +50,7 @@ if (!doNotTrack) {
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -175,7 +176,7 @@ if (!doNotTrack) {
             <div class="sl-nav">
                 <ul>
                     <li>
-                        <b>Castellano</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <b style="color:var(--pink);">Castellano</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="triangle"></div>
                         <ul>
                         
@@ -199,13 +200,18 @@ if (!doNotTrack) {
 				<div class="page-separator centered"><hr></div>
 
 				<div class="markdown">
-    <ul id="list-items">
-        
-        <li>
-            <a class="li-link" href="https://charly3pins.dev/es/code/collectus/">Collectus</a>
-            <p>Como proyecto de fin de carrera de Ingeniería Informática, construí una base de datos flexible para coleccionables y cualquier otro objeto o dato que cualquier usuario quiera ordenar y clasificar de una manera simple y efectiva.</p>
-            
-            <p class="metadata">
+    <section class="gallery">
+        <div class="container">
+            <ul class="image-list">
+                
+                <li>
+                    <figure>
+                        <a href="https://charly3pins.dev/es/code/collectus/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
+                        <figcaption>
+                            <a class="li-head li-link" href="https://charly3pins.dev/es/code/collectus/">Collectus</a>
+                            <div class="li-sub">
+                                Como proyecto de fin de carrera de Ingeniería Informática, construí una base de datos flexible para coleccionables y cualquier otro objeto o dato que cualquier usuario quiera ordenar y clasificar de una manera simple y efectiva. <a class="tag"href="https://charly3pins.dev/es/code/collectus/">Leer más...</a>
+                                <p class="metadata">
     
         
             <a class="button tag" href="https://charly3pins.dev/es/tags/php/"><span class="tag-prefix">#</span>php</a>
@@ -215,9 +221,14 @@ if (!doNotTrack) {
     
     
 </p>
-        </li>
-        
-    </ul>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
 </div>
 
 

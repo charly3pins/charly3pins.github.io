@@ -52,6 +52,7 @@ if (!doNotTrack) {
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -177,7 +178,7 @@ if (!doNotTrack) {
             <div class="sl-nav">
                 <ul>
                     <li>
-                        <b>English</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <b style="color:var(--pink);">English</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="triangle"></div>
                         <ul>
                         
@@ -241,13 +242,18 @@ if (!doNotTrack) {
 				</div>
 				
 				<div class="markdown">
-    <ul id="list-items">
-        
-        <li>
-            <a class="li-link" href="https://charly3pins.dev/blog/building-static-blog-with-hugo/">Building static blog with Hugo</a>
-            <p>Quick steps to create your own static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages.</p>
-            
-            <p class="metadata">
+    <section class="gallery">
+        <div class="container">
+            <ul class="image-list">
+                
+                <li>
+                    <figure>
+                        <a href="https://charly3pins.dev/blog/building-static-blog-with-hugo/"><img src="https://charly3pins.dev/images/gohugoio-card-thumb.png" alt="thumb image"></a>
+                        <figcaption>
+                            <a class="li-head li-link" href="https://charly3pins.dev/blog/building-static-blog-with-hugo/">Building static blog with Hugo</a>
+                            <div class="li-sub">
+                                Quick steps to create your own static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages. <a class="tag"href="https://charly3pins.dev/blog/building-static-blog-with-hugo/">Read more...</a>
+                                <p class="metadata">
     
         
             <a class="button tag" href="https://charly3pins.dev/tags/hugo/"><span class="tag-prefix">#</span>hugo</a>
@@ -259,9 +265,14 @@ if (!doNotTrack) {
     
     22/09/2018 · 4 min. read
 </p>
-        </li>
-        
-    </ul>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
 </div>
 
 

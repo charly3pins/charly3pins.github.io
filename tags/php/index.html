@@ -50,6 +50,7 @@ if (!doNotTrack) {
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -175,7 +176,7 @@ if (!doNotTrack) {
             <div class="sl-nav">
                 <ul>
                     <li>
-                        <b>English</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <b style="color:var(--pink);">English</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="triangle"></div>
                         <ul>
                         
@@ -199,13 +200,18 @@ if (!doNotTrack) {
 				<div class="page-separator centered"><hr></div>
 
 				<div class="markdown">
-    <ul id="list-items">
-        
-        <li>
-            <a class="li-link" href="https://charly3pins.dev/code/collectus/">Collectus</a>
-            <p>As my Final Year Project for Computer Science Engineering I builded a flexible database for collectibles and any other objects or data that any user wants to have ordered and classified in a simple and effective way.</p>
-            
-            <p class="metadata">
+    <section class="gallery">
+        <div class="container">
+            <ul class="image-list">
+                
+                <li>
+                    <figure>
+                        <a href="https://charly3pins.dev/code/collectus/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
+                        <figcaption>
+                            <a class="li-head li-link" href="https://charly3pins.dev/code/collectus/">Collectus</a>
+                            <div class="li-sub">
+                                As my Final Year Project for Computer Science Engineering I builded a flexible database for collectibles and any other objects or data that any user wants to have ordered and classified in a simple and effective way. <a class="tag"href="https://charly3pins.dev/code/collectus/">Read more...</a>
+                                <p class="metadata">
     
         
             <a class="button tag" href="https://charly3pins.dev/tags/php/"><span class="tag-prefix">#</span>php</a>
@@ -215,9 +221,14 @@ if (!doNotTrack) {
     
     
 </p>
-        </li>
-        
-    </ul>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
 </div>
 
 
