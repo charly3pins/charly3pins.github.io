@@ -116,6 +116,10 @@ Elegí &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; como lenguaje de
 &lt;h2 id=&#34;pensamientos-finales&#34;&gt;PENSAMIENTOS FINALES&lt;/h2&gt;
 &lt;p&gt;Con esta prueba de concepto tuve la oportunidad de trabajar en una aplicación compleja en términos de diseño de componentes reutilizables en una aplicación móvil, llamar a una API externa para administrar la información que se muestra en la aplicación y aprender a usar el paquete Provider para mover información. entre múltiples vistas y controlar el estado de la aplicación de una forma más sencilla y eficaz.&lt;/p&gt;
 &lt;p&gt;Hay mucho más que aprender con respecto al desarrollo móvil, pero considero este proyecto como un paso inicial para empezar. Algún día haré las vistas que faltan para que podamos usarlas en el mundo real, pero espero que no sea porque tengamos otra pandemia 😏&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Código fuente de la API en Go: &lt;a href=&#34;https://github.com/charly3pins/fifa-gen-api&#34;&gt;https://github.com/charly3pins/fifa-gen-api&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Código fuente de la app en Flutter: &lt;a href=&#34;https://github.com/charly3pins/fifa_gen&#34;&gt;https://github.com/charly3pins/fifa_gen&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     </item>
     

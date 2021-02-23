@@ -76,6 +76,10 @@ I&amp;rsquo;ve chosen &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; a
 &lt;h2 id=&#34;final-thoughts&#34;&gt;FINAL THOUGHTS&lt;/h2&gt;
 &lt;p&gt;With this proof of concept I had the opportunity to work in a complex application in terms of designing reusable components in a mobile application, calling to an external API to manage the information displayed in the app and learning how to use the Provider package for moving information between multiple views and control the state of the application in a simpler and effective way.&lt;/p&gt;
 &lt;p&gt;There is a lot more to learn regarding mobile development but I consider this project as an initial step to start with. I will do the missing views someday in order we can use it in real world, but I hope it&amp;rsquo;s not because we have another pandemic 😏&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Source code of the API in Go: &lt;a href=&#34;https://github.com/charly3pins/fifa-gen-api&#34;&gt;https://github.com/charly3pins/fifa-gen-api&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Source of of the Flutter app: &lt;a href=&#34;https://github.com/charly3pins/fifa_gen&#34;&gt;https://github.com/charly3pins/fifa_gen&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     </item>
     
