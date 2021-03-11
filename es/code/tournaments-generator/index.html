@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 	
 	<head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Ingeniero de Software, amante de Japón, jugador de videojuegos y paseador de perros">
+  <meta name="description" content="Ingeniero de Software">
 
   <title>Tournaments generator | Charly3Pins</title>
 
@@ -49,170 +49,66 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
-
-			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/blog/" class="">/blog</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/code/" class="">/código</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/about/" class="">$USUARIO</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>Castellano</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/code/tournaments-generator/">Inglés</a>
-                            
-                                <a href="https://charly3pins.dev/ca/code/tournaments-generator/">Catalán</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/" class="">~</a>
-            </span>
-            
+        <a href="/es/">Inicio</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/blog/" class="">/blog</a>
-            </span>
-            
+        <a href="/es/blog/">Blog</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/code/" class="">/código</a>
-            </span>
-            
+        <a href="/es/code/">Código</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/about/" class="">$USUARIO</a>
-            </span>
-            
+        <a href="/es/about/">Quién</a>
         
         
-        <span class="menu-item">
-            <div class="sl-nav">
+        <ul class="lang-selector">
+            <li>
+                <a>Castellano</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
                 <ul>
-                    <li>
-                        <b style="color:var(--pink);">Castellano</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/code/tournaments-generator/">Inglés</a>
-                        
-                            <a href="https://charly3pins.dev/ca/code/tournaments-generator/">Catalán</a>
-                        
-                        </ul>
-                    </li>
+                
+                    <a href="https://charly3pins.dev/code/tournaments-generator/">Inglés</a>
+                
+                    <a href="https://charly3pins.dev/ca/code/tournaments-generator/">Catalán</a>
+                
                 </ul>
-            </div>
-        </span>
+            </li>
+        </ul>
         
-    </div>
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
 </div>
+		
+		<div class="layout-container">
 
+			<section class="blog-container">
+				
+				<h4 class="post-title">Tournaments generator</h4>
+				<h2 class="post-description">Prueba de concepto de la construcción de una aplicación para administrar torneos FIFA 20 entre diferentes personas usando Flutter para construir una aplicación móvil y Go para construir una API que actúa como servidor. También usé Python para construir raspadores simples.</h2>
 
-			<div class="container">
-				<div class="markdown">
-					<h1>Tournaments generator</h1>
-					
-					<p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/es/tags/go/"><span class="tag-prefix">#</span>go</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/es/tags/flutter/"><span class="tag-prefix">#</span>flutter</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/es/tags/python/"><span class="tag-prefix">#</span>python</a>
-        
-    
-    
-</p>
+				<div class="post-metadata">
+					<div class="post-tags">
+						
+						<a class="tag" href="https://charly3pins.dev/tags/go/">#go</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/flutter/">#flutter</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/python/">#python</a>
+						
+					</div>
+					<span class="post-date">
+						01/05/2020 · 9 min. lectura
+					</span>
+				</div>
 
-					<ul class="icons">
+				<ul class="icons">
     
     <li>
         
@@ -257,10 +153,10 @@ if (!doNotTrack) {
     </li>
 </ul>
 
-				</div>
 
-				<div class="markdown">
-					<p><h2 id="por-qué">POR QUÉ</h2>
+				<article>
+					
+					<h2 id="por-qué">POR QUÉ</h2>
 <p>La motivación para iniciar este proyecto no es otra que mi curiosidad por las aplicaciones móviles. Es obvio que la forma de consumir tecnología ha cambiado en los últimos años y cada vez se hace más a través de un dispositivo móvil. Por esa razón, quería explorar cómo funcionan las aplicaciones móviles y cómo puedo crear una desde cero.
 Hice algunos tutoriales de Android, pero como están cambiando muchas cosas al lanzar nuevas versiones y mi idea era crear algo genérico para todos los dispositivos, decidí intentarlo con <a href="https://flutter.dev/">Flutter</a>.</p>
 <p>Estaba entre <a href="https://reactnative.dev/">React Native</a> o Flutter, pero después de leer algunos pros y contras, decidí aliarme con Flutter. Comencé a leer su <a href="https://flutter.dev/docs">documentación</a> y era muy similar a Android (están usando Dart en la parte inferior) y comencé a recordar mis viejos tiempos en los tutoriales de Android y me gusta, así que Yo continué. Después de unos días leyendo solo documentación técnica, continué con la aplicación &ldquo;hello world&rdquo; <a href="https://flutter.dev/docs/get-started/codelab">tutorial</a> que proporcionan en el sitio web. Y finalmente, estaba listo para comenzar mi propio proyecto.</p>
@@ -281,15 +177,15 @@ Elegí <a href="https://golang.org/">Go</a> como lenguaje de programación para 
 <p>Para la aplicación móvil, comencé a poner todos los archivos dentro de una carpeta de <code>componentes</code>, pero cuando comenzó a crecer, fue una tarea difícil de administrar. Después de agregar más complejidad a la aplicación, termino encontrando una forma limpia de organizar el código, dividiéndolo en dos carpetas separadas; uno para el núcleo y otro para la interfaz de usuario. Luego dentro de cada uno también categoricé los diferentes tipos de componentes en función de sus responsabilidades y al final el código (al menos para mí que no soy un experto en Flutter) terminó luciendo súper limpio y (sin duda) más mantenible . Debajo de la organización de carpetas en una vista general:</p>
 <p><img src="/images/code/tournaments-generator/app-structure.jpeg" alt="app structure"></p>
 <p>Al principio, cuando comencé a codificar y ver los resultados, todo fue súper elegante y pensé que era más fácil de lo esperado. Conectar la aplicación con la API fue solo una cuestión de saber cómo usar la biblioteca <code>http</code> y los métodos<code> get</code> o <code>post</code> se conectaron sin problemas.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart">    <span style="color:#66d9ef">var</span> client <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> http.Client();
+<div class="highlight"><pre class="chroma"><code class="language-dart" data-lang="dart">    <span class="kd">var</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">http</span><span class="p">.</span><span class="n">Client</span><span class="p">();</span>
 
-    <span style="color:#66d9ef">String</span> jsonBody <span style="color:#f92672">=</span> json.encode(user.toJson());
-    <span style="color:#66d9ef">var</span> response <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> client.post(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$</span>_baseUrl<span style="color:#e6db74">/token&#34;</span>,
-        headers: {<span style="color:#e6db74">&#34;Content-Type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span>}, body: jsonBody);
+    <span class="kt">String</span> <span class="n">jsonBody</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">toJson</span><span class="p">());</span>
+    <span class="kd">var</span> <span class="n">response</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">_baseUrl</span><span class="s2">/token&#34;</span><span class="p">,</span>
+        <span class="nl">headers:</span> <span class="p">{</span><span class="s2">&#34;Content-Type&#34;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="nl">body:</span> <span class="n">jsonBody</span><span class="p">);</span>
 
-    <span style="color:#66d9ef">if</span> (response.statusCode <span style="color:#f92672">==</span> <span style="color:#ae81ff">200</span>) {
-      <span style="color:#66d9ef">return</span> User.fromJson(json.decode(response.body));
-    }
+    <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">statusCode</span> <span class="o">==</span> <span class="m">200</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">));</span>
+    <span class="p">}</span>
 </code></pre></div><p>El único problema al que me he enfrentado allí es que estaba ejecutando las aplicaciones desde el emulador de Android; eso significa que se estaba ejecutando en una máquina virtual, por lo que la IP no era mi local y no puede acceder al <code>localhost</code>. Después de un poco de investigación, encontré el correcto y todo funcionó correctamente.</p>
 <p>Los problemas comenzaron cuando quería pasar información entre componentes y actualizar la vista en función de esa información, o mejor aún, no actualizar si nada cambia cuando entro de nuevo en una vista (por ejemplo, al pasar de una lista a una vista de detalle, y volviendo de nuevo a la lista). Después de un día leyendo en foros sobre el mismo problema al que me estaba enfrentando, encontré el paquete [Proveedor] (<a href="https://pub.dev/packages/provider">https://pub.dev/packages/provider</a>) y todo parecía fácil y el santo grial para todo, pero no lo era.</p>
 <p>¡El verdadero dolor acaba de comenzar allí! Me tomó algunos días entender realmente cómo funciona. El proveedor inicial es fácil de entender y lo usa y funciona, pero luego desea cambiar solo una pequeña parte de la vista, o desea reconstruir la totalidad, o desea modificar algunos valores en una vista A y luego vaya a la vista B y vea los cambios allí, y todos esos ejemplos está codificado de manera completamente diferente y primero debe saber que hay una forma para cada caso de hacer las cosas y segundo, debe saber cómo hacerlo. Al final utilicé Provider, ProxyProvider, StreamProvider y ChangeNotifierProvider.</p>
@@ -326,11 +222,12 @@ Elegí <a href="https://golang.org/">Go</a> como lenguaje de programación para 
 <li>Código fuente de la API en Go: <a href="https://github.com/charly3pins/fifa-gen-api">https://github.com/charly3pins/fifa-gen-api</a></li>
 <li>Código fuente de la app en Flutter: <a href="https://github.com/charly3pins/fifa_gen">https://github.com/charly3pins/fifa_gen</a></li>
 </ul>
-</p>
-				</div>
 
-				<div class="page-separator centered"><hr></div>
+				</article>
 
+				
+				
+				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
@@ -351,36 +248,35 @@ Elegí <a href="https://golang.org/">Go</a> como lenguaje de programación para 
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-				
-				<div class="page-separator centered"><hr></div>
-
-			</div>
 			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
+			</section>
+			
+			<div class="page-separator centered"><hr></div>
+			
+			<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
 	</ul>
-	</section>
-	<p>Último post publicado el 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
+	<div class="footer-text">Último post publicado el 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
-			
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+		
 		</div>
+
 	</body>
 </html>
-

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 	
 	<head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Software Engineer, Japan lover, video gamer and dog walker">
+  <meta name="description" content="Software Engineer">
 
   <title>My productivity setup for VS Code | Charly3Pins</title>
 
@@ -49,173 +49,64 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
-
-			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/blog/" class="">/blog</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/code/" class="">/code</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/about/" class="">$USER</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>English</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/">Spanish</a>
-                            
-                                <a href="https://charly3pins.dev/ca/blog/la-meva-configuraci%C3%B3-per-a-una-alta-productivitat-per-al-vs-code/">Catalan</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/" class="">~</a>
-            </span>
-            
+        <a href="/">Home</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/blog/" class="">/blog</a>
-            </span>
-            
+        <a href="/blog/">Blog</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/code/" class="">/code</a>
-            </span>
-            
+        <a href="/code/">Code</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/about/" class="">$USER</a>
-            </span>
-            
+        <a href="/about/">About</a>
         
         
-        <span class="menu-item">
-            <div class="sl-nav">
+        <ul class="lang-selector">
+            <li>
+                <a>English</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
                 <ul>
-                    <li>
-                        <b style="color:var(--pink);">English</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/">Spanish</a>
-                        
-                            <a href="https://charly3pins.dev/ca/blog/la-meva-configuraci%C3%B3-per-a-una-alta-productivitat-per-al-vs-code/">Catalan</a>
-                        
-                        </ul>
-                    </li>
+                
+                    <a href="https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/">Spanish</a>
+                
+                    <a href="https://charly3pins.dev/ca/blog/la-meva-configuraci%C3%B3-per-a-una-alta-productivitat-per-al-vs-code/">Catalan</a>
+                
                 </ul>
-            </div>
-        </span>
+            </li>
+        </ul>
         
-    </div>
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
 </div>
+		
+		<div class="layout-container">
 
-
-			<div class="container">
-				<div id="cover-image">
-					<img src="https://miro.medium.com/max/6000/0*8KANi15q2thT-dYt" alt="cover image">
-				</div>
+			<section class="blog-container">
 				
-				<div class="markdown">
-					<h1>My productivity setup for VS Code</h1>
-					<p class="subtitle">I am gonna show you my setup for VS Code editor which makes me more productive and I feel more comfortable with the tool that I spend most of my time during the day.</p>
-					
-					<p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/tags/productivity/"><span class="tag-prefix">#</span>productivity</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/tags/vscode/"><span class="tag-prefix">#</span>vscode</a>
-        
-    
-    09/03/2021 · 4 min. read
-</p>
+				<h4 class="post-title">My productivity setup for VS Code</h4>
+				<h2 class="post-description">I am gonna show you my setup for VS Code editor which makes me more productive and I feel more comfortable with the tool that I spend most of my time during the day.</h2>
 
-					<ul class="icons">
+				<div class="post-metadata">
+					<div class="post-tags">
+						
+						<a class="tag" href="https://charly3pins.dev/tags/productivity/">#productivity</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/vscode/">#vscode</a>
+						
+					</div>
+					<span class="post-date">
+						09/03/2021 · 4 min. read
+					</span>
+				</div>
+
+				<ul class="icons">
     
     <li>
         
@@ -260,10 +151,14 @@ if (!doNotTrack) {
     </li>
 </ul>
 
-				</div>
 
-				<div class="markdown">
-					<p><p>I spend a lot of hours during the day coding for the company I work for and during nights or weekends for myself, so I want to be comfortable with the tools I use constantly. One of them is my editor of code, specifically <a href="https://code.visualstudio.com/">VS Code</a>. I started with Java and the most extended for it is Eclipse with all its variants. Then I moved to Go and I was a Sublime user for years until I gave a try to VS Code. Oh boy! Since I tried, I never wanted to switch back. Super fast, super configurable, a lot of extensions and A LOT OF THEMES.</p>
+				<article>
+					
+					<div class="centered">
+						<img src="https://miro.medium.com/max/6000/0*8KANi15q2thT-dYt" alt="cover image">
+					</div>
+					
+					<p>I spend a lot of hours during the day coding for the company I work for and during nights or weekends for myself, so I want to be comfortable with the tools I use constantly. One of them is my editor of code, specifically <a href="https://code.visualstudio.com/">VS Code</a>. I started with Java and the most extended for it is Eclipse with all its variants. Then I moved to Go and I was a Sublime user for years until I gave a try to VS Code. Oh boy! Since I tried, I never wanted to switch back. Super fast, super configurable, a lot of extensions and A LOT OF THEMES.</p>
 <p>So after a long way of researching and tweaking (a never ending story I would say) I found a setup that makes me comfortable, happy and more productive. For that reason I want to share with you lovely readers my theme, my font, my icons and the extensions I have in order to inspire you to reach your own setup same as me.</p>
 <p>The default VS Code theme is not bad at all, but I will show you how to move from this
 <img src="/images/productivity-setup-vscode/vscode-default.jpeg" alt="vscode default"></p>
@@ -335,14 +230,11 @@ if (!doNotTrack) {
 </ol>
 <p>Simply the proto3 language support for the editor.</p>
 <p><img src="https://github.com/zxh0/vscode-proto3/raw/master/images/gif1.gif" alt="vscode proto3"></p>
-</p>
-				</div>
+
+				</article>
+
 				
 				
-				<div class="related">
-					
-					
-				</div>
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
@@ -364,36 +256,35 @@ if (!doNotTrack) {
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-			</div>
-
+			
+			</section>
+			
 			<div class="page-separator centered"><hr></div>
 			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
+			<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
 	</ul>
-	</section>
-	<p>Last post published on 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
+	<div class="footer-text">Last post published on 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
-			
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+		
 		</div>
+
 	</body>
 </html>
-

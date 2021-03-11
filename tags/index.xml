@@ -158,16 +158,6 @@
     </item>
     
     <item>
-      <title>ci</title>
-      <link>https://charly3pins.dev/tags/ci/</link>
-      <pubDate>Wed, 10 Oct 2018</pubDate>
-      
-      <guid>https://charly3pins.dev/tags/ci/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>devops</title>
       <link>https://charly3pins.dev/tags/devops/</link>
       <pubDate>Wed, 10 Oct 2018</pubDate>
@@ -203,6 +193,16 @@
       <pubDate>Sat, 22 Sep 2018</pubDate>
       
       <guid>https://charly3pins.dev/tags/php/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>ci/cd</title>
+      <link>https://charly3pins.dev/tags/ci/cd/</link>
+      <pubDate>Mon, 01 Jan 0001</pubDate>
+      
+      <guid>https://charly3pins.dev/tags/ci/cd/</guid>
       <description></description>
       <content></content>
     </item>

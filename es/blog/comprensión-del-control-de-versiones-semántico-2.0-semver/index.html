@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 	
 	<head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Ingeniero de Software, amante de Japón, jugador de videojuegos y paseador de perros">
+  <meta name="description" content="Ingeniero de Software">
 
   <title>Comprensión del Control de Versiones Semántico 2.0 (SemVer) | Charly3Pins</title>
 
@@ -49,173 +49,64 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
-
-			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/blog/" class="">/blog</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/code/" class="">/código</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/about/" class="">$USUARIO</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>Castellano</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/blog/understanding-semantic-versionin-2.0-semver/">Inglés</a>
-                            
-                                <a href="https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/">Catalán</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/" class="">~</a>
-            </span>
-            
+        <a href="/es/">Inicio</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/blog/" class="">/blog</a>
-            </span>
-            
+        <a href="/es/blog/">Blog</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/code/" class="">/código</a>
-            </span>
-            
+        <a href="/es/code/">Código</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/about/" class="">$USUARIO</a>
-            </span>
-            
+        <a href="/es/about/">Quién</a>
         
         
-        <span class="menu-item">
-            <div class="sl-nav">
+        <ul class="lang-selector">
+            <li>
+                <a>Castellano</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
                 <ul>
-                    <li>
-                        <b style="color:var(--pink);">Castellano</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/blog/understanding-semantic-versionin-2.0-semver/">Inglés</a>
-                        
-                            <a href="https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/">Catalán</a>
-                        
-                        </ul>
-                    </li>
+                
+                    <a href="https://charly3pins.dev/blog/understanding-semantic-versionin-2.0-semver/">Inglés</a>
+                
+                    <a href="https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/">Catalán</a>
+                
                 </ul>
-            </div>
-        </span>
+            </li>
+        </ul>
         
-    </div>
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
 </div>
+		
+		<div class="layout-container">
 
-
-			<div class="container">
-				<div id="cover-image">
-					<img src="https://charly3pins.dev/images/semver.png" alt="cover image">
-				</div>
+			<section class="blog-container">
 				
-				<div class="markdown">
-					<h1>Comprensión del Control de Versiones Semántico 2.0 (SemVer)</h1>
-					<p class="subtitle">¿Qué es el control de versiones semántico? ¿Por qué es importante utilizarlo en tus proyectos como desarrollador? ¿Qué significa para un usuario que usa su biblioteca?</p>
-					
-					<p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/es/tags/semver/"><span class="tag-prefix">#</span>semver</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/es/tags/api/"><span class="tag-prefix">#</span>api</a>
-        
-    
-    20/10/2020 · 3 min. lectura
-</p>
+				<h4 class="post-title">Comprensión del Control de Versiones Semántico 2.0 (SemVer)</h4>
+				<h2 class="post-description">¿Qué es el control de versiones semántico? ¿Por qué es importante utilizarlo en tus proyectos como desarrollador? ¿Qué significa para un usuario que usa su biblioteca?</h2>
 
-					<ul class="icons">
+				<div class="post-metadata">
+					<div class="post-tags">
+						
+						<a class="tag" href="https://charly3pins.dev/tags/semver/">#semver</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/api/">#api</a>
+						
+					</div>
+					<span class="post-date">
+						20/10/2020 · 3 min. lectura
+					</span>
+				</div>
+
+				<ul class="icons">
     
     <li>
         
@@ -260,10 +151,14 @@ if (!doNotTrack) {
     </li>
 </ul>
 
-				</div>
 
-				<div class="markdown">
-					<p><p>Cuando desee usar una biblioteca en su proyecto, probablemente notó que necesita especificar una versión. La mayoría de las veces, esas versiones tienen el formato de 3 números separados por puntos entre ellos. Ese formato es indicativo de que la biblioteca está utilizando el <a href="https://semver.org">Control de versiones semántico</a> también conocido como SemVer. Ese documento especifica el formato y la forma de etiquetar sus proyectos durante todo el ciclo de vida del mismo. Es solo una convención para que pueda definir el número de versión de la manera que desee, pero la verdad es que otros desarrolladores de todas las industrias acordaron usarlo y se convirtió en un estándar para el control de versiones.</p>
+				<article>
+					
+					<div class="centered">
+						<img src="https://charly3pins.dev/images/semver.png" alt="cover image">
+					</div>
+					
+					<p>Cuando desee usar una biblioteca en su proyecto, probablemente notó que necesita especificar una versión. La mayoría de las veces, esas versiones tienen el formato de 3 números separados por puntos entre ellos. Ese formato es indicativo de que la biblioteca está utilizando el <a href="https://semver.org">Control de versiones semántico</a> también conocido como SemVer. Ese documento especifica el formato y la forma de etiquetar sus proyectos durante todo el ciclo de vida del mismo. Es solo una convención para que pueda definir el número de versión de la manera que desee, pero la verdad es que otros desarrolladores de todas las industrias acordaron usarlo y se convirtió en un estándar para el control de versiones.</p>
 <p>El objetivo es tener diferentes versiones de su paquete siguiendo la regla de que cada vez que actualice el paquete, actualice la versión. Con eso lo que logras es tener un nombre y una versión únicos para cada paquete público. Para usar SemVer, debe declarar una API pública. Esto se debe a que el control de versiones propuesto se basa en los cambios en la versión anterior de la API, por lo que si no especifica uno (incluso codificado o simplemente documentado) no es posible aplicar esas reglas.</p>
 <p>El formato de SemVer es como se mencionó anteriormente, 3 números separados por un punto entre ellos:
 <code>PRINCIPAL.MINOR.PATCH</code></p>
@@ -312,14 +207,11 @@ NOTA 2: Cuando se aumenta MINOR, el PATCH se restablece a 0; Cuando se aumenta M
 <li>Fomenta API bien definidas;</li>
 <li>Hace que las decisiones de actualización sean más claras;</li>
 </ul>
-</p>
-				</div>
+
+				</article>
+
 				
 				
-				<div class="related">
-					
-					
-				</div>
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
@@ -341,36 +233,35 @@ NOTA 2: Cuando se aumenta MINOR, el PATCH se restablece a 0; Cuando se aumenta M
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-			</div>
-
+			
+			</section>
+			
 			<div class="page-separator centered"><hr></div>
 			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
+			<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
 	</ul>
-	</section>
-	<p>Último post publicado el 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
+	<div class="footer-text">Último post publicado el 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
-			
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+		
 		</div>
+
 	</body>
 </html>
-

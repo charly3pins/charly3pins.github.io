@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="ca" data-theme="light">
 	
 	<head>
 	<meta name="generator" content="Hugo 0.80.0" />
@@ -9,7 +9,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Enginyer de Software, amant de Japó, jugador de videojocs i passejador de gossos">
+  <meta name="description" content="Enginyer de Software">
 
   <title>charly3pins.dev | Charly3Pins</title>
 
@@ -49,264 +49,163 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
-
-			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/blog/" class="">/bloc</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/code/" class="">/codi</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/about/" class="">$USUARI</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>Català</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/">Anglès</a>
-                            
-                                <a href="https://charly3pins.dev/es/">Castellà</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/" class="">~</a>
-            </span>
-            
+        <a href="/ca/">Inici</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/blog/" class="">/bloc</a>
-            </span>
-            
+        <a href="/ca/blog/">Bloc</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/code/" class="">/codi</a>
-            </span>
-            
+        <a href="/ca/code/">Codi</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/about/" class="">$USUARI</a>
-            </span>
-            
+        <a href="/ca/about/">Qui</a>
         
         
-        <span class="menu-item">
-            <div class="sl-nav">
+        <ul class="lang-selector">
+            <li>
+                <a>Català</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
                 <ul>
-                    <li>
-                        <b style="color:var(--pink);">Català</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/">Anglès</a>
-                        
-                            <a href="https://charly3pins.dev/es/">Castellà</a>
-                        
-                        </ul>
-                    </li>
+                
+                    <a href="https://charly3pins.dev/">Anglès</a>
+                
+                    <a href="https://charly3pins.dev/es/">Castellà</a>
+                
                 </ul>
-            </div>
-        </span>
+            </li>
+        </ul>
         
-    </div>
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
 </div>
+		
+		<div class="layout-container">
 
-
-			<div class="container">
-				
-				<div class="index-content">
-					<div id="avatar-box">
-						<img id="avatar" src="/images/me.jpeg" alt="site author photo">
-					</div>
-					<h1>
-						<strong class="welcome">Benvingut/da! Sóc Charly3Pins</strong>
-					</h1>
-					<p>Sóc Enginyer de Software, amant de Japó, jugador de videojocs i passejador de gossos; a més, he escrit aquests articles!</p>
+			<div class="banner-container">
+				<img class="banner-image" src="/images/me.jpeg" alt="Picture of charly3pins">
+				<div class="banner-text">
+					<h1 class="banner-title">Charly3Pins</h1>
+					<div class="banner-description">Enginyer de Software</div>
 				</div>
 			</div>
 
-			<div class="page-separator centered"><hr></div>	
+			<header class="heading-container">
+				<h4 class="heading-container-title">Últim del bloc</h4>
+				<em class="heading-container-subtitle">Tutorials, consells i opinions</em>
+			</header>
 
-			<div class="container grid">
-				
-				<div class="card">
-					<a href="https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/">
-						<div class="card-banner">
-							
-							<p class="tags">hugo, cms</p>
-							<img class="banner-img" src="https://charly3pins.dev/images/gohugoio-card-banner.png" alt="banner image">
-						</div>
-						<div class="card-body">
-							<h2 class="blog-title">Gestió de plantilles i contingut d&#39;Hugo</h2>
-							<p class="metadata">
-    08/03/2020 · 5 min. de lectura
-</p>
-							<p class="blog-description">Com organitzar el vostre contingut i crear les vostres plantilles per obtenir el màxim valor d’Hugo.</p>
-							<a class="blog-readmore" href="https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/">Llegir més...</a>
-						</div>
-					</a>
-				</div>
-				
-				<div class="card">
-					<a href="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/">
-						<div class="card-banner">
-							
-							<p class="tags">drone, ci, devops</p>
-							<img class="banner-img" src="https://charly3pins.dev/images/droneio-0.8-banner.png" alt="banner image">
-						</div>
-						<div class="card-body">
-							<h2 class="blog-title">Instal·lació de Drone 0.8 a Ubuntu 16.04</h2>
-							<p class="metadata">
-    10/10/2018 · 5 min. de lectura
-</p>
-							<p class="blog-description">Publicació senzilla que explica com instal·lar Drone al servidor Ubuntu 16.04.</p>
-							<a class="blog-readmore" href="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/">Llegir més...</a>
-						</div>
-					</a>
-				</div>
-				
-				<div class="card">
-					<a href="https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/">
-						<div class="card-banner">
-							
-							<p class="tags">hugo, cms, github</p>
-							<img class="banner-img" src="https://charly3pins.dev/images/gohugoio-card-banner.png" alt="banner image">
-						</div>
-						<div class="card-body">
-							<h2 class="blog-title">Construint un bloc estàtic amb Hugo</h2>
-							<p class="metadata">
-    22/09/2018 · 4 min. de lectura
-</p>
-							<p class="blog-description">Passos ràpids per crear el vostre propi bloc estàtic amb Hugo i instal·lar un tema del catàleg. Després, empenyeu el vostre lloc a GitHub i implementeu-lo amb GitHub Pages.</p>
-							<a class="blog-readmore" href="https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/">Llegir més...</a>
-						</div>
-					</a>
-				</div>
-				
-
-				<div class="page-separator centered"><hr></div>	
-				
-				<div class="centered"><a href="https://charly3pins.dev/ca/blog/" class="button" id="blog-cta">Llegir més</a></div>
-				
-				<div class="page-separator centered"><hr></div>	
-
-				<div class="twitter">
-					<a class="twitter-timeline" data-height="600" href="https://twitter.com/charly3pins">Tweets by charly3pins</a>
-					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				</div>
-
-			</div>
-
-			<div class="page-separator centered"><hr></div>	
 			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
-	</ul>
-	</section>
-	<p>Últim post publicat el 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
-</footer>
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Gestió de plantilles i contingut d&#39;Hugo</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Com organitzar el vostre contingut i crear les vostres plantilles per obtenir el màxim valor d’Hugo.</div>
+					<div>
+						<span class="post-preview-metadata">
+							08/03/2020 · 5 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/hugo/">#hugo</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/cms/">#cms</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Instal·lació de Drone 0.8 a Ubuntu 16.04</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Publicació senzilla que explica com instal·lar Drone al servidor Ubuntu 16.04.</div>
+					<div>
+						<span class="post-preview-metadata">
+							10/10/2018 · 5 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/drone/">#drone</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/ci/cd/">#ci/cd</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/devops/">#devops</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Construint un bloc estàtic amb Hugo</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Passos ràpids per crear el vostre propi bloc estàtic amb Hugo i instal·lar un tema del catàleg. Després, empenyeu el vostre lloc a GitHub i implementeu-lo amb GitHub Pages.</div>
+					<div>
+						<span class="post-preview-metadata">
+							22/09/2018 · 4 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/hugo/">#hugo</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/cms/">#cms</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/github/">#github</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			
+			<div class="centered"><a href="https://charly3pins.dev/ca/blog/" class="button">Llegir més</a></div>
+
+			<div class="page-separator centered"><hr></div>	
+
+			<header class="heading-container">
+				<h4 class="heading-container-title">Últim de codi</h4>
+				<em class="heading-container-subtitle">PoC, Open Source i projectes varis</em>
+			</header>
+
+			
+
+			<div class="centered"><a href="https://charly3pins.dev/ca/code/" class="button">Llegir més</a></div>
 			
 		</div>
+
+		<div class="page-separator centered"><hr></div>	
+		
+		<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
+	</ul>
+	<div class="footer-text">Últim post publicat el 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
+</footer>
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+
 	</body>
 </html>
-

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="ca" data-theme="light">
 	
 	<head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Enginyer de Software, amant de Japó, jugador de videojocs i passejador de gossos">
+  <meta name="description" content="Enginyer de Software">
 
   <title>Pujeu de nivell les vostres presentacions amb Go | Charly3Pins</title>
 
@@ -49,173 +49,64 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
-
-			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/blog/" class="">/bloc</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/code/" class="">/codi</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/about/" class="">$USUARI</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>Català</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/blog/level-up-your-preseentations-with-go/">Anglès</a>
-                            
-                                <a href="https://charly3pins.dev/es/blog/suba-de-nivel-sus-presentaciones-con-go/">Castellà</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/" class="">~</a>
-            </span>
-            
+        <a href="/ca/">Inici</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/blog/" class="">/bloc</a>
-            </span>
-            
+        <a href="/ca/blog/">Bloc</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/code/" class="">/codi</a>
-            </span>
-            
+        <a href="/ca/code/">Codi</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/about/" class="">$USUARI</a>
-            </span>
-            
+        <a href="/ca/about/">Qui</a>
         
         
-        <span class="menu-item">
-            <div class="sl-nav">
+        <ul class="lang-selector">
+            <li>
+                <a>Català</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
                 <ul>
-                    <li>
-                        <b style="color:var(--pink);">Català</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/blog/level-up-your-preseentations-with-go/">Anglès</a>
-                        
-                            <a href="https://charly3pins.dev/es/blog/suba-de-nivel-sus-presentaciones-con-go/">Castellà</a>
-                        
-                        </ul>
-                    </li>
+                
+                    <a href="https://charly3pins.dev/blog/level-up-your-preseentations-with-go/">Anglès</a>
+                
+                    <a href="https://charly3pins.dev/es/blog/suba-de-nivel-sus-presentaciones-con-go/">Castellà</a>
+                
                 </ul>
-            </div>
-        </span>
+            </li>
+        </ul>
         
-    </div>
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
 </div>
+		
+		<div class="layout-container">
 
-
-			<div class="container">
-				<div id="cover-image">
-					<img src="https://charly3pins.dev/images/level-up-your-presentations-with-go/GOPHER_MIC_DROP_WITH_BACKGROUND.png" alt="cover image">
-				</div>
+			<section class="blog-container">
 				
-				<div class="markdown">
-					<h1>Pujeu de nivell les vostres presentacions amb Go</h1>
-					<p class="subtitle">Genera fàcilment les teves presentacions amb &#34;present&#34;, l&#39;eina impulsada per Go que genera i renderitza les teves diapositives.</p>
-					
-					<p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/go/"><span class="tag-prefix">#</span>go</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/life/"><span class="tag-prefix">#</span>life</a>
-        
-    
-    06/10/2020 · 7 min. de lectura
-</p>
+				<h4 class="post-title">Pujeu de nivell les vostres presentacions amb Go</h4>
+				<h2 class="post-description">Genera fàcilment les teves presentacions amb &#34;present&#34;, l&#39;eina impulsada per Go que genera i renderitza les teves diapositives.</h2>
 
-					<ul class="icons">
+				<div class="post-metadata">
+					<div class="post-tags">
+						
+						<a class="tag" href="https://charly3pins.dev/tags/go/">#go</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/life/">#life</a>
+						
+					</div>
+					<span class="post-date">
+						06/10/2020 · 7 min. de lectura
+					</span>
+				</div>
+
+				<ul class="icons">
     
     <li>
         
@@ -260,24 +151,28 @@ if (!doNotTrack) {
     </li>
 </ul>
 
-				</div>
 
-				<div class="markdown">
-					<p><p>Si sou una persona tècnica i no us agrada lluitar amb els programes de presentació però voleu / necessiteu crear-ne un, enhorabona! estàs al lloc correcte. Sé que, com a enginyers de programari, volem codificar, llegir o mirar coses relacionades amb programari, arquitectura o devops, però no amb presentacions. De vegades, se’ns exigeix ​​que presentem alguna cosa a altres membres de l’equip, als propietaris de productes o fins i tot més aterridors, a l’equip directiu.</p>
+				<article>
+					
+					<div class="centered">
+						<img src="https://charly3pins.dev/images/level-up-your-presentations-with-go/GOPHER_MIC_DROP_WITH_BACKGROUND.png" alt="cover image">
+					</div>
+					
+					<p>Si sou una persona tècnica i no us agrada lluitar amb els programes de presentació però voleu / necessiteu crear-ne un, enhorabona! estàs al lloc correcte. Sé que, com a enginyers de programari, volem codificar, llegir o mirar coses relacionades amb programari, arquitectura o devops, però no amb presentacions. De vegades, se’ns exigeix ​​que presentem alguna cosa a altres membres de l’equip, als propietaris de productes o fins i tot més aterridors, a l’equip directiu.</p>
 <p>Per aquest motiu, vull presentar-vos el paquet Go <a href="https://godoc.org/golang.org/x/tools/present">present</a>. S&rsquo;utilitza per crear diapositives a Golang allotjades a discussions.golang.org o a la vostra privada. L’he utilitzat diverses vegades, sobretot quan vull compartir alguna cosa amb els meus companys de l’equip (algun codi, és clar), perquè no vull perdre el temps amb els programes. Acabo de crear el projecte per a les diapositives, afegeixo les meves diapositives a la marca, afegeixo les imatges necessàries i les presento. Vegem detalladament com funciona!</p>
 <p>Suposant que teniu Go <a href="https://golang.org/doc/install">instal·lat</a> i configurat correctament, tot el que heu d’instal·lar és el paquet amb la comanda següent:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">go</span> <span style="color:#a6e22e">get</span> -<span style="color:#a6e22e">u</span> <span style="color:#a6e22e">golang</span>.<span style="color:#a6e22e">org</span><span style="color:#e6db74">/x/</span><span style="color:#a6e22e">tools</span>/<span style="color:#a6e22e">present</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">go</span> <span class="nx">get</span> <span class="p">-</span><span class="nx">u</span> <span class="nx">golang</span>.<span class="nx">org</span><span class="sr">/x/</span><span class="nx">tools</span>/<span class="nx">present</span><span class="err">
 </span></code></pre></div><p>Comproveu si funciona escrivint:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">present</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">present</span><span class="err">
 </span></code></pre></div><p>Hauria de mostrar un missatge similar a:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#ae81ff">2020</span><span style="color:#e6db74">/10/</span><span style="color:#ae81ff">04</span> <span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">54</span> <span style="color:#a6e22e">Open</span> <span style="color:#a6e22e">your</span> <span style="color:#a6e22e">web</span> <span style="color:#a6e22e">browser</span> <span style="color:#a6e22e">and</span> <span style="color:#a6e22e">visit</span> <span style="color:#a6e22e">http</span>:<span style="color:#e6db74">//</span><span style="color:#ae81ff">127</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3999</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="m">2020</span><span class="sr">/10/</span><span class="m">04</span> <span class="m">23</span>:<span class="m">23</span>:<span class="m">54</span> <span class="nx">Open</span> <span class="nx">your</span> <span class="nx">web</span> <span class="nx">browser</span> <span class="nx">and</span> <span class="nx">visit</span> <span class="nx">http</span>:<span class="sr">//</span><span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">3999</span><span class="err">
 </span></code></pre></div><p>Per tant, podeu visitar l’enllaç i veure el servidor local preparat per allotjar les vostres presentacions. Increïble o no? D’acord, sé que voleu mostrar alguna cosa que no sigui un directori buit, així que anem a crear un exemple de presentació per a això.</p>
 <h2 id="format">Format</h2>
 <p>Creeu un directori per a les diapositives:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">mkdir</span> <span style="color:#a6e22e">go</span>-<span style="color:#a6e22e">present</span>-<span style="color:#a6e22e">example</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">cd</span> <span style="color:#a6e22e">go</span>-<span style="color:#a6e22e">present</span>-<span style="color:#a6e22e">example</span>/<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">mkdir</span> <span class="nx">go</span><span class="p">-</span><span class="nx">present</span><span class="p">-</span><span class="nx">example</span><span class="err">
+</span><span class="err"></span><span class="nx">cd</span> <span class="nx">go</span><span class="p">-</span><span class="nx">present</span><span class="p">-</span><span class="nx">example</span>/<span class="err">
 </span></code></pre></div><p>Creeu la primera diapositiva:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">vim</span> <span style="color:#a6e22e">initial</span>.<span style="color:#a6e22e">slide</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">vim</span> <span class="nx">initial</span>.<span class="nx">slide</span><span class="err">
 </span></code></pre></div><p>I afegiu el següent contingut:</p>
 <pre><code>Learning Go present
 6 October 2020
@@ -297,7 +192,7 @@ I'm a slide
 <h2 id="sintaxi-heretat-de-present">Sintaxi heretat de present</h2>
 <p>És compatible amb Markdown, però aquí explorarem la <a href="https://godoc.org/golang.org/x/tools/present#hdr-Legacy_Present_Syntax">sintaxi heretat de present</a>, ja que el Markdown té molts recursos on podeu comprovar . Així que explorem una mica les funcions que ofereix &ldquo;present&rdquo; per formatar i mostrar text a les nostres diapositives.</p>
 <p>Primer són les opcions clàssiques per formatar el text:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">normal vs `highlighted`
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">normal vs `highlighted`
 *bold*
 _italic_
 *multiple*bold*text*
@@ -305,7 +200,7 @@ _multiple_italic_text_
 </code></pre></div><p>I el resultat és:
 <img src="/images/level-up-your-presentations-with-go/text-formatting.jpeg" alt="text formatting"></p>
 <p>També pot afegir una llista:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Grocery list for the gopher:
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Grocery list for the gopher:
 
 - go routines
 - garbage collector
@@ -326,64 +221,64 @@ Another Gopher is diving more into the sub-subsection!
 <p>A part del format de text, hi ha una <a href="https://godoc.org/golang.org/x/tools/present#hdr-Command_Invocations">invocacions de comandes especials</a> que podeu invocar per portar la vostra presentació a un altre nivell.</p>
 <h3 id="imatges-i-vídeos">imatges i vídeos</h3>
 <p>La comanda <code>.image</code> injecta una imatge a la diapositiva. Accepta 1 o 3 arguments (nom, alçada, amplada). El nom és obligatori, altres dos han d&rsquo;estar presents o substituïts per un <code>_</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">.image /images/gopher.jpeg 200 200
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.image /images/gopher.jpeg 200 200
 .image /images/gopher.jpeg _ 300
 </code></pre></div><p><img src="/images/level-up-your-presentations-with-go/images.jpeg" alt="images"></p>
 <p>Igual que les imatges, podeu fer el mateix amb un vídeo mitjançant la comanda <code>.video</code>. Accepta 2 o 4 arguments (nom, tipus de contingut del fitxer, alçada, amplada). El nom i el tipus de contingut del fitxer són obligatoris; altres dos han d’estar presents o substituïts per i <code>_</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">.video videos/gopher-dance.mp4 video/mp4 400 600
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.video videos/gopher-dance.mp4 video/mp4 400 600
 .video videos/gopher-dance.mkv video/mkv 500 _
 </code></pre></div><p>De manera similar a les imatges, també té la comanda <code>.background</code> per configurar la imatge de fons d&rsquo;una diapositiva. Només té un argument com a nom de fitxer de la imatge.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">.background images/susan.jpg
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.background images/susan.jpg
 </code></pre></div><h3 id="enllaços">enllaços</h3>
 <p>Si heu d&rsquo;inserir un enllaç a la presentació, podeu utilitzar la comanda <code>.link</code>. Accepta 1 o 2 arguments (URL HTTP, etiqueta de text). L&rsquo;URL HTTP és obligatori, el segon és opcional.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">.link https://charly3pins.dev charly3pins website
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.link https://charly3pins.dev charly3pins website
 .link https://charly3pins.dev
 </code></pre></div><p><img src="/images/level-up-your-presentations-with-go/links.jpeg" alt="links"></p>
 <h3 id="codi">codi</h3>
 <p>La millor comanda en la meva opinió és la de <code>.code</code>. Us permet posar codi extret dels fitxers font i injectar-los com a blocs <!-- raw HTML omitted --> escapats per HTML. Accepta un argument com a nom de fitxer seguit d’una adreça opcional que especifica quina secció del fitxer es mostrarà.</p>
 <p>Per exemple, prenent Hello world a Go com a codi font:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello world!&#34;</span>)
-}
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div><p>Hem d’especificar com a:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">.code hello.go
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.code hello.go
 </code></pre></div><p>I es mostrarà així:
 <img src="/images/level-up-your-presentations-with-go/code.jpeg" alt="code"></p>
 <p>Però, què passa si voleu ressaltar alguna part del codi? No us preocupeu, present té aquest &ldquo;present&rdquo; i podeu afegir-hi les &ldquo;adreces opcionals&rdquo; que hem comentat a continuació. Per tant, modifiqueu el codi així per ressaltar la trucada <code>Printf</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello world!&#34;</span>) <span style="color:#75715e">// HL
-</span><span style="color:#75715e"></span>}
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span> <span class="c1">// HL
+</span><span class="c1"></span><span class="p">}</span>
 </code></pre></div><p>I utilitzeu la mateixa comanda a la diapositiva:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">.code hello-hl.go
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.code hello-hl.go
 </code></pre></div><p>Per veure el codi ressaltat:
 <img src="/images/level-up-your-presentations-with-go/code-hl.jpeg" alt="code-hl"></p>
 <p>Un pas més! Si només voleu mostrar una part del vostre codi, per exemple, amagar el paquet i les importacions del fitxer, també podeu afegir els fragments següents:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
 
-<span style="color:#75715e">//START OMIT
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello world!&#34;</span>) <span style="color:#75715e">// HL
-</span><span style="color:#75715e"></span>}
-<span style="color:#75715e">//END OMIT
+<span class="c1">//START OMIT
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span> <span class="c1">// HL
+</span><span class="c1"></span><span class="p">}</span>
+<span class="c1">//END OMIT
 </span></code></pre></div><p>Torneu a utilitzar la mateixa ordre però afegint el fragment següent:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">.code hello-hl-partial.go /START OMIT/,/END OMIT/
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.code hello-hl-partial.go /START OMIT/,/END OMIT/
 </code></pre></div><p>I vegeu el codi parcialment mostrat:
 <img src="/images/level-up-your-presentations-with-go/code-hl-partial.jpeg" alt="code-hl-partial"></p>
 <h4 id="play">play</h4>
 <p>Aquesta ordre és superpotent per ajudar-vos a presentar algun codi i ressaltar o amagar algunes parts. Però l’espectacle ha de continuar i la millor part és la següent. La comanda <code>.play</code> és com el del <code>.code</code>, però posa un botó a la font descatalogada i podeu executar el programa des del navegador. És màgia o no?
 <img src="/images/level-up-your-presentations-with-go/magic.gif" alt="magic"></p>
 <p>Utilitzem el mateix codi font que estem utilitzant i afegim la nova ordre a les diapositives així:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">.play hello.go
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.play hello.go
 </code></pre></div><p>Apareixerà com el del &ldquo;codi&rdquo;, però si observeu a l&rsquo;extrem inferior dret, apareixerà un petit botó <code>Run</code>.
 <img src="/images/level-up-your-presentations-with-go/code-play.jpeg" alt="code-play"></p>
 <p>En executar el codi es mostrarà una petita finestra negra a la pantalla on es mostrarà la sortida del codi:
@@ -391,7 +286,7 @@ Another Gopher is diving more into the sub-subsection!
 <h2 id="notes-del-presentador">Notes del presentador</h2>
 <p>Per últim, però no menys important, és una cosa interessant que també proporcionen. És ben sabut que als programes de PowerPoint o similars podeu afegir les vostres notes només per a vosaltres quan presenteu la presentació i de vegades són molt útils. Així doncs, &ldquo;present&rdquo; també ho té en compte i podeu afegir les vostres notes de presentació només afegint un <code>:</code> al començament de la frase i aquest text es tractarà com una nota de presentador.</p>
 <p>Per exemple:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">* Presenter notes
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">* Presenter notes
 
 The gophers like to eat a lot.
 
@@ -402,46 +297,43 @@ They eat basically plants.
 : typically gnaws the roots of a plant just beneath the soil, so the damage isn’t seen
 </code></pre></div><p><img src="/images/level-up-your-presentations-with-go/present-notes.jpeg" alt="present-notes"></p>
 <p>Com podeu veure, les notes no hi són presents, per què? Perquè necessiteu executar la presentació en un &ldquo;presentador&rdquo; així.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">present</span> -<span style="color:#a6e22e">notes</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">present</span> <span class="p">-</span><span class="nx">notes</span><span class="err">
 </span></code></pre></div><p>I hauria de mostrar un missatge similar a:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#ae81ff">2020</span><span style="color:#e6db74">/10/</span><span style="color:#ae81ff">04</span> <span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">54</span> <span style="color:#a6e22e">Open</span> <span style="color:#a6e22e">your</span> <span style="color:#a6e22e">web</span> <span style="color:#a6e22e">browser</span> <span style="color:#a6e22e">and</span> <span style="color:#a6e22e">visit</span> <span style="color:#a6e22e">http</span>:<span style="color:#e6db74">//</span><span style="color:#ae81ff">127</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3999</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#ae81ff">2020</span><span style="color:#e6db74">/10/</span><span style="color:#ae81ff">04</span> <span style="color:#a6e22e">Notes</span> <span style="color:#a6e22e">are</span> <span style="color:#a6e22e">enabled</span>, <span style="color:#a6e22e">press</span> <span style="color:#e6db74">&#39;N&#39;</span> <span style="color:#a6e22e">from</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">browser</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">display</span> <span style="color:#a6e22e">them</span>.<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="m">2020</span><span class="sr">/10/</span><span class="m">04</span> <span class="m">23</span>:<span class="m">23</span>:<span class="m">54</span> <span class="nx">Open</span> <span class="nx">your</span> <span class="nx">web</span> <span class="nx">browser</span> <span class="nx">and</span> <span class="nx">visit</span> <span class="nx">http</span>:<span class="sr">//</span><span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">3999</span><span class="err">
+</span><span class="err"></span><span class="m">2020</span><span class="sr">/10/</span><span class="m">04</span> <span class="nx">Notes</span> <span class="nx">are</span> <span class="nx">enabled</span><span class="p">,</span> <span class="nx">press</span> <span class="s1">&#39;N&#39;</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">browser</span> <span class="nx">to</span> <span class="nx">display</span> <span class="nx">them</span>.<span class="err">
 </span></code></pre></div><p>Per tant, si actualitzeu el navegador amb la presentació i premeu <code>N</code>, veureu una finestra emergent que mostra les notes de cada diapositiva a la part inferior de la manera següent:
 <img src="/images/level-up-your-presentations-with-go/present-notes-popup.jpeg" alt="present-notes-popup"></p>
 <h2 id="conclusió">Conclusió</h2>
 <p>L&rsquo;eina <code>present</code> és molt útil per a presentacions tècniques, especialment en Go. Té limitacions com el format de les diapositives i el posicionament de la imatge de vegades difícil, però en general és un paquet fantàstic i per a mi és l&rsquo;estàndard de totes les meves presentacions. Si voleu aprofundir en aquest paquet, consulteu la <a href="https://godoc.org/golang.org/x/tools/present">documentació oficial</a> i també us recomanaria la <a href="https://discussions.golang.org/2012/insidepresent.slide#1">presentació</a>: <code>Inside the &quot;present&quot; tool</code> d&rsquo;Andrew Gerrand. També he penjat el codi font d’aquest tutorial a <a href="https://github.com/charly3pins/go-present-example">GitHub</a>.</p>
-</p>
-				</div>
+
+				</article>
+
 				
 				
-				<div class="related">
-					
-					
-					<div class="page-separator"><hr></div>
-					
-					<ul id="list-items">
-						
-						<li>
-							<a class="li-link" href="https://charly3pins.dev/ca/code/tournaments-generator/">Tournaments generator</a>
-							<p class="li-brief">Prova del concepte de creació d&#39;una aplicació per gestionar tornejos FIFA 20 entre diferents persones que utilitzen Flutter per crear una aplicació mòbil i Go per crear una API que actua com a servidor. També es va utilitzar Python per construir rascadors senzills.</p>
+				<div class="page-separator"><hr></div>
+				
+				<section class="post-preview-container">
+					<a href="https://charly3pins.dev/ca/code/tournaments-generator/">
+						<div class="post-preview-title-container">
+							<h3 class="post-preview-title">Tournaments generator</h3>
+						</div>
+						<div class="post-preview-subtext">Prova del concepte de creació d&#39;una aplicació per gestionar tornejos FIFA 20 entre diferents persones que utilitzen Flutter per crear una aplicació mòbil i Go per crear una API que actua com a servidor. També es va utilitzar Python per construir rascadors senzills.</div>
+						<div>
+							<span class="post-preview-metadata">
+								01/05/2020 · 8 min. de lectura
+							</span>
 							
-							<p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/go/"><span class="tag-prefix">#</span>go</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/flutter/"><span class="tag-prefix">#</span>flutter</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/python/"><span class="tag-prefix">#</span>python</a>
-        
-    
-    
-</p>
-						</li>
-						
-					</ul>
-					
-				</div>
+							<a class="tag" href="https://charly3pins.dev/tags/go/">#go</a>
+							
+							<a class="tag" href="https://charly3pins.dev/tags/flutter/">#flutter</a>
+							
+							<a class="tag" href="https://charly3pins.dev/tags/python/">#python</a>
+							
+						</div>
+					</a>
+				</section>					
+				
+				
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
@@ -463,36 +355,35 @@ They eat basically plants.
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-			</div>
-
+			
+			</section>
+			
 			<div class="page-separator centered"><hr></div>
 			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
+			<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
 	</ul>
-	</section>
-	<p>Últim post publicat el 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
+	<div class="footer-text">Últim post publicat el 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
-			
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+		
 		</div>
+
 	</body>
 </html>
-

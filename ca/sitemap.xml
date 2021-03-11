@@ -603,26 +603,6 @@
   </url>
   
   <url>
-    <loc>https://charly3pins.dev/ca/tags/ci/</loc>
-    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/ci/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/ci/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/ci/"
-                />
-  </url>
-  
-  <url>
     <loc>https://charly3pins.dev/ca/tags/devops/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -758,6 +738,25 @@
                 rel="alternate"
                 hreflang="ca"
                 href="https://charly3pins.dev/ca/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/ca/tags/ci/cd/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/ci/cd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/ci/cd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/ci/cd/"
                 />
   </url>
   

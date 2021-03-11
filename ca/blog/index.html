@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="ca" data-theme="light">
 	
 	<head>
   <meta charset="utf-8">
@@ -8,15 +8,15 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Enginyer de Software, amant de Japó, jugador de videojocs i passejador de gossos">
+  <meta name="description" content="Enginyer de Software">
 
-  <title>cd ~/bloc | Charly3Pins</title>
+  <title>Bloc | Charly3Pins</title>
 
 
-  <meta property="og:title" content="cd ~/bloc - charly3pins" />
+  <meta property="og:title" content="Bloc - charly3pins" />
 
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Bloc de Charly3Pins, un Enginyer de Software, amant de Japó, jugador de videojocs i passejador de gossos">
+  <meta property="og:description" content="Tutorials, consells i opinions">
   <meta property="og:url" content="https://charly3pins.dev/ca/blog/">
   <meta property="og:site_name" content="charly3pins.dev">
   
@@ -24,10 +24,10 @@
 
   <meta name="twitter:card" content="summary_large_image">
 
-  <meta name="twitter:title" content="cd ~/bloc" />
+  <meta name="twitter:title" content="Bloc" />
 
 
-  <meta name="twitter:description" content="Bloc de Charly3Pins, un Enginyer de Software, amant de Japó, jugador de videojocs i passejador de gossos">
+  <meta name="twitter:description" content="Tutorials, consells i opinions">
 
 
   <meta name="twitter:image" content="https://charly3pins.dev/images/me.jpeg">
@@ -50,434 +50,301 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
+        
+        <a href="/ca/">Inici</a>
+        
+        <a href="/ca/blog/">Bloc</a>
+        
+        <a href="/ca/code/">Codi</a>
+        
+        <a href="/ca/about/">Qui</a>
+        
+        
+        <ul class="lang-selector">
+            <li>
+                <a>Català</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <ul>
+                
+                    <a href="https://charly3pins.dev/blog/">Anglès</a>
+                
+                    <a href="https://charly3pins.dev/es/blog/">Castellà</a>
+                
+                </ul>
+            </li>
+        </ul>
+        
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
+</div>
+		
+		<div class="layout-container">
+
+			<div class="tags-container">
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/api/">#api(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/ci/cd/">#ci/cd(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/cms/">#cms(4)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/devops/">#devops(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/drone/">#drone(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/flutter/">#flutter(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/git/">#git(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/github/">#github(2)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/go/">#go(2)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/hugo/">#hugo(4)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/javascript/">#javascript(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/life/">#life(2)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/linux/">#linux(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/php/">#php(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/productivity/">#productivity(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/python/">#python(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/raspberrypi/">#raspberrypi(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/semver/">#semver(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/terminal/">#terminal(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/ca/tags/vscode/">#vscode(1)</a>
+				
+			</div>
+
+			<header class="heading-container">
+				<h4 class="heading-container-title">Bloc</h4>
+				<em class="heading-container-subtitle">Tutorials, consells i opinions</em>
+			</header>
 
 			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/blog/" class="">/bloc</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/code/" class="">/codi</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/about/" class="">$USUARI</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>Català</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/blog/">Anglès</a>
-                            
-                                <a href="https://charly3pins.dev/es/blog/">Castellà</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/" class="">~</a>
-            </span>
-            
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/blog/" class="">/bloc</a>
-            </span>
-            
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/code/" class="">/codi</a>
-            </span>
-            
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/about/" class="">$USUARI</a>
-            </span>
-            
-        
-        
-        <span class="menu-item">
-            <div class="sl-nav">
-                <ul>
-                    <li>
-                        <b style="color:var(--pink);">Català</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/blog/">Anglès</a>
-                        
-                            <a href="https://charly3pins.dev/es/blog/">Castellà</a>
-                        
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </span>
-        
-    </div>
-</div>
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/la-meva-configuraci%C3%B3-per-a-una-alta-productivitat-per-al-vs-code/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">La meva configuració per a una alta productivitat per al VS Code</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Et mostraré la meva configuració per a l&#39;editor VS Code que em fa ser més productiu i sentir-me més còmode amb l&#39;eina que passo la major part del meu temps durant el dia.</div>
+					<div>
+						<span class="post-preview-metadata">
+							09/03/2021 · 4 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/productivity/">#productivity</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/vscode/">#vscode</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/crei-un-readme-incre%C3%AFble-pel-su-perfil-de-github/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Crei un README increïble pel su perfil de GitHub</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Passos ràpids i senzills per crear un portfoli a la seva pàgina de perfil de GitHub amb un repositori especial i amb estadístiques dinàmiques de GitHub.</div>
+					<div>
+						<span class="post-preview-metadata">
+							12/02/2021 · 2 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/github/">#github</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiling%C3%BCe-a-hugo/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Com tenir un lloc multilingüe a Hugo</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Conegueu les configuracions i els trucs per convertir el vostre lloc d&#39;un sol idioma en Hugo a un lloc multilingüe en només uns quants passos.</div>
+					<div>
+						<span class="post-preview-metadata">
+							05/02/2021 · 4 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/hugo/">#hugo</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/cms/">#cms</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Com afegir Google Analytics al vostre lloc amb Hugo</h3>
+						
+					</div>
+					<div class="post-preview-subtext">Tutorial ràpid sobre com integrar Google Analytics en un lloc web Hugo.</div>
+					<div>
+						<span class="post-preview-metadata">
+							23/11/2020 · 2 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/hugo/">#hugo</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/cms/">#cms</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/reproductor-multim%C3%A8dia-a-un-raspberry-pi-amb-plex-transmission-sonarr-bazarr-i-jackett/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Reproductor multimèdia a un Raspberry Pi amb Plex, Transmission, Sonarr, Bazarr i Jackett</h3>
+						
+					</div>
+					<div class="post-preview-subtext">Construïu el vostre propi reproductor multimèdia mitjançant un client BitTorrent (transmissió), un PVR per a usuaris d’Usenet i BitTorrent (Sonarr), un suport d’API per als vostres seguidors de torrents (Jackett), un gestor de subtítols a Sonarr &amp; Radarr (Bazarr) i un client–servudir reproductor multimèdia (Plex).</div>
+					<div>
+						<span class="post-preview-metadata">
+							05/11/2020 · 11 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/raspberrypi/">#raspberrypi</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/linux/">#linux</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/life/">#life</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Comprensió de la Versió Semàntica 2.0 (SemVer)</h3>
+						
+					</div>
+					<div class="post-preview-subtext">Què és la versió semàntica? Per què és important utilitzar-lo en els vostres projectes com a desenvolupador? Què significa per a un usuari que utilitza la vostra biblioteca?</div>
+					<div>
+						<span class="post-preview-metadata">
+							20/10/2020 · 3 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/semver/">#semver</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/api/">#api</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/pujeu-de-nivell-les-vostres-presentacions-amb-go/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Pujeu de nivell les vostres presentacions amb Go</h3>
+						
+					</div>
+					<div class="post-preview-subtext">Genera fàcilment les teves presentacions amb &#34;present&#34;, l&#39;eina impulsada per Go que genera i renderitza les teves diapositives.</div>
+					<div>
+						<span class="post-preview-metadata">
+							06/10/2020 · 7 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/go/">#go</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/life/">#life</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Missatges de commit personalitzats de Git</h3>
+						
+					</div>
+					<div class="post-preview-subtext">Genera missatges de commit personalitzats per al vostre repositori i estandarditzeu el registre de commits.</div>
+					<div>
+						<span class="post-preview-metadata">
+							10/03/2020 · 2 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/terminal/">#terminal</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/git/">#git</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Gestió de plantilles i contingut d&#39;Hugo</h3>
+						
+					</div>
+					<div class="post-preview-subtext">Com organitzar el vostre contingut i crear les vostres plantilles per obtenir el màxim valor d’Hugo.</div>
+					<div>
+						<span class="post-preview-metadata">
+							08/03/2020 · 5 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/hugo/">#hugo</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/cms/">#cms</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Instal·lació de Drone 0.8 a Ubuntu 16.04</h3>
+						
+					</div>
+					<div class="post-preview-subtext">Publicació senzilla que explica com instal·lar Drone al servidor Ubuntu 16.04.</div>
+					<div>
+						<span class="post-preview-metadata">
+							10/10/2018 · 5 min. de lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/drone/">#drone</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/ci/cd/">#ci/cd</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/devops/">#devops</a>
+						
+					</div>
+				</a>
+			</section>
+			
 
+			<div class="page-separator"></div>
 
-			<div class="container">
-				<h1 class="h1-section">cd ~/bloc <span class="cursor"></span></h1>
-
-				<div class="markdown">
-					<p>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/api/"><span class="tag-prefix">#</span>api <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/ci/"><span class="tag-prefix">#</span>ci <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/cms/"><span class="tag-prefix">#</span>cms <span class="tag-count">(4)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/devops/"><span class="tag-prefix">#</span>devops <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/drone/"><span class="tag-prefix">#</span>drone <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/flutter/"><span class="tag-prefix">#</span>flutter <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/git/"><span class="tag-prefix">#</span>git <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/github/"><span class="tag-prefix">#</span>github <span class="tag-count">(2)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/go/"><span class="tag-prefix">#</span>go <span class="tag-count">(2)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/hugo/"><span class="tag-prefix">#</span>hugo <span class="tag-count">(4)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/javascript/"><span class="tag-prefix">#</span>javascript <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/life/"><span class="tag-prefix">#</span>life <span class="tag-count">(2)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/linux/"><span class="tag-prefix">#</span>linux <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/php/"><span class="tag-prefix">#</span>php <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/productivity/"><span class="tag-prefix">#</span>productivity <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/python/"><span class="tag-prefix">#</span>python <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/raspberrypi/"><span class="tag-prefix">#</span>raspberrypi <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/semver/"><span class="tag-prefix">#</span>semver <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/terminal/"><span class="tag-prefix">#</span>terminal <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/ca/tags/vscode/"><span class="tag-prefix">#</span>vscode <span class="tag-count">(1)</span></a>
-						
-					</p>
-				</div>
-				
-				<div class="markdown">
-    <section class="gallery">
-        <div class="container">
-            <ul class="image-list">
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/ca/blog/la-meva-configuraci%C3%B3-per-a-una-alta-productivitat-per-al-vs-code/"><img src="https://miro.medium.com/max/6000/0*8KANi15q2thT-dYt" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/ca/blog/la-meva-configuraci%C3%B3-per-a-una-alta-productivitat-per-al-vs-code/">La meva configuració per a una alta productivitat per al VS Code</a>
-                            <div class="li-sub">
-                                Et mostraré la meva configuració per a l&#39;editor VS Code que em fa ser més productiu i sentir-me més còmode amb l&#39;eina que passo la major part del meu temps durant el dia. <a class="tag"href="https://charly3pins.dev/ca/blog/la-meva-configuraci%C3%B3-per-a-una-alta-productivitat-per-al-vs-code/">Llegir més...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/productivity/"><span class="tag-prefix">#</span>productivity</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/vscode/"><span class="tag-prefix">#</span>vscode</a>
-        
-    
-    09/03/2021 · 4 min. de lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/ca/blog/crei-un-readme-incre%C3%AFble-pel-su-perfil-de-github/"><img src="https://charly3pins.dev/images/github-profile-readme/octocat-profile-thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/ca/blog/crei-un-readme-incre%C3%AFble-pel-su-perfil-de-github/">Crei un README increïble pel su perfil de GitHub</a>
-                            <div class="li-sub">
-                                Passos ràpids i senzills per crear un portfoli a la seva pàgina de perfil de GitHub amb un repositori especial i amb estadístiques dinàmiques de GitHub. <a class="tag"href="https://charly3pins.dev/ca/blog/crei-un-readme-incre%C3%AFble-pel-su-perfil-de-github/">Llegir més...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/github/"><span class="tag-prefix">#</span>github</a>
-        
-    
-    12/02/2021 · 2 min. de lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiling%C3%BCe-a-hugo/"><img src="https://charly3pins.dev/images/gohugoio-card-thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiling%C3%BCe-a-hugo/">Com tenir un lloc multilingüe a Hugo</a>
-                            <div class="li-sub">
-                                Conegueu les configuracions i els trucs per convertir el vostre lloc d&#39;un sol idioma en Hugo a un lloc multilingüe en només uns quants passos. <a class="tag"href="https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiling%C3%BCe-a-hugo/">Llegir més...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/hugo/"><span class="tag-prefix">#</span>hugo</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/cms/"><span class="tag-prefix">#</span>cms</a>
-        
-    
-    05/02/2021 · 4 min. de lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/"><img src="https://charly3pins.dev/images/google-analytics-hugo-thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/">Com afegir Google Analytics al vostre lloc amb Hugo</a>
-                            <div class="li-sub">
-                                Tutorial ràpid sobre com integrar Google Analytics en un lloc web Hugo. <a class="tag"href="https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/">Llegir més...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/hugo/"><span class="tag-prefix">#</span>hugo</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/cms/"><span class="tag-prefix">#</span>cms</a>
-        
-    
-    23/11/2020 · 2 min. de lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/ca/blog/reproductor-multim%C3%A8dia-a-un-raspberry-pi-amb-plex-transmission-sonarr-bazarr-i-jackett/"><img src="https://charly3pins.dev/images/raspberry-media-player/thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/ca/blog/reproductor-multim%C3%A8dia-a-un-raspberry-pi-amb-plex-transmission-sonarr-bazarr-i-jackett/">Reproductor multimèdia a un Raspberry Pi amb Plex, Transmission, Sonarr, Bazarr i Jackett</a>
-                            <div class="li-sub">
-                                Construïu el vostre propi reproductor multimèdia mitjançant un client BitTorrent (transmissió), un PVR per a usuaris d’Usenet i BitTorrent (Sonarr), un suport d’API per als vostres seguidors de torrents (Jackett), un gestor de subtítols a Sonarr &amp; Radarr (Bazarr) i un client–servudir reproductor multimèdia (Plex). <a class="tag"href="https://charly3pins.dev/ca/blog/reproductor-multim%C3%A8dia-a-un-raspberry-pi-amb-plex-transmission-sonarr-bazarr-i-jackett/">Llegir més...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/raspberrypi/"><span class="tag-prefix">#</span>raspberrypi</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/linux/"><span class="tag-prefix">#</span>linux</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/life/"><span class="tag-prefix">#</span>life</a>
-        
-    
-    05/11/2020 · 11 min. de lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/"><img src="https://charly3pins.dev/images/semver-thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/">Comprensió de la Versió Semàntica 2.0 (SemVer)</a>
-                            <div class="li-sub">
-                                Què és la versió semàntica? Per què és important utilitzar-lo en els vostres projectes com a desenvolupador? Què significa per a un usuari que utilitza la vostra biblioteca? <a class="tag"href="https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/">Llegir més...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/semver/"><span class="tag-prefix">#</span>semver</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/api/"><span class="tag-prefix">#</span>api</a>
-        
-    
-    20/10/2020 · 3 min. de lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/ca/blog/pujeu-de-nivell-les-vostres-presentacions-amb-go/"><img src="https://charly3pins.dev/images/level-up-your-presentations-with-go/GOPHER_MIC_DROP_WITH_BACKGROUND-thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/ca/blog/pujeu-de-nivell-les-vostres-presentacions-amb-go/">Pujeu de nivell les vostres presentacions amb Go</a>
-                            <div class="li-sub">
-                                Genera fàcilment les teves presentacions amb &#34;present&#34;, l&#39;eina impulsada per Go que genera i renderitza les teves diapositives. <a class="tag"href="https://charly3pins.dev/ca/blog/pujeu-de-nivell-les-vostres-presentacions-amb-go/">Llegir més...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/go/"><span class="tag-prefix">#</span>go</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/life/"><span class="tag-prefix">#</span>life</a>
-        
-    
-    06/10/2020 · 7 min. de lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/"><img src="https://charly3pins.dev/images/git-commit-thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/">Missatges de commit personalitzats de Git</a>
-                            <div class="li-sub">
-                                Genera missatges de commit personalitzats per al vostre repositori i estandarditzeu el registre de commits. <a class="tag"href="https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/">Llegir més...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/terminal/"><span class="tag-prefix">#</span>terminal</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/git/"><span class="tag-prefix">#</span>git</a>
-        
-    
-    10/03/2020 · 2 min. de lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/"><img src="https://charly3pins.dev/images/gohugoio-card-thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/">Gestió de plantilles i contingut d&#39;Hugo</a>
-                            <div class="li-sub">
-                                Com organitzar el vostre contingut i crear les vostres plantilles per obtenir el màxim valor d’Hugo. <a class="tag"href="https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/">Llegir més...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/hugo/"><span class="tag-prefix">#</span>hugo</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/cms/"><span class="tag-prefix">#</span>cms</a>
-        
-    
-    08/03/2020 · 5 min. de lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/"><img src="https://charly3pins.dev/images/droneio-0.8-thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/">Instal·lació de Drone 0.8 a Ubuntu 16.04</a>
-                            <div class="li-sub">
-                                Publicació senzilla que explica com instal·lar Drone al servidor Ubuntu 16.04. <a class="tag"href="https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/">Llegir més...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/drone/"><span class="tag-prefix">#</span>drone</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/ci/"><span class="tag-prefix">#</span>ci</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/devops/"><span class="tag-prefix">#</span>devops</a>
-        
-    
-    10/10/2018 · 5 min. de lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-            </ul>
-        </div>
-    </section>
-</div>
-
-
+			
 <ul class="pagination">
   <li class="page-item">
     <a href="/ca/blog/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
@@ -501,36 +368,32 @@ if (!doNotTrack) {
 
 
 
-<div class="page-separator centered"><hr></div>
-
-
-			</div>
-			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
-	</ul>
-	</section>
-	<p>Últim post publicat el 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
-</footer>
-			
 		</div>
+
+		<div class="page-separator centered"><hr></div>
+		
+		<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
+	</ul>
+	<div class="footer-text">Últim post publicat el 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
+</footer>
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+
 	</body>
 </html>
-

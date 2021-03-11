@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 	
 	<head>
 	<meta name="generator" content="Hugo 0.80.0" />
@@ -9,7 +9,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Ingeniero de Software, amante de Japón, jugador de videojuegos y paseador de perros">
+  <meta name="description" content="Ingeniero de Software">
 
   <title>charly3pins.dev | Charly3Pins</title>
 
@@ -49,318 +49,199 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
-
-			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/blog/" class="">/blog</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/code/" class="">/código</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/about/" class="">$USUARIO</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>Castellano</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/">Inglés</a>
-                            
-                                <a href="https://charly3pins.dev/ca/">Catalán</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/" class="">~</a>
-            </span>
-            
+        <a href="/es/">Inicio</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/blog/" class="">/blog</a>
-            </span>
-            
+        <a href="/es/blog/">Blog</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/code/" class="">/código</a>
-            </span>
-            
+        <a href="/es/code/">Código</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/about/" class="">$USUARIO</a>
-            </span>
-            
+        <a href="/es/about/">Quién</a>
         
         
-        <span class="menu-item">
-            <div class="sl-nav">
+        <ul class="lang-selector">
+            <li>
+                <a>Castellano</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
                 <ul>
-                    <li>
-                        <b style="color:var(--pink);">Castellano</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/">Inglés</a>
-                        
-                            <a href="https://charly3pins.dev/ca/">Catalán</a>
-                        
-                        </ul>
-                    </li>
+                
+                    <a href="https://charly3pins.dev/">Inglés</a>
+                
+                    <a href="https://charly3pins.dev/ca/">Catalán</a>
+                
                 </ul>
-            </div>
-        </span>
+            </li>
+        </ul>
         
-    </div>
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
 </div>
+		
+		<div class="layout-container">
 
-
-			<div class="container">
-				
-				<div class="index-content">
-					<div id="avatar-box">
-						<img id="avatar" src="/images/me.jpeg" alt="site author photo">
-					</div>
-					<h1>
-						<strong class="welcome">¡Bienvenid@! Soy Charly3Pins</strong>
-					</h1>
-					<p>Soy Ingeniero de Software, amante de Japón, jugador de videojuegos y paseador de perros; además, ¡he escrito estos artículos!</p>
+			<div class="banner-container">
+				<img class="banner-image" src="/images/me.jpeg" alt="Picture of charly3pins">
+				<div class="banner-text">
+					<h1 class="banner-title">Charly3Pins</h1>
+					<div class="banner-description">Ingeniero de Software</div>
 				</div>
 			</div>
 
-			<div class="page-separator centered"><hr></div>	
+			<header class="heading-container">
+				<h4 class="heading-container-title">Lo último del blog</h4>
+				<em class="heading-container-subtitle">Tutoriales, consejos y opiniones</em>
+			</header>
 
-			<div class="container grid">
-				
-				<div class="card">
-					<a href="https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/">
-						<div class="card-banner">
-							
-							<p class="tags">productivity, vscode</p>
-							<img class="banner-img" src="https://miro.medium.com/max/6000/0*8KANi15q2thT-dYt" alt="banner image">
-						</div>
-						<div class="card-body">
-							<h2 class="blog-title">Mi configuración para una alta productividad para VS Code</h2>
-							<p class="metadata">
-    09/03/2021 · 4 min. lectura
-</p>
-							<p class="blog-description">Voy a mostrarles mi configuración para el editor VS Code, que me hace ser más productivo y hace sentirme más cómodo con la herramienta que paso la mayor parte de mi tiempo durante el día.</p>
-							<a class="blog-readmore" href="https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/">Leer más...</a>
-						</div>
-					</a>
-				</div>
-				
-				<div class="card">
-					<a href="https://charly3pins.dev/es/blog/cree-un-readme-incre%C3%ADble-para-su-perfil-de-github/">
-						<div class="card-banner">
-							
-							<p class="tags">github</p>
-							<img class="banner-img" src="https://charly3pins.dev/images/github-profile-readme/octocat-profile-banner.png" alt="banner image">
-						</div>
-						<div class="card-body">
-							<h2 class="blog-title">Cree un README  increíble para su perfil de GitHub</h2>
-							<p class="metadata">
-    12/02/2021 · 2 min. lectura
-</p>
-							<p class="blog-description">Pasos rápidos y sencillos para crear un portfolio en su página de perfil de GitHub con un repositorio especial y con estadísticas dinámicas de GitHub.</p>
-							<a class="blog-readmore" href="https://charly3pins.dev/es/blog/cree-un-readme-incre%C3%ADble-para-su-perfil-de-github/">Leer más...</a>
-						</div>
-					</a>
-				</div>
-				
-				<div class="card">
-					<a href="https://charly3pins.dev/es/blog/c%C3%B3mo-tener-un-sitio-multiling%C3%BCe-en-hugo/">
-						<div class="card-banner">
-							
-							<p class="tags">hugo, cms</p>
-							<img class="banner-img" src="https://charly3pins.dev/images/gohugoio-card-banner.png" alt="banner image">
-						</div>
-						<div class="card-body">
-							<h2 class="blog-title">Cómo tener un sitio multilingüe en Hugo</h2>
-							<p class="metadata">
-    05/02/2021 · 4 min. lectura
-</p>
-							<p class="blog-description">Conozca las configuraciones y los trucos para convertir su sitio en un solo idioma en Hugo en un sitio multilingüe en solo unos pocos pasos.</p>
-							<a class="blog-readmore" href="https://charly3pins.dev/es/blog/c%C3%B3mo-tener-un-sitio-multiling%C3%BCe-en-hugo/">Leer más...</a>
-						</div>
-					</a>
-				</div>
-				
-				<div class="card">
-					<a href="https://charly3pins.dev/es/blog/c%C3%B3mo-a%C3%B1adir-google-analytics-a-su-sitio-hugo/">
-						<div class="card-banner">
-							
-							<p class="tags">hugo, cms</p>
-							<img class="banner-img" src="https://charly3pins.dev/images/google-analytics-hugo-banner.png" alt="banner image">
-						</div>
-						<div class="card-body">
-							<h2 class="blog-title">Cómo añadir Google Analytics a su sitio con Hugo</h2>
-							<p class="metadata">
-    23/11/2020 · 2 min. lectura
-</p>
-							<p class="blog-description">Tutorial rápido sobre cómo integrar Google Analytics en un sitio web de Hugo.</p>
-							<a class="blog-readmore" href="https://charly3pins.dev/es/blog/c%C3%B3mo-a%C3%B1adir-google-analytics-a-su-sitio-hugo/">Leer más...</a>
-						</div>
-					</a>
-				</div>
-				
-				<div class="card">
-					<a href="https://charly3pins.dev/es/blog/reproductor-multimedia-en-una-raspberry-pi-con-plex-transmission-sonarr-bazarr-y-jackett/">
-						<div class="card-banner">
-							
-							<p class="tags">raspberrypi, linux, life</p>
-							<img class="banner-img" src="https://charly3pins.dev/images/raspberry-media-player/banner.png" alt="banner image">
-						</div>
-						<div class="card-body">
-							<h2 class="blog-title">Reproductor multimedia en una Raspberry Pi con Plex, Transmission, Sonarr, Bazarr y Jackett</h2>
-							<p class="metadata">
-    05/11/2020 · 11 min. lectura
-</p>
-							<p class="blog-description">Construya su propio reproductor multimedia usando un cliente BitTorrent (Transmisión), un PVR para usuarios de Usenet y BitTorrent (Sonarr), un Soporte API para sus rastreadores de torrents (Jackett), un administrador de subtítulos en Sonarr &amp; Radarr (Bazarr) y un reproductor multimedia cliente-servidor (Plex).</p>
-							<a class="blog-readmore" href="https://charly3pins.dev/es/blog/reproductor-multimedia-en-una-raspberry-pi-con-plex-transmission-sonarr-bazarr-y-jackett/">Leer más...</a>
-						</div>
-					</a>
-				</div>
-				
-				<div class="card">
-					<a href="https://charly3pins.dev/es/blog/comprensi%C3%B3n-del-control-de-versiones-sem%C3%A1ntico-2.0-semver/">
-						<div class="card-banner">
-							
-							<p class="tags">semver, api</p>
-							<img class="banner-img" src="https://charly3pins.dev/images/semver-banner.png" alt="banner image">
-						</div>
-						<div class="card-body">
-							<h2 class="blog-title">Comprensión del Control de Versiones Semántico 2.0 (SemVer)</h2>
-							<p class="metadata">
-    20/10/2020 · 3 min. lectura
-</p>
-							<p class="blog-description">¿Qué es el control de versiones semántico? ¿Por qué es importante utilizarlo en tus proyectos como desarrollador? ¿Qué significa para un usuario que usa su biblioteca?</p>
-							<a class="blog-readmore" href="https://charly3pins.dev/es/blog/comprensi%C3%B3n-del-control-de-versiones-sem%C3%A1ntico-2.0-semver/">Leer más...</a>
-						</div>
-					</a>
-				</div>
-				
-
-				<div class="page-separator centered"><hr></div>	
-				
-				<div class="centered"><a href="https://charly3pins.dev/es/blog/" class="button" id="blog-cta">Leer más</a></div>
-				
-				<div class="page-separator centered"><hr></div>	
-
-				<div class="twitter">
-					<a class="twitter-timeline" data-height="600" href="https://twitter.com/charly3pins">Tweets by charly3pins</a>
-					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				</div>
-
-			</div>
-
-			<div class="page-separator centered"><hr></div>	
 			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
-	</ul>
-	</section>
-	<p>Último post publicado el 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
-</footer>
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Mi configuración para una alta productividad para VS Code</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Voy a mostrarles mi configuración para el editor VS Code, que me hace ser más productivo y hace sentirme más cómodo con la herramienta que paso la mayor parte de mi tiempo durante el día.</div>
+					<div>
+						<span class="post-preview-metadata">
+							09/03/2021 · 4 min. lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/productivity/">#productivity</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/vscode/">#vscode</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/blog/cree-un-readme-incre%C3%ADble-para-su-perfil-de-github/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Cree un README  increíble para su perfil de GitHub</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Pasos rápidos y sencillos para crear un portfolio en su página de perfil de GitHub con un repositorio especial y con estadísticas dinámicas de GitHub.</div>
+					<div>
+						<span class="post-preview-metadata">
+							12/02/2021 · 2 min. lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/github/">#github</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/blog/c%C3%B3mo-tener-un-sitio-multiling%C3%BCe-en-hugo/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Cómo tener un sitio multilingüe en Hugo</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Conozca las configuraciones y los trucos para convertir su sitio en un solo idioma en Hugo en un sitio multilingüe en solo unos pocos pasos.</div>
+					<div>
+						<span class="post-preview-metadata">
+							05/02/2021 · 4 min. lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/hugo/">#hugo</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/cms/">#cms</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			
+			<div class="centered"><a href="https://charly3pins.dev/es/blog/" class="button">Leer más</a></div>
+
+			<div class="page-separator centered"><hr></div>	
+
+			<header class="heading-container">
+				<h4 class="heading-container-title">Lo último de código</h4>
+				<em class="heading-container-subtitle">PoC, Open Source y proyectos varios</em>
+			</header>
+
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/code/collectus/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Collectus</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Como proyecto de fin de carrera de Ingeniería Informática, construí una base de datos flexible para coleccionables y cualquier otro objeto o dato que cualquier usuario quiera ordenar y clasificar de una manera simple y efectiva.</div>
+					<div>
+						<span class="post-preview-metadata">
+							22/09/2018 · 4 min. lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/php/">#php</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/javascript/">#javascript</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/code/tournaments-generator/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Tournaments generator</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Prueba de concepto de la construcción de una aplicación para administrar torneos FIFA 20 entre diferentes personas usando Flutter para construir una aplicación móvil y Go para construir una API que actúa como servidor. También usé Python para construir raspadores simples.</div>
+					<div>
+						<span class="post-preview-metadata">
+							01/05/2020 · 9 min. lectura
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/go/">#go</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/flutter/">#flutter</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/python/">#python</a>
+						
+					</div>
+				</a>
+			</section>
+			
+
+			<div class="centered"><a href="https://charly3pins.dev/es/code/" class="button">Leer más</a></div>
 			
 		</div>
+
+		<div class="page-separator centered"><hr></div>	
+		
+		<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
+	</ul>
+	<div class="footer-text">Último post publicado el 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
+</footer>
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+
 	</body>
 </html>
-

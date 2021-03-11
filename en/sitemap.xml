@@ -603,26 +603,6 @@
   </url>
   
   <url>
-    <loc>https://charly3pins.dev/tags/ci/</loc>
-    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/ci/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/ci/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/ci/"
-                />
-  </url>
-  
-  <url>
     <loc>https://charly3pins.dev/tags/devops/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -748,6 +728,25 @@
   </url>
   
   <url>
+    <loc>https://charly3pins.dev/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/about/"
+                />
+  </url>
+  
+  <url>
     <loc>https://charly3pins.dev/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -767,21 +766,21 @@
   </url>
   
   <url>
-    <loc>https://charly3pins.dev/about/</loc>
+    <loc>https://charly3pins.dev/tags/ci/cd/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://charly3pins.dev/es/about/"
+                href="https://charly3pins.dev/es/tags/ci/cd/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://charly3pins.dev/ca/about/"
+                href="https://charly3pins.dev/ca/tags/ci/cd/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://charly3pins.dev/about/"
+                href="https://charly3pins.dev/tags/ci/cd/"
                 />
   </url>
   

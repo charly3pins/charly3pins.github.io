@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 	
 	<head>
   <meta charset="utf-8">
@@ -8,15 +8,15 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Software Engineer, Japan lover, video gamer and dog walker">
+  <meta name="description" content="Software Engineer">
 
-  <title>cd ~/blog | Charly3Pins</title>
+  <title>Blog | Charly3Pins</title>
 
 
-  <meta property="og:title" content="cd ~/blog - charly3pins" />
+  <meta property="og:title" content="Blog - charly3pins" />
 
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Blog by Charly3Pins, a Software Engineer, Japan lover, video gamer and dog walker">
+  <meta property="og:description" content="Tutorials, tips &amp; opinions">
   <meta property="og:url" content="https://charly3pins.dev/blog/">
   <meta property="og:site_name" content="charly3pins.dev">
   
@@ -24,10 +24,10 @@
 
   <meta name="twitter:card" content="summary_large_image">
 
-  <meta name="twitter:title" content="cd ~/blog" />
+  <meta name="twitter:title" content="Blog" />
 
 
-  <meta name="twitter:description" content="Blog by Charly3Pins, a Software Engineer, Japan lover, video gamer and dog walker">
+  <meta name="twitter:description" content="Tutorials, tips &amp; opinions">
 
 
   <meta name="twitter:image" content="https://charly3pins.dev/images/me.jpeg">
@@ -50,256 +50,139 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
+        
+        <a href="/">Home</a>
+        
+        <a href="/blog/">Blog</a>
+        
+        <a href="/code/">Code</a>
+        
+        <a href="/about/">About</a>
+        
+        
+        <ul class="lang-selector">
+            <li>
+                <a>English</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <ul>
+                
+                    <a href="https://charly3pins.dev/es/blog/">Spanish</a>
+                
+                    <a href="https://charly3pins.dev/ca/blog/">Catalan</a>
+                
+                </ul>
+            </li>
+        </ul>
+        
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
+</div>
+		
+		<div class="layout-container">
+
+			<div class="tags-container">
+				
+				<a class="tag" href="https://charly3pins.dev/tags/api/">#api(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/ci/cd/">#ci/cd(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/cms/">#cms(4)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/devops/">#devops(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/drone/">#drone(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/flutter/">#flutter(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/git/">#git(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/github/">#github(2)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/go/">#go(3)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/hugo/">#hugo(4)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/javascript/">#javascript(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/life/">#life(2)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/linux/">#linux(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/php/">#php(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/productivity/">#productivity(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/python/">#python(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/raspberrypi/">#raspberrypi(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/semver/">#semver(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/terminal/">#terminal(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/tags/vscode/">#vscode(1)</a>
+				
+			</div>
+
+			<header class="heading-container">
+				<h4 class="heading-container-title">Blog</h4>
+				<em class="heading-container-subtitle">Tutorials, tips &amp; opinions</em>
+			</header>
 
 			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/blog/" class="active">/blog</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/code/" class="">/code</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/about/" class="">$USER</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>English</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/es/blog/">Spanish</a>
-                            
-                                <a href="https://charly3pins.dev/ca/blog/">Catalan</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/" class="">~</a>
-            </span>
-            
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/blog/" class="active">/blog</a>
-            </span>
-            
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/code/" class="">/code</a>
-            </span>
-            
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/about/" class="">$USER</a>
-            </span>
-            
-        
-        
-        <span class="menu-item">
-            <div class="sl-nav">
-                <ul>
-                    <li>
-                        <b style="color:var(--pink);">English</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/es/blog/">Spanish</a>
-                        
-                            <a href="https://charly3pins.dev/ca/blog/">Catalan</a>
-                        
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </span>
-        
-    </div>
-</div>
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/blog/gophercises-quiz/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Gophercises - Quiz game</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Code review of my first exercise in the Gophercises page. It&#39;s focused in the CSV and time packages in addition to an introduction for the goroutines and channels.</div>
+					<div>
+						<span class="post-preview-metadata">
+							24/09/2018 · 8 min. read
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/go/">#go</a>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/blog/building-static-blog-with-hugo/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">Building static blog with Hugo</h3>
+						<div class="post-preview-tag-new">New</div>
+					</div>
+					<div class="post-preview-subtext">Quick steps to create your own static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages.</div>
+					<div>
+						<span class="post-preview-metadata">
+							22/09/2018 · 4 min. read
+						</span>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/hugo/">#hugo</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/cms/">#cms</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/github/">#github</a>
+						
+					</div>
+				</a>
+			</section>
+			
 
+			<div class="page-separator"></div>
 
-			<div class="container">
-				<h1 class="h1-section">cd ~/blog <span class="cursor"></span></h1>
-
-				<div class="markdown">
-					<p>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/api/"><span class="tag-prefix">#</span>api <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/ci/"><span class="tag-prefix">#</span>ci <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/cms/"><span class="tag-prefix">#</span>cms <span class="tag-count">(4)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/devops/"><span class="tag-prefix">#</span>devops <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/drone/"><span class="tag-prefix">#</span>drone <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/flutter/"><span class="tag-prefix">#</span>flutter <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/git/"><span class="tag-prefix">#</span>git <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/github/"><span class="tag-prefix">#</span>github <span class="tag-count">(2)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/go/"><span class="tag-prefix">#</span>go <span class="tag-count">(3)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/hugo/"><span class="tag-prefix">#</span>hugo <span class="tag-count">(4)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/javascript/"><span class="tag-prefix">#</span>javascript <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/life/"><span class="tag-prefix">#</span>life <span class="tag-count">(2)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/linux/"><span class="tag-prefix">#</span>linux <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/php/"><span class="tag-prefix">#</span>php <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/productivity/"><span class="tag-prefix">#</span>productivity <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/python/"><span class="tag-prefix">#</span>python <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/raspberrypi/"><span class="tag-prefix">#</span>raspberrypi <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/semver/"><span class="tag-prefix">#</span>semver <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/terminal/"><span class="tag-prefix">#</span>terminal <span class="tag-count">(1)</span></a>
-						
-							<a class="button tag" href="https://charly3pins.dev/tags/vscode/"><span class="tag-prefix">#</span>vscode <span class="tag-count">(1)</span></a>
-						
-					</p>
-				</div>
-				
-				<div class="markdown">
-    <section class="gallery">
-        <div class="container">
-            <ul class="image-list">
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/blog/gophercises-quiz/"><img src="https://charly3pins.dev/images/go-learn-thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/blog/gophercises-quiz/">Gophercises - Quiz game</a>
-                            <div class="li-sub">
-                                Code review of my first exercise in the Gophercises page. It&#39;s focused in the CSV and time packages in addition to an introduction for the goroutines and channels. <a class="tag"href="https://charly3pins.dev/blog/gophercises-quiz/">Read more...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/tags/go/"><span class="tag-prefix">#</span>go</a>
-        
-    
-    24/09/2018 · 8 min. read
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/blog/building-static-blog-with-hugo/"><img src="https://charly3pins.dev/images/gohugoio-card-thumb.png" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/blog/building-static-blog-with-hugo/">Building static blog with Hugo</a>
-                            <div class="li-sub">
-                                Quick steps to create your own static blog with Hugo and install a theme from the catalogue. After that, push your site to GitHub and deploy it with GitHub Pages. <a class="tag"href="https://charly3pins.dev/blog/building-static-blog-with-hugo/">Read more...</a>
-                                <p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/tags/hugo/"><span class="tag-prefix">#</span>hugo</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/tags/cms/"><span class="tag-prefix">#</span>cms</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/tags/github/"><span class="tag-prefix">#</span>github</a>
-        
-    
-    22/09/2018 · 4 min. read
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-            </ul>
-        </div>
-    </section>
-</div>
-
-
+			
 <ul class="pagination">
   <li class="page-item">
     <a href="/blog/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
@@ -323,36 +206,32 @@ if (!doNotTrack) {
 
 
 
-<div class="page-separator centered"><hr></div>
-
-
-			</div>
-			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
-	</ul>
-	</section>
-	<p>Last post published on 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
-</footer>
-			
 		</div>
+
+		<div class="page-separator centered"><hr></div>
+		
+		<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
+	</ul>
+	<div class="footer-text">Last post published on 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
+</footer>
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+
 	</body>
 </html>
-

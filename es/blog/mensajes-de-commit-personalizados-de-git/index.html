@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 	
 	<head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Ingeniero de Software, amante de Japón, jugador de videojuegos y paseador de perros">
+  <meta name="description" content="Ingeniero de Software">
 
   <title>Mensajes de commit personalizados de Git | Charly3Pins</title>
 
@@ -49,173 +49,64 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
-
-			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/blog/" class="">/blog</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/code/" class="">/código</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/about/" class="">$USUARIO</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>Castellano</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/blog/git-custom-commit-messages/">Inglés</a>
-                            
-                                <a href="https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/">Catalán</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/" class="">~</a>
-            </span>
-            
+        <a href="/es/">Inicio</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/blog/" class="">/blog</a>
-            </span>
-            
+        <a href="/es/blog/">Blog</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/code/" class="">/código</a>
-            </span>
-            
+        <a href="/es/code/">Código</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/about/" class="">$USUARIO</a>
-            </span>
-            
+        <a href="/es/about/">Quién</a>
         
         
-        <span class="menu-item">
-            <div class="sl-nav">
+        <ul class="lang-selector">
+            <li>
+                <a>Castellano</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
                 <ul>
-                    <li>
-                        <b style="color:var(--pink);">Castellano</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/blog/git-custom-commit-messages/">Inglés</a>
-                        
-                            <a href="https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/">Catalán</a>
-                        
-                        </ul>
-                    </li>
+                
+                    <a href="https://charly3pins.dev/blog/git-custom-commit-messages/">Inglés</a>
+                
+                    <a href="https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/">Catalán</a>
+                
                 </ul>
-            </div>
-        </span>
+            </li>
+        </ul>
         
-    </div>
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
 </div>
+		
+		<div class="layout-container">
 
-
-			<div class="container">
-				<div id="cover-image">
-					<img src="https://charly3pins.dev/images/git-commit.png" alt="cover image">
-				</div>
+			<section class="blog-container">
 				
-				<div class="markdown">
-					<h1>Mensajes de commit personalizados de Git</h1>
-					<p class="subtitle">Genere mensajes de commit personalizados para su repositorio y estandarice su registro de commits.</p>
-					
-					<p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/es/tags/terminal/"><span class="tag-prefix">#</span>terminal</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/es/tags/git/"><span class="tag-prefix">#</span>git</a>
-        
-    
-    10/03/2020 · 2 min. lectura
-</p>
+				<h4 class="post-title">Mensajes de commit personalizados de Git</h4>
+				<h2 class="post-description">Genere mensajes de commit personalizados para su repositorio y estandarice su registro de commits.</h2>
 
-					<ul class="icons">
+				<div class="post-metadata">
+					<div class="post-tags">
+						
+						<a class="tag" href="https://charly3pins.dev/tags/terminal/">#terminal</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/git/">#git</a>
+						
+					</div>
+					<span class="post-date">
+						10/03/2020 · 2 min. lectura
+					</span>
+				</div>
+
+				<ul class="icons">
     
     <li>
         
@@ -260,17 +151,21 @@ if (!doNotTrack) {
     </li>
 </ul>
 
-				</div>
 
-				<div class="markdown">
-					<p><p>He estado usando la herramienta <a href="https://github.com/walmartdigital/commit-message-formatter">CMF</a> durante el último año y creo que su simplicidad es su potencial. Básicamente es una herramienta de terminal desarrollada en Go por <a href="https://github.com/walmartdigital">Walmart Digital</a> que te ayuda a estandarizar el log de commits de tus proyectos.</p>
+				<article>
+					
+					<div class="centered">
+						<img src="https://charly3pins.dev/images/git-commit.png" alt="cover image">
+					</div>
+					
+					<p>He estado usando la herramienta <a href="https://github.com/walmartdigital/commit-message-formatter">CMF</a> durante el último año y creo que su simplicidad es su potencial. Básicamente es una herramienta de terminal desarrollada en Go por <a href="https://github.com/walmartdigital">Walmart Digital</a> que te ayuda a estandarizar el log de commits de tus proyectos.</p>
 <p>Lo he estado usando durante el último año y medio aproximadamente y todo lo que puedo decir es muy útil. Acordamos con el equipo la configuración que queremos utilizar y definimos un conjunto de cambios que aplica en nuestro caso. También elegimos el <a href="https://github.com/walmartdigital/commit-message-formatter#jira-flow">Jira flow</a> y cambiamos los valores para el <code>cambio</code> agregando un emojis para hacer las confirmaciones un poco más divertidas para comprobarlos en el registro.</p>
 <p>Puede instalarlo a través de npm:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> -<span style="color:#a6e22e">g</span> <span style="color:#a6e22e">go</span>-<span style="color:#a6e22e">cmf</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">npm</span> <span class="nx">install</span> <span class="p">-</span><span class="nx">g</span> <span class="nx">go</span><span class="p">-</span><span class="nx">cmf</span><span class="err">
 </span></code></pre></div><p>o desde Go:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">go</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#e6db74">/walmartdigital/</span><span style="color:#a6e22e">commit</span>-<span style="color:#a6e22e">message</span>-<span style="color:#a6e22e">formatter</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">go</span> <span class="nx">install</span> <span class="nx">github</span>.<span class="nx">com</span><span class="sr">/walmartdigital/</span><span class="nx">commit</span><span class="p">-</span><span class="nx">message</span><span class="p">-</span><span class="nx">formatter</span><span class="err">
 </span></code></pre></div><p>Después de eso, abra una terminal y navegue hasta la raíz del proyecto que desea usar. Luego escriba:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#a6e22e">cmf</span> <span style="color:#a6e22e">init</span> <span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">cmf</span> <span class="nx">init</span> <span class="err">
 </span></code></pre></div><p>Deberá seleccionar uno de los flujos y creará un archivo <code>.cmf.yaml</code> con la plantilla del seleccionado. Puede editar ese archivo de la forma que desee. La condición única es que cualquier variable que desee utilizar debe definirse mediante <code>{{}}</code>. Ejemplo: <code>{{CHANGE}}</code> le preguntará el &ldquo;CAMBIO&rdquo; que hizo y mostrará las opciones que definió en la plantilla.</p>
 <p>Aquí está el archivo <code>.cmf.yaml</code> que estoy usando en este sitio:</p>
 <pre><code>PROMPT:
@@ -296,14 +191,11 @@ if (!doNotTrack) {
     - KEY: &quot;MESSAGE&quot;
       LABEL: &quot;Commit message&quot;
 TEMPLATE: &quot;{{CHANGE}}: {{MESSAGE}}&quot;
-</code></pre></p>
-				</div>
+</code></pre>
+				</article>
+
 				
 				
-				<div class="related">
-					
-					
-				</div>
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
@@ -325,36 +217,35 @@ TEMPLATE: &quot;{{CHANGE}}: {{MESSAGE}}&quot;
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-			</div>
-
+			
+			</section>
+			
 			<div class="page-separator centered"><hr></div>
 			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
+			<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
 	</ul>
-	</section>
-	<p>Último post publicado el 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
+	<div class="footer-text">Último post publicado el 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
-			
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+		
 		</div>
+
 	</body>
 </html>
-

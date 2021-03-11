@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 	
 	<head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Ingeniero de Software, amante de Japón, jugador de videojuegos y paseador de perros">
+  <meta name="description" content="Ingeniero de Software">
 
   <title>Collectus | Charly3Pins</title>
 
@@ -49,168 +49,64 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
-
-			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/blog/" class="">/blog</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/code/" class="">/código</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/about/" class="">$USUARIO</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>Castellano</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/code/collectus/">Inglés</a>
-                            
-                                <a href="https://charly3pins.dev/ca/code/collectus/">Catalán</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/" class="">~</a>
-            </span>
-            
+        <a href="/es/">Inicio</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/blog/" class="">/blog</a>
-            </span>
-            
+        <a href="/es/blog/">Blog</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/code/" class="">/código</a>
-            </span>
-            
+        <a href="/es/code/">Código</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/about/" class="">$USUARIO</a>
-            </span>
-            
+        <a href="/es/about/">Quién</a>
         
         
-        <span class="menu-item">
-            <div class="sl-nav">
+        <ul class="lang-selector">
+            <li>
+                <a>Castellano</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
                 <ul>
-                    <li>
-                        <b style="color:var(--pink);">Castellano</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/code/collectus/">Inglés</a>
-                        
-                            <a href="https://charly3pins.dev/ca/code/collectus/">Catalán</a>
-                        
-                        </ul>
-                    </li>
+                
+                    <a href="https://charly3pins.dev/code/collectus/">Inglés</a>
+                
+                    <a href="https://charly3pins.dev/ca/code/collectus/">Catalán</a>
+                
                 </ul>
-            </div>
-        </span>
+            </li>
+        </ul>
         
-    </div>
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
 </div>
+		
+		<div class="layout-container">
 
+			<section class="blog-container">
+				
+				<h4 class="post-title">Collectus</h4>
+				<h2 class="post-description">Como proyecto de fin de carrera de Ingeniería Informática, construí una base de datos flexible para coleccionables y cualquier otro objeto o dato que cualquier usuario quiera ordenar y clasificar de una manera simple y efectiva.</h2>
 
-			<div class="container">
-				<div class="markdown">
-					<h1>Collectus</h1>
-					
-					<p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/es/tags/php/"><span class="tag-prefix">#</span>php</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/es/tags/javascript/"><span class="tag-prefix">#</span>javascript</a>
-        
-    
-    
-</p>
+				<div class="post-metadata">
+					<div class="post-tags">
+						
+						<a class="tag" href="https://charly3pins.dev/tags/php/">#php</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/javascript/">#javascript</a>
+						
+					</div>
+					<span class="post-date">
+						22/09/2018 · 4 min. lectura
+					</span>
+				</div>
 
-					<ul class="icons">
+				<ul class="icons">
     
     <li>
         
@@ -255,10 +151,10 @@ if (!doNotTrack) {
     </li>
 </ul>
 
-				</div>
 
-				<div class="markdown">
-					<p><h2 id="por-qué">POR QUÉ</h2>
+				<article>
+					
+					<h2 id="por-qué">POR QUÉ</h2>
 <p>La motivación de este proyecto es mitad personal y mitad académica. Dejame explicar. En casa mi padre siempre coleccionaba un montón de cosas, desde los libros más antiguos que puedas imaginar hasta el nuevo Funko POP más reciente, pasando por Swiss Knives o dados entre otros. Tener esa variedad de objetos y muchos de ellos (demasiados para ser honestos) catalogar esa cantidad de artículos siempre había sido un desafío para él.</p>
 <p>Siempre trató de clasificar de diferentes formas como usando un Excel, aplicaciones gratuitas, aplicaciones de pago, etc. Al final cada vez que sucede algo similar, el hándicap de su &ldquo;colección de colecciones&rdquo; (como él lo describe) es demasiado singular, y no cabe en ningún lado. Él es desarrollador y yo estaba en mi último año en la Universidad estudiando Ingeniería en Ciencias de la Computación, así que comenzamos a planear cómo podríamos resolver ese problema haciendo nosotros mismos la aplicación.</p>
 <p>Después de unos días / semanas me di cuenta de que pronto tendría que elegir un proyecto para presentar como mi Proyecto de Fin de Año, así que decidí darle una oportunidad a esta idea loca y familiar y proponérsela a mi tutor. Estaba emocionada con la idea que teníamos y aceptó feliz.</p>
@@ -288,11 +184,12 @@ if (!doNotTrack) {
 <p>Fue mi primer gran proyecto como desarrollador de software construyendo una web y aprendí muchas cosas como aprender nuevos lenguajes de programación y la arquitectura de los proyectos; diseñar correctamente las bases de datos; pulir el más mínimo detalle visual; batalla con las API externas que se conectan a ellos; organizarme para entregar pequeñas partes del proyecto paso a paso en lugar de todo el proyecto a la vez; escribir la documentación apropiada sobre la funcionalidad del proyecto y probablemente muchos otros.</p>
 <p>Siempre he querido hacer una segunda versión mejorada del proyecto, ahora con la experiencia que tengo y las habilidades que he ido adquiriendo a lo largo de estos años de trabajo. Empecé varias veces pero nunca terminé&hellip;</p>
 <p>Espero algún día poder lanzar oficialmente la aplicación y contaros aquí. 🚀</p>
-</p>
-				</div>
 
-				<div class="page-separator centered"><hr></div>
+				</article>
 
+				
+				
+				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
@@ -313,36 +210,35 @@ if (!doNotTrack) {
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-				
-				<div class="page-separator centered"><hr></div>
-
-			</div>
 			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
+			</section>
+			
+			<div class="page-separator centered"><hr></div>
+			
+			<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
 	</ul>
-	</section>
-	<p>Último post publicado el 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
+	<div class="footer-text">Último post publicado el 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
-			
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+		
 		</div>
+
 	</body>
 </html>
-

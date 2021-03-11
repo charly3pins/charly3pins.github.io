@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="ca" data-theme="light">
 	
 	<head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Enginyer de Software, amant de Japó, jugador de videojocs i passejador de gossos">
+  <meta name="description" content="Enginyer de Software">
 
   <title>La meva configuració per a una alta productivitat per al VS Code | Charly3Pins</title>
 
@@ -49,173 +49,64 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
-
-			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/blog/" class="">/bloc</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/code/" class="">/codi</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/ca/about/" class="">$USUARI</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>Català</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/blog/my-productivity-setup-for-vs-code/">Anglès</a>
-                            
-                                <a href="https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/">Castellà</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/" class="">~</a>
-            </span>
-            
+        <a href="/ca/">Inici</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/blog/" class="">/bloc</a>
-            </span>
-            
+        <a href="/ca/blog/">Bloc</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/code/" class="">/codi</a>
-            </span>
-            
+        <a href="/ca/code/">Codi</a>
         
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/ca/about/" class="">$USUARI</a>
-            </span>
-            
+        <a href="/ca/about/">Qui</a>
         
         
-        <span class="menu-item">
-            <div class="sl-nav">
+        <ul class="lang-selector">
+            <li>
+                <a>Català</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
                 <ul>
-                    <li>
-                        <b style="color:var(--pink);">Català</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/blog/my-productivity-setup-for-vs-code/">Anglès</a>
-                        
-                            <a href="https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/">Castellà</a>
-                        
-                        </ul>
-                    </li>
+                
+                    <a href="https://charly3pins.dev/blog/my-productivity-setup-for-vs-code/">Anglès</a>
+                
+                    <a href="https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/">Castellà</a>
+                
                 </ul>
-            </div>
-        </span>
+            </li>
+        </ul>
         
-    </div>
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
 </div>
+		
+		<div class="layout-container">
 
-
-			<div class="container">
-				<div id="cover-image">
-					<img src="https://miro.medium.com/max/6000/0*8KANi15q2thT-dYt" alt="cover image">
-				</div>
+			<section class="blog-container">
 				
-				<div class="markdown">
-					<h1>La meva configuració per a una alta productivitat per al VS Code</h1>
-					<p class="subtitle">Et mostraré la meva configuració per a l&#39;editor VS Code que em fa ser més productiu i sentir-me més còmode amb l&#39;eina que passo la major part del meu temps durant el dia.</p>
-					
-					<p class="metadata">
-    
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/productivity/"><span class="tag-prefix">#</span>productivity</a>
-        
-            <a class="button tag" href="https://charly3pins.dev/ca/tags/vscode/"><span class="tag-prefix">#</span>vscode</a>
-        
-    
-    09/03/2021 · 4 min. de lectura
-</p>
+				<h4 class="post-title">La meva configuració per a una alta productivitat per al VS Code</h4>
+				<h2 class="post-description">Et mostraré la meva configuració per a l&#39;editor VS Code que em fa ser més productiu i sentir-me més còmode amb l&#39;eina que passo la major part del meu temps durant el dia.</h2>
 
-					<ul class="icons">
+				<div class="post-metadata">
+					<div class="post-tags">
+						
+						<a class="tag" href="https://charly3pins.dev/tags/productivity/">#productivity</a>
+						
+						<a class="tag" href="https://charly3pins.dev/tags/vscode/">#vscode</a>
+						
+					</div>
+					<span class="post-date">
+						09/03/2021 · 4 min. de lectura
+					</span>
+				</div>
+
+				<ul class="icons">
     
     <li>
         
@@ -260,11 +151,15 @@ if (!doNotTrack) {
     </li>
 </ul>
 
-				</div>
 
-				<div class="markdown">
-					<p><p>Passo moltes hores durant el dia programant per a l&rsquo;empresa en la qual treballo i durant les nits o els caps de setmana per a mi, així que vull estar còmode amb les eines que utilitzo constantment. Una d&rsquo;elles és el meu editor de codi, específicament [VS Code] (<a href="https://code.visualstudio.com/)">https://code.visualstudio.com/)</a>. Vaig començar amb Java i la més estesa per a ell és l&rsquo;Eclipse amb totes les seves variants. Després em vaig canviar a Go i vaig ser un usuari de Sublime a tope durant varis anys fins que li vaig donar una oportunitat a VS Code. Oh sí! Des que ho vaig provar, mai vaig voler tornar enrere. Super ràpid, súper configurable, moltes extensions i MOLTS TEMES.</p>
-<p>Llavors, després d&rsquo;una llarga recerca investigant i ajustant (una història que mai acaba diria jo), vaig trobar una configuració que em fa sentir còmode, feliç i més productiu. Per això vull compartir amb vostè encantador lector, el meu tema, la meva font, els meus icones i les extensions que tinc per inspirar-lo a trobar la seva pròpia configuració ideal, a l&rsquo;igual que jo ho vaig aconseguir.</p>
+				<article>
+					
+					<div class="centered">
+						<img src="https://miro.medium.com/max/6000/0*8KANi15q2thT-dYt" alt="cover image">
+					</div>
+					
+					<p>Passo moltes hores durant el dia programant per a l&rsquo;empresa en la qual treballo i durant les nits o els caps de setmana per a mi, així que vull estar còmode amb les eines que utilitzo constantment. Una d&rsquo;elles és el meu editor de codi, específicament <a href="https://code.visualstudio.com/">VS Code</a>. Vaig començar amb Java i la més estesa per a ell és l&rsquo;Eclipse amb totes les seves variants. Després em vaig canviar a Go i vaig ser un usuari de Sublime a tope durant varis anys fins que li vaig donar una oportunitat a VS Code. Oh sí! Des que ho vaig provar, mai vaig voler tornar enrere. Super ràpid, súper configurable, moltes extensions i MOLTS TEMES.</p>
+<p>Llavors, després d&rsquo;una llarga recerca investigant i ajustant (una història que mai acaba diria jo), vaig trobar una configuració que em fa sentir còmode, feliç i més productiu. Per això vull compartir amb vostè estimat lector, el meu tema, la meva font, els meus icones i les extensions que tinc per inspirar-lo a trobar la seva pròpia configuració ideal, a l&rsquo;igual que jo ho vaig aconseguir.</p>
 <p>El tema predeterminat que proporciona VS Code no és dolent en absolut, però li mostraré com passar d&rsquo;això
 <img src="/images/productivity-setup-vscode/vscode-default.jpeg" alt="vscode default"></p>
 <p>A aquesta increïble configuració
@@ -335,14 +230,11 @@ if (!doNotTrack) {
 </ol>
 <p>Simplement el suport del llenguatge proto3 per a l&rsquo;editor.</p>
 <p><img src="https://github.com/zxh0/vscode-proto3/raw/master/images/gif1.gif" alt="vscode proto3"></p>
-</p>
-				</div>
+
+				</article>
+
 				
 				
-				<div class="related">
-					
-					
-				</div>
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
@@ -364,36 +256,35 @@ if (!doNotTrack) {
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-			</div>
-
+			
+			</section>
+			
 			<div class="page-separator centered"><hr></div>
 			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
+			<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
 	</ul>
-	</section>
-	<p>Últim post publicat el 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
+	<div class="footer-text">Últim post publicat el 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
-			
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+		
 		</div>
+
 	</body>
 </html>
-

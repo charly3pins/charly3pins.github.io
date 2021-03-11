@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 	
 	<head>
   <meta charset="utf-8">
@@ -8,7 +8,7 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Ingeniero de Software, amante de Japón, jugador de videojuegos y paseador de perros">
+  <meta name="description" content="Ingeniero de Software">
 
   <title>Tags | Charly3Pins</title>
 
@@ -48,328 +48,248 @@ if (!doNotTrack) {
 
 
   <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
+  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
   <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/grid.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/thumbnail_list.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 	<body>
-		<div id="main">
+		<div class="navbar-container">
+    <nav class="navbar-navigation">
+        
+        <a href="/es/">Inicio</a>
+        
+        <a href="/es/blog/">Blog</a>
+        
+        <a href="/es/code/">Código</a>
+        
+        <a href="/es/about/">Quién</a>
+        
+        
+        <ul class="lang-selector">
+            <li>
+                <a>Castellano</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <ul>
+                
+                    <a href="https://charly3pins.dev/tags/">Inglés</a>
+                
+                    <a href="https://charly3pins.dev/ca/tags/">Catalán</a>
+                
+                </ul>
+            </li>
+        </ul>
+        
+        <button class="theme-switch-wrapper">
+            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
+        </button>
+    </nav>
+</div>
+		
+		<div class="layout-container">
+
+			<div class="tags-container">
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/api/">#api(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/ci/cd/">#ci/cd(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/cms/">#cms(4)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/devops/">#devops(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/drone/">#drone(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/flutter/">#flutter(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/git/">#git(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/github/">#github(2)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/go/">#go(2)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/hugo/">#hugo(4)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/javascript/">#javascript(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/life/">#life(2)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/linux/">#linux(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/php/">#php(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/productivity/">#productivity(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/python/">#python(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/raspberrypi/">#raspberrypi(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/semver/">#semver(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/terminal/">#terminal(1)</a>
+				
+				<a class="tag" href="https://charly3pins.dev/es/tags/vscode/">#vscode(1)</a>
+				
+			</div>
+			
+			<header class="heading-container">
+				<h4 class="heading-container-title">#Tags</h4>
+			</header>
 
 			
-<div class="container">
-    <div class="toggle">
-        <input type="checkbox">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        <div id="mobile-menu">
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/" class="">~</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/blog/" class="">/blog</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/code/" class="">/código</a>
-                </span>
-            
-                
-                
-                
-                
-                
-                <span class="menu-item">
-                    <a href="/es/about/" class="">$USUARIO</a>
-                </span>
-            
-            
-            <span class="menu-item">
-                <div class="sl-nav">
-                    <ul>
-                        <li>
-                            <b>Castellano</b> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                            
-                                <a href="https://charly3pins.dev/tags/">Inglés</a>
-                            
-                                <a href="https://charly3pins.dev/ca/tags/">Catalán</a>
-                            
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            
-        </div>
-    </div>
-    <div id="menu">
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/" class="">~</a>
-            </span>
-            
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/blog/" class="">/blog</a>
-            </span>
-            
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/code/" class="">/código</a>
-            </span>
-            
-        
-            
-            
-            
-            
-            
-            
-            
-            <span class="menu-item">
-                <a href="/es/about/" class="">$USUARIO</a>
-            </span>
-            
-        
-        
-        <span class="menu-item">
-            <div class="sl-nav">
-                <ul>
-                    <li>
-                        <b style="color:var(--pink);">Castellano</b> <i style="color:var(--pink);" class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="triangle"></div>
-                        <ul>
-                        
-                            <a href="https://charly3pins.dev/tags/">Inglés</a>
-                        
-                            <a href="https://charly3pins.dev/ca/tags/">Catalán</a>
-                        
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </span>
-        
-    </div>
-</div>
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/tags/go/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">go</h3>
+					</div>
+					<div class="post-preview-subtext"></div>
+					<div>
+						<span class="post-preview-metadata">
+							06/10/2020 · 0 min. lectura
+						</span>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/tags/flutter/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">flutter</h3>
+					</div>
+					<div class="post-preview-subtext"></div>
+					<div>
+						<span class="post-preview-metadata">
+							01/05/2020 · 0 min. lectura
+						</span>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/tags/python/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">python</h3>
+					</div>
+					<div class="post-preview-subtext"></div>
+					<div>
+						<span class="post-preview-metadata">
+							01/05/2020 · 0 min. lectura
+						</span>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/tags/git/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">git</h3>
+					</div>
+					<div class="post-preview-subtext"></div>
+					<div>
+						<span class="post-preview-metadata">
+							10/03/2020 · 0 min. lectura
+						</span>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/tags/terminal/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">terminal</h3>
+					</div>
+					<div class="post-preview-subtext"></div>
+					<div>
+						<span class="post-preview-metadata">
+							10/03/2020 · 0 min. lectura
+						</span>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/tags/devops/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">devops</h3>
+					</div>
+					<div class="post-preview-subtext"></div>
+					<div>
+						<span class="post-preview-metadata">
+							10/10/2018 · 0 min. lectura
+						</span>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/tags/drone/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">drone</h3>
+					</div>
+					<div class="post-preview-subtext"></div>
+					<div>
+						<span class="post-preview-metadata">
+							10/10/2018 · 0 min. lectura
+						</span>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/tags/javascript/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">javascript</h3>
+					</div>
+					<div class="post-preview-subtext"></div>
+					<div>
+						<span class="post-preview-metadata">
+							22/09/2018 · 0 min. lectura
+						</span>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/tags/php/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">php</h3>
+					</div>
+					<div class="post-preview-subtext"></div>
+					<div>
+						<span class="post-preview-metadata">
+							22/09/2018 · 0 min. lectura
+						</span>
+						
+					</div>
+				</a>
+			</section>
+			
+			<section class="post-preview-container">
+				<a href="https://charly3pins.dev/es/tags/ci/cd/">
+					<div class="post-preview-title-container">
+						<h3 class="post-preview-title">ci/cd</h3>
+					</div>
+					<div class="post-preview-subtext"></div>
+					<div>
+						<span class="post-preview-metadata">
+							01/01/0001 · 0 min. lectura
+						</span>
+						
+					</div>
+				</a>
+			</section>
+			
 
+			<div class="page-separator"></div>
 
-			<div class="container">
-				<h1 class="h1-section">SELECT * FROM posts WHERE tag ='<a class="button tag" href="/tags/Tags/"><span class="tag-prefix">#</span>Tags</a>';</h1>
-				
-				<div class="page-separator centered"><hr></div>
-
-				<div class="markdown">
-    <section class="gallery">
-        <div class="container">
-            <ul class="image-list">
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/es/tags/go/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/es/tags/go/">go</a>
-                            <div class="li-sub">
-                                 <a class="tag"href="https://charly3pins.dev/es/tags/go/">Leer más...</a>
-                                <p class="metadata">
-    
-    06/10/2020 · 0 min. lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/es/tags/flutter/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/es/tags/flutter/">flutter</a>
-                            <div class="li-sub">
-                                 <a class="tag"href="https://charly3pins.dev/es/tags/flutter/">Leer más...</a>
-                                <p class="metadata">
-    
-    01/05/2020 · 0 min. lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/es/tags/python/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/es/tags/python/">python</a>
-                            <div class="li-sub">
-                                 <a class="tag"href="https://charly3pins.dev/es/tags/python/">Leer más...</a>
-                                <p class="metadata">
-    
-    01/05/2020 · 0 min. lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/es/tags/git/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/es/tags/git/">git</a>
-                            <div class="li-sub">
-                                 <a class="tag"href="https://charly3pins.dev/es/tags/git/">Leer más...</a>
-                                <p class="metadata">
-    
-    10/03/2020 · 0 min. lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/es/tags/terminal/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/es/tags/terminal/">terminal</a>
-                            <div class="li-sub">
-                                 <a class="tag"href="https://charly3pins.dev/es/tags/terminal/">Leer más...</a>
-                                <p class="metadata">
-    
-    10/03/2020 · 0 min. lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/es/tags/ci/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/es/tags/ci/">ci</a>
-                            <div class="li-sub">
-                                 <a class="tag"href="https://charly3pins.dev/es/tags/ci/">Leer más...</a>
-                                <p class="metadata">
-    
-    10/10/2018 · 0 min. lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/es/tags/devops/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/es/tags/devops/">devops</a>
-                            <div class="li-sub">
-                                 <a class="tag"href="https://charly3pins.dev/es/tags/devops/">Leer más...</a>
-                                <p class="metadata">
-    
-    10/10/2018 · 0 min. lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/es/tags/drone/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/es/tags/drone/">drone</a>
-                            <div class="li-sub">
-                                 <a class="tag"href="https://charly3pins.dev/es/tags/drone/">Leer más...</a>
-                                <p class="metadata">
-    
-    10/10/2018 · 0 min. lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/es/tags/javascript/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/es/tags/javascript/">javascript</a>
-                            <div class="li-sub">
-                                 <a class="tag"href="https://charly3pins.dev/es/tags/javascript/">Leer más...</a>
-                                <p class="metadata">
-    
-    22/09/2018 · 0 min. lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-                <li>
-                    <figure>
-                        <a href="https://charly3pins.dev/es/tags/php/"><img src="https://charly3pins.dev/" alt="thumb image"></a>
-                        <figcaption>
-                            <a class="li-head li-link" href="https://charly3pins.dev/es/tags/php/">php</a>
-                            <div class="li-sub">
-                                 <a class="tag"href="https://charly3pins.dev/es/tags/php/">Leer más...</a>
-                                <p class="metadata">
-    
-    22/09/2018 · 0 min. lectura
-</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                
-            </ul>
-        </div>
-    </section>
-</div>
-
-
+			
 <ul class="pagination">
   <li class="page-item">
     <a href="/es/tags/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
@@ -393,36 +313,32 @@ if (!doNotTrack) {
 
 
 
-<div class="page-separator centered"><hr></div>
-
-				
-			</div>
-			
-			<footer class="container centered">
-	<section class="social">
-		<ul class="social-set">
-			<li><a class="sociali" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-				<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-			</li>
-			<li><a class="sociali" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-				<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-			</li>
-			<li><a class="sociali" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-				<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-			</li>
-			<li><a class="sociali" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
-			</li>
-			<li><a class="sociali" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
-				<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-			</li>
-	</ul>
-	</section>
-	<p>Último post publicado el 09/03/2021</p>
-	<p>© 2018 - 2021 Charly3Pins</p>
-</footer>
-			
 		</div>
+
+		<div class="page-separator centered"><hr></div>
+		
+		<footer class="footer-container">
+	<ul class="footer-social-icons-container">
+		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
+			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
+			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
+			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://www.linkedin.com/in/carlesfuste" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-linkedin fa-fw" title="LinkedIn"></i></a>
+		</li>
+		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="LinkedIn">
+			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
+		</li>
+	</ul>
+	<div class="footer-text">Último post publicado el 09/03/2021</div>
+	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
+</footer>
+<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
+
 	</body>
 </html>
-
