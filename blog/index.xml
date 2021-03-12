@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blog on charly3pins.dev</title>
-    <link>https://charly3pins.dev/blog/</link>
-    <description>Recent content in Blog on charly3pins.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 09 Mar 2021</lastBuildDate><atom:link href="https://charly3pins.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <channel>
+        <title>Blog on charly3pins.dev</title>
+        <link>https://charly3pins.dev/blog/</link>
+        <description>Recent content in Blog on charly3pins.dev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 09 Mar 2021</lastBuildDate>
+    
+    <atom:link href="https://charly3pins.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>My productivity setup for VS Code</title>
       <link>https://charly3pins.dev/blog/my-productivity-setup-for-vs-code/</link>

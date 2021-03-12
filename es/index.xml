@@ -1,127 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>charly3pins.dev</title>
-    <link>https://charly3pins.dev/es/</link>
-    <description>Recent content on charly3pins.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 09 Mar 2021</lastBuildDate><atom:link href="https://charly3pins.dev/es/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Collectus</title>
-      <link>https://charly3pins.dev/es/code/collectus/</link>
-      <pubDate>Sat, 22 Sep 2018</pubDate>
-      
-      <guid>https://charly3pins.dev/es/code/collectus/</guid>
-      <description>Como proyecto de fin de carrera de Ingeniería Informática, construí una base de datos flexible para coleccionables y cualquier otro objeto o dato que cualquier usuario quiera ordenar y clasificar de una manera simple y efectiva.</description>
-      <content>&lt;h2 id=&#34;por-qué&#34;&gt;POR QUÉ&lt;/h2&gt;
-&lt;p&gt;La motivación de este proyecto es mitad personal y mitad académica. Dejame explicar. En casa mi padre siempre coleccionaba un montón de cosas, desde los libros más antiguos que puedas imaginar hasta el nuevo Funko POP más reciente, pasando por Swiss Knives o dados entre otros. Tener esa variedad de objetos y muchos de ellos (demasiados para ser honestos) catalogar esa cantidad de artículos siempre había sido un desafío para él.&lt;/p&gt;
-&lt;p&gt;Siempre trató de clasificar de diferentes formas como usando un Excel, aplicaciones gratuitas, aplicaciones de pago, etc. Al final cada vez que sucede algo similar, el hándicap de su &amp;ldquo;colección de colecciones&amp;rdquo; (como él lo describe) es demasiado singular, y no cabe en ningún lado. Él es desarrollador y yo estaba en mi último año en la Universidad estudiando Ingeniería en Ciencias de la Computación, así que comenzamos a planear cómo podríamos resolver ese problema haciendo nosotros mismos la aplicación.&lt;/p&gt;
-&lt;p&gt;Después de unos días / semanas me di cuenta de que pronto tendría que elegir un proyecto para presentar como mi Proyecto de Fin de Año, así que decidí darle una oportunidad a esta idea loca y familiar y proponérsela a mi tutor. Estaba emocionada con la idea que teníamos y aceptó feliz.&lt;/p&gt;
-&lt;p&gt;Una vez que tuve la aprobación de mi tutor, fue una novedad asombrosa porque el proyecto personal que queríamos desarrollar en nuestros tiempos libres, ahora tuve la oportunidad de dedicar todo mi esfuerzo no solo a resolver el problema que teníamos, sino a presentarlo. como proyecto final. Y así empezó todo.&lt;/p&gt;
-&lt;p&gt;Al final el proyecto terminó siendo súper exitoso, mi tutor quedó encantado con el resultado, y al tribunal le gustó mucho, incluso me dijeron que les enviara un correo cuando lo pusiera en producción para que lo usen y cataloguen sus colecciones propias.&lt;/p&gt;
-&lt;h2 id=&#34;qué&#34;&gt;QUÉ&lt;/h2&gt;
-&lt;p&gt;Llamé a la aplicación Collectus porque es la palabra latina que significa &amp;ldquo;reunir, recolectar&amp;rdquo;, por lo que en ese caso encaja perfectamente. Es un sistema de base de datos flexible para coleccionables y cualquier otro objeto o dato que el usuario quiera ordenar y clasificar. Collectus está pensado para coleccionistas, permitiéndoles realizar un seguimiento de cualquier tipo de colección que tengan, utilizando un sistema de base de datos con una estructura abierta adaptable a cada necesidad. También proporciona dos tipos de inicio de sesión para los usuarios, creando uno nuevo para la plataforma o usando su cuenta de Facebook conectándolo con la API de Facebook.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/main-app.jpeg&#34; alt=&#34;app&#34;&gt;
-&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/login.jpeg&#34; alt=&#34;login&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Mediante plantillas el usuario puede establecer todo tipo de récords para elementos tan diversos como sellos o placas de cava, carteles o fósiles, muñecos de trapo o billetes de lotería. Una vez definida la plantilla (categoría) para el objeto o tipo de objeto de interés, y el usuario puede ingresar los datos inmediatamente.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/item-edit.jpeg&#34; alt=&#34;item edit&#34;&gt;
-&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/amazon-mapping.jpeg&#34; alt=&#34;amazon mapping&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Para facilitar toda esta tarea, incorpora herramientas de ayuda al usuario. El más destacado lo proporciona la API de productos de Amazon para leer automáticamente la información de su base de datos en el momento de la entrada de datos.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/amazon-search.jpeg&#34; alt=&#34;amazon search&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Desde aquí los usuarios podrán leer la información según varios criterios de búsqueda ofrecidos en la aplicación y almacenarlos. También hay una comparación de precios entre las distintas tiendas de Amazon en todos los países para encontrar diferentes precios y ayudar en la compra de artículos a los usuarios.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/collectus/amazon-results.jpeg&#34; alt=&#34;amazon results&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Todo esto ha sido desarrollado bajo una atractiva GUI y la usabilidad como objetivo principal.&lt;/p&gt;
-&lt;p&gt;Lenguajes de programación y herramientas utilizadas para este proyecto:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;PHP 5, JavaScript y jQuery para el backend&lt;/li&gt;
-&lt;li&gt;HTML y CSS para la interfaz&lt;/li&gt;
-&lt;li&gt;AJAX como forma de llamar al lado del servidor&lt;/li&gt;
-&lt;li&gt;API de productos de Amazon para la investigación de productos y la comparación de precios&lt;/li&gt;
-&lt;li&gt;API de Facebook para el inicio de sesión&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;pensamientos-finales&#34;&gt;PENSAMIENTOS FINALES&lt;/h2&gt;
-&lt;p&gt;Fue mi primer gran proyecto como desarrollador de software construyendo una web y aprendí muchas cosas como aprender nuevos lenguajes de programación y la arquitectura de los proyectos; diseñar correctamente las bases de datos; pulir el más mínimo detalle visual; batalla con las API externas que se conectan a ellos; organizarme para entregar pequeñas partes del proyecto paso a paso en lugar de todo el proyecto a la vez; escribir la documentación apropiada sobre la funcionalidad del proyecto y probablemente muchos otros.&lt;/p&gt;
-&lt;p&gt;Siempre he querido hacer una segunda versión mejorada del proyecto, ahora con la experiencia que tengo y las habilidades que he ido adquiriendo a lo largo de estos años de trabajo. Empecé varias veces pero nunca terminé&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Espero algún día poder lanzar oficialmente la aplicación y contaros aquí. 🚀&lt;/p&gt;
-</content>
-    </item>
+    <channel>
+        <title>charly3pins.dev</title>
+        <link>https://charly3pins.dev/es/</link>
+        <description>Recent content on charly3pins.dev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 09 Mar 2021</lastBuildDate>
     
-    <item>
-      <title>Tournaments generator</title>
-      <link>https://charly3pins.dev/es/code/tournaments-generator/</link>
-      <pubDate>Fri, 01 May 2020</pubDate>
-      
-      <guid>https://charly3pins.dev/es/code/tournaments-generator/</guid>
-      <description>Prueba de concepto de la construcción de una aplicación para administrar torneos FIFA 20 entre diferentes personas usando Flutter para construir una aplicación móvil y Go para construir una API que actúa como servidor. También usé Python para construir raspadores simples.</description>
-      <content>&lt;h2 id=&#34;por-qué&#34;&gt;POR QUÉ&lt;/h2&gt;
-&lt;p&gt;La motivación para iniciar este proyecto no es otra que mi curiosidad por las aplicaciones móviles. Es obvio que la forma de consumir tecnología ha cambiado en los últimos años y cada vez se hace más a través de un dispositivo móvil. Por esa razón, quería explorar cómo funcionan las aplicaciones móviles y cómo puedo crear una desde cero.
-Hice algunos tutoriales de Android, pero como están cambiando muchas cosas al lanzar nuevas versiones y mi idea era crear algo genérico para todos los dispositivos, decidí intentarlo con &lt;a href=&#34;https://flutter.dev/&#34;&gt;Flutter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Estaba entre &lt;a href=&#34;https://reactnative.dev/&#34;&gt;React Native&lt;/a&gt; o Flutter, pero después de leer algunos pros y contras, decidí aliarme con Flutter. Comencé a leer su &lt;a href=&#34;https://flutter.dev/docs&#34;&gt;documentación&lt;/a&gt; y era muy similar a Android (están usando Dart en la parte inferior) y comencé a recordar mis viejos tiempos en los tutoriales de Android y me gusta, así que Yo continué. Después de unos días leyendo solo documentación técnica, continué con la aplicación &amp;ldquo;hello world&amp;rdquo; &lt;a href=&#34;https://flutter.dev/docs/get-started/codelab&#34;&gt;tutorial&lt;/a&gt; que proporcionan en el sitio web. Y finalmente, estaba listo para comenzar mi propio proyecto.&lt;/p&gt;
-&lt;p&gt;Para cuando comenzó la pandemia mundial, mis amigos y yo comenzamos una liga FIFA 20 en PS4 para distraernos por las tardes / noches. Inicialmente solo se trataba de jugar y nada más, pero luego comenzamos a tener un panel de Power BI para estadísticas, un canal de YouTube para compartir los juegos en vivo y luego almacenarlos allí y un Twitter para tuitear las actualizaciones de la clasificación cada semana. La primera liga se creó de forma manual y un poco dolorosa y súper estática, así que decidí usar ese tema para crear una aplicación que nos ayude a administrar la segunda liga creando la liga, administrando nuestros equipos y partidos allí, notificando los resultados. y mostrando estadísticas más detalladas en su interior.&lt;/p&gt;
-&lt;h2 id=&#34;qué&#34;&gt;QUÉ&lt;/h2&gt;
-&lt;p&gt;En primer lugar, quería poner toda la información real de FIFA 20 dentro del sitio web relacionada con ligas, equipos y jugadores. Para eso encontré algunos sitios web que tienen esa información abierta y gratuita, pero no tienen una API para consumirla. La idea de copiar manualmente era muy tentadora, pero preferí escribir un rastreador simple en &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt; usando la biblioteca &lt;a href=&#34;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors&#34;&gt;BeautifulSoup&lt;/a&gt; con los css-selectors que proporciona. Haciendo algunos ajustes aquí y allá, al final terminé teniendo 3 archivos json, uno para cada tema que quería inicialmente, ¡así que todo perfecto!&lt;/p&gt;
-&lt;p&gt;Luego, para poder introducir toda esa información en la base de datos, la idea fue crear una herramienta de línea de comandos que lea esos archivos y genere las correspondientes declaraciones SQL y luego genere los archivos de migración correspondientes.
-Elegí &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; como lenguaje de programación para la API y creé un &lt;code&gt;cmd&lt;/code&gt; que me permite hacer la idea deseada. La base de datos sería &lt;a href=&#34;https://www.postgresql.org/&#34;&gt;PostgreSQL&lt;/a&gt; por lo que las &amp;ldquo;inserciones&amp;rdquo; tienen que estar de acuerdo con su sintaxis.&lt;/p&gt;
-&lt;p&gt;Con todos los datos iniciales listos, comencé a diseñar el resto de la base de datos y los posibles puntos finales lo necesitan para administrar toda esa información. Elegí &lt;a href=&#34;https://github.com/gorilla/mux&#34;&gt;mux&lt;/a&gt; para HTTP por su simplicidad pero potente en comparación con la lib estándar (solo para el análisis de parámetros vale la pena &amp;hellip;). Como quería explorar más el lado de la aplicación móvil que el lado del servidor, simplemente organicé el código usando la [Arquitectura de capas](&lt;a href=&#34;https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01&#34;&gt;https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01&lt;/a&gt; .html) agrupando los elementos por función y usé &lt;a href=&#34;https://gorm.io/index.html&#34;&gt;GORM&lt;/a&gt; como el ORM para simplificar la consulta y las asignaciones entre la base de datos y mis modelos.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/api-structure.jpeg&#34; alt=&#34;api structure&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Dentro de la carpeta &lt;code&gt;cmd&lt;/code&gt; he creado diferentes comandos:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;migración: gestiona las migraciones en la base de datos&lt;/li&gt;
-&lt;li&gt;analizador: traduce el json del rastreador en sentencias sql&lt;/li&gt;
-&lt;li&gt;servidor: ejecuta el servidor&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Dentro de la carpeta &lt;code&gt;pkg&lt;/code&gt; es fácil identificar qué están haciendo las carpetas por su propio nombre.&lt;/p&gt;
-&lt;p&gt;Para la aplicación móvil, comencé a poner todos los archivos dentro de una carpeta de &lt;code&gt;componentes&lt;/code&gt;, pero cuando comenzó a crecer, fue una tarea difícil de administrar. Después de agregar más complejidad a la aplicación, termino encontrando una forma limpia de organizar el código, dividiéndolo en dos carpetas separadas; uno para el núcleo y otro para la interfaz de usuario. Luego dentro de cada uno también categoricé los diferentes tipos de componentes en función de sus responsabilidades y al final el código (al menos para mí que no soy un experto en Flutter) terminó luciendo súper limpio y (sin duda) más mantenible . Debajo de la organización de carpetas en una vista general:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/app-structure.jpeg&#34; alt=&#34;app structure&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Al principio, cuando comencé a codificar y ver los resultados, todo fue súper elegante y pensé que era más fácil de lo esperado. Conectar la aplicación con la API fue solo una cuestión de saber cómo usar la biblioteca &lt;code&gt;http&lt;/code&gt; y los métodos&lt;code&gt; get&lt;/code&gt; o &lt;code&gt;post&lt;/code&gt; se conectaron sin problemas.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;client&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Client&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-
-    &lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;jsonBody&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;encode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toJson&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;
-    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;client&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_baseUrl&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/token&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-        &lt;span class=&#34;nl&#34;&gt;headers:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;application/json&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;body:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;jsonBody&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-
-    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;statusCode&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;User&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fromJson&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;decode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El único problema al que me he enfrentado allí es que estaba ejecutando las aplicaciones desde el emulador de Android; eso significa que se estaba ejecutando en una máquina virtual, por lo que la IP no era mi local y no puede acceder al &lt;code&gt;localhost&lt;/code&gt;. Después de un poco de investigación, encontré el correcto y todo funcionó correctamente.&lt;/p&gt;
-&lt;p&gt;Los problemas comenzaron cuando quería pasar información entre componentes y actualizar la vista en función de esa información, o mejor aún, no actualizar si nada cambia cuando entro de nuevo en una vista (por ejemplo, al pasar de una lista a una vista de detalle, y volviendo de nuevo a la lista). Después de un día leyendo en foros sobre el mismo problema al que me estaba enfrentando, encontré el paquete [Proveedor] (&lt;a href=&#34;https://pub.dev/packages/provider&#34;&gt;https://pub.dev/packages/provider&lt;/a&gt;) y todo parecía fácil y el santo grial para todo, pero no lo era.&lt;/p&gt;
-&lt;p&gt;¡El verdadero dolor acaba de comenzar allí! Me tomó algunos días entender realmente cómo funciona. El proveedor inicial es fácil de entender y lo usa y funciona, pero luego desea cambiar solo una pequeña parte de la vista, o desea reconstruir la totalidad, o desea modificar algunos valores en una vista A y luego vaya a la vista B y vea los cambios allí, y todos esos ejemplos está codificado de manera completamente diferente y primero debe saber que hay una forma para cada caso de hacer las cosas y segundo, debe saber cómo hacerlo. Al final utilicé Provider, ProxyProvider, StreamProvider y ChangeNotifierProvider.&lt;/p&gt;
-&lt;p&gt;El proyecto no está terminado pero por ahora está En Espera con las siguientes funcionalidades:&lt;/p&gt;
-&lt;p&gt;Inicialmente, el usuario puede cambiar entre las vistas de registro / inicio de sesión.
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/signup.png&#34; alt=&#34;signup&#34;&gt;
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/login.png&#34; alt=&#34;login&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Una vez que el usuario está dentro de la aplicación esta tiene diferentes pestañas donde los próximos &lt;code&gt;Partidos&lt;/code&gt; tiene que jugar, los&lt;code&gt; Torneos&lt;/code&gt; que está jugando y los &lt;code&gt;Grupos&lt;/code&gt; donde está presente y los miembros dentro. En la parte superior tiene una barra de navegación con una foto de perfil, un ícono de campana para las notificaciones, un ícono de lente para buscar a otros miembros y agregar como sus amigos y el botón de cierre de sesión para desconectarse.
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/home.png&#34; alt=&#34;home&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Si hace clic en la foto de perfil va directamente al perfil del usuario donde muestra los amigos y donde puede editar su información personal (nombre, nombre de usuario, foto de perfil):
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/profile.png&#34; alt=&#34;profile&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Al presionar el ícono de la lente, cambia la vista a la funcionalidad de súper buscador que permite al usuario encontrar a otras personas que ya están en la plataforma, agregarlas como sus amigos y luego crear grupos, generar torneos y jugar partidos juntos. El buscador es una búsqueda de &amp;ldquo;me gusta&amp;rdquo;, por lo que si alguna de las letras que introduce aparece en algún nombre de usuario, entonces se muestra allí.
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/searcher.png&#34; alt=&#34;searcher&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Luego de eso, si el usuario ingresa a un perfil que no es amigo, aparecerá el botón para agregarlo y si se hace clic, ocultará ese botón y mostrará la información de que ya hay una solicitud enviada, esperando al otro usuario. para contestarlo.
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/add-friend.png&#34; alt=&#34;add friend&#34;&gt;
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/add-friend-requested.png&#34; alt=&#34;add friend requested&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Actuando como el otro usuario, al iniciar sesión, el icono de campana mostrará una nueva notificación. Entrar aparece como una notificación de amigo y se puede responder directamente desde la lista o entrar en el perfil de &amp;ldquo;solicitante&amp;rdquo; y aceptar / rechazar allí. Si se acepta la solicitud de amistad, aparecerá como un nuevo amigo en el perfil del usuario.
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/friend-request-notification.png&#34; alt=&#34;friend request notification&#34;&gt;
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/friend-request-notification-answer.png&#34; alt=&#34;friend request notification answer&#34;&gt;
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/profile-multifriends.png&#34; alt=&#34;profile multi friends&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Después de que un usuario tiene algunos amigos, es el momento en que puede crear un grupo. Para eso la aplicación tiene la tercera pestaña llamada &lt;code&gt;Grupos&lt;/code&gt; y un botón (+).
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group.png&#34; alt=&#34;new group&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Dentro del generador de grupos, mostrará la lista de amigos en la parte superior. A medida que se seleccionan, se colocan en la lista siguiente, donde se pueden eliminar si se desea; cuando se seleccionan todos los amigos, es hora de pasar a la siguiente pantalla con el botón (&amp;ndash;&amp;gt;).
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-selected.png&#34; alt=&#34;new group selected&#34;&gt;&lt;/p&gt;
-&lt;p&gt;El siguiente paso es poner un buen nombre para ese grupo y luego presionar la casilla uno para crear el grupo.
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-name.png&#34; alt=&#34;new group name&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Cuando el usuario regresa a la vista de inicio, aparece el nuevo grupo creado y sus miembros en la lista.
-&lt;img src=&#34;https://charly3pins.dev/images/code/tournaments-generator/new-group-created.png&#34; alt=&#34;new group created&#34;&gt;&lt;/p&gt;
-&lt;p&gt;A partir de aquí lo que falta es crear los &lt;code&gt;Torneos&lt;/code&gt; seleccionando el grupo y los miembros de ese grupo que quieren jugar, el número de equipos para cada integrante, los equipos, las rondas, el tipo de torneo, etc. y luego generar el calendario. Muestre el calendario en la pestaña &lt;code&gt;Partidos&lt;/code&gt; y dentro de cada partida permita a los usuarios agregar los resultados. También proporcione una clasificación y las estadísticas de cada partido y una agrupada para cada encuentro y una genérica.&lt;/p&gt;
-&lt;h2 id=&#34;pensamientos-finales&#34;&gt;PENSAMIENTOS FINALES&lt;/h2&gt;
-&lt;p&gt;Con esta prueba de concepto tuve la oportunidad de trabajar en una aplicación compleja en términos de diseño de componentes reutilizables en una aplicación móvil, llamar a una API externa para administrar la información que se muestra en la aplicación y aprender a usar el paquete Provider para mover información. entre múltiples vistas y controlar el estado de la aplicación de una forma más sencilla y eficaz.&lt;/p&gt;
-&lt;p&gt;Hay mucho más que aprender con respecto al desarrollo móvil, pero considero este proyecto como un paso inicial para empezar. Algún día haré las vistas que faltan para que podamos usarlas en el mundo real, pero espero que no sea porque tengamos otra pandemia 😏&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Código fuente de la API en Go: &lt;a href=&#34;https://github.com/charly3pins/fifa-gen-api&#34;&gt;https://github.com/charly3pins/fifa-gen-api&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Código fuente de la app en Flutter: &lt;a href=&#34;https://github.com/charly3pins/fifa_gen&#34;&gt;https://github.com/charly3pins/fifa_gen&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    </item>
+    <atom:link href="https://charly3pins.dev/es/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Mi configuración para una alta productividad para VS Code</title>

@@ -1,12 +1,261 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>raspberrypi on charly3pins.dev</title>
-    <link>https://charly3pins.dev/ca/tags/raspberrypi/</link>
-    <description>Recent content in raspberrypi on charly3pins.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 05 Nov 2020</lastBuildDate><atom:link href="https://charly3pins.dev/ca/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    <channel>
+        <title>raspberrypi on charly3pins.dev</title>
+        <link>https://charly3pins.dev/ca/tags/raspberrypi/</link>
+        <description>Recent content in raspberrypi on charly3pins.dev</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 05 Nov 2020</lastBuildDate>
+    
+    <atom:link href="https://charly3pins.dev/ca/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>La meva configuració per a una alta productivitat per al VS Code</title>
+      <link>https://charly3pins.dev/ca/blog/la-meva-configuraci%C3%B3-per-a-una-alta-productivitat-per-al-vs-code/</link>
+      <pubDate>Tue, 09 Mar 2021</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/la-meva-configuraci%C3%B3-per-a-una-alta-productivitat-per-al-vs-code/</guid>
+      <description>Et mostraré la meva configuració per a l&#39;editor VS Code que em fa ser més productiu i sentir-me més còmode amb l&#39;eina que passo la major part del meu temps durant el dia.</description>
+      <content>&lt;p&gt;Passo moltes hores durant el dia programant per a l&amp;rsquo;empresa en la qual treballo i durant les nits o els caps de setmana per a mi, així que vull estar còmode amb les eines que utilitzo constantment. Una d&amp;rsquo;elles és el meu editor de codi, específicament &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VS Code&lt;/a&gt;. Vaig començar amb Java i la més estesa per a ell és l&amp;rsquo;Eclipse amb totes les seves variants. Després em vaig canviar a Go i vaig ser un usuari de Sublime a tope durant varis anys fins que li vaig donar una oportunitat a VS Code. Oh sí! Des que ho vaig provar, mai vaig voler tornar enrere. Super ràpid, súper configurable, moltes extensions i MOLTS TEMES.&lt;/p&gt;
+&lt;p&gt;Llavors, després d&amp;rsquo;una llarga recerca investigant i ajustant (una història que mai acaba diria jo), vaig trobar una configuració que em fa sentir còmode, feliç i més productiu. Per això vull compartir amb vostè estimat lector, el meu tema, la meva font, els meus icones i les extensions que tinc per inspirar-lo a trobar la seva pròpia configuració ideal, a l&amp;rsquo;igual que jo ho vaig aconseguir.&lt;/p&gt;
+&lt;p&gt;El tema predeterminat que proporciona VS Code no és dolent en absolut, però li mostraré com passar d&amp;rsquo;això
+&lt;img src=&#34;https://charly3pins.dev/images/productivity-setup-vscode/vscode-default.jpeg&#34; alt=&#34;vscode default&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A aquesta increïble configuració
+&lt;img src=&#34;https://charly3pins.dev/images/productivity-setup-vscode/vscode-charly3pins.jpeg&#34; alt=&#34;vscode charly3pins&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tema&#34;&gt;Tema&lt;/h2&gt;
+&lt;p&gt;Sóc fan dels temes foscos, així que això era el primordial a trobar per a mi. He provat alguns com el &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2&#34;&gt;Cobalt2&lt;/a&gt;, &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=kohlbachjan.the-best-theme&#34;&gt;The Best Theme&lt;/a&gt; o fins i tot un més &amp;ldquo;boig&amp;rdquo; com el &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=max-SS.cyberpunk&#34;&gt;Cyberpunk&lt;/a&gt;, fins que vaig trovar l&amp;rsquo;anomenat &lt;a href=&#34;https://github.com/DHedgecock/radical-vscode/&#34;&gt;Radical&lt;/a&gt;. És simplement el perfecte per a mi. Un tema fosc, un toc futirista retro amb colors de neó subtils i la combinació de blau fosc per al fons i blau amb gris per al text juntament amb el verd, groc i rosa. Té la paleta de colors ideal per a mi.
+&lt;img src=&#34;https://raw.githubusercontent.com/DHedgecock/radical-vscode/master/assets/banner.png&#34; alt=&#34;radical theme&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;font&#34;&gt;Font&lt;/h2&gt;
+&lt;p&gt;He instal·lat la &lt;a href=&#34;https://github.com/pcaro90/hermit&#34;&gt;Hermit&lt;/a&gt; com la meva font per a l&amp;rsquo;editor. No m&amp;rsquo;agraden els lligams, així que vaig tractar de trobar una que tingués monoespai que fos clara i llegible i vaig trobar aquesta font que realment m&amp;rsquo;agradava. També l&amp;rsquo;estic fent servir en el meu terminal que probablement aviat publicaré un post sobre com el tinc configurat. A més, per als més curiosos, la mida de la font que estic fent servir és de 14.
+&lt;img src=&#34;https://charly3pins.dev/images/productivity-setup-vscode/hermit-font.jpeg&#34; alt=&#34;hermit font&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Si desitja trobar la seva font preferida, li recomano que visiti el següent lloc web &lt;a href=&#34;https://www.programmingfonts.org&#34;&gt;https://www.programmingfonts.org&lt;/a&gt;, on pot veure en una demostració en viu totes les fonts i els enllaços als seus llocs web.&lt;/p&gt;
+&lt;h2 id=&#34;icones&#34;&gt;Icones&lt;/h2&gt;
+&lt;p&gt;Anteriorment, havia instal·lat algunes extensions de Material icons, però actualment estic fent servir les icones per defecte &lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=qinjia.seti-icons&#34;&gt;Seti&lt;/a&gt; per a VS Code.
+&lt;img src=&#34;https://github.com/hellopao/vscode-seti-icons/raw/master/screenshot.png&#34; alt=&#34;seti icons&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;extensions&#34;&gt;Extensions&lt;/h2&gt;
+&lt;p&gt;Les extensions que tinc instal·lades a dia d&amp;rsquo;avui en el meu editor són les següents:
+&lt;img src=&#34;https://charly3pins.dev/images/productivity-setup-vscode/vscode-extensions.jpeg&#34; alt=&#34;extensions&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag&#34;&gt;Auto Rename Tag&lt;/a&gt;
+&lt;img src=&#34;https://github.com/formulahendry/vscode-auto-rename-tag/raw/master/images/usage.gif&#34; alt=&#34;auto rename tag&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Proporciona un gran estalvi de temps quan està treballant amb HTML o XML perquè canvia el nom de les etiquetes d&amp;rsquo;obrir / tancar al mateix temps que està editant una d&amp;rsquo;elles.&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2&#34;&gt;Bracket Pair Colorizer 2&lt;/a&gt;
+&lt;img src=&#34;https://github.com/CoenraadS/Bracket-Pair-Colorizer-2/raw/master/images/example.png&#34; alt=&#34;bracket pair colorizer 2&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ajuda molt per identificar els parells de paréntisis o claus en el seu codi, colorejant-los amb el mateix color. A més, si posa el seu cursor dins d&amp;rsquo;un bloc, veurà com li subratlla la línia d&amp;rsquo;inici i la connecta al parèntesi o clau de tancament amb una línia vertical del mateix color. Realment és molt útil!&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize&#34;&gt;Colorize&lt;/a&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/kamikillerto/vscode-colorize/master/assets/demo.gif&#34; alt=&#34;colorize&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Si el seu arxiu conté un codi de color, aquesta extensió ressaltarà aquest codi amb el color.&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code&#34;&gt;Dart&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Simplement el suport del llenguatge Dart per a l&amp;rsquo;editor.&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter&#34;&gt;Flutter&lt;/a&gt;
+&lt;img src=&#34;https://dartcode.org/images/marketplace/flutter_hot_reload.gif&#34; alt=&#34;flutter&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Simplement el suport del llenguatge Flutter per a l&amp;rsquo;editor.&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=golang.Go&#34;&gt;Go&lt;/a&gt;
+&lt;img src=&#34;https://github.com/golang/vscode-go/raw/master/docs/images/completion-signature-help.gif&#34; alt=&#34;go&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Simplement el suport del llenguatge Go per a l&amp;rsquo;editor.&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare&#34;&gt;Live Share&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Li permet editar col·laborativament amb altres en temps real, independentment dels llenguatges de programació que faci servir o els tipus d&amp;rsquo;aplicacions que estigui construint. Li permet compartir de forma instantània i segura el seu projecte actual en un nou espai de treball. Els desenvolupadors que s&amp;rsquo;uneixen a les seves sessions reben tot el seu context de l&amp;rsquo;editor del seu entorn (per exemple, serveis d&amp;rsquo;idiomes, depuració), el que garanteix que puguin començar a col·laborar de manera productiva immediatament, sense necessitat de clonar cap repositori o instal·lar qualsevol SDK.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://aka.ms/vsls/quickstart/invite&#34; alt=&#34;live share&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=dhedgecock.radical-vscode&#34;&gt;Radical&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;El tema ja explicat en la seva secció.&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight&#34;&gt;TODO Highlight&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Destaca els TODOs dins d&amp;rsquo;el codi per fer-los més visibles una vegada que está llegint el codi.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/wayou/vscode-todo-highlight/raw/master/assets/material-night-eighties.png&#34; alt=&#34;todo highlight&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree&#34;&gt;Todo Tree&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Mostra els TODO i FIXME en una vista d&amp;rsquo;arbre en el panell de l&amp;rsquo;Explorador. Al fer clic en un TODO dins de l&amp;rsquo;arbre, s&amp;rsquo;obrirà l&amp;rsquo;arxiu i li col·locarà el cursor a la línia que contingui el TODO.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Gruntfuggly/todo-tree/master/resources/screenshot.png&#34; alt=&#34;todo tree&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=zxh404.vscode-proto3&#34;&gt;vscode-proto3&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Simplement el suport del llenguatge proto3 per a l&amp;rsquo;editor.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/zxh0/vscode-proto3/raw/master/images/gif1.gif&#34; alt=&#34;vscode proto3&#34;&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Crei un README increïble pel su perfil de GitHub</title>
+      <link>https://charly3pins.dev/ca/blog/crei-un-readme-incre%C3%AFble-pel-su-perfil-de-github/</link>
+      <pubDate>Fri, 12 Feb 2021</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/crei-un-readme-incre%C3%AFble-pel-su-perfil-de-github/</guid>
+      <description>Passos ràpids i senzills per crear un portfoli a la seva pàgina de perfil de GitHub amb un repositori especial i amb estadístiques dinàmiques de GitHub.</description>
+      <content>&lt;p&gt;GitHub va llançar una &lt;a href=&#34;https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme&#34;&gt;nova funcionalitat&lt;/a&gt; que permet als usuaris crear un portfoli usant un &lt;code&gt;README&lt;/code&gt; en un repositori especial amb el mateix nom que el nom d&amp;rsquo;usuari i mostrar-lo en el perfil de l&amp;rsquo;usuari com la imatge de portada d&amp;rsquo;aquesta publicació. Aquest article explica com crear aquest repositori pas a pas i afegeix alguns consells i trucs que pot utilitzar per modificar el seu.&lt;/p&gt;
+&lt;h2 id=&#34;com-crear-el-fitxer-readme-pel-meu-perfil&#34;&gt;Com crear el fitxer README pel meu perfil?&lt;/h2&gt;
+&lt;p&gt;Com he comentat abans, el README del perfil es crea quan l&amp;rsquo;usuari crea un nou repositori amb el mateix nom que el seu nom d&amp;rsquo;usuari. Per exemple, el meu nom d&amp;rsquo;usuari de GitHub és charly3pins, així que he creat un nou repositori anomenat &lt;code&gt;charly3pins&lt;/code&gt;. Els passos són els següents:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Crear un nou repositori amb el mateix nom que el nom d&amp;rsquo;usuari de GitHub anant &lt;a href=&#34;https://github.com/new&#34;&gt;aquí&lt;/a&gt;. Marcar  l&amp;rsquo;opció &lt;code&gt;Afegir un arxiu README&lt;/code&gt;.
+&lt;img src=&#34;https://charly3pins.dev/images/github-profile-readme/new-repo.png&#34; alt=&#34;crear repositori&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Obriu el fitxer README.md generat i veurà la següent plantilla:
+&lt;img src=&#34;https://charly3pins.dev/images/github-profile-readme/repo-template.png&#34; alt=&#34;plantilla de repositori&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Descomentar els comentaris i afegir contingut com a text, GIF, imatges, emojis, etc. El que es vulgui mentre sigui acceptat per Markdown&amp;hellip; No hi ha límit! 🚀  Consultar &lt;a href=&#34;https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf&#34;&gt;aquest&lt;/a&gt; Full de referència de Markdown si es necessita repassar la sintaxi de Markdown.&lt;/li&gt;
+&lt;li&gt;Comittejar el nou arxiu README. Recordar que els canvis han d&amp;rsquo;estar en la branca &lt;code&gt;master&lt;/code&gt; o&lt;code&gt; main&lt;/code&gt;; en cas contrari, no seran visibles en el perfil fins que mergee els canvis en una d&amp;rsquo;aquestes dues branques.&lt;/li&gt;
+&lt;li&gt;Pusheejar els canvis a GitHub (si s&amp;rsquo;han realitzat localment).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;sigues-creatiu&#34;&gt;Sigues creatiu&lt;/h2&gt;
+&lt;p&gt;Pot consultar el meu &lt;a href=&#34;https://github.com/charly3pins&#34;&gt;perfil de GitHub&lt;/a&gt; i el &lt;a href=&#34;https://github.com/charly3pins/charly3pins&#34;&gt;repositori&lt;/a&gt; que allotja el meu arxiu README. He afegit les meves estadístiques dinàmiques de GitHub usant &lt;a href=&#34;https://github.com/anuraghazra/github-readme-stats&#34;&gt;aquest&lt;/a&gt; repositori, hi ha molta més informació que es pot afegir als perfils. També he fet servir &lt;a href=&#34;https://shields.io/&#34;&gt;aquest&lt;/a&gt; lloc per fer les insígnies de les xarxes socials i les tecnologies i eines.
+La meva recomanació és donar un cop d&amp;rsquo;ull al repositori &lt;a href=&#34;https://github.com/abhisheknaiidu/awesome-github-profile-readme&#34;&gt;següent&lt;/a&gt; per veure diversos perfils de GitHub i obtenir una mica d&amp;rsquo;inspiració.
+No dubtis a comentar aquí o contactar-me en les meves xarxes socials per a qualsevol comentari, pregunta o suggeriment.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Com tenir un lloc multilingüe a Hugo</title>
+      <link>https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiling%C3%BCe-a-hugo/</link>
+      <pubDate>Fri, 05 Feb 2021</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiling%C3%BCe-a-hugo/</guid>
+      <description>Conegueu les configuracions i els trucs per convertir el vostre lloc d&#39;un sol idioma en Hugo a un lloc multilingüe en només uns quants passos.</description>
+      <content>&lt;p&gt;Com es pot apreciar des d&amp;rsquo;aquesta setmana aquesta humil pàgina web s&amp;rsquo;ha remodelat una mica tant visualment com internament, i és que no només hi ha nous colors, imatges i seccions, sinó que també ofereix tot el seu contingut en 2 nous idiomes! M&amp;rsquo;he decidit a fer aquest pas perquè primer de tot volia provar com funcionava el tema dels multiidiomes en Hugo i també per intentar fer més còmoda la lectura dels articles a la gent que la visita, sense que l&amp;rsquo;idioma fos un obstacle i oferint el major confort i plaer als lectors.&lt;/p&gt;
+&lt;p&gt;Els idiomes com podeu veure a la barra superior són el Castellà i el Català. Així que per canviar l&amp;rsquo;idioma en el que esteu veient la pàgina, és tan senzill com escollir al gestor quin idioma prefereixes i automàticament es traduirà tot. Si trobeu alguna errada en la traducció o algun lloc que no està traduïda per favor Poseu-me un comentari en el post en qüestió o comenta-pels meus xarxes socials (links a la part baixa de la web).&lt;/p&gt;
+&lt;p&gt;Després d&amp;rsquo;aquesta &amp;ldquo;xapa&amp;rdquo;, veurem com es podeu tenir els vostres llocs en Hugo en diversos idiomes de forma fàcil, senzilla i per a tota la família. Som-hi!&lt;/p&gt;
+&lt;h2 id=&#34;configura-idiomes&#34;&gt;Configura Idiomes&lt;/h2&gt;
+&lt;p&gt;El primer que cal fer per tenir un lloc multilingüe, és definir en el &lt;code&gt;config.toml&lt;/code&gt; els idiomes que es volen oferir. En el meu cas he decidit anglès, castellà i català de la manera següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;[&lt;span class=&#34;nx&#34;&gt;Languages&lt;/span&gt;]&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;[&lt;span class=&#34;nx&#34;&gt;Languages&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;en&lt;/span&gt;]&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;languageName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;English&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;weight&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;[&lt;span class=&#34;nx&#34;&gt;Languages&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;es&lt;/span&gt;]&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;languageName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Spanish&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;weight&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;[&lt;span class=&#34;nx&#34;&gt;Languages&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;ca&lt;/span&gt;]&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;languageName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Catalan&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;weight&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El &lt;code&gt;languageName&lt;/code&gt; s&amp;rsquo;utilitza per definir el text que es veurà a la web al comprovar quins idiomes hi ha disponibles. Spoiler alert! Més endavant veurem com traduir també aquests textos.&lt;/p&gt;
+&lt;h2 id=&#34;menús&#34;&gt;Menús&lt;/h2&gt;
+&lt;p&gt;Per traduir els menús en els diferents idiomes s&amp;rsquo;han de declarar de la forma següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;[[&lt;span class=&#34;nx&#34;&gt;languages&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;en&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;menu&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;]]&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;home&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;[[&lt;span class=&#34;nx&#34;&gt;languages&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;en&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;menu&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;]]&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;about me&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/about&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;[[&lt;span class=&#34;nx&#34;&gt;languages&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;es&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;menu&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;]]&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;inicio&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;[[&lt;span class=&#34;nx&#34;&gt;languages&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;es&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;menu&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;]]&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sobre mí&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/about&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;[[&lt;span class=&#34;nx&#34;&gt;languages&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;ca&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;menu&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;]]&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;inici&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;[[&lt;span class=&#34;nx&#34;&gt;languages&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;ca&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;menu&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;]]&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sobre mi&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/about&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;contingut&#34;&gt;Contingut&lt;/h2&gt;
+&lt;p&gt;Si per exemple volem traduir la pàgina &lt;code&gt;Sobre mí&lt;/code&gt;, podem fer-ho simplement amb replicar aquest fitxer tantes vegades com idiomes tinguem, en aquest cas 3, afegint l&amp;rsquo;ISO de l&amp;rsquo;idioma en el nom de la següent manera:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;sr&#34;&gt;/content/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;about&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;en&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;md&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/content/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;about&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;es&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;md&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/content/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;about&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;ca&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;md&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el nostre cas l&amp;rsquo;idioma anglès és el per defecte, de manera que fins i tot podríem fer-ho tal que així:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;sr&#34;&gt;/content/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;about&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;md&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/content/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;about&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;es&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;md&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/content/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;about&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;ca&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;md&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;contingut-traduït&#34;&gt;Contingut traduït&lt;/h2&gt;
+&lt;p&gt;Per trobar les traduccions de la pàgina en concret es pot fer servir el tros de codi proporcionat en la documentació oficial:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;IsTranslated&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;H4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i18n&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;translations&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Range&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Translations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;{{ .Permalink }}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{{.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Lang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{{.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;IsPage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;({{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i18n&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;wordCount&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.}})&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;End&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;End&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A la plantilla on inserim aquest codi, un cop es renderitzi el contingut per aquesta, apareixerà si hi ha traducció o no d&amp;rsquo;aquest contingut.&lt;/p&gt;
+&lt;h2 id=&#34;traducció-de-textos&#34;&gt;Traducció de textos&lt;/h2&gt;
+&lt;p&gt;En el codi anterior ja podem veure que apareix la funció &lt;code&gt;i18n&lt;/code&gt; que Hugo utilitza per traduir els textos definits en els arxius d&amp;rsquo;idiomes dins el directori arrel com &lt;code&gt;/ i18n&lt;/code&gt;. El format dels arxius de dins ha de ser per exemple:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;i18n&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;en&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;toml&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i18n&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;es&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;toml&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i18n&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;ca&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;toml&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per a cada idioma anteriorment descrit respectivament.&lt;/p&gt;
+&lt;p&gt;El contingut de l&amp;rsquo;arxiu serà semblant a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;readMore&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;other&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Llegir més&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per l&amp;rsquo;arxiu en anglès.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;readMore&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;other&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Llegir més&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per l&amp;rsquo;arxiu en castellà.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;readMore&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;other&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Llegir més&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per l&amp;rsquo;arxiu en català.&lt;/p&gt;
+&lt;p&gt;Un cop definida la traducció per &lt;code&gt;Llegir més&lt;/code&gt;, s&amp;rsquo;utilitza en la nostra plantilla d&amp;rsquo;Hugo com:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i18n&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;readMore&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I el resultat serà el text definit en els &lt;code&gt;.toml&lt;/code&gt; segons l&amp;rsquo;idioma escollit per l&amp;rsquo;usuari per veure la pàgina web.&lt;/p&gt;
+&lt;h2 id=&#34;traducció-singular-io-plural&#34;&gt;Traducció singular i/o plural&lt;/h2&gt;
+&lt;p&gt;Es poden definir traduccions singulars o plurals depenent d&amp;rsquo;un &amp;ldquo;comptador&amp;rdquo;, ja que la funció &lt;code&gt;i18n&lt;/code&gt; ofereix aquesta possibilitat. Per exemple per al &lt;code&gt;Temps de lectura&lt;/code&gt; d&amp;rsquo;un article, podem definir-lo tal que així en el &lt;code&gt;.toml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;readingTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;one&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;One minute to read&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;other&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;{{.Count}} minutes to read&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Veiem que li passem el &lt;code&gt;.Count&lt;/code&gt; a la traducció pel que haurem de invocar la funció de la següent manera:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i18n&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;readingTime&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ReadingTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Nota: la propietat &lt;code&gt;.ReadingTime&lt;/code&gt; és un comptador que retorna Hugo segons el nombre de paraules dels articles que creiem.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;referències&#34;&gt;Referències&lt;/h2&gt;
+&lt;p&gt;Per a més detalls consulteu la pàgina oficial de la &lt;a href=&#34;https://gohugo.io/content-management/multilingual/&#34;&gt;documentació d&amp;rsquo;Hugo&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Com afegir Google Analytics al vostre lloc amb Hugo</title>
+      <link>https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/</link>
+      <pubDate>Mon, 23 Nov 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/</guid>
+      <description>Tutorial ràpid sobre com integrar Google Analytics en un lloc web Hugo.</description>
+      <content>&lt;h2 id=&#34;google-analytics&#34;&gt;Google Analytics&lt;/h2&gt;
+&lt;p&gt;En primer lloc, el que necessiteu és obtenir un identificador de seguiment de Google Analytics. Per a això, cal que us inscriviu a &lt;a href=&#34;https://analytics.google.com/analytics/web/&#34;&gt;Google Analytics&lt;/a&gt;. A continuació, heu de crear un identificador de seguiment seguint els passos següents:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feu clic al botó &lt;code&gt;Admin&lt;/code&gt; (a l&amp;rsquo;extrem inferior esquerre).&lt;/li&gt;
+&lt;li&gt;Feu clic al botó &lt;code&gt;Create Account&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Després de completar tots els passos, feu clic al botó &lt;code&gt;Create&lt;/code&gt; i accepteu els termes i condicions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Després de completar aquests passos, obtindreu el vostre identificador de seguiment. Copieu-lo per afegir-lo al vostre lloc Hugo més endavant.&lt;/p&gt;
+&lt;h2 id=&#34;configuració-hugo&#34;&gt;Configuració Hugo&lt;/h2&gt;
+&lt;p&gt;Ara és el torn d&amp;rsquo;afegir l&amp;rsquo;identificador de seguiment al vostre lloc.
+La forma més senzilla de fer-ho és mitjançant la &lt;a href=&#34;https://gohugo.io/templates/internal/#google-analytics&#34;&gt;plantilla interna d&amp;rsquo;Hugo&lt;/a&gt; proporcionada per Hugo. Només cal afegir una nova variable anomenada &lt;code&gt;googleAnalytics&lt;/code&gt; amb el &lt;code&gt;tracking ID&lt;/code&gt; obtingut del pas anterior del vostre &lt;code&gt;config.toml&lt;/code&gt;, com ara:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;googleAnalytics&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;UA-123-45&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El següent pas és afegir el fragment de codi següent al vostre lloc:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;{{ &lt;span class=&#34;nx&#34;&gt;template&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;_internal/google_analytics.html&amp;#34;&lt;/span&gt; . }}&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Heu de buscar la plantilla parcial &lt;code&gt;head&lt;/code&gt; i afegir-la dins de les etiquetes &lt;code&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;comprovació-de-la-integració&#34;&gt;Comprovació de la integració&lt;/h2&gt;
+&lt;p&gt;Abans de passar-ho a la producció, podeu provar-lo executant el vostre lloc localment realitzant l&amp;rsquo;ordre següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;hugo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;serve&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;L&amp;rsquo;URL per defecte a localhost és &lt;code&gt;http://localhost:1313&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Obriu de nou o actualitzeu &lt;a href=&#34;https://analytics.google.com/analytics/web/&#34;&gt;Google Analytics&lt;/a&gt; en una pestanya diferent.&lt;/p&gt;
+&lt;p&gt;Consulteu el tauler i podríeu veure el número a la secció Usuaris actius ara mateix com 1 com la imatge següent:
+&lt;img src=&#34;https://charly3pins.dev/images/google-analytics-active-users.png&#34; alt=&#34;active-users&#34;&gt;&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Reproductor multimèdia a un Raspberry Pi amb Plex, Transmission, Sonarr, Bazarr i Jackett</title>
       <link>https://charly3pins.dev/ca/blog/reproductor-multim%C3%A8dia-a-un-raspberry-pi-amb-plex-transmission-sonarr-bazarr-i-jackett/</link>
@@ -284,6 +533,570 @@
 &lt;p&gt;En una publicació futura probablement intenti Dockerize tota aquesta configuració i inclouré Radarr, o no&amp;hellip; ja ho veurem 🧑‍🚀&lt;/p&gt;
 &lt;p&gt;Espero que us hagi agradat i si teniu dubtes, contacteu amb mi a qualsevol xarxa social.&lt;/p&gt;
 </content>
+    </item>
+    
+    <item>
+      <title>Comprensió de la Versió Semàntica 2.0 (SemVer)</title>
+      <link>https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/</link>
+      <pubDate>Tue, 20 Oct 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/comprensi%C3%B3-de-la-versi%C3%B3-sem%C3%A0ntica-2.0-semver/</guid>
+      <description>Què és la versió semàntica? Per què és important utilitzar-lo en els vostres projectes com a desenvolupador? Què significa per a un usuari que utilitza la vostra biblioteca?</description>
+      <content>&lt;p&gt;Quan vulgueu utilitzar una biblioteca al vostre projecte, probablement haureu notat que cal especificar una versió. La majoria de les vegades, aquestes versions tenen el format de 3 nombres separats amb punts entre ells. Aquest format és indicatiu que la biblioteca utilitza el &lt;a href=&#34;https://semver.org&#34;&gt;Versió semàntica&lt;/a&gt; també conegut com SemVer. Aquest document especifica el format i la forma d’etiquetar els vostres projectes durant tot el cicle de vida dels mateixos. És només una convenció perquè pugueu definir el número de versió tal com vulgueu, però el cert és que altres desenvolupadors de totes les indústries van acordar utilitzar-lo i es va convertir en un estàndard per a la versió.&lt;/p&gt;
+&lt;p&gt;L’objectiu és tenir diferents versions del paquet seguint la regla que cada vegada que actualitzeu el paquet, actualitzeu la versió. Amb això, el que s&amp;rsquo;aconsegueix és tenir un nom i una versió únics per a cada paquet públic. Per utilitzar SemVer, heu de declarar una API pública. Això es deu al fet que la versió de versions proposada es basa en els canvis respecte a la versió anterior de l&amp;rsquo;API, de manera que si no n&amp;rsquo;especifiqueu cap (fins i tot codificada o només documentada) no és possible aplicar aquestes regles.&lt;/p&gt;
+&lt;p&gt;El format del SemVer és l’esmentat abans de 3 números separats amb un punt entre ells:
+&lt;code&gt;MAJOR.MINOR.PATCH&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;La forma d’incrementar cada número es descriu al document. Com a resum:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Les noves funcions amb versions de comportament incompatibles (trenca l&amp;rsquo;API) augmenten la MAJOR;&lt;/li&gt;
+&lt;li&gt;Les noves funcions compatibles amb la versió anterior (no trenca l&amp;rsquo;API) augmenten el MINOR;&lt;/li&gt;
+&lt;li&gt;Les correccions d&amp;rsquo;errors augmenten el PATCH;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NOTA: El desenvolupament inicial utilitza una versió principal 0.
+NOTA2: Quan s&amp;rsquo;incrementa el MENOR, el PATCH es restableix a 0; Quan s&amp;rsquo;incrementa el valor MAJOR, el MENOR i el PATCH es restableixen a 0.&lt;/p&gt;
+&lt;p&gt;Com a cas especial, podeu utilitzar les versions prèvies a la versió. Es denoten afegint un guionet i les següents cadenes acceptades a nivell mundial:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;alpha;&lt;/li&gt;
+&lt;li&gt;beta;&lt;/li&gt;
+&lt;li&gt;rc (release candidates);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Seguit del número de versió necessari. Per tant, les versions anteriors al llançament haurien de seguir un ordre similar com:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.0.0-alpha&lt;/li&gt;
+&lt;li&gt;1.0.0-alpha-1&lt;/li&gt;
+&lt;li&gt;1.0.0-beta&lt;/li&gt;
+&lt;li&gt;1.0.0-beta.2&lt;/li&gt;
+&lt;li&gt;1.0.0-beta.10&lt;/li&gt;
+&lt;li&gt;1.0.0-rc.1&lt;/li&gt;
+&lt;li&gt;1.0.0-rc.40&lt;/li&gt;
+&lt;li&gt;1.0.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NOTA: Una API es considera publicada a partir del 1.0.0.&lt;/p&gt;
+&lt;p&gt;Quan vulgueu utilitzar el SemVer, podeu especificar una versió exacta o no. Per a això, podeu utilitzar les eines següents:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Si voleu una versió exacta, indiqueu la dependència amb: X.Y.Z;&lt;/li&gt;
+&lt;li&gt;Si voleu utilitzar la versió actual o versions superiors, fins i tot amb canvis de ruptura a l&amp;rsquo;API, podeu utilitzar el tipus &lt;code&gt;&amp;gt;&lt;/code&gt; com:&amp;gt; X.Y.Z;&lt;/li&gt;
+&lt;li&gt;Si voleu tenir la versió actual o actualitzada, però amb compatibilitats anteriors, podeu utilitzar el format &lt;code&gt;^&lt;/code&gt; com: ^ X.Y.Z (on es fixa X);&lt;/li&gt;
+&lt;li&gt;Si voleu tenir la versió actual o actualitzada només amb correccions d&amp;rsquo;errors amb canvis de nivell menor, podeu utilitzar el tipus &lt;code&gt;~&lt;/code&gt; com: ~ X.Y.Z (on es fixen X i Y);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Per tant, després de llegir aquest article com a desenvolupador que utilitza la biblioteca d&amp;rsquo;un altre, podeu saber quin tipus de canvis van fer quan us van presentar la nova versió seguint les regles descrites anteriorment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nova versió 0.2.3 → Els canvis poden ser només correccions d&amp;rsquo;errors;&lt;/li&gt;
+&lt;li&gt;Nova versió 0.5.0 → S&amp;rsquo;han afegit algunes funcionalitats, però compatibles amb l&amp;rsquo;API;&lt;/li&gt;
+&lt;li&gt;Nova versió 5.0.0 → Pot ser que hi hagi un problema perquè va introduir canvis trencats amb l&amp;rsquo;API;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Com a conclusió, l’avantatge d’utilitzar SemVer contra no:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compatibilitat / dependències més clares;&lt;/li&gt;
+&lt;li&gt;Fomenta les API ben definides;&lt;/li&gt;
+&lt;li&gt;Aclareix les decisions d’actualització;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Pujeu de nivell les vostres presentacions amb Go</title>
+      <link>https://charly3pins.dev/ca/blog/pujeu-de-nivell-les-vostres-presentacions-amb-go/</link>
+      <pubDate>Tue, 06 Oct 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/pujeu-de-nivell-les-vostres-presentacions-amb-go/</guid>
+      <description>Genera fàcilment les teves presentacions amb &#34;present&#34;, l&#39;eina impulsada per Go que genera i renderitza les teves diapositives.</description>
+      <content>&lt;p&gt;Si sou una persona tècnica i no us agrada lluitar amb els programes de presentació però voleu / necessiteu crear-ne un, enhorabona! estàs al lloc correcte. Sé que, com a enginyers de programari, volem codificar, llegir o mirar coses relacionades amb programari, arquitectura o devops, però no amb presentacions. De vegades, se’ns exigeix ​​que presentem alguna cosa a altres membres de l’equip, als propietaris de productes o fins i tot més aterridors, a l’equip directiu.&lt;/p&gt;
+&lt;p&gt;Per aquest motiu, vull presentar-vos el paquet Go &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present&#34;&gt;present&lt;/a&gt;. S&amp;rsquo;utilitza per crear diapositives a Golang allotjades a discussions.golang.org o a la vostra privada. L’he utilitzat diverses vegades, sobretot quan vull compartir alguna cosa amb els meus companys de l’equip (algun codi, és clar), perquè no vull perdre el temps amb els programes. Acabo de crear el projecte per a les diapositives, afegeixo les meves diapositives a la marca, afegeixo les imatges necessàries i les presento. Vegem detalladament com funciona!&lt;/p&gt;
+&lt;p&gt;Suposant que teniu Go &lt;a href=&#34;https://golang.org/doc/install&#34;&gt;instal·lat&lt;/a&gt; i configurat correctament, tot el que heu d’instal·lar és el paquet amb la comanda següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;go&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;get&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;u&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;golang&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;org&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/x/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;tools&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;present&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Comproveu si funciona escrivint:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;present&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hauria de mostrar un missatge similar a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;m&#34;&gt;2020&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/10/&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;23&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;23&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;54&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Open&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;your&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;web&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;browser&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;visit&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;3999&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per tant, podeu visitar l’enllaç i veure el servidor local preparat per allotjar les vostres presentacions. Increïble o no? D’acord, sé que voleu mostrar alguna cosa que no sigui un directori buit, així que anem a crear un exemple de presentació per a això.&lt;/p&gt;
+&lt;h2 id=&#34;format&#34;&gt;Format&lt;/h2&gt;
+&lt;p&gt;Creeu un directori per a les diapositives:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;go&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;present&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;example&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;go&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;present&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;example&lt;/span&gt;/&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Creeu la primera diapositiva:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;vim&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;initial&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;slide&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I afegiu el següent contingut:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Learning Go present
+6 October 2020
+
+Crash Bandicoot
+crash.bandicoot@gmail.com
+
+* Hello World
+
+I&#39;m a slide
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Per tant, si torneu a executar la comanda &lt;code&gt;present&lt;/code&gt; dins de la vostra carpeta i aneu de nou al navegador hauríeu de poder veure la pantalla següent:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/initial-slide.jpeg&#34; alt=&#34;initial slide&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Feu clic a l’enllaç &lt;code&gt;initial.slide&lt;/code&gt; i admireu la vostra presentació.
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/initial-presentation.jpeg&#34; alt=&#34;initial presentation&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Com podeu veure, la primera línia és el títol, la segona la data i després la segueix l’autor. A la segona diapositiva, en realitat la primera, apareix el títol de la diapositiva i el text d’aquesta. L&amp;rsquo;últim mostra un títol d&amp;rsquo;agraïment i el vostre nom i contacte (correu electrònic, twitter, etc.) que heu afegit a la diapositiva. Vegeu-ho a continuació:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/end-presentation.jpeg&#34; alt=&#34;end presentation&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sintaxi-heretat-de-present&#34;&gt;Sintaxi heretat de present&lt;/h2&gt;
+&lt;p&gt;És compatible amb Markdown, però aquí explorarem la &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present#hdr-Legacy_Present_Syntax&#34;&gt;sintaxi heretat de present&lt;/a&gt;, ja que el Markdown té molts recursos on podeu comprovar . Així que explorem una mica les funcions que ofereix &amp;ldquo;present&amp;rdquo; per formatar i mostrar text a les nostres diapositives.&lt;/p&gt;
+&lt;p&gt;Primer són les opcions clàssiques per formatar el text:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;normal vs `highlighted`
+*bold*
+_italic_
+*multiple*bold*text*
+_multiple_italic_text_
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I el resultat és:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/text-formatting.jpeg&#34; alt=&#34;text formatting&#34;&gt;&lt;/p&gt;
+&lt;p&gt;També pot afegir una llista:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;Grocery list for the gopher:
+
+- go routines
+- garbage collector
+- Rust
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/text-formatting-list.jpeg&#34; alt=&#34;text formatting list&#34;&gt;&lt;/p&gt;
+&lt;p&gt;O un nivell diferent de subseccions així:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;** Subsection
+
+Gopher is diving the subsection.
+
+*** Sub-subsection
+
+Another Gopher is diving more into the sub-subsection!
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I veureu la diapositiva com aquesta bogeria:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/text-formatting-subsections.jpeg&#34; alt=&#34;text formatting subsections&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/gophers.gif&#34; alt=&#34;gophers&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;invocacions-de-comandes&#34;&gt;Invocacions de comandes&lt;/h2&gt;
+&lt;p&gt;A part del format de text, hi ha una &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present#hdr-Command_Invocations&#34;&gt;invocacions de comandes especials&lt;/a&gt; que podeu invocar per portar la vostra presentació a un altre nivell.&lt;/p&gt;
+&lt;h3 id=&#34;imatges-i-vídeos&#34;&gt;imatges i vídeos&lt;/h3&gt;
+&lt;p&gt;La comanda &lt;code&gt;.image&lt;/code&gt; injecta una imatge a la diapositiva. Accepta 1 o 3 arguments (nom, alçada, amplada). El nom és obligatori, altres dos han d&amp;rsquo;estar presents o substituïts per un &lt;code&gt;_&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.image /images/gopher.jpeg 200 200
+.image /images/gopher.jpeg _ 300
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/images.jpeg&#34; alt=&#34;images&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Igual que les imatges, podeu fer el mateix amb un vídeo mitjançant la comanda &lt;code&gt;.video&lt;/code&gt;. Accepta 2 o 4 arguments (nom, tipus de contingut del fitxer, alçada, amplada). El nom i el tipus de contingut del fitxer són obligatoris; altres dos han d’estar presents o substituïts per i &lt;code&gt;_&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.video videos/gopher-dance.mp4 video/mp4 400 600
+.video videos/gopher-dance.mkv video/mkv 500 _
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De manera similar a les imatges, també té la comanda &lt;code&gt;.background&lt;/code&gt; per configurar la imatge de fons d&amp;rsquo;una diapositiva. Només té un argument com a nom de fitxer de la imatge.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.background images/susan.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;enllaços&#34;&gt;enllaços&lt;/h3&gt;
+&lt;p&gt;Si heu d&amp;rsquo;inserir un enllaç a la presentació, podeu utilitzar la comanda &lt;code&gt;.link&lt;/code&gt;. Accepta 1 o 2 arguments (URL HTTP, etiqueta de text). L&amp;rsquo;URL HTTP és obligatori, el segon és opcional.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.link https://charly3pins.dev charly3pins website
+.link https://charly3pins.dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/links.jpeg&#34; alt=&#34;links&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;codi&#34;&gt;codi&lt;/h3&gt;
+&lt;p&gt;La millor comanda en la meva opinió és la de &lt;code&gt;.code&lt;/code&gt;. Us permet posar codi extret dels fitxers font i injectar-los com a blocs &lt;!-- raw HTML omitted --&gt; escapats per HTML. Accepta un argument com a nom de fitxer seguit d’una adreça opcional que especifica quina secció del fitxer es mostrarà.&lt;/p&gt;
+&lt;p&gt;Per exemple, prenent Hello world a Go com a codi font:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hem d’especificar com a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.code hello.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I es mostrarà així:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code.jpeg&#34; alt=&#34;code&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Però, què passa si voleu ressaltar alguna part del codi? No us preocupeu, present té aquest &amp;ldquo;present&amp;rdquo; i podeu afegir-hi les &amp;ldquo;adreces opcionals&amp;rdquo; que hem comentat a continuació. Per tant, modifiqueu el codi així per ressaltar la trucada &lt;code&gt;Printf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// HL
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I utilitzeu la mateixa comanda a la diapositiva:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.code hello-hl.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per veure el codi ressaltat:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-hl.jpeg&#34; alt=&#34;code-hl&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Un pas més! Si només voleu mostrar una part del vostre codi, per exemple, amagar el paquet i les importacions del fitxer, també podeu afegir els fragments següents:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;//START OMIT
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// HL
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//END OMIT
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Torneu a utilitzar la mateixa ordre però afegint el fragment següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.code hello-hl-partial.go /START OMIT/,/END OMIT/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I vegeu el codi parcialment mostrat:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-hl-partial.jpeg&#34; alt=&#34;code-hl-partial&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;play&#34;&gt;play&lt;/h4&gt;
+&lt;p&gt;Aquesta ordre és superpotent per ajudar-vos a presentar algun codi i ressaltar o amagar algunes parts. Però l’espectacle ha de continuar i la millor part és la següent. La comanda &lt;code&gt;.play&lt;/code&gt; és com el del &lt;code&gt;.code&lt;/code&gt;, però posa un botó a la font descatalogada i podeu executar el programa des del navegador. És màgia o no?
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/magic.gif&#34; alt=&#34;magic&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Utilitzem el mateix codi font que estem utilitzant i afegim la nova ordre a les diapositives així:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.play hello.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Apareixerà com el del &amp;ldquo;codi&amp;rdquo;, però si observeu a l&amp;rsquo;extrem inferior dret, apareixerà un petit botó &lt;code&gt;Run&lt;/code&gt;.
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-play.jpeg&#34; alt=&#34;code-play&#34;&gt;&lt;/p&gt;
+&lt;p&gt;En executar el codi es mostrarà una petita finestra negra a la pantalla on es mostrarà la sortida del codi:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-played.jpeg&#34; alt=&#34;code-played&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;notes-del-presentador&#34;&gt;Notes del presentador&lt;/h2&gt;
+&lt;p&gt;Per últim, però no menys important, és una cosa interessant que també proporcionen. És ben sabut que als programes de PowerPoint o similars podeu afegir les vostres notes només per a vosaltres quan presenteu la presentació i de vegades són molt útils. Així doncs, &amp;ldquo;present&amp;rdquo; també ho té en compte i podeu afegir les vostres notes de presentació només afegint un &lt;code&gt;:&lt;/code&gt; al començament de la frase i aquest text es tractarà com una nota de presentador.&lt;/p&gt;
+&lt;p&gt;Per exemple:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;* Presenter notes
+
+The gophers like to eat a lot.
+
+: they eat more than half their body weight in food each day
+
+They eat basically plants.
+
+: typically gnaws the roots of a plant just beneath the soil, so the damage isn’t seen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/present-notes.jpeg&#34; alt=&#34;present-notes&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Com podeu veure, les notes no hi són presents, per què? Perquè necessiteu executar la presentació en un &amp;ldquo;presentador&amp;rdquo; així.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;present&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;notes&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I hauria de mostrar un missatge similar a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;m&#34;&gt;2020&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/10/&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;23&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;23&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;54&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Open&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;your&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;web&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;browser&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;visit&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;3999&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2020&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/10/&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Notes&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;are&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;enabled&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;press&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;N&amp;#39;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;browser&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;display&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;them&lt;/span&gt;.&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per tant, si actualitzeu el navegador amb la presentació i premeu &lt;code&gt;N&lt;/code&gt;, veureu una finestra emergent que mostra les notes de cada diapositiva a la part inferior de la manera següent:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/present-notes-popup.jpeg&#34; alt=&#34;present-notes-popup&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusió&#34;&gt;Conclusió&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;eina &lt;code&gt;present&lt;/code&gt; és molt útil per a presentacions tècniques, especialment en Go. Té limitacions com el format de les diapositives i el posicionament de la imatge de vegades difícil, però en general és un paquet fantàstic i per a mi és l&amp;rsquo;estàndard de totes les meves presentacions. Si voleu aprofundir en aquest paquet, consulteu la &lt;a href=&#34;https://godoc.org/golang.org/x/tools/present&#34;&gt;documentació oficial&lt;/a&gt; i també us recomanaria la &lt;a href=&#34;https://discussions.golang.org/2012/insidepresent.slide#1&#34;&gt;presentació&lt;/a&gt;: &lt;code&gt;Inside the &amp;quot;present&amp;quot; tool&lt;/code&gt; d&amp;rsquo;Andrew Gerrand. També he penjat el codi font d’aquest tutorial a &lt;a href=&#34;https://github.com/charly3pins/go-present-example&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Missatges de commit personalitzats de Git</title>
+      <link>https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/</link>
+      <pubDate>Tue, 10 Mar 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/missatges-de-commit-personalitzats-de-git/</guid>
+      <description>Genera missatges de commit personalitzats per al vostre repositori i estandarditzeu el registre de commits.</description>
+      <content>&lt;p&gt;He estat utilitzant l&amp;rsquo;eina &lt;a href=&#34;https://github.com/walmartdigital/commit-message-formatter&#34;&gt;CMF&lt;/a&gt; durant l&amp;rsquo;últim any i crec que la seva simplicitat és el seu potencial. Bàsicament és una eina terminal desenvolupada a Go by &lt;a href=&#34;https://github.com/walmartdigital&#34;&gt;Walmart Digital&lt;/a&gt; que us ajuda a normalitzar el registre de compromisos dels vostres projectes.&lt;/p&gt;
+&lt;p&gt;He estat utilitzant durant l&amp;rsquo;últim any i mig aproximadament i tot el que puc dir és molt útil. Vam acordar amb l&amp;rsquo;equip la configuració que volem utilitzar i vam definir un conjunt de canvis que s&amp;rsquo;apliquen en el nostre cas. També escollim el &lt;a href=&#34;https://github.com/walmartdigital/commit-message-formatter#jira-flow&#34;&gt;Jira flow&lt;/a&gt; i varem canviar els valors del &amp;ldquo;canvi&amp;rdquo; afegint un emojis per fer que els compromisos siguin una mica més divertits per comprovar-los al registre.&lt;/p&gt;
+&lt;p&gt;Podeu instal·lar-lo mitjançant npm:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;g&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;go&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cmf&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;o des de Go:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;go&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;github&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/walmartdigital/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;commit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;formatter&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Després, obriu un terminal i aneu a l&amp;rsquo;arrel del projecte que vulgueu utilitzar. A continuació, escriviu:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;cmf&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;init&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Haureu de seleccionar un dels fluxos i crearà un fitxer &lt;code&gt;.cmf.yaml&lt;/code&gt; amb la plantilla del seleccionat. Podeu editar aquest fitxer de la manera que vulgueu. La condició única és que qualsevol variable que vulgueu utilitzar s&amp;rsquo;hagi de definir mitjançant &lt;code&gt;{{}}&lt;/code&gt;. Exemple: &amp;ldquo;{{CHANGE}}&amp;rdquo; us demanarà que demaneu el &amp;ldquo;CANVI&amp;rdquo; que heu fet i que mostreu les opcions que heu definit a la plantilla.&lt;/p&gt;
+&lt;p&gt;Aquí teniu el fitxer &lt;code&gt;.cmf.yaml&lt;/code&gt; que estic fent servir en aquest lloc:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;PROMPT:
+    - KEY: &amp;quot;CHANGE&amp;quot;
+      LABEL: &amp;quot;Type of change&amp;quot;
+      OPTIONS:
+        - VALUE: &amp;quot;feat :sparkles:&amp;quot;
+          DESC: &amp;quot;A new feature&amp;quot;
+        - VALUE: &amp;quot;fix :bug:&amp;quot;
+          DESC: &amp;quot;A bug fix&amp;quot;
+        - VALUE: &amp;quot;test :rotating_light:&amp;quot;
+          DESC: &amp;quot;Adding missing tests or correcting wrong ones&amp;quot;
+        - VALUE: &amp;quot;style :lipstick:&amp;quot;
+          DESC: &amp;quot;A code change to improve clean code&amp;quot;
+        - VALUE: &amp;quot;build-ci :construction_worker_man:&amp;quot;
+          DESC: &amp;quot;Changes that affect the build system and/or CI configuration files and scripts&amp;quot;
+        - VALUE: &amp;quot;refactor :hammer:&amp;quot;
+          DESC: &amp;quot;A code change&amp;quot;
+        - VALUE: &amp;quot;docs :books:&amp;quot;
+          DESC: &amp;quot;Documentation only changes&amp;quot;
+        - VALUE: &amp;quot;chore :card_index:&amp;quot;
+          DESC: &amp;quot;Changes that don&#39;t fit any of the options above&amp;quot;
+    - KEY: &amp;quot;MESSAGE&amp;quot;
+      LABEL: &amp;quot;Commit message&amp;quot;
+TEMPLATE: &amp;quot;{{CHANGE}}: {{MESSAGE}}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
+    <item>
+      <title>Gestió de plantilles i contingut d&#39;Hugo</title>
+      <link>https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/</link>
+      <pubDate>Sun, 08 Mar 2020</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/</guid>
+      <description>Com organitzar el vostre contingut i crear les vostres plantilles per obtenir el màxim valor d’Hugo.</description>
+      <content>&lt;p&gt;Després de molt de temps sense escriure&amp;hellip; he tornat!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/hugo-content-templates-managing/im-back-terminator.jpg&#34; alt=&#34;I&amp;rsquo;m back&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Tenia previst reconstruir el meu lloc i començar a crear contingut de nou, però mai no he trobat el temps fins ara.&lt;/p&gt;
+&lt;p&gt;Volia fer el meu tema des de zero en lloc d’utilitzar un &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;tema predefinit&lt;/a&gt;, així que vaig haver d’aprendre com es fan les plantilles i la gestió del contingut a Hugo.&lt;/p&gt;
+&lt;p&gt;Un cop fet aquest procés, vull resumir les coses més importants que considero que heu de saber si voleu fer el vostre propi tema com ho vaig fer jo (aquest lloc ho demostra!).&lt;/p&gt;
+&lt;h2 id=&#34;gestió-de-continguts&#34;&gt;Gestió de continguts&lt;/h2&gt;
+&lt;p&gt;Primer de tot, parlem de la [organització de contingut] (&lt;a href=&#34;https://gohugo.io/content-management/organization/&#34;&gt;https://gohugo.io/content-management/organization/&lt;/a&gt;) a Hugo.&lt;/p&gt;
+&lt;p&gt;Tot el contingut que vulgueu tenir al vostre lloc ha d&amp;rsquo;estar dins del directori &lt;code&gt;content/&lt;/code&gt;. Simplement poseu les vostres publicacions dins de &lt;code&gt;content/posts&lt;/code&gt; i la vostra descripció a &lt;code&gt;content/about&lt;/code&gt; i Hugo us farà la màgia. Sembla fàcil oi? Continueu llavors.&lt;/p&gt;
+&lt;p&gt;Hugo té principalment dos tipus de pàgines, les &amp;ldquo;úniques&amp;rdquo; i les &amp;ldquo;múltiples&amp;rdquo;. Els primers s&amp;rsquo;utilitzen, per exemple, per a un &amp;ldquo;about&amp;rdquo; o per a un &amp;ldquo;faq&amp;rdquo; o un &amp;ldquo;contribuir&amp;rdquo; o un &amp;ldquo;landing&amp;rdquo; &amp;hellip; Els segons s&amp;rsquo;utilitzen quan es vol agrupar contingut en una mateixa categoria. Per exemple, les vostres diferents publicacions per a les vostres publicacions o un catàleg per als vostres productes. Dit això, hi ha una altra diferència que heu de saber quan creeu les vostres diferents pàgines.&lt;/p&gt;
+&lt;p&gt;Els únics s&amp;rsquo;han de nomenar com a &amp;ldquo;index.md&amp;rdquo;, els de la llista no. Això al final indica a Hugo com gestionar el contingut dins dels directoris i com generar les URL per accedir-hi. L&amp;rsquo;esquema següent mostra com funciona això:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;└── content
+    └── about
+    |   └── index.md        (https://mysite.com/about)
+    ├── posts
+    |   ├── first-post.md   (https://mysite.com/posts/first-post)
+    |   └── second-post.md  (https://mysite.com/posts/second-post)
+    |   └── trips
+    |       └── pandora.md  (https://mysite.com/posts/trips/pandora)
+    └── faq
+        └── index.md        (https://mysite.com/faq)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;També hi ha la possibilitat d&amp;rsquo;especificar l&amp;rsquo;URL mitjançant la propietat &lt;code&gt;slug&lt;/code&gt; com slug =&amp;ldquo;my-custom-url&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;gestió-de-plantilles&#34;&gt;Gestió de plantilles&lt;/h2&gt;
+&lt;p&gt;Ara ja sabeu com organitzar el vostre contingut, és hora de parlar de les &lt;a href=&#34;https://gohugo.io/templates/&#34;&gt;plantilles&lt;/a&gt;. Són el codi HTML que genera les pàgines del vostre lloc. Hi ha alguns trucs i consells que vull compartir amb vosaltres, com he fet amb el contingut de la secció anterior.&lt;/p&gt;
+&lt;p&gt;Les diferents plantilles s&amp;rsquo;han de col·locar dins del directori &lt;code&gt;layouts/&lt;/code&gt;. A l&amp;rsquo;arrel ha d&amp;rsquo;haver-hi la plantilla principal anomenada &lt;code&gt;index.html&lt;/code&gt; que s&amp;rsquo;utilitza per representar la pàgina d&amp;rsquo;inici. De la mateixa manera que el contingut, les plantilles es poden organitzar en carpetes si voleu mostrar de diferents maneres el contingut en funció de la ruta. Igual que el contingut, les plantilles es poden organitzar entre exclusives i múltiples. Prenent l&amp;rsquo;organització de contingut descrita anteriorment, tenint en compte que voleu especificar plantilles diferents per a cada carpeta de contingut, una de les organitzacions de plantilla possibles pot ser:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;└── layouts
+    └── _default_
+    |   ├── list.html
+    |   └── single.html
+    └── posts
+        ├── list.html
+        └── single.html
+        └── trips
+            ├── list.html
+            └── single.html
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Analitzant-ho en detall, podeu veure un arbre similar al contingut, però amb una particularitat que no inclou cap carpeta &lt;code&gt;about&lt;/code&gt; ni &lt;code&gt;faq&lt;/code&gt;, però apareixia com a &lt;code&gt;_default&lt;/code&gt;. Hugo utilitza aquesta carpeta especial per representar les pàgines que no tenen la seva pròpia plantilla. En aquest cas, sobre i les preguntes freqüents, ambdós tipus únics, es representaran mitjançant la plantilla &lt;code&gt;layouts / _default / single.html&lt;/code&gt;. Si el directori &lt;code&gt;viatges&lt;/code&gt; no existia, les plantilles utilitzades seran les &lt;code&gt;_default&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En aquest moment ja sabeu sobre l&amp;rsquo;organització del contingut i la gestió de plantilles, però esteu pensant:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Com sap Hugo quan vull utilitzar una sola pàgina o una llista?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;La resposta depèn de la URL i del contingut que hi hagi. Si torneu a utilitzar l&amp;rsquo;exemple anterior per a l&amp;rsquo;organització del contingut, si observeu que &lt;code&gt;about&lt;/code&gt; conté un &lt;code&gt;index.md&lt;/code&gt;, de manera que indica que Hugo és una pàgina &amp;ldquo;única&amp;rdquo;. Com que no vam definir cap plantilla en concret, la que s&amp;rsquo;utilitzarà és el genèric &lt;code&gt;_default/single.thml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;altra banda, dins de &lt;code&gt;posts&lt;/code&gt; hi ha tres publicacions, però no hi ha cap &amp;ldquo;index.md&amp;rdquo;, de manera que indica a Hugo que és una pàgina &amp;ldquo;multi&amp;rdquo;, de manera que faràs servir les dues plantilles, la &lt;code&gt;list.html&lt;/code&gt; com un &amp;ldquo;índex&amp;rdquo; de les vostres publicacions i el &lt;code&gt;single.html&lt;/code&gt; de cada publicació. Per representar el &lt;code&gt;list.html&lt;/code&gt;, heu d&amp;rsquo;anar a l&amp;rsquo;URL del directori (&lt;a href=&#34;https://mysite.com/posts/)&#34;&gt;https://mysite.com/posts/)&lt;/a&gt;. Per a les publicacions (&lt;a href=&#34;https://mysite.com/posts/first-post&#34;&gt;https://mysite.com/posts/first-post&lt;/a&gt;) i (&lt;a href=&#34;https://mysite.com/posts/second-post&#34;&gt;https://mysite.com/posts/second-post&lt;/a&gt;) la plantilla utilitzada serà &lt;code&gt;single.html&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;variables-de-pàgina&#34;&gt;Variables de pàgina&lt;/h3&gt;
+&lt;p&gt;Les pàgines tenen un conjunt de variables útils que és bo saber:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title: el títol del missatge&lt;/li&gt;
+&lt;li&gt;Description: una descripció breu o llarga del missatge&lt;/li&gt;
+&lt;li&gt;Content: el cos de la publicació&lt;/li&gt;
+&lt;li&gt;ReadingTime: els minuts que Hugo calcularà automàticament trigaran a llegir la publicació&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Per accedir als paràmetres personalitzats que podeu crear a cada publicació, haureu d’accedir-hi per nom dins de l’objecte &lt;code&gt;Params&lt;/code&gt; (Params.yourParam).&lt;/p&gt;
+&lt;p&gt;Podeu mostrar publicacions relacionades llegint els resultats de la pàgina &lt;code&gt;.Site.RegularPages.Related&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Consulteu la llista completa a la pàgina &lt;a href=&#34;https://gohugo.io/variables/page/&#34;&gt;documentació&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La plantilla &lt;code&gt;list.html&lt;/code&gt; s’utilitza per mostrar una breu descripció de les publicacions, com ara un índex de llibre, amb els enllaços a la publicació real. Per fer-ho, heu d’accedir a la variable &lt;code&gt;$.Paginator.Pages&lt;/code&gt; i fer un recorregut pels resultats. Les variables són les mateixes descrites anteriorment amb un &lt;code&gt;PermaLink&lt;/code&gt; més, el que heu d&amp;rsquo;utilitzar per accedir a la publicació (i truqueu a la plantilla &lt;code&gt;single.html&lt;/code&gt;) per a aquest contingut.&lt;/p&gt;
+&lt;p&gt;També hi ha les variables &lt;code&gt;PrevInSection&lt;/code&gt; i &lt;code&gt;NextInSection&lt;/code&gt; per a paginar els resultats.&lt;/p&gt;
+&lt;h3 id=&#34;plantilles-parcials&#34;&gt;Plantilles parcials&lt;/h3&gt;
+&lt;p&gt;L&amp;rsquo;últim consell que vull explicar-vos és que no cal que repetiu totes les parts de les plantilles, podeu extreure la part comuna en una plantilla i tornar-la a utilitzar a qualsevol lloc que vulgueu. Aquestes són les &lt;a href=&#34;https://gohugo.io/templates/partials/&#34;&gt;plantilles parcials&lt;/a&gt;. La seva particularitat és que heu de col·locar aquesta part dins d&amp;rsquo;un directori &lt;code&gt;partials/&lt;/code&gt; i anomenar-la com a &lt;code&gt;{{partial &amp;quot;name.html&amp;quot; . }}&lt;/code&gt;. Són útils per al &lt;code&gt;header&lt;/code&gt;, &lt;code&gt;footer&lt;/code&gt;, &lt;code&gt;navbar&lt;/code&gt; i altres parts genèriques, així com per a una plantilla de llista que voleu reutilitzar per a les vostres publicacions i per als vostres viatges, per exemple.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Instal·lació de Drone 0.8 a Ubuntu 16.04</title>
+      <link>https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/</link>
+      <pubDate>Wed, 10 Oct 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/installaci%C3%B3-de-drone-0.8-a-ubuntu-16.04/</guid>
+      <description>Publicació senzilla que explica com instal·lar Drone al servidor Ubuntu 16.04.</description>
+      <content>&lt;p&gt;He de reconèixer que mai no m’han agradat la part dels sistemes del procés de desenvolupament. Sempre, però, que era una feina en un lloc fosc i esgarrifós, ple de monstres que feien coses rares. Aquesta visió va canviar completament quan vaig començar a utilitzar &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt;. En aquest punt em vaig adonar que tota la màgia feta a la part de sysadmin era millor que jo i, aleshores, vaig començar a interessar-me més per aquest costat.&lt;/p&gt;
+&lt;p&gt;A més, a la meva feina hem començat a utilitzar &lt;a href=&#34;https://jenkins.io/&#34;&gt;Jenkins&lt;/a&gt; per a &lt;a href=&#34;https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd&#34;&gt;CI/CD&lt;/a&gt;, canviant la nostra tasca manual d’embalatge-proves-desplegament per a un procés automàtic. Va ser super xulo !!! Em sento molt content perquè estalvia molt de temps i us permet concentrar-vos en les tasques de desenvolupament sense perdre temps en la fase de desplegament. Solia dedicar molt de temps a generar les meves guerres, desplegar-les a la caixa de sorra, provar les noves funcions afegides, tornar-les a desplegar si alguna cosa necessita solucionar-les de nou i finalment alliberar una nova versió de codi i implementar-les a la producció. Tots aquests passos es van simplificar amb només accedir a una branca i després fusionar-se amb el mestre (després de provar, per descomptat). En aquest pont vaig aprofundir en com s&amp;rsquo;estan construint i desplegant les coses, on (en el nostre cas a AWS) i com fer-ho.&lt;/p&gt;
+&lt;p&gt;En aquest moment és quan vaig descobrir &lt;a href=&#34;https://drone.io/&#34;&gt;Drone&lt;/a&gt;. Jenkins és molt divertit i funciona, però depenent del projecte, sobretot si no és Java, és molt dolent fer la feina (perquè heu d’instal·lar molts connectors o dependències per fer la tasca). A més, la configuració dels projectes i la instal·lació de Jenkins al vostre servidor és una mica tediós i complicat. Per tant, Drone s’executa en un contenidor Docker. Només cal estirar el contenidor i fer-lo funcionar. IMPRESSIONANT! Funciona amb un &lt;a href=&#34;http://yaml.org/&#34;&gt;.yaml&lt;/a&gt; que defineix el servidor i l&amp;rsquo;agent i això és tot. Vegem els passos per instal·lar-lo en un servidor Ubuntu 16.04.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt; IMPORTANT &lt;!-- raw HTML omitted --&gt;: heu de tenir certificat SSL al vostre servidor perquè Drone funciona amb https. Llegiu &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04&#34;&gt;aquest article&lt;/a&gt; per veure com afegir SSL en un Nginx amb Let&amp;rsquo;s Encrypt.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;installació&#34;&gt;Instal·lació&lt;/h2&gt;
+&lt;p&gt;Primer de tot, cal tirar de la imatge del dron.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;pull&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A continuació, creeu el docker-compose per executar-lo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nano&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;docker&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;compose&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;yml&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I copieu el següent:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;version: &#39;2&#39;
+
+services:
+  drone-server:
+    image: drone/drone:0.8
+    ports:
+      - 8000:8000
+      - 9000:9000
+    volumes:
+      - /var/lib/drone:/var/lib/drone/
+    restart: always
+    env_file:
+      - /etc/drone/server.env
+
+  drone-agent:
+    image: drone/agent:0.8
+    command: agent
+    restart: always
+    depends_on:
+      - drone-server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    env_file:
+      - /etc/drone/agent.env
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;!-- raw HTML omitted --&gt; En el meu cas, he utilitzat aquests ports perquè tinc altres coses al meu Nginx, però podeu triar-ne de vostres. També he emmagatzemat el servidor i l&amp;rsquo;agent &lt;code&gt;env&lt;/code&gt; vars en fitxers específics. &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Ara és hora de crear aquests fitxers. Primer creem el servidor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nano&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;server&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I copieu el següent:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Service settings 
+DRONE_SECRET=secret_generated_on_command_line
+DRONE_HOST=https://yourDroneURL.com
+
+# Registration settings
+DRONE_OPEN=false
+DRONE_ADMIN=your_github_username
+
+# GitHub Settings
+DRONE_GITHUB=true
+DRONE_GITHUB_CLIENT=Client_ID_from_GitHub
+DRONE_GITHUB_SECRET=Client_Secret_from_GitHub
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Per a l’identificador de client i clientSecret de GitHub, heu de registrar Drone al vostre compte de GitHub per obtenir-los. Seguiu &lt;a href=&#34;https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/&#34;&gt;aquestes instruccions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I ara l’agent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nano&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;agent&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I copieu el següent:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DRONE_SECRET=secret_generated_on_command_line
+DRONE_SERVER=drone-server:9000
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Per generar el &lt;code&gt;DRONE_SECRET&lt;/code&gt; podeu escriure l&amp;rsquo;ordre següent&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;LC_ALL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;C&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/dev/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;urandom&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;tr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dc&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Za&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;z0&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;-9&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;head&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;65&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&#34;nx&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Un cop instal·lat i configurat el Drone, hem de crear un fitxer d’unitat systemd per gestionar el servei.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nano&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;systemd&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/system/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;service&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I copieu el següent:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=Drone server
+After=docker.service nginx.service
+
+[Service]
+Restart=always
+ExecStart=/usr/local/bin/docker-compose -f /etc/drone/docker-compose.yml up
+ExecStop=/usr/local/bin/docker-compose -f /etc/drone/docker-compose.yml stop
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;configureu-nginx&#34;&gt;Configureu Nginx&lt;/h2&gt;
+&lt;p&gt;I, finalment, hem de configurar el Nginx per sol·licitar proxy al nostre servidor Drone. Primer de tot, cerqueu els blocs de servidor habilitats amb l&amp;rsquo;ordre següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;R&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;server_name&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;sites&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;enabled&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Veureu alguna cosa així:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;Output&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/sites-enabled/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;default&lt;/span&gt;:   &lt;span class=&#34;nx&#34;&gt;server_name&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;yourDroneURL&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;com&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/sites-enabled/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;default&lt;/span&gt;:   &lt;span class=&#34;nx&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;301&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;$&lt;span class=&#34;nx&#34;&gt;server_name&lt;/span&gt;$&lt;span class=&#34;nx&#34;&gt;request_uri&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/sites-enabled/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;default&lt;/span&gt;:   &lt;span class=&#34;nx&#34;&gt;server_name&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;yourDroneURL&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;com&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/sites-enabled/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;default&lt;/span&gt;:#  &lt;span class=&#34;nx&#34;&gt;server_name&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;yourDroneURL&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;com&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Després de conèixer el bloc que gestiona el nostre servidor, podem editar-lo escrivint:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nano&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/sites-enabled/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I afegint aquest text abans del bloc &lt;code&gt;servidor {&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;upstream&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt; {&lt;span class=&#34;nx&#34;&gt;upstream&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt; {&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;         &lt;span class=&#34;nx&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;8000&lt;/span&gt;;&lt;span class=&#34;nx&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;8000&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt; }}&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;map&lt;/span&gt; $&lt;span class=&#34;nx&#34;&gt;http_upgrade&lt;/span&gt; $&lt;span class=&#34;nx&#34;&gt;connection_upgrade&lt;/span&gt; {&lt;span class=&#34;nx&#34;&gt;map&lt;/span&gt; $&lt;span class=&#34;nx&#34;&gt;http_upgrade&lt;/span&gt; $&lt;span class=&#34;nx&#34;&gt;connection_up&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;upgrade&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;      &lt;span class=&#34;nx&#34;&gt;close&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;}&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A continuació, cerqueu el bloc de servidor amb la directiva listen 443 a dins. Substituïu el contingut del bloc d&amp;rsquo;ubicació pel següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;server&lt;/span&gt; {&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;listen&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;443&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ssl&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;location&lt;/span&gt; / {&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;        # &lt;span class=&#34;nx&#34;&gt;try_files&lt;/span&gt; $&lt;span class=&#34;nx&#34;&gt;uri&lt;/span&gt; $&lt;span class=&#34;nx&#34;&gt;uri&lt;/span&gt;/ &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;404&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;proxy_pass&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;proxy_params&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Upgrade&lt;/span&gt; $&lt;span class=&#34;nx&#34;&gt;http_upgrade&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Connection&lt;/span&gt; $&lt;span class=&#34;nx&#34;&gt;connection_upgrade&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;proxy_redirect&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;off&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;proxy_http_version&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;proxy_buffering&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;off&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;chunked_transfer_encoding&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;off&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nx&#34;&gt;proxy_read_timeout&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;86400&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;    }&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;}&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ara és hora de provar si el nostre Nginx funciona o no:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hauríeu de veure:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;Output&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;: &lt;span class=&#34;nx&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;configuration&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;conf&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;syntax&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ok&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;: &lt;span class=&#34;nx&#34;&gt;configuration&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;conf&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;test&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;successful&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Només haureu de reiniciar el servidor i substituireu les peticions:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;systemctl&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;restart&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nginx&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finalment, cal iniciar el servidor Drone:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;systemctl&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;start&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per comprovar l&amp;rsquo;estat del contenidor, podeu utilitzar l&amp;rsquo;ordre següent:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;systemctl&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podeu consultar els logs de Nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;less&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/var/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/nginx/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;error&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I també podeu consultar els logs de Drone:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;journalctl&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;u&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si tot està bé, és hora d’activar Drone:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;systemctl&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;enable&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si voleu apagar Drone, podeu escriure les ordres següents:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/etc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;drone&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/usr/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/bin/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;docker&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;compose&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;down&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Visiteu el servidor Drone al vostre https: // yourDroneURL.com i inicieu la sessió amb el compte GitHub que heu utilitzat per obtenir l’identificador de client i el secret del client.&lt;/p&gt;
+&lt;h2 id=&#34;referències&#34;&gt;Referències&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Drone &lt;a href=&#34;http://docs.drone.io/installation/&#34;&gt;documentació oficial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-drone-on-ubuntu-16-04&#34;&gt;Article&lt;/a&gt; de Digital Ocean&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Construint un bloc estàtic amb Hugo</title>
+      <link>https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/</link>
+      <pubDate>Sat, 22 Sep 2018</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/construint-un-bloc-est%C3%A0tic-amb-hugo/</guid>
+      <description>Passos ràpids per crear el vostre propi bloc estàtic amb Hugo i instal·lar un tema del catàleg. Després, empenyeu el vostre lloc a GitHub i implementeu-lo amb GitHub Pages.</description>
+      <content>&lt;p&gt;Si voleu crear un lloc web estàtic ràpid us recomano &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. Està escrit a Go i és realment útil per configurar i adaptar-se a les vostres necessitats. A més, podeu triar a través de diferents &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;temes&lt;/a&gt; creats per l’equip i altres per la comunitat o fins i tot crear el vostre propi.&lt;/p&gt;
+&lt;p&gt;Aquí explicaré en alguns passos com crear un bloc amb Hugo i com allotjar-se i desplegar-se a GitHub i GitHub Pages. Si necessiteu més detalls, visiteu els &lt;a href=&#34;https://gohugo.io/documentation/&#34;&gt;documents Hugo oficials&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;inici&#34;&gt;Inici&lt;/h2&gt;
+&lt;p&gt;Primer de tot, heu d’instal·lar Hugo, en el meu cas amb &lt;a href=&#34;https://brew.sh/&#34;&gt;Homebrew&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;brew&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;hugo&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Comproveu la versió instal·lada:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;hugo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;crea-un-lloc&#34;&gt;Crea un lloc&lt;/h2&gt;
+&lt;p&gt;Un cop hàgiu instal·lat Hugo, podreu crear el vostre lloc web mitjançant l&amp;rsquo;ordre:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;hugo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;site&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;your&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;blog&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Després d&amp;rsquo;això, veureu una nova carpeta anomenada &lt;code&gt;your-blog-name&lt;/code&gt; i, si mireu a l&amp;rsquo;interior, veureu l&amp;rsquo;arbre següent:
+&lt;img src=&#34;https://charly3pins.dev/images/build-hugo-static-blog/folder-tree-your-blog-name.png&#34; alt=&#34;Folder tree&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Archetypes són fitxers de plantilla de contingut per al vostre projecte, que s&amp;rsquo;utilitzen quan s&amp;rsquo;executa l&amp;rsquo;ordre &lt;code&gt;hugo new&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Content és on s’emmagatzemen totes les publicacions i pàgines. La mateixa estructura d’aquesta carpeta s’utilitzarà per organitzar els URL del vostre lloc renderitzat.&lt;/li&gt;
+&lt;li&gt;Data són una carpeta per emmagatzemar dades addicionals per generar el vostre lloc.&lt;/li&gt;
+&lt;li&gt;Layouts és la carpeta on s&amp;rsquo;emmagatzema la plantilla del vostre lloc si no utilitzeu un tema.&lt;/li&gt;
+&lt;li&gt;Static emmagatzema tots els fitxers estàtics del vostre lloc.&lt;/li&gt;
+&lt;li&gt;Themes són on s’emmagatzemen els temes que instal·leu.&lt;/li&gt;
+&lt;li&gt;config.toml emmagatzema la configuració principal del vostre lloc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installa-el-tema&#34;&gt;Instal·la el tema&lt;/h2&gt;
+&lt;p&gt;Si voleu utilitzar un tema ja creat, podeu fer-ho de dues maneres. Per comprovar els temes existents, visiteu el lloc web oficial de &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34;&gt;Temes d&amp;rsquo;Hugo&lt;/a&gt; on podeu veure una demostració de cadascun.&lt;/p&gt;
+&lt;p&gt;Primer de tot, heu d&amp;rsquo;iniciar un repositori de git dins del vostre projecte:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;your&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;blog&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;;\&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;init&lt;/span&gt;;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A continuació, podeu clonar la reposició a la carpeta &lt;code&gt;themes&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;clone&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;github&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/panr/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hugo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;theme&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;friend&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;themes&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;friend&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si no voleu fer cap canvi, és millor incloure el tema com a submòdul git i podeu obtenir noves actualitzacions quan estiguin disponibles. Feu-ho amb:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;submodule&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;github&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/panr/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hugo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;theme&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;friend&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;themes&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;friend&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;crea-contingut&#34;&gt;Crea contingut&lt;/h2&gt;
+&lt;p&gt;Per generar la vostra primera publicació al bloc, podeu utilitzar l&amp;rsquo;ordre &lt;code&gt;hugo new&lt;/code&gt; i establir el camí que vulgueu, en el meu cas&lt;code&gt; publicacions&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;hugo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;posts&lt;/span&gt;/&lt;span class=&#34;nx&#34;&gt;my&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;first&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;md&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Obtindreu el fitxer següent:
+&lt;img src=&#34;https://charly3pins.dev/images/build-hugo-static-blog/example-post.png&#34; alt=&#34;Example post&#34;&gt;&lt;/p&gt;
+&lt;p&gt;La primera secció és per a paràmetres i la segona per al contingut en aquest cas en el marcatge. Consulteu aquest &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;Full de trucs de Markdown&lt;/a&gt; com a referència i aparador ràpid.&lt;/p&gt;
+&lt;h2 id=&#34;executeu-el-vostre-lloc&#34;&gt;Executeu el vostre lloc&lt;/h2&gt;
+&lt;p&gt;Un cop hàgiu creat la publicació, podeu crear el vostre lloc mitjançant l&amp;rsquo;ordre &lt;code&gt;hugo server&lt;/code&gt;. La bandera &lt;code&gt;-D&lt;/code&gt; és per als esborranys de renderització:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;hugo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I apareixeran els registres de representació i, al final, un missatge similar a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;Web&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Server&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;available&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;at&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;http&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;localhost&lt;/span&gt;:&lt;span class=&#34;m&#34;&gt;1313&lt;/span&gt;/ &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;bind&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Copieu l&amp;rsquo;URL al navegador i veureu el vostre lloc en funcionament.&lt;/p&gt;
+&lt;h2 id=&#34;host-a-github&#34;&gt;Host a GitHub&lt;/h2&gt;
+&lt;p&gt;Utilitzarem les pàgines d&amp;rsquo;usuari/organització &lt;code&gt;https://&amp;lt;USERNAME|ORGANIZATION&amp;gt;.github.io/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Creeu un dipòsit &lt;code&gt;&amp;lt;YOUR-PROJECT&amp;gt;&lt;/code&gt; a GitHub. Aquest dipòsit inclourà el contingut d’Hugo i altres fitxers font.&lt;/p&gt;
+&lt;p&gt;Creeu un dipòsit GitHub &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&lt;/code&gt;. Aquest és el dipòsit que contindrà la versió totalment renderitzada del vostre lloc web Hugo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;clone&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;github&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/&amp;lt;USERNAME&amp;gt;/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;YOUR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;PROJECT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;YOUR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;PROJECT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Executeu el vostre lloc web localment mitjançant l&amp;rsquo;ordre &lt;code&gt;hugo server&lt;/code&gt; o si feu servir el tema &lt;code&gt;hugo server -t &amp;lt;THEME_NAME&amp;gt;&lt;/code&gt;. Seguiu les instruccions de la consola per accedir-hi. El servidor web hauria d’estar disponible a http://localhost:1313/&lt;/p&gt;
+&lt;p&gt;Finalment, haureu d&amp;rsquo;afegir el repositori &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&lt;/code&gt; dins de la carpeta &lt;code&gt;public&lt;/code&gt; com a submòdul git per tal d&amp;rsquo;actualitzar el vostre lloc web un cop el regeneu.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;submodule&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;master&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt;@&lt;span class=&#34;nx&#34;&gt;github&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;com&lt;/span&gt;:&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;USERNAME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;/&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;USERNAME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;github&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;io&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si no teniu configurada la clau de parell RSA, haureu d&amp;rsquo;afegir el submòdul mitjançant HTTP:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;submodule&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;master&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;:&lt;span class=&#34;sr&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;github&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/&amp;lt;USERNAME&amp;gt;/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;USERNAME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;github&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;io&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Per automatitzar els passos següents, podeu desar-lo a &lt;code&gt;deploy.sh&lt;/code&gt;. Recordeu fer-lo executable amb:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;nx&#34;&gt;chmod&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;deploy&lt;/span&gt;.&lt;span class=&#34;nx&#34;&gt;sh&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;deploy.sh&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Build the project.&lt;/span&gt;
+hugo &lt;span class=&#34;c1&#34;&gt;# if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;`&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Go To Public folder&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; public
+&lt;span class=&#34;c1&#34;&gt;# Add changes to git.&lt;/span&gt;
+git add .
+
+&lt;span class=&#34;c1&#34;&gt;# Commit changes.&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;rebuilding site `date`&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -eq &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$msg&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Push source and build repos.&lt;/span&gt;
+git push origin master
+
+&lt;span class=&#34;c1&#34;&gt;# Come Back up to the Project Root&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
     </item>
     
   </channel>
