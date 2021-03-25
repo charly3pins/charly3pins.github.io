@@ -206,7 +206,7 @@ if (!doNotTrack) {
 
 <span class="nx">data</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s\n\n%s\n\n%s\n\n%s\n&#34;</span><span class="p">,</span> <span class="nx">hi</span><span class="p">,</span> <span class="nx">blog</span><span class="p">)</span>
 </code></pre></div><p>The important part is the <code>blog</code> where you can clearly see how I read the feed information.</p>
-<p>You can see the complete code in <a href="https://github.com/charly3pins/charly3pins/blob/main/update/main.go">my repositori</a>.</p>
+<p>You can see the complete code in <a href="https://github.com/charly3pins/charly3pins/blob/main/update/main.go">my repository</a>.</p>
 <h2 id="running-the-process-automatically">Running the process automatically</h2>
 <p>Once we have the code that generates the README automatically and dynamically according to the last post, what remains to be done is to run it periodically and in order to do not have to worry about anything. To do this I will use a <a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows">trigger</a> from GitHub Actions so that every time I push to branch <code>master</code> run the process and also run it on a scheduled basis every Sunday at 12am.</p>
 <p>First of all I need the <code>.github/worfklows</code> folder and inside I create the <code>update.yaml</code> file with the following content:</p>
