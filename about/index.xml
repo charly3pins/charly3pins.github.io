@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>About on charly3pins.dev</title>
-        <link>https://charly3pins.dev/about/</link>
-        <description>Recent content in About on charly3pins.dev</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
+  <channel>
+    <title>About on charly3pins.dev</title>
+    <link>https://charly3pins.dev/about/</link>
+    <description>Recent content in About on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     
     <atom:link href="https://charly3pins.dev/about/index.xml" rel="self" type="application/rss+xml" />
     

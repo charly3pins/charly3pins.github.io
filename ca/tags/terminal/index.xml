@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>terminal on charly3pins.dev</title>
-        <link>https://charly3pins.dev/ca/tags/terminal/</link>
-        <description>Recent content in terminal on charly3pins.dev</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Tue, 10 Mar 2020</lastBuildDate>
+  <channel>
+    <title>terminal on charly3pins.dev</title>
+    <link>https://charly3pins.dev/ca/tags/terminal/</link>
+    <description>Recent content in terminal on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Mar 2020</lastBuildDate>
     
     <atom:link href="https://charly3pins.dev/ca/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
     

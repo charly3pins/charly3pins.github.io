@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Tags on charly3pins.dev</title>
-        <link>https://charly3pins.dev/ca/tags/</link>
-        <description>Recent content in Tags on charly3pins.dev</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Tue, 16 Mar 2021</lastBuildDate>
+  <channel>
+    <title>Tags on charly3pins.dev</title>
+    <link>https://charly3pins.dev/ca/tags/</link>
+    <description>Recent content in Tags on charly3pins.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Mar 2021</lastBuildDate>
     
     <atom:link href="https://charly3pins.dev/ca/tags/index.xml" rel="self" type="application/rss+xml" />
     
