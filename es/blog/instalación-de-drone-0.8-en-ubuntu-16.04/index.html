@@ -156,6 +156,8 @@ if (!doNotTrack) {
 						<img src="https://charly3pins.dev/images/droneio-0.8.png" alt="cover image">
 					</div>
 					
+					
+					<div class="page-separator"></div>
 					<p>Debo admitir que nunca me gustó la parte de sistemas del proceso de desarrollo. Siempre pensé que era un trabajo en un lugar oscuro y sucio, lleno de monstruos haciendo cosas raras. Esta visión cambió por completo cuando comencé a usar <a href="https://www.docker.com/">Docker</a>. En este punto me di cuenta de que toda la magia hecha en la parte del administrador de sistemas era mejor de lo que pensaba y luego, comencé a interesarme más y más de este lado.</p>
 <p>Además, en mi trabajo comenzamos a usar <a href="https://jenkins.io/">Jenkins</a> para <a href="https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd">CI/CD</a>, cambiando nuestra tarea manual de empaquetado-prueba-implementación manual para un proceso automático. ¡¡¡Fue genial!!! Me siento muy feliz porque ahorra mucho tiempo y te permite concentrarte en tus tareas de desarrollo sin perder tiempo en la fase de implementación. Solía ​​pasar mucho tiempo generando mis guerras, implementándolas en sandbox, probando las nuevas características agregadas, implementándolas nuevamente si algo necesita arreglarlo nuevamente y finalmente lanzando una nueva versión del código y desplegándolas en producción. Todos estos pasos se simplificaron con solo ingresar a una rama y luego fusionarse con el maestro (después de la prueba, por supuesto). En este pont, profundicé en cómo se están construyendo e implementando las cosas, dónde (en nuestro caso en AWS) y cómo hacer esas cosas.</p>
 <p>En este punto es cuando descubrí <a href="https://drone.io/">Drone</a>. Jenkins es realmente genial y funciona, pero dependiendo del proyecto, especialmente si no es de Java, es realmente malo hacer el trabajo (porque necesitas instalar muchos complementos o dependencias para realizar la tarea). Además, la configuración de los proyectos y la instalación del propio Jenkins en tu servidor es un poco tediosa y complicada. Entonces, Drone se ejecuta en un contenedor Docker. Solo necesitas tirar del contenedor y ejecutarlo. ¡INCREÍBLE! Funciona con un <a href="http://yaml.org/">.yaml</a> que define el servidor y el agente y eso es todo. Entonces, veamos los pasos para instalarlo en un servidor Ubuntu 16.04.</p>
@@ -347,7 +349,7 @@ WantedBy=multi-user.target
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Último post publicado el 16/03/2021</div>
+	<div class="footer-text">Último post publicado el 30/03/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>

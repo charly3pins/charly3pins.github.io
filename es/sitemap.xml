@@ -43,28 +43,8 @@
   </url>
   
   <url>
-    <loc>https://charly3pins.dev/es/blog/automatice-el-readme-para-su-perfil-de-github-con-go-y-github-actions/</loc>
-    <lastmod>2021-03-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/blog/automate-your-github-profile-readme-with-go-and-github-actions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/blog/automatitzi-el-readme-pel-seu-perfil-de-github-amb-go-i-github-actions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/blog/automatice-el-readme-para-su-perfil-de-github-con-go-y-github-actions/"
-                />
-  </url>
-  
-  <url>
     <loc>https://charly3pins.dev/es/blog/</loc>
-    <lastmod>2021-03-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -84,7 +64,7 @@
   
   <url>
     <loc>https://charly3pins.dev/es/</loc>
-    <lastmod>2021-03-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -99,6 +79,106 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://charly3pins.dev/es/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/blog/la-t%C3%A9cnica-pomodoro/</loc>
+    <lastmod>2021-03-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/the-pomodoro-technique/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/blog/la-t%C3%A8cnica-pomodoro/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/la-t%C3%A9cnica-pomodoro/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/tags/life/</loc>
+    <lastmod>2021-03-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/life/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/life/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/life/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/tags/productivity/</loc>
+    <lastmod>2021-03-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/productivity/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/productivity/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/productivity/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/tags/</loc>
+    <lastmod>2021-03-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/es/blog/automatice-el-readme-para-su-perfil-de-github-con-go-y-github-actions/</loc>
+    <lastmod>2021-03-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/automate-your-github-profile-readme-with-go-and-github-actions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/blog/automatitzi-el-readme-pel-seu-perfil-de-github-amb-go-i-github-actions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/automatice-el-readme-para-su-perfil-de-github-con-go-y-github-actions/"
                 />
   </url>
   
@@ -143,26 +223,6 @@
   </url>
   
   <url>
-    <loc>https://charly3pins.dev/es/tags/</loc>
-    <lastmod>2021-03-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/</loc>
     <lastmod>2021-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -179,26 +239,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://charly3pins.dev/es/blog/mi-configuraci%C3%B3n-para-una-alta-productividad-para-vs-code/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/es/tags/productivity/</loc>
-    <lastmod>2021-03-09T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/productivity/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/productivity/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/productivity/"
                 />
   </url>
   
@@ -319,26 +359,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://charly3pins.dev/es/blog/c%C3%B3mo-a%C3%B1adir-google-analytics-a-su-sitio-hugo/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/es/tags/life/</loc>
-    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/life/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/life/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/life/"
                 />
   </url>
   

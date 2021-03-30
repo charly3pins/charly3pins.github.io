@@ -156,6 +156,8 @@ if (!doNotTrack) {
 						<img src="https://charly3pins.dev/images/droneio-0.8.png" alt="cover image">
 					</div>
 					
+					
+					<div class="page-separator"></div>
 					<p>He de reconèixer que mai no m’han agradat la part dels sistemes del procés de desenvolupament. Sempre, però, que era una feina en un lloc fosc i esgarrifós, ple de monstres que feien coses rares. Aquesta visió va canviar completament quan vaig començar a utilitzar <a href="https://www.docker.com/">Docker</a>. En aquest punt em vaig adonar que tota la màgia feta a la part de sysadmin era millor que jo i, aleshores, vaig començar a interessar-me més per aquest costat.</p>
 <p>A més, a la meva feina hem començat a utilitzar <a href="https://jenkins.io/">Jenkins</a> per a <a href="https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd">CI/CD</a>, canviant la nostra tasca manual d’embalatge-proves-desplegament per a un procés automàtic. Va ser super xulo !!! Em sento molt content perquè estalvia molt de temps i us permet concentrar-vos en les tasques de desenvolupament sense perdre temps en la fase de desplegament. Solia dedicar molt de temps a generar les meves guerres, desplegar-les a la caixa de sorra, provar les noves funcions afegides, tornar-les a desplegar si alguna cosa necessita solucionar-les de nou i finalment alliberar una nova versió de codi i implementar-les a la producció. Tots aquests passos es van simplificar amb només accedir a una branca i després fusionar-se amb el mestre (després de provar, per descomptat). En aquest pont vaig aprofundir en com s&rsquo;estan construint i desplegant les coses, on (en el nostre cas a AWS) i com fer-ho.</p>
 <p>En aquest moment és quan vaig descobrir <a href="https://drone.io/">Drone</a>. Jenkins és molt divertit i funciona, però depenent del projecte, sobretot si no és Java, és molt dolent fer la feina (perquè heu d’instal·lar molts connectors o dependències per fer la tasca). A més, la configuració dels projectes i la instal·lació de Jenkins al vostre servidor és una mica tediós i complicat. Per tant, Drone s’executa en un contenidor Docker. Només cal estirar el contenidor i fer-lo funcionar. IMPRESSIONANT! Funciona amb un <a href="http://yaml.org/">.yaml</a> que defineix el servidor i l&rsquo;agent i això és tot. Vegem els passos per instal·lar-lo en un servidor Ubuntu 16.04.</p>
@@ -347,7 +349,7 @@ WantedBy=multi-user.target
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Últim post publicat el 16/03/2021</div>
+	<div class="footer-text">Últim post publicat el 30/03/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>

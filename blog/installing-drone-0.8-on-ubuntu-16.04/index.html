@@ -156,6 +156,8 @@ if (!doNotTrack) {
 						<img src="https://charly3pins.dev/images/droneio-0.8.png" alt="cover image">
 					</div>
 					
+					
+					<div class="page-separator"></div>
 					<p>I have to admit that I never liked the systems part of the development process. I always though that it was a job in a dark and creppy place, full of freaks doing a rare things. This vision completely changed when I started using <a href="https://www.docker.com/">Docker</a>. On this point I realized that all the magic done in the sysadmin part was better than I though and then, I started intereseting more an more on this side.</p>
 <p>Also, at my job we&rsquo;ve started using <a href="https://jenkins.io/">Jenkins</a> for <a href="https://www.atlassian.com/continuous-delivery/ci-vs-ci-vs-cd">CI/CD</a>, chaning our manual packing-testing-deploying manual task for an automatic process. It was super cool!!! I&rsquo;ve feel very happy because it saves a lot of time and allows you to concentrate in your development tasks not wasting time in the deployment phase. I&rsquo;ve use to spend a lot of time generating my wars, deploying them to sandbox, testing the new features added, deploying again if something need to fix it again and finally releasing a new version of code and deploying to production. All these steps were simiplified with just comitting to a branch and then mergin to master (after testing of course). At this pont I profundized in how the things are being build and deployed, where (in our case in AWS) and how to do that things.</p>
 <p>At this point is when I discovered <a href="https://drone.io/">Drone</a>. Jenkins is really cool and it works, but depending on the project, specially if it&rsquo;s not a Java one, is really bad doing the job (because you need to install a lot of plugins or depenencies to do the task). Also, the configuration of the projects and the installation of Jenkins itself in your server is a bit tedious and complicate. So, Drone is running in a Docker container. You only need to pull the container and run it. AWESOME! It works with a <a href="http://yaml.org/">.yaml</a> defining the server and the agent and thats all. So let&rsquo;s see the steps to install it in an Ubuntu 16.04 server.</p>
@@ -347,7 +349,7 @@ WantedBy=multi-user.target
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Last post published on 16/03/2021</div>
+	<div class="footer-text">Last post published on 30/03/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
