@@ -283,26 +283,6 @@
   </url>
   
   <url>
-    <loc>https://charly3pins.dev/ca/tags/cms/</loc>
-    <lastmod>2021-02-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/cms/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/cms/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/cms/"
-                />
-  </url>
-  
-  <url>
     <loc>https://charly3pins.dev/ca/blog/com-tenir-un-lloc-multiling%C3%BCe-a-hugo/</loc>
     <lastmod>2021-02-05T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -359,6 +339,26 @@
                 rel="alternate"
                 hreflang="ca"
                 href="https://charly3pins.dev/ca/blog/com-afegir-google-analytics-al-vostre-lloc-amb-hugo/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/ca/tags/linux/</loc>
+    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/linux/"
                 />
   </url>
   
