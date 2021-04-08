@@ -5,10 +5,60 @@
     <description>Recent content on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Mar 2021</lastBuildDate>
+    <lastBuildDate>Thu, 08 Apr 2021</lastBuildDate>
     
     <atom:link href="https://charly3pins.dev/ca/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Augmenti la seva productivitat amb Notion</title>
+      <link>https://charly3pins.dev/ca/blog/increase-your-productivity-with-notion/</link>
+      <pubDate>Thu, 08 Apr 2021</pubDate>
+      
+      <guid>https://charly3pins.dev/ca/blog/increase-your-productivity-with-notion/</guid>
+      <description>Organitzi les seves idees, gestioni els seus projectes i faci un seguiment de la seva vida amb l’aplicació Notion i augmenti la seva productivitat personal al següent nivell.</description>
+      <content>&lt;p&gt;Després de la meva última publicació sobre com augmentar la productivitat amb &lt;a href=&#34;https://charly3pins.dev/ca/blog/la-t%C3%A8cnica-pomodoro/&#34;&gt;La Tècnica Pomodoro&lt;/a&gt;, li mostraré com vaig organitzar la meva vida respecte als meus projectes paral·lels, les meves lectures i les publicacions que publico en aquest bloc.&lt;/p&gt;
+&lt;p&gt;Primer estava fent servir les notes de Google Keep per a realitzar un seguiment de tots aquests temes, però com pot imaginar, va resultar impossible administrar tal quantitat d&amp;rsquo;informació i, el que és més important, fer-ho correctament. Per afegir notes ràpides sobre idees que sorgeixen al meu cap o algun comentari sobre un llibre/vídeo o simplement un resum d&amp;rsquo;un xat, és fantàstic. El problema és quan aquestes notes van començar a convertir-se en una mena de llista de tasques en lloc d&amp;rsquo;una llista de notes, agregant molts detalls, enllaços, subllistes i molts parèntesi per ajudar el meu futur jo a entendre el que vaig escriure allà. Després de molt temps usant aquest mètode i alguns intents de canviar la forma de fer-ho (perquè siguem honestos va ser un embolic)&amp;hellip; un bon amic meu, el &lt;a href=&#34;https://twitter.com/mcanhizares&#34;&gt;@MCanhizares&lt;/a&gt;, em va recomanar que provés l&#39;&lt;a href=&#34;https://www.notion.so/&#34;&gt;aplicació Notion&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Al principi, vaig començar amb una vista buida simplement afegint les notes que tenia an Keep allà i creant pàgines separades per a diferents temes, però vaig sentir que no estava treient tot el suc que l&amp;rsquo;aplicació m&amp;rsquo;oferia. Així que un dia vaig començar a jugar amb les plantilles que ofereix l&amp;rsquo;aplicació i vaig descobrir la de &lt;a href=&#34;https://www.notion.so/To-do-22ea4a5722cf49ad83718b10f4ff14f9&#34;&gt;To-do&lt;/a&gt;. Per usar-la és tan fàcil com fer clic a l&amp;rsquo;enllaç i duplicar-la al seu espai de treball. Si vol crear-lo pel seu compte, ha de crear una nova pàgina buida i després fer clic al tauler com es mostra en les següents imatges:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/01-start.png&#34; alt=&#34;Inici&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/02-create-kanban.png&#34; alt=&#34;Crear kanban&#34;&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/03-kanban-default.png&#34; alt=&#34;Kanban per defecte&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Després d&amp;rsquo;això, el tauler estarà al seu lloc i serà el torn d&amp;rsquo;ajustar-lo i modificar-lo com vulgui. Li mostraré aquí uns trucs bàsics per a això amb la finalitat de facilitar-li els seus primers passos tant com sigui possible, però novament el límit el posa vostè en termes de personalització.&lt;/p&gt;
+&lt;p&gt;Per crear una llista de propietats per a una tasca, només necessita anar a dins d&amp;rsquo;una tasca i canviar el tipus de propietat a una llista com a &lt;code&gt;Estat&lt;/code&gt; i &lt;code&gt;Tipus&lt;/code&gt;:
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/04-task-properties.png&#34; alt=&#34;Propietats de la tasca&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Després anoti el valor d&amp;rsquo;aquesta propietat i faci clic a &lt;code&gt;crear&lt;/code&gt; &lt;em&gt;la_seva_propietat&lt;/em&gt; a continuació:
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/04-task-add-list-property.png&#34; alt=&#34;Tasca afegir propietat de llista&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Si vol afegir la propietat &lt;code&gt;Última hora d&#39;edició&lt;/code&gt;, pot crear-ne una de nova amb el nom que vulgui, però la de temps ha de ser aquesta:
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/05-task-add-last-edited-property.png&#34; alt=&#34;Tasca afegir la última propietat editada&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Per modificar l&amp;rsquo;aparença del tauler afegint les propietats que ha creat en els passos anteriors, pot modificar les opcions de visualització seguint el següent. Primer vagi a les propietats del tauler:
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/06-board-properties.png&#34; alt=&#34;Propietats del tauler&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Posteriorment seleccioni les propietats que vol mostrar per a les targetes i canviï la vista prèvia i la mida:
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/07-board-properties.png&#34; alt=&#34;Propietats del tauler&#34;&gt;
+A més pot ordenar les propietats i afegir-ne de noves a la seva elecció.&lt;/p&gt;
+&lt;p&gt;Fins aquí ha estat una introducció ràpida a la plantilla &amp;ldquo;Tasques pendents&amp;rdquo; que utilitzo molt com un tauler &lt;a href=&#34;https://en.wikipedia.org/wiki/Kanban&#34;&gt;Kanban&lt;/a&gt; per les meves coses. Li mostraré els meus principals Kanbans per inspirar-lo.&lt;/p&gt;
+&lt;p&gt;Tech Reading Kanban: aquí organitzo tots els llibres tècnics (o articles) que vull llegir:
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/tech-reading-kanban.jpeg&#34; alt=&#34;Kanban de lectura tecnològica&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Videojocs Kanban: aquí organitzo tots els videojocs que vull jugar:
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/videogames-kanban.jpeg&#34; alt=&#34;Kanban de videojocs&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Manga Kanban: aquí organitzo tots els manga que vull llegir:
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/manga-kanban.jpeg&#34; alt=&#34;Kanban de manga&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Com pot veure amb només amb aquesta plantilla simple, pot fer moltes coses&amp;hellip; així que depèn de vostè i de la seva imaginació. Però això no és tot. Fins aquí, li he mostrat una forma senzilla de començar a augmentar la seva productivitat utilitzant l&amp;rsquo;aplicació Notion i la seva plantilla de tasques pendents. Però ara és el moment de fer un pas més enllà, de pujar de nivell.&lt;/p&gt;
+&lt;p&gt;Està pensant &amp;ldquo;Tot això sona bé, però no vull tenir tones de pàgines amb diferents plantilles i totes distribuïdes en el meu espai de treball, llavors, com puc administrar-es totes en una sola vista?&amp;rdquo; Avui és el seu dia de sort perquè és el que vaig a explicar ara mateix!&lt;/p&gt;
+&lt;p&gt;Hi ha moltes &lt;a href=&#34;https://www.notion.so/Learn-the-shortcuts-66e28cec810548c3a4061513126766b0&#34;&gt;ordres&lt;/a&gt; proporcionades per l&amp;rsquo;aplicació, però el que ens interessa ara és &lt;a href=&#34;https://www.notion.so/Linked-databases-fb007e2798d04c57aee839ecf6ce450a&#34;&gt;les bases de dades vinculades&lt;/a&gt;. Com diu a la documentació:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Les bases de dades vinculades li permeten mostrar, filtrar i ordenar la mateixa base de dades en diversos llocs (en una altra part de la mateixa pàgina i  o en un altre lloc del seu espai de treball) tantes vegades com vulgui.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Amb això, podem organitzar tots els nostres taulers en una sola pàgina principal vinculant els que vulguem i tan detallats com necessitem. Podem crear diferents vistes o simplement afegir l&amp;rsquo;enllaç a aquesta pàgina o una combinació de tots dos segons el cas. Un cop més, Notion proporciona una llista de plantilles per facilitar les nostres vides i la que vaig utilitzar com a base és la &lt;a href=&#34;https://www.notion.so/Life-wiki-9fd5df673bc44b6583f419ad49a4d1af&#34;&gt;Life wiki&lt;/a&gt;. Si va a l&amp;rsquo;enllaç i fa clic a Duplicar, la plantilla s&amp;rsquo;afegirà al seu propi espai de treball i des d&amp;rsquo;allà podrà començar a jugar amb ella. El meu actualment s&amp;rsquo;assembla a la captura de pantalla a continuació:
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/life-wiki.jpeg&#34; alt=&#34;Life wiki&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Potser en una publicació futura detallaré exactament com es veuen les pàgines internes i les vistes o si vol veure-ho, pot comentar-me aquí o a qualsevol xarxa social i ho faré més aviat del previst.&lt;/p&gt;
+&lt;p&gt;Això és tot per a un sistema de gestió personal. Espero que hagi gaudit la lectura i l&amp;rsquo;ajudi a portar les seves metes a el següent nivell amb aquests consells d&amp;rsquo;organització i gestió.&lt;/p&gt;
+&lt;p&gt;Però&amp;hellip; &lt;strong&gt;AIXÒ NO ÉS TOT!&lt;/strong&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/thats-all.gif&#34; alt=&#34;That &amp;rsquo;s all&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Si considera que aquesta és una gran eina per les seves coses personals, però es pregunta què tal seria fer-la servir per a projectes professionals, per exemple, reemplaçant JIRA en el seu treball, no es preocupi, hi ha una altra plantilla que pot ajudar-lo a fer aquesta transició que és &lt;a href=&#34;https://www.notion.so/Jira-Alternative-Notion-template-93880ffefbbd4931900ffd11430859fd&#34;&gt;aquesta&lt;/a&gt;. Com pot veure, és més o menys el mateix que JIRA, ja que té les vistes de les èpiques, l&amp;rsquo;esprint actual, els esprints futurs i el backlog. També a la part superior abans de les èpiques, hi ha una secció amb alguns enllaços a altres pàgines com les tasques, les etiquetes, les versions, etc. Llavors, com pot veure, ofereix gairebé una còpia de les vistes de JIRA però sense el negatiu de les vistes de JIRA (ja sap al que em refereixo).&lt;/p&gt;
+&lt;p&gt;També pot investigar la &lt;a href=&#34;https://www.notion.so/Notion-Template-Gallery-181e961aeb5c4ee6915307c0dfd5156d&#34;&gt;Galeria de plantilles de Notion&lt;/a&gt; per inspirar-se i duplicar-ne una d&amp;rsquo;allà o també compartir-hi la seva pròpia. &lt;a href=&#34;https://notionpages.com/&#34;&gt;Aquí&lt;/a&gt; té un altre lloc web inspirador creat per fans de Notion.&lt;/p&gt;
+&lt;p&gt;Com veu Notion és el present i al meu entendre el futur de les aplicacions de gestió/organització i un ferm candidat per liderar tots els rànquings, així que jugui amb ell, provi totes les plantilles, descobreixi totes les funcionalitats que ofereix i com sempre dic no dubti a comentar aquí o contactar-me en les meves xarxes socials per a qualsevol comentari, pregunta o suggeriment.&lt;/p&gt;
+</content>
+    </item>
     
     <item>
       <title>La Tècnica Pomodoro</title>
