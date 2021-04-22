@@ -44,7 +44,7 @@
   
   <url>
     <loc>https://charly3pins.dev/blog/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -64,7 +64,7 @@
   
   <url>
     <loc>https://charly3pins.dev/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -79,61 +79,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/tags/dotfiles/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/blog/getting-started-with-dotfiles/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/tags/linux/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/linux/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/linux/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/linux/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/tags/shell/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/tags/</loc>
-    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/"
                 />
   </url>
   
@@ -194,6 +139,26 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/tags/productivity/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/tags/</loc>
+    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
                 />
   </url>
   
@@ -394,6 +359,26 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://charly3pins.dev/tags/linux/</loc>
+    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/linux/"
                 />
   </url>
   
