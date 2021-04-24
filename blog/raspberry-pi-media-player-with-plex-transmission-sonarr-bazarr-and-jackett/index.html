@@ -256,11 +256,8 @@ if (!doNotTrack) {
 </span></code></pre></div><p>New we need to stop the demon to apply changes to the configuration that will allow us to manage it remotely:</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">service</span> <span class="nx">transmission</span><span class="p">-</span><span class="nx">daemon</span> <span class="nx">stop</span><span class="err">
 </span><span class="err"></span><span class="nx">sudo</span> <span class="nx">vi</span> <span class="sr">/etc/</span><span class="nx">transmission</span><span class="p">-</span><span class="nx">daemon</span>/<span class="nx">settings</span>.<span class="nx">json</span><span class="err">
-</span><span class="err"></span>``<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="nx">Look</span> <span class="nx">for</span> <span class="nx">rpc</span><span class="p">-</span><span class="nx">whitelist</span> <span class="nx">and</span> <span class="nx">rpc</span><span class="p">-</span><span class="nx">whitelist</span><span class="p">-</span><span class="nx">enabled</span> <span class="nx">and</span> <span class="nx">make</span> <span class="nx">sure</span> <span class="nx">they</span> <span class="nx">look</span> <span class="nx">like</span> <span class="nx">this</span>:<span class="err">
-</span><span class="err"></span>```<span class="nx">vim</span><span class="err">
-</span><span class="err"></span><span class="c">&#34;rpc-whitelist&#34;: &#34;127.0.0.1,192.168.*.*&#34;,</span><span class="err">
+</span></code></pre></div><p>Look for rpc-whitelist and rpc-whitelist-enabled and make sure they look like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34;rpc-whitelist&#34;: &#34;127.0.0.1,192.168.*.*&#34;,</span><span class="err">
 </span><span class="err"></span><span class="c">&#34;rpc-whitelist-enable&#34;: &#34;true&#34;,</span><span class="err">
 </span></code></pre></div><p>Please note that this is assuming that your internal network works on <code>192.168.0.1/24</code>. If otherwise please change the value accordingly.</p>
 <p>Also, we can modify download-dir and incomplete-dir to point at the external USB drive, for example:</p>
@@ -501,7 +498,7 @@ if (!doNotTrack) {
 		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="RSS">
 			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
 		</li>
-		<li><a class="footer-social-icon" href="https://dev.to/charly3pins" target="_blank" aria-label="Dev.to">
+        <li><a class="footer-social-icon" href="https://dev.to/charly3pins" target="_blank" aria-label="Dev.to">
 			<i class="fa fa-dev-to" title="Dev.to"></i>DEV</a>
         </li> 
 		<li><a class="footer-social-icon" href="mailto:hello@charly3pins.dev" target="_blank" aria-label="Email">
