@@ -850,7 +850,7 @@ Another Gopher is diving more into the sub-subsection!
 .link https://charly3pins.dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/links.jpeg&#34; alt=&#34;links&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;código&#34;&gt;código&lt;/h3&gt;
-&lt;p&gt;La mejor pedido en mi opinión es la de &lt;code&gt;.code&lt;/code&gt;. Le permite poner código extraído de los archivos fuente y inyectarles como bloques &lt;!-- raw HTML omitted --&gt; escapados por HTML. Acepta un argumento como nombre de archivo seguido de una dirección opcional que especifica qué sección del archivo se mostrará.&lt;/p&gt;
+&lt;p&gt;El mejor comando en mi opinión es &lt;code&gt;.code&lt;/code&gt;. Le permite poner código extraído de los archivos fuente y inyectarles como bloques &lt;!-- raw HTML omitted --&gt; escapados por HTML. Acepta un argumento como nombre de archivo seguido de una dirección opcional que especifica qué sección del archivo se mostrará.&lt;/p&gt;
 &lt;p&gt;Por ejemplo, tomando Hello world a Go como código fuente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
 
@@ -859,22 +859,19 @@ Another Gopher is diving more into the sub-subsection!
 &lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Debemos especificar como:```text
-.code hello.go&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
-Y se mostrará así:
-![code](/images/level-up-your-presentations-with-go/code.jpeg)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Debemos especificar como:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.code hello.go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y se mostrará así:
+&lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code.jpeg&#34; alt=&#34;code&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pero, ¿qué ocurre si desea resaltar alguna parte del código? No se preocupe, presente tiene este &amp;ldquo;presente&amp;rdquo; y puede añadir las &amp;ldquo;direcciones opcionales&amp;rdquo; que hemos comentado a continuación. Por lo tanto, cambie el código así para resaltar la llamada &lt;code&gt;Printf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
 
-Pero, ¿qué ocurre si desea resaltar alguna parte del código? No se preocupe, presente tiene este &amp;quot;presente&amp;quot; y puede añadir las &amp;quot;direcciones opcionales&amp;quot; que hemos comentado a continuación. Por lo tanto, cambie el código así para resaltar la llamada `Printf`:
-```go
-package main
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
 
-import &amp;quot;fmt&amp;quot;
-
-func main() {
-	fmt.Println(&amp;quot;Hello world!&amp;quot;) // HL
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Y utilice el mismo comando en la diapositiva:&lt;/p&gt;
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// HL
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y utilice el mismo comando en la diapositiva:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;.code hello-hl.go
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para ver el código resaltado:
 &lt;img src=&#34;https://charly3pins.dev/images/level-up-your-presentations-with-go/code-hl.jpeg&#34; alt=&#34;code-hl&#34;&gt;&lt;/p&gt;

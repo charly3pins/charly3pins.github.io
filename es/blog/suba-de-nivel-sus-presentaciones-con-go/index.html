@@ -237,7 +237,7 @@ Another Gopher is diving more into the sub-subsection!
 .link https://charly3pins.dev
 </code></pre></div><p><img src="/images/level-up-your-presentations-with-go/links.jpeg" alt="links"></p>
 <h3 id="código">código</h3>
-<p>La mejor pedido en mi opinión es la de <code>.code</code>. Le permite poner código extraído de los archivos fuente y inyectarles como bloques <!-- raw HTML omitted --> escapados por HTML. Acepta un argumento como nombre de archivo seguido de una dirección opcional que especifica qué sección del archivo se mostrará.</p>
+<p>El mejor comando en mi opinión es <code>.code</code>. Le permite poner código extraído de los archivos fuente y inyectarles como bloques <!-- raw HTML omitted --> escapados por HTML. Acepta un argumento como nombre de archivo seguido de una dirección opcional que especifica qué sección del archivo se mostrará.</p>
 <p>Por ejemplo, tomando Hello world a Go como código fuente:</p>
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
@@ -246,22 +246,19 @@ Another Gopher is diving more into the sub-subsection!
 <span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span>
 <span class="p">}</span>
-</code></pre></div><p>Debemos especificar como:```text
-.code hello.go</p>
-<pre><code>
-Y se mostrará así:
-![code](/images/level-up-your-presentations-with-go/code.jpeg)
+</code></pre></div><p>Debemos especificar como:</p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.code hello.go
+</code></pre></div><p>Y se mostrará así:
+<img src="/images/level-up-your-presentations-with-go/code.jpeg" alt="code"></p>
+<p>Pero, ¿qué ocurre si desea resaltar alguna parte del código? No se preocupe, presente tiene este &ldquo;presente&rdquo; y puede añadir las &ldquo;direcciones opcionales&rdquo; que hemos comentado a continuación. Por lo tanto, cambie el código así para resaltar la llamada <code>Printf</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-Pero, ¿qué ocurre si desea resaltar alguna parte del código? No se preocupe, presente tiene este &quot;presente&quot; y puede añadir las &quot;direcciones opcionales&quot; que hemos comentado a continuación. Por lo tanto, cambie el código así para resaltar la llamada `Printf`:
-```go
-package main
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
 
-import &quot;fmt&quot;
-
-func main() {
-	fmt.Println(&quot;Hello world!&quot;) // HL
-}
-</code></pre><p>Y utilice el mismo comando en la diapositiva:</p>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span> <span class="c1">// HL
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>Y utilice el mismo comando en la diapositiva:</p>
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.code hello-hl.go
 </code></pre></div><p>Para ver el código resaltado:
 <img src="/images/level-up-your-presentations-with-go/code-hl.jpeg" alt="code-hl"></p>
@@ -382,9 +379,9 @@ They eat basically plants.
 		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="RSS">
 			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
 		</li>
-        <li><a class="footer-social-icon" href="https://dev.to/charly3pins" target="_blank" aria-label="Dev.to">
+		<li><a class="footer-social-icon" href="https://dev.to/charly3pins" target="_blank" aria-label="Dev.to">
 			<i class="fa fa-dev-to" title="Dev.to"></i>DEV</a>
-        </li> 
+		</li> 
 		<li><a class="footer-social-icon" href="mailto:hello@charly3pins.dev" target="_blank" aria-label="Email">
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
