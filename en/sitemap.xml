@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://charly3pins.dev/code/collectus/</loc>
     <lastmod>2018-09-22T00:00:00+00:00</lastmod>
@@ -20,9 +19,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/code/collectus/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/code/tournaments-generator/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -40,11 +37,9 @@
                 hreflang="en"
                 href="https://charly3pins.dev/code/tournaments-generator/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/</loc>
-    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -60,11 +55,9 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/</loc>
-    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -80,9 +73,79 @@
                 hreflang="en"
                 href="https://charly3pins.dev/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://charly3pins.dev/tags/life/</loc>
+    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/life/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/life/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/life/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/tags/startup/</loc>
+    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/startup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/startup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/startup/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/tags/</loc>
+    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/blog/what-i-learned-defining-the-selection-process-for-a-software-engineer-in-the-startup-where-i-work/</loc>
+    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/qu%C3%A9-aprend%C3%AD-definiendo-el-proceso-de-selecci%C3%B3n-para-ingeniero-de-software-en-la-startup-donde-trabajo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/blog/qu%C3%A8-he-apr%C3%A8s-definint-el-proc%C3%A9s-de-selecci%C3%B3-per-a-enginyer-de-software-a-lstartup-on-treballo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/what-i-learned-defining-the-selection-process-for-a-software-engineer-in-the-startup-where-i-work/"
+                />
+  </url><url>
     <loc>https://charly3pins.dev/blog/increase-your-productivity-with-notion/</loc>
     <lastmod>2021-04-08T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -100,29 +163,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/increase-your-productivity-with-notion/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/tags/life/</loc>
-    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/life/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/life/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/life/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/productivity/</loc>
     <lastmod>2021-04-08T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -140,29 +181,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/productivity/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://charly3pins.dev/tags/</loc>
-    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/the-pomodoro-technique/</loc>
     <lastmod>2021-03-30T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -180,9 +199,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/the-pomodoro-technique/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/automate-your-github-profile-readme-with-go-and-github-actions/</loc>
     <lastmod>2021-03-16T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -200,9 +217,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/automate-your-github-profile-readme-with-go-and-github-actions/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/github/</loc>
     <lastmod>2021-03-16T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -220,9 +235,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/github/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/go/</loc>
     <lastmod>2021-03-16T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -240,9 +253,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/go/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/my-productivity-setup-for-vs-code/</loc>
     <lastmod>2021-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -260,9 +271,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/my-productivity-setup-for-vs-code/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/vscode/</loc>
     <lastmod>2021-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -280,9 +289,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/vscode/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/build-an-awesome-github-profile-readme/</loc>
     <lastmod>2021-02-12T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -300,9 +307,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/build-an-awesome-github-profile-readme/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/how-to-have-a-multilingual-site-in-hugo/</loc>
     <lastmod>2021-02-05T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -320,9 +325,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/how-to-have-a-multilingual-site-in-hugo/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/hugo/</loc>
     <lastmod>2021-02-05T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -340,9 +343,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/hugo/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/</loc>
     <lastmod>2020-11-23T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -360,9 +361,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/how-to-add-google-analytics-to-your-hugo-site/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/linux/</loc>
     <lastmod>2020-11-05T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -380,9 +379,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/linux/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/raspberry-pi-media-player-with-plex-transmission-sonarr-bazarr-and-jackett/</loc>
     <lastmod>2020-11-05T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -400,9 +397,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/raspberry-pi-media-player-with-plex-transmission-sonarr-bazarr-and-jackett/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/raspberrypi/</loc>
     <lastmod>2020-11-05T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -420,9 +415,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/raspberrypi/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/api/</loc>
     <lastmod>2020-10-20T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -440,9 +433,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/api/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/understanding-semantic-versionin-2.0-semver/</loc>
     <lastmod>2020-10-20T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -460,9 +451,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/understanding-semantic-versionin-2.0-semver/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/level-up-your-preseentations-with-go/</loc>
     <lastmod>2020-10-06T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -480,9 +469,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/level-up-your-preseentations-with-go/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/code/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -500,9 +487,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/code/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/flutter/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -520,9 +505,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/flutter/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/python/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -540,9 +523,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/python/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/git/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -560,9 +541,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/git/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/git-custom-commit-messages/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -580,9 +559,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/git-custom-commit-messages/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/terminal/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -600,9 +577,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/terminal/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/hugo-content-and-templates-managing/</loc>
     <lastmod>2020-03-08T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -620,9 +595,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/hugo-content-and-templates-managing/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/installing-drone-0.8-on-ubuntu-16.04/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -640,14 +613,10 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/installing-drone-0.8-on-ubuntu-16.04/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/gophercises-quiz/</loc>
     <lastmod>2018-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/blog/building-static-blog-with-hugo/</loc>
     <lastmod>2018-09-22T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -665,9 +634,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/blog/building-static-blog-with-hugo/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/javascript/</loc>
     <lastmod>2018-09-22T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -685,9 +652,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/javascript/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/php/</loc>
     <lastmod>2018-09-22T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -705,9 +670,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/tags/php/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/about/</loc>
     <xhtml:link
                 rel="alternate"
@@ -724,9 +687,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/about/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -743,9 +704,7 @@
                 hreflang="en"
                 href="https://charly3pins.dev/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://charly3pins.dev/tags/ci/cd/</loc>
     <xhtml:link
                 rel="alternate"
@@ -763,5 +722,4 @@
                 href="https://charly3pins.dev/tags/ci/cd/"
                 />
   </url>
-  
 </urlset>
