@@ -38,8 +38,26 @@
                 href="https://charly3pins.dev/ca/code/tournaments-generator/"
                 />
   </url><url>
+    <loc>https://charly3pins.dev/ca/blog/apr%C3%A8n-a-fer-servir-el-paquet-embed-a-go-construint-una-p%C3%A0gina-web-f%C3%A0cilment/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/learn-how-to-use-the-embed-package-in-go-by-building-a-web-page-easily/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/aprende-a-utilizar-el-paquete-embed-a-go-construyendo-una-p%C3%A1gina-web-f%C3%A1cilmente/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/blog/apr%C3%A8n-a-fer-servir-el-paquet-embed-a-go-construint-una-p%C3%A0gina-web-f%C3%A0cilment/"
+                />
+  </url><url>
     <loc>https://charly3pins.dev/ca/blog/</loc>
-    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -57,7 +75,7 @@
                 />
   </url><url>
     <loc>https://charly3pins.dev/ca/</loc>
-    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -72,6 +90,42 @@
                 rel="alternate"
                 hreflang="ca"
                 href="https://charly3pins.dev/ca/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/ca/tags/go/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/go/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/go/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/go/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/ca/tags/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/ca/tags/life/</loc>
@@ -126,24 +180,6 @@
                 rel="alternate"
                 hreflang="ca"
                 href="https://charly3pins.dev/ca/tags/startup/"
-                />
-  </url><url>
-    <loc>https://charly3pins.dev/ca/tags/</loc>
-    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/ca/blog/augmenti-la-seva-productivitat-amb-notion/</loc>
@@ -234,24 +270,6 @@
                 rel="alternate"
                 hreflang="ca"
                 href="https://charly3pins.dev/ca/tags/github/"
-                />
-  </url><url>
-    <loc>https://charly3pins.dev/ca/tags/go/</loc>
-    <lastmod>2021-03-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/go/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/ca/blog/la-meva-configuraci%C3%B3-per-a-una-alta-productivitat-per-al-vs-code/</loc>

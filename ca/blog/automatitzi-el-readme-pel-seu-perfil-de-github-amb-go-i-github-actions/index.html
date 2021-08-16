@@ -167,14 +167,14 @@ if (!doNotTrack) {
 <h2 id="obtenir-lúltim-post-amb-go">Obtenir l&rsquo;últim post amb Go</h2>
 <p>Necessitava escanejar el feed del blog i ho volia fer en Go, per tant, el primer que vaig fer va ser buscar si ja hi havia alguna llibreria que em facilités aquesta tasca per no reinventar la roda i vaig trobar la <a href="https://github.com/mmcdole/gofeed">github.com/mmcdole/gofeed</a>. Tenía un munt de funcionalitats però jo amb l&rsquo;ús basic descrit al seu README en tenia suficient.</p>
 <p>Amb el següent tros de codi, creo un nou parser, escanejo la direcció del meu feed i dels elements resultants, em quedo amb el primer, ja que és l&rsquo;últim post publicat.</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">p</span> <span class="o">:=</span> <span class="nx">gofeed</span><span class="p">.</span><span class="nf">NewParser</span><span class="p">()</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">p</span> <span class="o">:=</span> <span class="nx">gofeed</span><span class="p">.</span><span class="nf">NewParser</span><span class="p">()</span>
 <span class="nx">feed</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">p</span><span class="p">.</span><span class="nf">ParseURL</span><span class="p">(</span><span class="s">&#34;https://charly3pins.dev/index.xml&#34;</span><span class="p">)</span>
 <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
     <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;error getting feed: %v&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="nx">newestItem</span> <span class="o">:=</span> <span class="nx">feed</span><span class="p">.</span><span class="nx">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div><p>Amb això  ja tinc l&rsquo;item amb tota la informació. El seu aspecte és similar a:</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;item&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;item&gt;</span>
     <span class="nt">&lt;title&gt;</span>My productivity setup for VS Code<span class="nt">&lt;/title&gt;</span>
     <span class="nt">&lt;link&gt;</span>http://charly3pins.dev/blog/my-productivity-setup-for-vs-code/<span class="nt">&lt;/link&gt;</span>
     <span class="nt">&lt;pubDate&gt;</span>Tue, 09 Mar 2021<span class="nt">&lt;/pubDate&gt;</span>
@@ -188,7 +188,7 @@ if (!doNotTrack) {
 <p>Per fer-ho podia llegir el fitxer fent servir la llibreria standard <code>ioutil.ReadFile()</code>, però en aquest cas com que no vull reaprofitar res del fitxer, puc cridar directament al <code>os.Create()</code> per crear un nou fitxer i així sobreescriure el README.md que ja tenia al directori.</p>
 <p>A més, com que vull posar la informació del feed juntament amb la part estàtica de text que ja tenia, el que faré es crear varies cadenes de text amb les diferents seccions que vull posar al perfil i després ajuntar-les totes amb un <code>fmt.Sprintf()</code>.</p>
 <p>El codi que fa tot això és el següent:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">file</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="nx">filename</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">file</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="nx">filename</span><span class="p">)</span>
 <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
 	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;error creating file&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
 	<span class="k">return</span>
@@ -202,7 +202,7 @@ if (!doNotTrack) {
 <span class="p">}</span>
 <span class="nx">file</span><span class="p">.</span><span class="nf">Sync</span><span class="p">()</span>
 </code></pre></div><p>El que falta per veure d&rsquo;aquí és el valor de <code>filename</code> i el de <code>data</code>. El primer és fàcil, simplement la ruta per arribar al README. En el meu cas com tinc el projecte en un subdirectori del meu repositori he de fer servir <code>filename = ../README.md</code>. A l&rsquo;altra variable, el que hi ha és el següent:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">hi</span> <span class="o">:=</span> <span class="s">&#34;# Hey there!&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">hi</span> <span class="o">:=</span> <span class="s">&#34;# Hey there!&#34;</span>
 <span class="nx">blog</span> <span class="o">:=</span> <span class="s">&#34;## Blog\n\nMy latest blog post is: **[&#34;</span> <span class="o">+</span> <span class="nx">newestItem</span><span class="p">.</span><span class="nx">Title</span> <span class="o">+</span> <span class="s">&#34;](&#34;</span> <span class="o">+</span> <span class="nx">newestItem</span><span class="p">.</span><span class="nx">Link</span> <span class="o">+</span> <span class="s">&#34;)**.&#34;</span>
 
 <span class="nx">data</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s\n\n%s\n\n%s\n\n%s\n&#34;</span><span class="p">,</span> <span class="nx">hi</span><span class="p">,</span> <span class="nx">blog</span><span class="p">)</span>
@@ -211,14 +211,14 @@ if (!doNotTrack) {
 <h2 id="executant-automàticament-el-procés">Executant automàticament el procés</h2>
 <p>Un cop ja tenim el codi que ens genera el README automàtic i de forma dinàmica segons l&rsquo;últim post, el que queda per fer es que s&rsquo;executi de forma periòdica i no ens tinguem que preocupar de res. Per a fer-ho faré servir un <a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows">trigger</a> de GitHub Actions per a que cada cop que faci un push a la branca <code>master</code> executi el procés i també que s&rsquo;executi de forma planificada cada diumenge a les 12am.</p>
 <p>Primer de tot necessito la carpeta <code>.github/worfklows</code> i a dins hi creo el fitxer <code>update.yaml</code> amb el contingut següent:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">on</span>:<span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">on</span>:<span class="err">
 </span><span class="err"></span>  <span class="nx">push</span>:<span class="err">
 </span><span class="err"></span>    <span class="nx">branches</span>:<span class="err">
 </span><span class="err"></span>      <span class="p">-</span> <span class="nx">master</span><span class="err">
 </span><span class="err"></span>  <span class="nx">schedule</span>:<span class="err">
 </span><span class="err"></span>    <span class="p">-</span> <span class="nx">cron</span>: <span class="s1">&#39;0 0 * * 0&#39;</span><span class="err">
 </span></code></pre></div><p>Quan ja està el trigger llest, el que s&rsquo;han de definir són els <a href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs">jobs</a>. Es poden definir tants com es vulguin, en el meu cas amb 3 senzills en tinc suficient. El primer farà un <code>checkout</code> del projecte, el segon <code>generarà</code> el README i el tercer <code>desplegarà</code> els canvis. Per a fer l&rsquo;últim pas haurem de fer servir els mecanismes d'<a href="https://docs.github.com/en/actions/reference/authentication-in-a-workflow">autenticació</a> que proporciona GitHub Actions. El codi resultants és:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">jobs</span>:<span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">jobs</span>:<span class="err">
 </span><span class="err"></span>  <span class="nx">build</span><span class="p">-</span><span class="nx">and</span><span class="p">-</span><span class="nx">deploy</span>:<span class="err">
 </span><span class="err"></span>    <span class="nx">runs</span><span class="p">-</span><span class="nx">on</span>: <span class="nx">ubuntu</span><span class="p">-</span><span class="nx">latest</span><span class="err">
 </span><span class="err">
@@ -352,7 +352,7 @@ if (!doNotTrack) {
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Darrer post el 04/05/2021</div>
+	<div class="footer-text">Darrer post el 16/08/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>

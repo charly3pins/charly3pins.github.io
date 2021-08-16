@@ -162,7 +162,7 @@ if (!doNotTrack) {
 <p>Tras esta &ldquo;chapa&rdquo;, vamos a ver como se podéis tener vuestros sitios en Hugo en varios idiomas de forma fácil, sencilla y para toda la familia. ¡Vamos allá!</p>
 <h2 id="configurar-idiomas">Configurar Idiomas</h2>
 <p>Lo primero que hay que hacer para tener un sitio multilingüe, es definir en el <code>config.toml</code> los idiomas que se quieren ofrecer. En mi caso he decidido inglés, castellano y catalán de la siguiente forma:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim">[<span class="nx">languages</span>]<span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">[<span class="nx">languages</span>]<span class="err">
 </span><span class="err"></span>[<span class="nx">languages</span>.<span class="nx">en</span>]<span class="err">
 </span><span class="err"></span><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span><span class="err">
 </span><span class="err"></span><span class="nx">weight</span> <span class="p">=</span> <span class="m">1</span><span class="err">
@@ -177,7 +177,7 @@ if (!doNotTrack) {
 </span></code></pre></div><p>El <code>languageName</code> se utiliza para definir el texto que se verá en la web al comprobar qué idiomas hay disponibles. ¡Spoiler alert! Más adelante veremos cómo traducir también estos textos.</p>
 <h2 id="menús">Menús</h2>
 <p>Para traducir los menús en los diferentes idiomas se deben declarar de la siguiente forma:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim">[[<span class="nx">languages</span>.<span class="nx">en</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">[[<span class="nx">languages</span>.<span class="nx">en</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
 </span><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;home&#34;</span><span class="err">
 </span><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span><span class="err">
 </span><span class="err">
@@ -202,16 +202,16 @@ if (!doNotTrack) {
 </span><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/about&#34;</span><span class="err">
 </span></code></pre></div><h2 id="contenido">Contenido</h2>
 <p>Si por ejemplo queremos traducir la página de <code>Sobre mí</code>, podemos hacerlo simplemente con replicar dicho fichero tantas veces como idiomas tengamos, en este caso 3, añadiendo el ISO del idioma en el nombre de la siguiente forma:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">en</span>.<span class="nx">md</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">en</span>.<span class="nx">md</span><span class="err">
 </span><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">es</span>.<span class="nx">md</span><span class="err">
 </span><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">ca</span>.<span class="nx">md</span><span class="err">
 </span></code></pre></div><p>En nuestro caso el idioma inglés es el por defecto, por lo que incluso podríamos hacerlo tal que así:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">md</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">md</span><span class="err">
 </span><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">es</span>.<span class="nx">md</span><span class="err">
 </span><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">ca</span>.<span class="nx">md</span><span class="err">
 </span></code></pre></div><h2 id="contenido-traducido">Contenido traducido</h2>
 <p>Para encontrar las traducciones de la página en concreto se puede usar el trozo de código proporcionado en la documentación oficial:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go">
 <span class="p">{{</span> <span class="k">if</span> <span class="p">.</span><span class="nx">IsTranslated</span> <span class="p">}}</span>
 <span class="p">&lt;</span><span class="nx">h4</span><span class="p">&gt;{{</span> <span class="nx">i18n</span> <span class="s">&#34;translations&#34;</span> <span class="p">}}&lt;</span><span class="o">/</span><span class="nx">h4</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nx">ul</span><span class="p">&gt;</span>
@@ -225,30 +225,30 @@ if (!doNotTrack) {
 </code></pre></div><p>En la plantilla donde insertemos este código, una vez se renderice el contenido para ésta, aparecerá si hay traducción o no de ese contenido.</p>
 <h2 id="traducción-de-textos">Traducción de textos</h2>
 <p>En el código anterior ya podemos ver que aparece la función <code>i18n</code> que Hugo utiliza para traducir los textos definidos en los archivos de idiomas dentro del directorio raíz como <code>/i18n</code>. El formato de los archivos de dentro debe ser por ejemplo:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">i18n</span>/<span class="nx">en</span>.<span class="nx">toml</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">i18n</span>/<span class="nx">en</span>.<span class="nx">toml</span><span class="err">
 </span><span class="err"></span><span class="nx">i18n</span>/<span class="nx">es</span>.<span class="nx">toml</span><span class="err">
 </span><span class="err"></span><span class="nx">i18n</span>/<span class="nx">ca</span>.<span class="nx">toml</span><span class="err">
 </span></code></pre></div><p>Para cada idioma anteriormente descrito respectivamente.</p>
 <p>El contenido del archivo será parecido a:</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
 <span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;Read more&#34;</span>
 </code></pre></div><p>Para el archivo en inglés.</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
 <span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;Leer más&#34;</span>
 </code></pre></div><p>Para el archivo en castellano.</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
 <span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;Llegir més&#34;</span>
 </code></pre></div><p>Para el archivo en catalán.</p>
 <p>Una vez definida la traducción para <code>Leer más</code>, se utiliza en nuestra plantilla de Hugo como:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span> <span class="nx">i18n</span> <span class="s">&#34;readMore&#34;</span> <span class="p">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span> <span class="nx">i18n</span> <span class="s">&#34;readMore&#34;</span> <span class="p">}}</span>
 </code></pre></div><p>Y el resultado será el texto definido en los <code>.toml</code> según el idioma escogido por el usuario para ver la página web.</p>
 <h2 id="traducción-singular-yo-plural">Traducción singular y/o plural</h2>
 <p>Se pueden definir traducciones singulares o plurales dependiendo un &ldquo;contador&rdquo;, ya que la función <code>i18n</code> ofrece esa posibilidad. Por ejemplo para el <code>Tiempo de leído</code> de un artículo, podemos definirlo tal que así en el <code>.toml</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readingTime</span><span class="p">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readingTime</span><span class="p">]</span>
 <span class="nx">one</span> <span class="p">=</span> <span class="s2">&#34;One minute to read&#34;</span>
 <span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;{{.Count}} minutes to read&#34;</span>
 </code></pre></div><p>Vemos que le pasamos el <code>.Count</code> a la traducción por lo que tendremos que invocar la función de la siguiente forma:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span> <span class="nx">i18n</span> <span class="s">&#34;readingTime&#34;</span> <span class="p">.</span><span class="nx">ReadingTime</span> <span class="p">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span> <span class="nx">i18n</span> <span class="s">&#34;readingTime&#34;</span> <span class="p">.</span><span class="nx">ReadingTime</span> <span class="p">}}</span>
 </code></pre></div><blockquote>
 <p>Nota: la propiedad <code>.ReadingTime</code> es un contador que retorna Hugo según el número de palabras de los artículos que creemos.</p>
 </blockquote>
@@ -362,7 +362,7 @@ if (!doNotTrack) {
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Última publicación en 04/05/2021</div>
+	<div class="footer-text">Última publicación en 16/08/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>

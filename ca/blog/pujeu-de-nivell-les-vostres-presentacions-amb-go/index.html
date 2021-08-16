@@ -162,18 +162,18 @@ if (!doNotTrack) {
 					<p>Si sou una persona tècnica i no us agrada lluitar amb els programes de presentació però voleu / necessiteu crear-ne un, enhorabona! estàs al lloc correcte. Sé que, com a enginyers de programari, volem codificar, llegir o mirar coses relacionades amb programari, arquitectura o devops, però no amb presentacions. De vegades, se’ns exigeix ​​que presentem alguna cosa a altres membres de l’equip, als propietaris de productes o fins i tot més aterridors, a l’equip directiu.</p>
 <p>Per aquest motiu, vull presentar-vos el paquet Go <a href="https://godoc.org/golang.org/x/tools/present">present</a>. S&rsquo;utilitza per crear diapositives a Golang allotjades a discussions.golang.org o a la vostra privada. L’he utilitzat diverses vegades, sobretot quan vull compartir alguna cosa amb els meus companys de l’equip (algun codi, és clar), perquè no vull perdre el temps amb els programes. Acabo de crear el projecte per a les diapositives, afegeixo les meves diapositives a la marca, afegeixo les imatges necessàries i les presento. Vegem detalladament com funciona!</p>
 <p>Suposant que teniu Go <a href="https://golang.org/doc/install">instal·lat</a> i configurat correctament, tot el que heu d’instal·lar és el paquet amb la comanda següent:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">go</span> <span class="nx">get</span> <span class="p">-</span><span class="nx">u</span> <span class="nx">golang</span>.<span class="nx">org</span><span class="sr">/x/</span><span class="nx">tools</span>/<span class="nx">present</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">go</span> <span class="nx">get</span> <span class="p">-</span><span class="nx">u</span> <span class="nx">golang</span>.<span class="nx">org</span><span class="sr">/x/</span><span class="nx">tools</span>/<span class="nx">present</span><span class="err">
 </span></code></pre></div><p>Comproveu si funciona escrivint:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">present</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">present</span><span class="err">
 </span></code></pre></div><p>Hauria de mostrar un missatge similar a:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="m">2020</span><span class="sr">/10/</span><span class="m">04</span> <span class="m">23</span>:<span class="m">23</span>:<span class="m">54</span> <span class="nx">Open</span> <span class="nx">your</span> <span class="nx">web</span> <span class="nx">browser</span> <span class="nx">and</span> <span class="nx">visit</span> <span class="nx">http</span>:<span class="sr">//</span><span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">3999</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="m">2020</span><span class="sr">/10/</span><span class="m">04</span> <span class="m">23</span>:<span class="m">23</span>:<span class="m">54</span> <span class="nx">Open</span> <span class="nx">your</span> <span class="nx">web</span> <span class="nx">browser</span> <span class="nx">and</span> <span class="nx">visit</span> <span class="nx">http</span>:<span class="sr">//</span><span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">3999</span><span class="err">
 </span></code></pre></div><p>Per tant, podeu visitar l’enllaç i veure el servidor local preparat per allotjar les vostres presentacions. Increïble o no? D’acord, sé que voleu mostrar alguna cosa que no sigui un directori buit, així que anem a crear un exemple de presentació per a això.</p>
 <h2 id="format">Format</h2>
 <p>Creeu un directori per a les diapositives:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">mkdir</span> <span class="nx">go</span><span class="p">-</span><span class="nx">present</span><span class="p">-</span><span class="nx">example</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">mkdir</span> <span class="nx">go</span><span class="p">-</span><span class="nx">present</span><span class="p">-</span><span class="nx">example</span><span class="err">
 </span><span class="err"></span><span class="nx">cd</span> <span class="nx">go</span><span class="p">-</span><span class="nx">present</span><span class="p">-</span><span class="nx">example</span>/<span class="err">
 </span></code></pre></div><p>Creeu la primera diapositiva:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">vim</span> <span class="nx">initial</span>.<span class="nx">slide</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">vim</span> <span class="nx">initial</span>.<span class="nx">slide</span><span class="err">
 </span></code></pre></div><p>I afegiu el següent contingut:</p>
 <pre><code>Learning Go present
 6 October 2020
@@ -193,7 +193,7 @@ I'm a slide
 <h2 id="sintaxi-heretat-de-present">Sintaxi heretat de present</h2>
 <p>És compatible amb Markdown, però aquí explorarem la <a href="https://godoc.org/golang.org/x/tools/present#hdr-Legacy_Present_Syntax">sintaxi heretat de present</a>, ja que el Markdown té molts recursos on podeu comprovar . Així que explorem una mica les funcions que ofereix &ldquo;present&rdquo; per formatar i mostrar text a les nostres diapositives.</p>
 <p>Primer són les opcions clàssiques per formatar el text:</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">normal vs `highlighted`
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">normal vs `highlighted`
 *bold*
 _italic_
 *multiple*bold*text*
@@ -201,7 +201,7 @@ _multiple_italic_text_
 </code></pre></div><p>I el resultat és:
 <img src="/images/level-up-your-presentations-with-go/text-formatting.jpeg" alt="text formatting"></p>
 <p>També pot afegir una llista:</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Grocery list for the gopher:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Grocery list for the gopher:
 
 - go routines
 - garbage collector
@@ -222,23 +222,23 @@ Another Gopher is diving more into the sub-subsection!
 <p>A part del format de text, hi ha una <a href="https://godoc.org/golang.org/x/tools/present#hdr-Command_Invocations">invocacions de comandes especials</a> que podeu invocar per portar la vostra presentació a un altre nivell.</p>
 <h3 id="imatges-i-vídeos">imatges i vídeos</h3>
 <p>La comanda <code>.image</code> injecta una imatge a la diapositiva. Accepta 1 o 3 arguments (nom, alçada, amplada). El nom és obligatori, altres dos han d&rsquo;estar presents o substituïts per un <code>_</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.image /images/gopher.jpeg 200 200
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">.image /images/gopher.jpeg 200 200
 .image /images/gopher.jpeg _ 300
 </code></pre></div><p><img src="/images/level-up-your-presentations-with-go/images.jpeg" alt="images"></p>
 <p>Igual que les imatges, podeu fer el mateix amb un vídeo mitjançant la comanda <code>.video</code>. Accepta 2 o 4 arguments (nom, tipus de contingut del fitxer, alçada, amplada). El nom i el tipus de contingut del fitxer són obligatoris; altres dos han d’estar presents o substituïts per i <code>_</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.video videos/gopher-dance.mp4 video/mp4 400 600
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">.video videos/gopher-dance.mp4 video/mp4 400 600
 .video videos/gopher-dance.mkv video/mkv 500 _
 </code></pre></div><p>De manera similar a les imatges, també té la comanda <code>.background</code> per configurar la imatge de fons d&rsquo;una diapositiva. Només té un argument com a nom de fitxer de la imatge.</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.background images/susan.jpg
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">.background images/susan.jpg
 </code></pre></div><h3 id="enllaços">enllaços</h3>
 <p>Si heu d&rsquo;inserir un enllaç a la presentació, podeu utilitzar la comanda <code>.link</code>. Accepta 1 o 2 arguments (URL HTTP, etiqueta de text). L&rsquo;URL HTTP és obligatori, el segon és opcional.</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.link https://charly3pins.dev charly3pins website
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">.link https://charly3pins.dev charly3pins website
 .link https://charly3pins.dev
 </code></pre></div><p><img src="/images/level-up-your-presentations-with-go/links.jpeg" alt="links"></p>
 <h3 id="codi">codi</h3>
 <p>La millor comanda en la meva opinió és la de <code>.code</code>. Us permet posar codi extret dels fitxers font i injectar-los com a blocs <!-- raw HTML omitted --> escapats per HTML. Accepta un argument com a nom de fitxer seguit d’una adreça opcional que especifica quina secció del fitxer es mostrarà.</p>
 <p>Per exemple, prenent Hello world a Go com a codi font:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
 
@@ -246,11 +246,11 @@ Another Gopher is diving more into the sub-subsection!
 	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div><p>Hem d’especificar com a:</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.code hello.go
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">.code hello.go
 </code></pre></div><p>I es mostrarà així:
 <img src="/images/level-up-your-presentations-with-go/code.jpeg" alt="code"></p>
 <p>Però, què passa si voleu ressaltar alguna part del codi? No us preocupeu, present té aquest &ldquo;present&rdquo; i podeu afegir-hi les &ldquo;adreces opcionals&rdquo; que hem comentat a continuació. Per tant, modifiqueu el codi així per ressaltar la trucada <code>Printf</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
 
@@ -258,11 +258,11 @@ Another Gopher is diving more into the sub-subsection!
 	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span> <span class="c1">// HL
 </span><span class="c1"></span><span class="p">}</span>
 </code></pre></div><p>I utilitzeu la mateixa comanda a la diapositiva:</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.code hello-hl.go
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">.code hello-hl.go
 </code></pre></div><p>Per veure el codi ressaltat:
 <img src="/images/level-up-your-presentations-with-go/code-hl.jpeg" alt="code-hl"></p>
 <p>Un pas més! Si només voleu mostrar una part del vostre codi, per exemple, amagar el paquet i les importacions del fitxer, també podeu afegir els fragments següents:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
 
@@ -272,14 +272,14 @@ Another Gopher is diving more into the sub-subsection!
 </span><span class="c1"></span><span class="p">}</span>
 <span class="c1">//END OMIT
 </span></code></pre></div><p>Torneu a utilitzar la mateixa ordre però afegint el fragment següent:</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.code hello-hl-partial.go /START OMIT/,/END OMIT/
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">.code hello-hl-partial.go /START OMIT/,/END OMIT/
 </code></pre></div><p>I vegeu el codi parcialment mostrat:
 <img src="/images/level-up-your-presentations-with-go/code-hl-partial.jpeg" alt="code-hl-partial"></p>
 <h4 id="play">play</h4>
 <p>Aquesta ordre és superpotent per ajudar-vos a presentar algun codi i ressaltar o amagar algunes parts. Però l’espectacle ha de continuar i la millor part és la següent. La comanda <code>.play</code> és com el del <code>.code</code>, però posa un botó a la font descatalogada i podeu executar el programa des del navegador. És màgia o no?
 <img src="/images/level-up-your-presentations-with-go/magic.gif" alt="magic"></p>
 <p>Utilitzem el mateix codi font que estem utilitzant i afegim la nova ordre a les diapositives així:</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">.play hello.go
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">.play hello.go
 </code></pre></div><p>Apareixerà com el del &ldquo;codi&rdquo;, però si observeu a l&rsquo;extrem inferior dret, apareixerà un petit botó <code>Run</code>.
 <img src="/images/level-up-your-presentations-with-go/code-play.jpeg" alt="code-play"></p>
 <p>En executar el codi es mostrarà una petita finestra negra a la pantalla on es mostrarà la sortida del codi:
@@ -287,7 +287,7 @@ Another Gopher is diving more into the sub-subsection!
 <h2 id="notes-del-presentador">Notes del presentador</h2>
 <p>Per últim, però no menys important, és una cosa interessant que també proporcionen. És ben sabut que als programes de PowerPoint o similars podeu afegir les vostres notes només per a vosaltres quan presenteu la presentació i de vegades són molt útils. Així doncs, &ldquo;present&rdquo; també ho té en compte i podeu afegir les vostres notes de presentació només afegint un <code>:</code> al començament de la frase i aquest text es tractarà com una nota de presentador.</p>
 <p>Per exemple:</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">* Presenter notes
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">* Presenter notes
 
 The gophers like to eat a lot.
 
@@ -298,9 +298,9 @@ They eat basically plants.
 : typically gnaws the roots of a plant just beneath the soil, so the damage isn’t seen
 </code></pre></div><p><img src="/images/level-up-your-presentations-with-go/present-notes.jpeg" alt="present-notes"></p>
 <p>Com podeu veure, les notes no hi són presents, per què? Perquè necessiteu executar la presentació en un &ldquo;presentador&rdquo; així.</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">present</span> <span class="p">-</span><span class="nx">notes</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">present</span> <span class="p">-</span><span class="nx">notes</span><span class="err">
 </span></code></pre></div><p>I hauria de mostrar un missatge similar a:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="m">2020</span><span class="sr">/10/</span><span class="m">04</span> <span class="m">23</span>:<span class="m">23</span>:<span class="m">54</span> <span class="nx">Open</span> <span class="nx">your</span> <span class="nx">web</span> <span class="nx">browser</span> <span class="nx">and</span> <span class="nx">visit</span> <span class="nx">http</span>:<span class="sr">//</span><span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">3999</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="m">2020</span><span class="sr">/10/</span><span class="m">04</span> <span class="m">23</span>:<span class="m">23</span>:<span class="m">54</span> <span class="nx">Open</span> <span class="nx">your</span> <span class="nx">web</span> <span class="nx">browser</span> <span class="nx">and</span> <span class="nx">visit</span> <span class="nx">http</span>:<span class="sr">//</span><span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">3999</span><span class="err">
 </span><span class="err"></span><span class="m">2020</span><span class="sr">/10/</span><span class="m">04</span> <span class="nx">Notes</span> <span class="nx">are</span> <span class="nx">enabled</span><span class="p">,</span> <span class="nx">press</span> <span class="s1">&#39;N&#39;</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">browser</span> <span class="nx">to</span> <span class="nx">display</span> <span class="nx">them</span>.<span class="err">
 </span></code></pre></div><p>Per tant, si actualitzeu el navegador amb la presentació i premeu <code>N</code>, veureu una finestra emergent que mostra les notes de cada diapositiva a la part inferior de la manera següent:
 <img src="/images/level-up-your-presentations-with-go/present-notes-popup.jpeg" alt="present-notes-popup"></p>
@@ -382,7 +382,7 @@ They eat basically plants.
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Darrer post el 04/05/2021</div>
+	<div class="footer-text">Darrer post el 16/08/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>

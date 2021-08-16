@@ -178,7 +178,7 @@ I&rsquo;ve chosen <a href="https://golang.org/">Go</a> as the programming langua
 <p>For the mobile app, I started putting all files inside a <code>components</code> folder but when it started growing it was a complete kaos to manage. After adding more complexity to the app I end up finding a clean way to organize the code, dividing it into two separate folders; one for the core and another one for the ui. Then inside of each one I also categorized the different type of components depending on their responsibilities and at the end the code (at least for me that I&rsquo;m not a Flutter expert) ended up looking super clean and (without no doubt) more maintainable. Below the folder organization in a general view:</p>
 <p><img src="/images/code/tournaments-generator/app-structure.jpeg" alt="app structure"></p>
 <p>At the beginning when I started coding and watching the results all was super fancy and I thought it was easier than expected. Connecting the app with the API was just a matter of knowing how to use the <code>http</code> library and the <code>get</code> or <code>post</code> methods was connected with no problems.</p>
-<div class="highlight"><pre class="chroma"><code class="language-dart" data-lang="dart">    <span class="kd">var</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">http</span><span class="p">.</span><span class="n">Client</span><span class="p">();</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart">    <span class="kd">var</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">http</span><span class="p">.</span><span class="n">Client</span><span class="p">();</span>
 
     <span class="kt">String</span> <span class="n">jsonBody</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">toJson</span><span class="p">());</span>
     <span class="kd">var</span> <span class="n">response</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">_baseUrl</span><span class="s2">/token&#34;</span><span class="p">,</span>
@@ -295,7 +295,7 @@ I&rsquo;ve chosen <a href="https://golang.org/">Go</a> as the programming langua
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Last post on 04/05/2021</div>
+	<div class="footer-text">Last post on 16/08/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>

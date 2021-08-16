@@ -168,13 +168,13 @@ if (!doNotTrack) {
 <h2 id="hugo-configuration">Hugo configuration</h2>
 <p>Now it&rsquo;s turn to add the tracking ID to your site.
 The easiest way for do it is using the Hugo&rsquo;s <a href="https://gohugo.io/templates/internal/#google-analytics">internal template</a> provided by Hugo. You just need to add a new variable called <code>googleAnalytics</code> with the <code>tracking ID</code> obtained from the previous step in your <code>config.toml</code> like:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;UA-123-45&#34;</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;UA-123-45&#34;</span><span class="err">
 </span></code></pre></div><p>The next step is to add the following snippet of code in your site:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim">{{ <span class="nx">template</span> <span class="s2">&#34;_internal/google_analytics.html&#34;</span> . }}<span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">{{ <span class="nx">template</span> <span class="s2">&#34;_internal/google_analytics.html&#34;</span> . }}<span class="err">
 </span></code></pre></div><p>You should search for the <code>head</code> partial template and add it inside the <code>&lt;head&gt;&lt;/head&gt;</code> tags.</p>
 <h2 id="checking-the-integration">Checking the integration</h2>
 <p>Before passing that to production you can test it running your site locally performing the next command:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">hugo</span> <span class="nx">serve</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">hugo</span> <span class="nx">serve</span><span class="err">
 </span></code></pre></div><p>The default url on localhost is <code>http://localhost:1313</code>.</p>
 <p>Open again or refresh <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> on a different tab.</p>
 <p>Check the dashboard and you should be able to see the number under the section Active Users right now as 1 like the picture below:
@@ -270,7 +270,7 @@ The easiest way for do it is using the Hugo&rsquo;s <a href="https://gohugo.io/t
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Last post on 04/05/2021</div>
+	<div class="footer-text">Last post on 16/08/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>

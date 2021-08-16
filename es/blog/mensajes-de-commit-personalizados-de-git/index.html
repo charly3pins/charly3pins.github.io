@@ -162,11 +162,11 @@ if (!doNotTrack) {
 					<p>He estado usando la herramienta <a href="https://github.com/walmartdigital/commit-message-formatter">CMF</a> durante el último año y creo que su simplicidad es su potencial. Básicamente es una herramienta de terminal desarrollada en Go por <a href="https://github.com/walmartdigital">Walmart Digital</a> que te ayuda a estandarizar el log de commits de tus proyectos.</p>
 <p>Lo he estado usando durante el último año y medio aproximadamente y todo lo que puedo decir es muy útil. Acordamos con el equipo la configuración que queremos utilizar y definimos un conjunto de cambios que aplica en nuestro caso. También elegimos el <a href="https://github.com/walmartdigital/commit-message-formatter#jira-flow">Jira flow</a> y cambiamos los valores para el <code>cambio</code> agregando un emojis para hacer las confirmaciones un poco más divertidas para comprobarlos en el registro.</p>
 <p>Puede instalarlo a través de npm:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">npm</span> <span class="nx">install</span> <span class="p">-</span><span class="nx">g</span> <span class="nx">go</span><span class="p">-</span><span class="nx">cmf</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">npm</span> <span class="nx">install</span> <span class="p">-</span><span class="nx">g</span> <span class="nx">go</span><span class="p">-</span><span class="nx">cmf</span><span class="err">
 </span></code></pre></div><p>o desde Go:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">go</span> <span class="nx">install</span> <span class="nx">github</span>.<span class="nx">com</span><span class="sr">/walmartdigital/</span><span class="nx">commit</span><span class="p">-</span><span class="nx">message</span><span class="p">-</span><span class="nx">formatter</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">go</span> <span class="nx">install</span> <span class="nx">github</span>.<span class="nx">com</span><span class="sr">/walmartdigital/</span><span class="nx">commit</span><span class="p">-</span><span class="nx">message</span><span class="p">-</span><span class="nx">formatter</span><span class="err">
 </span></code></pre></div><p>Después de eso, abra una terminal y navegue hasta la raíz del proyecto que desea usar. Luego escriba:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">cmf</span> <span class="nx">init</span> <span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">cmf</span> <span class="nx">init</span> <span class="err">
 </span></code></pre></div><p>Deberá seleccionar uno de los flujos y creará un archivo <code>.cmf.yaml</code> con la plantilla del seleccionado. Puede editar ese archivo de la forma que desee. La condición única es que cualquier variable que desee utilizar debe definirse mediante <code>{{}}</code>. Ejemplo: <code>{{CHANGE}}</code> le preguntará el &ldquo;CAMBIO&rdquo; que hizo y mostrará las opciones que definió en la plantilla.</p>
 <p>Aquí está el archivo <code>.cmf.yaml</code> que estoy usando en este sitio:</p>
 <pre><code>PROMPT:
@@ -244,7 +244,7 @@ TEMPLATE: &quot;{{CHANGE}}: {{MESSAGE}}&quot;
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Última publicación en 04/05/2021</div>
+	<div class="footer-text">Última publicación en 16/08/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>

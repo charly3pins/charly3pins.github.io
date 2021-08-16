@@ -167,14 +167,14 @@ if (!doNotTrack) {
 <h2 id="get-the-latest-post-with-go">Get the latest post with Go</h2>
 <p>I needed to scan the blog feed and wanted to do it in Go, so the first thing I did was look for any libraries that would make it easier for me not to reinvent the wheel and I found the <a href="https://github.com/mmcdole/gofeed">github.com/mmcdole/gofeed</a>. It had a lot of features but I had enough with the basic use described in its README.</p>
 <p>With the next piece of code, I create a new parser, scan the address of my feed and the resulting items, I save only the first one, as it is the last post posted.</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">p</span> <span class="o">:=</span> <span class="nx">gofeed</span><span class="p">.</span><span class="nf">NewParser</span><span class="p">()</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">p</span> <span class="o">:=</span> <span class="nx">gofeed</span><span class="p">.</span><span class="nf">NewParser</span><span class="p">()</span>
 <span class="nx">feed</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">p</span><span class="p">.</span><span class="nf">ParseURL</span><span class="p">(</span><span class="s">&#34;https://charly3pins.dev/index.xml&#34;</span><span class="p">)</span>
 <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
     <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;error getting feed: %v&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="nx">newestItem</span> <span class="o">:=</span> <span class="nx">feed</span><span class="p">.</span><span class="nx">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div><p>With that I already have the item with all the information. It looks like:</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;item&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;item&gt;</span>
     <span class="nt">&lt;title&gt;</span>My productivity setup for VS Code<span class="nt">&lt;/title&gt;</span>
     <span class="nt">&lt;link&gt;</span>http://charly3pins.dev/blog/my-productivity-setup-for-vs-code/<span class="nt">&lt;/link&gt;</span>
     <span class="nt">&lt;pubDate&gt;</span>Tue, 09 Mar 2021<span class="nt">&lt;/pubDate&gt;</span>
@@ -188,7 +188,7 @@ if (!doNotTrack) {
 <p>To do this I could read the file using the standard library <code>ioutil.ReadFile()</code>, but in this case since I don&rsquo;t want to reuse anything from the file, so I can call <code>os.Create()</code> directly to create a new file and so overwrite the README.md that I already had in the directory.</p>
 <p>Also, since I want to put the feed information along with the static part of text I already had, what I will do is create a few strings with the different sections I want to put in the profile and then put them all together using <code>fmt.Sprintf()</code>.</p>
 <p>The code that does all this is this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">file</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="nx">filename</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">file</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="nx">filename</span><span class="p">)</span>
 <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
 	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;error creating file&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
 	<span class="k">return</span>
@@ -202,7 +202,7 @@ if (!doNotTrack) {
 <span class="p">}</span>
 <span class="nx">file</span><span class="p">.</span><span class="nf">Sync</span><span class="p">()</span>
 </code></pre></div><p>What remains to be seen from here is the value of <code>filename</code> and that of<code> data</code>. The first is easy, just the route to get to the README. In my case as I have the project in a subdirectory of my repository I have to use <code>filename = ../README.md</code>. For the other variable, what is there is this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">hi</span> <span class="o">:=</span> <span class="s">&#34;# Hey there!&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">hi</span> <span class="o">:=</span> <span class="s">&#34;# Hey there!&#34;</span>
 <span class="nx">blog</span> <span class="o">:=</span> <span class="s">&#34;## Blog\n\nMy latest blog post is: **[&#34;</span> <span class="o">+</span> <span class="nx">newestItem</span><span class="p">.</span><span class="nx">Title</span> <span class="o">+</span> <span class="s">&#34;](&#34;</span> <span class="o">+</span> <span class="nx">newestItem</span><span class="p">.</span><span class="nx">Link</span> <span class="o">+</span> <span class="s">&#34;)**.&#34;</span>
 
 <span class="nx">data</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s\n\n%s\n\n%s\n\n%s\n&#34;</span><span class="p">,</span> <span class="nx">hi</span><span class="p">,</span> <span class="nx">blog</span><span class="p">)</span>
@@ -211,14 +211,14 @@ if (!doNotTrack) {
 <h2 id="running-the-process-automatically">Running the process automatically</h2>
 <p>Once we have the code that generates the README automatically and dynamically according to the last post, what remains to be done is to run it periodically and in order to do not have to worry about anything. To do this I will use a <a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows">trigger</a> from GitHub Actions so that every time I push to branch <code>master</code> run the process and also run it on a scheduled basis every Sunday at 12am.</p>
 <p>First of all I need the <code>.github/worfklows</code> folder and inside I create the <code>update.yaml</code> file with the following content:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">on</span>:<span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">on</span>:<span class="err">
 </span><span class="err"></span>  <span class="nx">push</span>:<span class="err">
 </span><span class="err"></span>    <span class="nx">branches</span>:<span class="err">
 </span><span class="err"></span>      <span class="p">-</span> <span class="nx">master</span><span class="err">
 </span><span class="err"></span>  <span class="nx">schedule</span>:<span class="err">
 </span><span class="err"></span>    <span class="p">-</span> <span class="nx">cron</span>: <span class="s1">&#39;0 0 * * 0&#39;</span><span class="err">
 </span></code></pre></div><p>Once the trigger is ready, what needs to be defined are the <a href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs">jobs</a>. You can define as many as you want, in my case with 3 I have enough. The first will <code>checkout</code> the project, the second will <code>generate</code> the README, and the third will <code>deploy</code> the changes. For the last step we will need to use the <a href="https://docs.github.com/en/actions/reference/authentication-in-a-workflow">authentication mechanisms</a> provided by GitHub Actions. The resulting code is:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">jobs</span>:<span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">jobs</span>:<span class="err">
 </span><span class="err"></span>  <span class="nx">build</span><span class="p">-</span><span class="nx">and</span><span class="p">-</span><span class="nx">deploy</span>:<span class="err">
 </span><span class="err"></span>    <span class="nx">runs</span><span class="p">-</span><span class="nx">on</span>: <span class="nx">ubuntu</span><span class="p">-</span><span class="nx">latest</span><span class="err">
 </span><span class="err">
@@ -351,7 +351,7 @@ if (!doNotTrack) {
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Last post on 04/05/2021</div>
+	<div class="footer-text">Last post on 16/08/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>

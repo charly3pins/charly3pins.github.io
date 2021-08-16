@@ -39,7 +39,7 @@
                 />
   </url><url>
     <loc>https://charly3pins.dev/blog/</loc>
-    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -57,7 +57,7 @@
                 />
   </url><url>
     <loc>https://charly3pins.dev/</loc>
-    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -72,6 +72,60 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/tags/go/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/go/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/go/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/go/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/blog/learn-how-to-use-the-embed-package-in-go-by-building-a-web-page-easily/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/aprende-a-utilizar-el-paquete-embed-a-go-construyendo-una-p%C3%A1gina-web-f%C3%A1cilmente/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/blog/apr%C3%A8n-a-fer-servir-el-paquet-embed-a-go-construint-una-p%C3%A0gina-web-f%C3%A0cilment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/learn-how-to-use-the-embed-package-in-go-by-building-a-web-page-easily/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/tags/</loc>
+    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/tags/life/</loc>
@@ -108,24 +162,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/tags/startup/"
-                />
-  </url><url>
-    <loc>https://charly3pins.dev/tags/</loc>
-    <lastmod>2021-05-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/blog/what-i-learned-defining-the-selection-process-for-a-software-engineer-in-the-startup-where-i-work/</loc>
@@ -234,24 +270,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/tags/github/"
-                />
-  </url><url>
-    <loc>https://charly3pins.dev/tags/go/</loc>
-    <lastmod>2021-03-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/go/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/blog/my-productivity-setup-for-vs-code/</loc>

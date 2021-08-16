@@ -165,9 +165,9 @@ if (!doNotTrack) {
 </blockquote>
 <h2 id="installació">Instal·lació</h2>
 <p>Primer de tot, cal tirar de la imatge del dron.</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">docker</span> <span class="nx">pull</span> <span class="nx">drone</span>/<span class="nx">drone</span>:<span class="m">0</span>.<span class="m">8</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">docker</span> <span class="nx">pull</span> <span class="nx">drone</span>/<span class="nx">drone</span>:<span class="m">0</span>.<span class="m">8</span><span class="err">
 </span></code></pre></div><p>A continuació, creeu el docker-compose per executar-lo:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">docker</span><span class="p">-</span><span class="nx">compose</span>.<span class="nx">yml</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">docker</span><span class="p">-</span><span class="nx">compose</span>.<span class="nx">yml</span><span class="err">
 </span></code></pre></div><p>I copieu el següent:</p>
 <pre><code>version: '2'
 
@@ -195,7 +195,7 @@ services:
       - /etc/drone/agent.env
 </code></pre><p><!-- raw HTML omitted --> En el meu cas, he utilitzat aquests ports perquè tinc altres coses al meu Nginx, però podeu triar-ne de vostres. També he emmagatzemat el servidor i l&rsquo;agent <code>env</code> vars en fitxers específics. <!-- raw HTML omitted --></p>
 <p>Ara és hora de crear aquests fitxers. Primer creem el servidor:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">server</span>.<span class="nx">env</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">server</span>.<span class="nx">env</span><span class="err">
 </span></code></pre></div><p>I copieu el següent:</p>
 <pre><code># Service settings 
 DRONE_SECRET=secret_generated_on_command_line
@@ -211,14 +211,14 @@ DRONE_GITHUB_CLIENT=Client_ID_from_GitHub
 DRONE_GITHUB_SECRET=Client_Secret_from_GitHub
 </code></pre><p>Per a l’identificador de client i clientSecret de GitHub, heu de registrar Drone al vostre compte de GitHub per obtenir-los. Seguiu <a href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/">aquestes instruccions</a>.</p>
 <p>I ara l’agent:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">agent</span>.<span class="nx">env</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">agent</span>.<span class="nx">env</span><span class="err">
 </span></code></pre></div><p>I copieu el següent:</p>
 <pre><code>DRONE_SECRET=secret_generated_on_command_line
 DRONE_SERVER=drone-server:9000
 </code></pre><p>Per generar el <code>DRONE_SECRET</code> podeu escriure l&rsquo;ordre següent</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">LC_ALL</span><span class="p">=</span><span class="nx">C</span> <span class="p">&lt;</span><span class="sr">/dev/</span><span class="nx">urandom</span> <span class="nx">tr</span> <span class="p">-</span><span class="nx">dc</span> <span class="nx">A</span><span class="p">-</span><span class="nx">Za</span><span class="p">-</span><span class="nx">z0</span><span class="m">-9</span> <span class="p">|</span> <span class="nx">head</span> <span class="p">-</span><span class="nx">c</span> <span class="m">65</span> &amp;&amp; <span class="nx">echo</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">LC_ALL</span><span class="p">=</span><span class="nx">C</span> <span class="p">&lt;</span><span class="sr">/dev/</span><span class="nx">urandom</span> <span class="nx">tr</span> <span class="p">-</span><span class="nx">dc</span> <span class="nx">A</span><span class="p">-</span><span class="nx">Za</span><span class="p">-</span><span class="nx">z0</span><span class="m">-9</span> <span class="p">|</span> <span class="nx">head</span> <span class="p">-</span><span class="nx">c</span> <span class="m">65</span> &amp;&amp; <span class="nx">echo</span><span class="err">
 </span></code></pre></div><p>Un cop instal·lat i configurat el Drone, hem de crear un fitxer d’unitat systemd per gestionar el servei.</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">systemd</span><span class="sr">/system/</span><span class="nx">drone</span>.<span class="nx">service</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">systemd</span><span class="sr">/system/</span><span class="nx">drone</span>.<span class="nx">service</span><span class="err">
 </span></code></pre></div><p>I copieu el següent:</p>
 <pre><code>[Unit]
 Description=Drone server
@@ -233,17 +233,17 @@ ExecStop=/usr/local/bin/docker-compose -f /etc/drone/docker-compose.yml stop
 WantedBy=multi-user.target
 </code></pre><h2 id="configureu-nginx">Configureu Nginx</h2>
 <p>I, finalment, hem de configurar el Nginx per sol·licitar proxy al nostre servidor Drone. Primer de tot, cerqueu els blocs de servidor habilitats amb l&rsquo;ordre següent:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">grep</span> <span class="p">-</span><span class="nx">R</span> <span class="nx">server_name</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">sites</span><span class="p">-</span><span class="nx">enabled</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">grep</span> <span class="p">-</span><span class="nx">R</span> <span class="nx">server_name</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">sites</span><span class="p">-</span><span class="nx">enabled</span><span class="err">
 </span></code></pre></div><p>Veureu alguna cosa així:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">Output</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">Output</span><span class="err">
 </span><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:   <span class="nx">server_name</span> <span class="nx">yourDroneURL</span>.<span class="nx">com</span>;<span class="err">
 </span><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:   <span class="nx">return</span> <span class="m">301</span> <span class="nx">https</span>:<span class="sr">//</span>$<span class="nx">server_name</span>$<span class="nx">request_uri</span>;<span class="err">
 </span><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:   <span class="nx">server_name</span> <span class="nx">yourDroneURL</span>.<span class="nx">com</span>;<span class="err">
 </span><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:#  <span class="nx">server_name</span> <span class="nx">yourDroneURL</span>.<span class="nx">com</span>;<span class="err">
 </span></code></pre></div><p>Després de conèixer el bloc que gestiona el nostre servidor, podem editar-lo escrivint:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span> <span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span> <span class="err">
 </span></code></pre></div><p>I afegint aquest text abans del bloc <code>servidor {</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">upstream</span> <span class="nx">drone</span> {<span class="nx">upstream</span> <span class="nx">drone</span> {<span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">upstream</span> <span class="nx">drone</span> {<span class="nx">upstream</span> <span class="nx">drone</span> {<span class="err">
 </span><span class="err"></span>         <span class="nx">server</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">8000</span>;<span class="nx">server</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">8000</span>;<span class="err">
 </span><span class="err"></span> }}<span class="err">
 </span><span class="err">
@@ -252,7 +252,7 @@ WantedBy=multi-user.target
 </span><span class="err"></span>    <span class="s1">&#39;&#39;</span>      <span class="nx">close</span>;<span class="err">
 </span><span class="err"></span>}<span class="err">
 </span></code></pre></div><p>A continuació, cerqueu el bloc de servidor amb la directiva listen 443 a dins. Substituïu el contingut del bloc d&rsquo;ubicació pel següent:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">server</span> {<span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">server</span> {<span class="err">
 </span><span class="err"></span>    <span class="nx">listen</span> <span class="m">443</span> <span class="nx">ssl</span>;<span class="err">
 </span><span class="err"></span>    <span class="nx">location</span> / {<span class="err">
 </span><span class="err"></span>        # <span class="nx">try_files</span> $<span class="nx">uri</span> $<span class="nx">uri</span>/ <span class="p">=</span><span class="m">404</span>;<span class="err">
@@ -270,25 +270,25 @@ WantedBy=multi-user.target
 </span><span class="err"></span>    }<span class="err">
 </span><span class="err"></span>}<span class="err">
 </span></code></pre></div><p>Ara és hora de provar si el nostre Nginx funciona o no:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nginx</span> <span class="p">-</span><span class="nx">t</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nginx</span> <span class="p">-</span><span class="nx">t</span><span class="err">
 </span></code></pre></div><p>Hauríeu de veure:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">Output</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">Output</span><span class="err">
 </span><span class="err"></span><span class="nx">nginx</span>: <span class="nx">the</span> <span class="nx">configuration</span> <span class="nx">file</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">nginx</span>.<span class="nx">conf</span> <span class="nx">syntax</span> <span class="nx">is</span> <span class="nx">ok</span><span class="err">
 </span><span class="err"></span><span class="nx">nginx</span>: <span class="nx">configuration</span> <span class="nx">file</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">nginx</span>.<span class="nx">conf</span> <span class="nx">test</span> <span class="nx">is</span> <span class="nx">successful</span><span class="err">
 </span></code></pre></div><p>Només haureu de reiniciar el servidor i substituireu les peticions:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">nginx</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">nginx</span><span class="err">
 </span></code></pre></div><p>Finalment, cal iniciar el servidor Drone:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">start</span> <span class="nx">drone</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">start</span> <span class="nx">drone</span><span class="err">
 </span></code></pre></div><p>Per comprovar l&rsquo;estat del contenidor, podeu utilitzar l&rsquo;ordre següent:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">status</span> <span class="nx">drone</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">status</span> <span class="nx">drone</span><span class="err">
 </span></code></pre></div><p>Podeu consultar els logs de Nginx:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">less</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/nginx/</span><span class="nx">error</span>.<span class="nx">log</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">less</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/nginx/</span><span class="nx">error</span>.<span class="nx">log</span><span class="err">
 </span></code></pre></div><p>I també podeu consultar els logs de Drone:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">journalctl</span> <span class="p">-</span><span class="nx">u</span> <span class="nx">drone</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">journalctl</span> <span class="p">-</span><span class="nx">u</span> <span class="nx">drone</span><span class="err">
 </span></code></pre></div><p>Si tot està bé, és hora d’activar Drone:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">enable</span> <span class="nx">drone</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">enable</span> <span class="nx">drone</span><span class="err">
 </span></code></pre></div><p>Si voleu apagar Drone, podeu escriure les ordres següents:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">cd</span> <span class="sr">/etc/</span><span class="nx">drone</span><span class="err">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">cd</span> <span class="sr">/etc/</span><span class="nx">drone</span><span class="err">
 </span><span class="err"></span><span class="nx">sudo</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">docker</span><span class="p">-</span><span class="nx">compose</span> <span class="nx">down</span><span class="err">
 </span></code></pre></div><p>Visiteu el servidor Drone al vostre https: // yourDroneURL.com i inicieu la sessió amb el compte GitHub que heu utilitzat per obtenir l’identificador de client i el secret del client.</p>
 <h2 id="referències">Referències</h2>
@@ -348,7 +348,7 @@ WantedBy=multi-user.target
 			<i class="fa fa-envelope fa-fw" title="email"></i></a>
 		</li>
 	</ul>
-	<div class="footer-text">Darrer post el 04/05/2021</div>
+	<div class="footer-text">Darrer post el 16/08/2021</div>
 	<div class="footer-text">© 2018 - 2021 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
