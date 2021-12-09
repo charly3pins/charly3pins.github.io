@@ -39,7 +39,7 @@
                 />
   </url><url>
     <loc>https://charly3pins.dev/blog/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -57,7 +57,7 @@
                 />
   </url><url>
     <loc>https://charly3pins.dev/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -75,7 +75,7 @@
                 />
   </url><url>
     <loc>https://charly3pins.dev/tags/go/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -90,6 +90,37 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/tags/go/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/blog/go-project-layout-with-clean-architecures-and-ddd/</loc>
+    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/go-project-layout-with-clean-architecures-and-ddd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/go-project-layout-with-clean-architecures-and-ddd/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/tags/</loc>
+    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/blog/learn-how-to-use-the-embed-package-in-go-by-building-a-web-page-easily/</loc>
@@ -108,24 +139,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/blog/learn-how-to-use-the-embed-package-in-go-by-building-a-web-page-easily/"
-                />
-  </url><url>
-    <loc>https://charly3pins.dev/tags/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/tags/life/</loc>

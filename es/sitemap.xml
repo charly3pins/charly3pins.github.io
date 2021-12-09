@@ -721,6 +721,16 @@
                 />
   </url><url>
     <loc>https://charly3pins.dev/es/blog/go-project-layout-with-clean-architecures-and-ddd/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/go-project-layout-with-clean-architecures-and-ddd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/go-project-layout-with-clean-architecures-and-ddd/"
+                />
   </url><url>
     <loc>https://charly3pins.dev/es/about/</loc>
     <xhtml:link
