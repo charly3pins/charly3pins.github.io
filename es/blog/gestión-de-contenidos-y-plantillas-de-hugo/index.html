@@ -158,7 +158,7 @@ if (!doNotTrack) {
 					
 					<div class="page-separator"></div>
 					<p>Después de mucho tiempo sin escribir&hellip; ¡estoy de vuelta!</p>
-<p><img src="/images/hugo-content-templates-managing/im-back-terminator.jpg" alt="I&rsquo;m back"></p>
+<p><img src="/images/hugo-content-templates-managing/im-back-terminator.jpg" alt="I&amp;rsquo;m back"></p>
 <p>Estaba planeando reconstruir mi sitio y comenzar a crear contenido nuevamente, pero nunca encontré el tiempo hasta ahora.</p>
 <p>Quería hacer mi tema desde cero en lugar de usar un <a href="https://themes.gohugo.io/">tema predefinido</a>, así que tuve que aprender cómo se realizan las plantillas y la gestión de contenido en Hugo.</p>
 <p>Una vez que hice ese proceso, quiero resumir las cosas más importantes que considero que debes saber si quieres hacer tu propio tema como lo hice yo (¡este sitio es la prueba de eso!).</p>
@@ -167,7 +167,7 @@ if (!doNotTrack) {
 <p>Todo el contenido que desee tener en su sitio debe estar dentro del directorio <code>content/</code>. Simplemente coloque sus publicaciones dentro de <code>content/posts</code> y su descripción en <code>content/about</code> y Hugo hará la magia por usted. Suena fácil, ¿verdad? Continúe entonces.</p>
 <p>Hugo tiene principalmente dos tipos de páginas, las &ldquo;únicas&rdquo; y las &ldquo;múltiples&rdquo;. Los primeros se utilizan por ejemplo para un <code>about</code> o para un <code>faq</code> o una <code>contrib</code> o un <code>landing</code>&hellip; Los segundos se utilizan cuando se desea agrupar en una misma categoría diferentes contenidos. Por ejemplo, sus diferentes publicaciones para sus &ldquo;publicaciones&rdquo; o un catálogo para sus &ldquo;productos&rdquo;. Dicho esto, hay otra diferencia que debes conocer cuando creas tus diferentes páginas.</p>
 <p>Los únicos tienen que ser nombrados como <code>index.md</code>, los de la lista no. Esto al final le indica a Hugo cómo administrar el contenido dentro de los directorios y cómo generar las URL para acceder a ellos. El siguiente esquema demuestra cómo funciona:</p>
-<pre><code>└── content
+<pre tabindex="0"><code>└── content
     └── about
     |   └── index.md        (https://mysite.com/about)
     ├── posts
@@ -181,7 +181,7 @@ if (!doNotTrack) {
 <h2 id="gestión-de-plantillas">Gestión de plantillas</h2>
 <p>Ahora que sabes cómo organizar tu contenido, es hora de hablar sobre las <a href="https://gohugo.io/templates/">plantillas</a>. Son el código HTML que genera las páginas de su sitio. Hay algunos trucos y consejos que quiero compartir con ustedes como lo hice con el contenido de la sección anterior.</p>
 <p>Las diferentes plantillas deben colocarse dentro del directorio <code>layouts/</code>. En la raíz debe estar la plantilla principal llamada <code>index.html</code> utilizada para representar la página de inicio. De la misma forma que el contenido, las plantillas se pueden organizar en carpetas si desea mostrar de diferentes formas el contenido según la ruta. Al igual que el contenido, las plantillas se pueden organizar entre únicas y múltiples. Tomando la organización de contenido descrita anteriormente, considerando que desea especificar diferentes plantillas para cada carpeta de contenido, una de las posibles organizaciones de plantillas puede ser:</p>
-<pre><code>└── layouts
+<pre tabindex="0"><code>└── layouts
     └── _default_
     |   ├── list.html
     |   └── single.html
@@ -243,7 +243,7 @@ if (!doNotTrack) {
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -288,7 +288,7 @@ if (!doNotTrack) {
 		</li>
 	</ul>
 	<div class="footer-text">Última publicación en 16/08/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 

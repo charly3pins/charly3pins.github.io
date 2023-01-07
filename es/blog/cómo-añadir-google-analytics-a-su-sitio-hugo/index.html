@@ -168,14 +168,14 @@ if (!doNotTrack) {
 <h2 id="configuración-de-hugo">Configuración de Hugo</h2>
 <p>Ahora es el turno de agregar el ID de seguimiento a su sitio.
 La forma más sencilla de hacerlo es utilizando la [plantilla interna] de Hugo (<a href="https://gohugo.io/templates/internal/#google-analytics">https://gohugo.io/templates/internal/#google-analytics</a>) proporcionada por Hugo. Solo necesita agregar una nueva variable llamada <code>googleAnalytics</code> con el <code>tracking ID</code> obtenido del paso anterior en su <code>config.toml</code> como:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;UA-123-45&#34;</span><span class="err">
-</span></code></pre></div><p>El siguiente paso es agregar el siguiente fragmento de código en su sitio:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">{{ <span class="nx">template</span> <span class="s2">&#34;_internal/google_analytics.html&#34;</span> . }}<span class="err">
-</span></code></pre></div><p>Debería buscar la plantilla parcial <code>head</code> y agregarla dentro de las etiquetas <code>&lt;head&gt; &lt;/head&gt;</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;UA-123-45&#34;</span><span class="err">
+</span></span></span></code></pre></div><p>El siguiente paso es agregar el siguiente fragmento de código en su sitio:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">{{ <span class="nx">template</span> <span class="s2">&#34;_internal/google_analytics.html&#34;</span> . }}<span class="err">
+</span></span></span></code></pre></div><p>Debería buscar la plantilla parcial <code>head</code> y agregarla dentro de las etiquetas <code>&lt;head&gt; &lt;/head&gt;</code>.</p>
 <h2 id="comprobando-la-integración">Comprobando la integración</h2>
 <p>Antes de pasar eso a producción, puede probarlo ejecutando su sitio localmente realizando el siguiente comando:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">hugo</span> <span class="nx">serve</span><span class="err">
-</span></code></pre></div><p>La URL predeterminada en localhost es <code>http://localhost:1313</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">serve</span><span class="err">
+</span></span></span></code></pre></div><p>La URL predeterminada en localhost es <code>http://localhost:1313</code>.</p>
 <p>Vuelva a abrir o actualice <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> en una pestaña diferente.</p>
 <p>Verifique el tablero y debería poder ver el número en la sección Usuarios activos en este momento como 1 como la imagen a continuación:
 <img src="/images/google-analytics-active-users.png" alt="active-users"></p>
@@ -226,7 +226,7 @@ La forma más sencilla de hacerlo es utilizando la [plantilla interna] de Hugo (
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -271,7 +271,7 @@ La forma más sencilla de hacerlo es utilizando la [plantilla interna] de Hugo (
 		</li>
 	</ul>
 	<div class="footer-text">Última publicación en 16/08/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 

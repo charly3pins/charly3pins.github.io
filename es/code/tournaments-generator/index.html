@@ -178,16 +178,16 @@ Elegí <a href="https://golang.org/">Go</a> como lenguaje de programación para 
 <p>Para la aplicación móvil, comencé a poner todos los archivos dentro de una carpeta de <code>componentes</code>, pero cuando comenzó a crecer, fue una tarea difícil de administrar. Después de agregar más complejidad a la aplicación, termino encontrando una forma limpia de organizar el código, dividiéndolo en dos carpetas separadas; uno para el núcleo y otro para la interfaz de usuario. Luego dentro de cada uno también categoricé los diferentes tipos de componentes en función de sus responsabilidades y al final el código (al menos para mí que no soy un experto en Flutter) terminó luciendo súper limpio y (sin duda) más mantenible . Debajo de la organización de carpetas en una vista general:</p>
 <p><img src="/images/code/tournaments-generator/app-structure.jpeg" alt="app structure"></p>
 <p>Al principio, cuando comencé a codificar y ver los resultados, todo fue súper elegante y pensé que era más fácil de lo esperado. Conectar la aplicación con la API fue solo una cuestión de saber cómo usar la biblioteca <code>http</code> y los métodos<code> get</code> o <code>post</code> se conectaron sin problemas.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart">    <span class="kd">var</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">http</span><span class="p">.</span><span class="n">Client</span><span class="p">();</span>
-
-    <span class="kt">String</span> <span class="n">jsonBody</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">toJson</span><span class="p">());</span>
-    <span class="kd">var</span> <span class="n">response</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">_baseUrl</span><span class="s2">/token&#34;</span><span class="p">,</span>
-        <span class="nl">headers:</span> <span class="p">{</span><span class="s2">&#34;Content-Type&#34;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="nl">body:</span> <span class="n">jsonBody</span><span class="p">);</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">statusCode</span> <span class="o">==</span> <span class="m">200</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">));</span>
-    <span class="p">}</span>
-</code></pre></div><p>El único problema al que me he enfrentado allí es que estaba ejecutando las aplicaciones desde el emulador de Android; eso significa que se estaba ejecutando en una máquina virtual, por lo que la IP no era mi local y no puede acceder al <code>localhost</code>. Después de un poco de investigación, encontré el correcto y todo funcionó correctamente.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl">    <span class="kd">var</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">http</span><span class="p">.</span><span class="n">Client</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">String</span> <span class="n">jsonBody</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">toJson</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="n">response</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">_baseUrl</span><span class="s2">/token&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">headers:</span> <span class="p">{</span><span class="s2">&#34;Content-Type&#34;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="nl">body:</span> <span class="n">jsonBody</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">statusCode</span> <span class="o">==</span> <span class="m">200</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><p>El único problema al que me he enfrentado allí es que estaba ejecutando las aplicaciones desde el emulador de Android; eso significa que se estaba ejecutando en una máquina virtual, por lo que la IP no era mi local y no puede acceder al <code>localhost</code>. Después de un poco de investigación, encontré el correcto y todo funcionó correctamente.</p>
 <p>Los problemas comenzaron cuando quería pasar información entre componentes y actualizar la vista en función de esa información, o mejor aún, no actualizar si nada cambia cuando entro de nuevo en una vista (por ejemplo, al pasar de una lista a una vista de detalle, y volviendo de nuevo a la lista). Después de un día leyendo en foros sobre el mismo problema al que me estaba enfrentando, encontré el paquete [Proveedor] (<a href="https://pub.dev/packages/provider">https://pub.dev/packages/provider</a>) y todo parecía fácil y el santo grial para todo, pero no lo era.</p>
 <p>¡El verdadero dolor acaba de comenzar allí! Me tomó algunos días entender realmente cómo funciona. El proveedor inicial es fácil de entender y lo usa y funciona, pero luego desea cambiar solo una pequeña parte de la vista, o desea reconstruir la totalidad, o desea modificar algunos valores en una vista A y luego vaya a la vista B y vea los cambios allí, y todos esos ejemplos está codificado de manera completamente diferente y primero debe saber que hay una forma para cada caso de hacer las cosas y segundo, debe saber cómo hacerlo. Al final utilicé Provider, ProxyProvider, StreamProvider y ChangeNotifierProvider.</p>
 <p>El proyecto no está terminado pero por ahora está En Espera con las siguientes funcionalidades:</p>
@@ -251,7 +251,7 @@ Elegí <a href="https://golang.org/">Go</a> como lenguaje de programación para 
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -296,7 +296,7 @@ Elegí <a href="https://golang.org/">Go</a> como lenguaje de programación para 
 		</li>
 	</ul>
 	<div class="footer-text">Última publicación en 16/08/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 

@@ -162,36 +162,36 @@ if (!doNotTrack) {
 					<p>He estat utilitzant l&rsquo;eina <a href="https://github.com/walmartdigital/commit-message-formatter">CMF</a> durant l&rsquo;últim any i crec que la seva simplicitat és el seu potencial. Bàsicament és una eina terminal desenvolupada a Go by <a href="https://github.com/walmartdigital">Walmart Digital</a> que us ajuda a normalitzar el registre de compromisos dels vostres projectes.</p>
 <p>He estat utilitzant durant l&rsquo;últim any i mig aproximadament i tot el que puc dir és molt útil. Vam acordar amb l&rsquo;equip la configuració que volem utilitzar i vam definir un conjunt de canvis que s&rsquo;apliquen en el nostre cas. També escollim el <a href="https://github.com/walmartdigital/commit-message-formatter#jira-flow">Jira flow</a> i varem canviar els valors del &ldquo;canvi&rdquo; afegint un emojis per fer que els compromisos siguin una mica més divertits per comprovar-los al registre.</p>
 <p>Podeu instal·lar-lo mitjançant npm:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">npm</span> <span class="nx">install</span> <span class="p">-</span><span class="nx">g</span> <span class="nx">go</span><span class="p">-</span><span class="nx">cmf</span><span class="err">
-</span></code></pre></div><p>o des de Go:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">go</span> <span class="nx">install</span> <span class="nx">github</span>.<span class="nx">com</span><span class="sr">/walmartdigital/</span><span class="nx">commit</span><span class="p">-</span><span class="nx">message</span><span class="p">-</span><span class="nx">formatter</span><span class="err">
-</span></code></pre></div><p>Després, obriu un terminal i aneu a l&rsquo;arrel del projecte que vulgueu utilitzar. A continuació, escriviu:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">cmf</span> <span class="nx">init</span> <span class="err">
-</span></code></pre></div><p>Haureu de seleccionar un dels fluxos i crearà un fitxer <code>.cmf.yaml</code> amb la plantilla del seleccionat. Podeu editar aquest fitxer de la manera que vulgueu. La condició única és que qualsevol variable que vulgueu utilitzar s&rsquo;hagi de definir mitjançant <code>{{}}</code>. Exemple: &ldquo;{{CHANGE}}&rdquo; us demanarà que demaneu el &ldquo;CANVI&rdquo; que heu fet i que mostreu les opcions que heu definit a la plantilla.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">install</span> <span class="p">-</span><span class="nx">g</span> <span class="nx">go</span><span class="p">-</span><span class="nx">cmf</span><span class="err">
+</span></span></span></code></pre></div><p>o des de Go:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">go</span> <span class="nx">install</span> <span class="nx">github</span>.<span class="nx">com</span><span class="sr">/walmartdigital/</span><span class="nx">commit</span><span class="p">-</span><span class="nx">message</span><span class="p">-</span><span class="nx">formatter</span><span class="err">
+</span></span></span></code></pre></div><p>Després, obriu un terminal i aneu a l&rsquo;arrel del projecte que vulgueu utilitzar. A continuació, escriviu:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">cmf</span> <span class="nx">init</span> <span class="err">
+</span></span></span></code></pre></div><p>Haureu de seleccionar un dels fluxos i crearà un fitxer <code>.cmf.yaml</code> amb la plantilla del seleccionat. Podeu editar aquest fitxer de la manera que vulgueu. La condició única és que qualsevol variable que vulgueu utilitzar s&rsquo;hagi de definir mitjançant <code>{{}}</code>. Exemple: &ldquo;{{CHANGE}}&rdquo; us demanarà que demaneu el &ldquo;CANVI&rdquo; que heu fet i que mostreu les opcions que heu definit a la plantilla.</p>
 <p>Aquí teniu el fitxer <code>.cmf.yaml</code> que estic fent servir en aquest lloc:</p>
-<pre><code>PROMPT:
-    - KEY: &quot;CHANGE&quot;
-      LABEL: &quot;Type of change&quot;
+<pre tabindex="0"><code>PROMPT:
+    - KEY: &#34;CHANGE&#34;
+      LABEL: &#34;Type of change&#34;
       OPTIONS:
-        - VALUE: &quot;feat :sparkles:&quot;
-          DESC: &quot;A new feature&quot;
-        - VALUE: &quot;fix :bug:&quot;
-          DESC: &quot;A bug fix&quot;
-        - VALUE: &quot;test :rotating_light:&quot;
-          DESC: &quot;Adding missing tests or correcting wrong ones&quot;
-        - VALUE: &quot;style :lipstick:&quot;
-          DESC: &quot;A code change to improve clean code&quot;
-        - VALUE: &quot;build-ci :construction_worker_man:&quot;
-          DESC: &quot;Changes that affect the build system and/or CI configuration files and scripts&quot;
-        - VALUE: &quot;refactor :hammer:&quot;
-          DESC: &quot;A code change&quot;
-        - VALUE: &quot;docs :books:&quot;
-          DESC: &quot;Documentation only changes&quot;
-        - VALUE: &quot;chore :card_index:&quot;
-          DESC: &quot;Changes that don't fit any of the options above&quot;
-    - KEY: &quot;MESSAGE&quot;
-      LABEL: &quot;Commit message&quot;
-TEMPLATE: &quot;{{CHANGE}}: {{MESSAGE}}&quot;
+        - VALUE: &#34;feat :sparkles:&#34;
+          DESC: &#34;A new feature&#34;
+        - VALUE: &#34;fix :bug:&#34;
+          DESC: &#34;A bug fix&#34;
+        - VALUE: &#34;test :rotating_light:&#34;
+          DESC: &#34;Adding missing tests or correcting wrong ones&#34;
+        - VALUE: &#34;style :lipstick:&#34;
+          DESC: &#34;A code change to improve clean code&#34;
+        - VALUE: &#34;build-ci :construction_worker_man:&#34;
+          DESC: &#34;Changes that affect the build system and/or CI configuration files and scripts&#34;
+        - VALUE: &#34;refactor :hammer:&#34;
+          DESC: &#34;A code change&#34;
+        - VALUE: &#34;docs :books:&#34;
+          DESC: &#34;Documentation only changes&#34;
+        - VALUE: &#34;chore :card_index:&#34;
+          DESC: &#34;Changes that don&#39;t fit any of the options above&#34;
+    - KEY: &#34;MESSAGE&#34;
+      LABEL: &#34;Commit message&#34;
+TEMPLATE: &#34;{{CHANGE}}: {{MESSAGE}}&#34;
 </code></pre>
 				</article>
 
@@ -200,7 +200,7 @@ TEMPLATE: &quot;{{CHANGE}}: {{MESSAGE}}&quot;
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -245,7 +245,7 @@ TEMPLATE: &quot;{{CHANGE}}: {{MESSAGE}}&quot;
 		</li>
 	</ul>
 	<div class="footer-text">Darrer post el 16/08/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 

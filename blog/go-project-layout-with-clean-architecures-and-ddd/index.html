@@ -163,33 +163,33 @@ if (!doNotTrack) {
 <p>During the last 5 years I have been working full time with Go. Some of you may already know that I&rsquo;m in love with this language because of the simplicity it has but with a lot of potential to build anything. The main question I have faced since the beginning is <code>Which layout should I use for my project?</code> I would say still today I don&rsquo;t know and as always in our industry&hellip; <code>it depends</code>. It depends on if you are building a library, it depends on if you are building a monolithic application (like MVC), it depends on if you are building a small service (aka microservice), etc. There is nothing written of and we don&rsquo;t have a lot (luckily) frameworks that force you to do things in the framework&rsquo;s way (note aside that&rsquo;s one of my favorite parts especially coming from Java where Spring seems to be the standard way of doing projects in Java). For the beginners sometimes that is difficult because you don&rsquo;t know how to start and need to do research and read/watch some tutorials and try to mimic those layouts without knowing if you&rsquo;re doing the correct things. The good point on that is as there is no standard, &ldquo;all&rdquo; you do will be okay (however it&rsquo;s dangerous sometimes).</p>
 <h2 id="first-approach">First approach</h2>
 <p>When I started I tried to check a lot of repos on GitHub using the tag #Go and see how people are organizing their projects. Checking smaller ones or checking the big players in the industry like Docker, Kubernetes, AWS, &hellip; My first approach was to use the still popular double folder:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="o">/</span><span class="nx">cmd</span>
-<span class="o">/</span><span class="nx">pkg</span>
-<span class="nx">config</span> <span class="nf">files</span> <span class="p">(</span><span class="nx">Makefile</span><span class="p">,</span> <span class="nx">docker</span><span class="p">,</span> <span class="nx">etc</span><span class="p">.)</span>
-</code></pre></div><p>This was the initial approach that some Go projects were adopting where inside the <code>pkg</code> you define all your code and in the <code>cmd</code> you simply create your <code>main.go</code> which bootstraps your application from the <code>pkg</code> one. This started to be so popular because some Go examples from the Go Team were used. Some months/years later some people started to question if the <code>pkg</code> folder was simply that, a folder, and it was not contributing anything to the project so it should be removed. For that time I was a clear defender of the <code>cmd, pkg</code> layout because it was a &ldquo;standard&rdquo; for the industry and for me it was clear where to look at the code (pkg) and where to look at the initialization of the application  (cmd). This is still true, but advocating the simplicity of Go we tend to remove the packages that are just folders and give them also a meaningful name as they are part of our code (importing them and using in types, functions, etc.).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="o">/</span><span class="nx">cmd</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="nx">pkg</span>
+</span></span><span class="line"><span class="cl"><span class="nx">config</span> <span class="nf">files</span> <span class="p">(</span><span class="nx">Makefile</span><span class="p">,</span> <span class="nx">docker</span><span class="p">,</span> <span class="nx">etc</span><span class="p">.)</span>
+</span></span></code></pre></div><p>This was the initial approach that some Go projects were adopting where inside the <code>pkg</code> you define all your code and in the <code>cmd</code> you simply create your <code>main.go</code> which bootstraps your application from the <code>pkg</code> one. This started to be so popular because some Go examples from the Go Team were used. Some months/years later some people started to question if the <code>pkg</code> folder was simply that, a folder, and it was not contributing anything to the project so it should be removed. For that time I was a clear defender of the <code>cmd, pkg</code> layout because it was a &ldquo;standard&rdquo; for the industry and for me it was clear where to look at the code (pkg) and where to look at the initialization of the application  (cmd). This is still true, but advocating the simplicity of Go we tend to remove the packages that are just folders and give them also a meaningful name as they are part of our code (importing them and using in types, functions, etc.).</p>
 <h2 id="ahá-moment">Ahá moment</h2>
 <p>Some years ago I started reading about DDD due to the popularity it has acquired in the last years and I wanted to know what that about. I don&rsquo;t want to be extenze on this post about that topic (if you would like that I write one specific for it please ping me here or through my social networks and I will be happy to do it) but basically what it aims for is to put your focus when designing in the domain instead of in the code. It helps you to better understand the problem by giving you a toolkit to work with the domain experts in your company in order to design the best possible solution for the problem you wanna solve. There are two main groups, the strategic patterns and the tactical patterns. Both are important but here as I want to talk about the project layout I will talk only about the tactical ones. When I read those I started to internalise that all the domain design that I was doing with the strategical patterns, all the questions that I was asking to the domain experts, the ubiquitous language we were defining and all the event storming sessions we were doing, all of that should be reflected in my code. How can I do that? There are a lot of possibilities but one possibility is using Clean Architectures.
 At that moment it was when I read Robert C. Martin&rsquo;s book <code>Clean Architecture: A Craftsman's Guide to Software Structure and Design: A Craftsman's Guide to Software Structure and Design</code>. Understanding what DDD aims for and the ideas conveyed in the book and after some refinement with my team colleagues we ended up creating a project layout in which we tried to gather all those concepts and the most important which we are comfortable working with. This is not to follow a trend or an imposition from any framework, so if we are not happy with it, we iterate it again and we tweak the parts we consider in order to facilitate our lives and specially our future selves when we need to do some fixes or add new features.</p>
 <h2 id="the-layout">The layout</h2>
 <p>Taking in consideration all I mentioned before, let me present to you the project layout. As an example I will use an application that has outgoing and incoming payments. Both with their own aggregates and business rules that need to satisfy and expose endpoints via grpc in this case.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="o">/</span><span class="nx">payments</span><span class="o">-</span><span class="nx">svc</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">app</span><span class="o">/</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">cmd</span><span class="o">/</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">docs</span><span class="o">/</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">grpc</span><span class="o">/</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">incoming</span><span class="o">/</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">internal</span><span class="o">/</span>
-	<span class="p">|</span><span class="o">-</span> <span class="nx">logger</span><span class="o">/</span>
-	<span class="p">|</span><span class="o">-</span> <span class="nx">postgres</span><span class="o">/</span>
-	<span class="p">|</span><span class="o">-</span> <span class="nx">slack</span><span class="o">/</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">k8s</span><span class="o">/</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">outgoing</span><span class="o">/</span>
-<span class="nx">docker</span><span class="o">-</span><span class="nx">compose</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">yml</span>
-<span class="k">go</span><span class="p">.</span><span class="nx">mod</span>
-<span class="k">go</span><span class="p">.</span><span class="nx">sum</span>
-<span class="nx">Makefile</span>
-<span class="nx">README</span><span class="p">.</span><span class="nx">md</span>
-</code></pre></div><p>I will try to be brief and explain a bit what parts each folder contains and why we adopted that layout.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="o">/</span><span class="nx">payments</span><span class="o">-</span><span class="nx">svc</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">app</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">cmd</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">docs</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">grpc</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">incoming</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">internal</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl">	<span class="p">|</span><span class="o">-</span> <span class="nx">logger</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl">	<span class="p">|</span><span class="o">-</span> <span class="nx">postgres</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl">	<span class="p">|</span><span class="o">-</span> <span class="nx">slack</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">k8s</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">outgoing</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="nx">docker</span><span class="o">-</span><span class="nx">compose</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">yml</span>
+</span></span><span class="line"><span class="cl"><span class="k">go</span><span class="p">.</span><span class="nx">mod</span>
+</span></span><span class="line"><span class="cl"><span class="k">go</span><span class="p">.</span><span class="nx">sum</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Makefile</span>
+</span></span><span class="line"><span class="cl"><span class="nx">README</span><span class="p">.</span><span class="nx">md</span>
+</span></span></code></pre></div><p>I will try to be brief and explain a bit what parts each folder contains and why we adopted that layout.</p>
 <p>As I said this service is responsible for payments so we want to have the domain first exposed so we display <code>incoming</code> and <code>outgoing</code> as the main parts of the application. I will go back after a few lines, don&rsquo;t worry.</p>
 <p>The <code>app</code> is where we have the <code>main.go</code> to bootstrap all the applications (basically where we import the incoming and outgoing packages and some from the internal if needed).</p>
 <p>The <code>cmd</code> is where we define the command line tools we need for the service. In this case we have a cli that interacts with our service.</p>
@@ -198,20 +198,20 @@ At that moment it was when I read Robert C. Martin&rsquo;s book <code>Clean Arch
 <p>The <code>internal</code> is where we have the implementation of the interfaces we use in the project but are not part of the domain; basically the infrastructure things like the database, queues, external services (Slack), the logger&hellip;</p>
 <p>The <code>k8s</code> one is referred to the Kubernetes config files for the deployment.</p>
 <p>As mentioned before the <code>incoming</code> and <code>outgoing</code> are our domain packages so that is where all the magic happens. I will describe a bit of one of them because the other is similar but with the particularities of that domain.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="o">/</span><span class="nx">outgoing</span>
-<span class="nx">app_service</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">app_service_test</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">display_payments</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">display_payments_test</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">execute_payments</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">execute_payments_test</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">flow_service</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">flow_service_test</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">instruction_repository</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">instruction_repository_test</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">instruction</span><span class="p">.</span><span class="k">go</span>
-<span class="nx">instruction_test</span><span class="p">.</span><span class="k">go</span>
-</code></pre></div><p>I&rsquo;ve picked up the <code>outgoing</code> for the explanation. First of all we have the <code>app_service</code>. This is where we define the type Application Service of our package so what it means is that it will have all the dependencies for the package and one method for each Use Case. Note: the dependencies are interfaces. The <code>app_service_test</code> is basically where we mock all the interfaces required for the app_service so we can reuse them in all the<code> *_test.go</code> files.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="o">/</span><span class="nx">outgoing</span>
+</span></span><span class="line"><span class="cl"><span class="nx">app_service</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">app_service_test</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">display_payments</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">display_payments_test</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">execute_payments</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">execute_payments_test</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">flow_service</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">flow_service_test</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">instruction_repository</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">instruction_repository_test</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">instruction</span><span class="p">.</span><span class="k">go</span>
+</span></span><span class="line"><span class="cl"><span class="nx">instruction_test</span><span class="p">.</span><span class="k">go</span>
+</span></span></code></pre></div><p>I&rsquo;ve picked up the <code>outgoing</code> for the explanation. First of all we have the <code>app_service</code>. This is where we define the type Application Service of our package so what it means is that it will have all the dependencies for the package and one method for each Use Case. Note: the dependencies are interfaces. The <code>app_service_test</code> is basically where we mock all the interfaces required for the app_service so we can reuse them in all the<code> *_test.go</code> files.</p>
 <p>The <code>display_payments</code> and <code>execute_payments</code> are use cases for this domain. The tests are simply testing the different scenarios for each use case.</p>
 <p>The <code>flow_service</code> is a domain service that helps us to execute the payments depending on the flow defined for each payment type. The test is basically testing the domain service.</p>
 <p>The <code>instruction_repository</code> is where we define all the methods against our repository, in this case our database in PostgreSQL. The test is checking against a testing database if all the queries are okay.</p>
@@ -295,7 +295,7 @@ At that moment it was when I read Robert C. Martin&rsquo;s book <code>Clean Arch
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -340,7 +340,7 @@ At that moment it was when I read Robert C. Martin&rsquo;s book <code>Clean Arch
 		</li>
 	</ul>
 	<div class="footer-text">Last post on 09/12/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 

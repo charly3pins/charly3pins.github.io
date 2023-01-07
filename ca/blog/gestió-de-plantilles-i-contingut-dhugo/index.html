@@ -158,7 +158,7 @@ if (!doNotTrack) {
 					
 					<div class="page-separator"></div>
 					<p>Després de molt de temps sense escriure&hellip; he tornat!</p>
-<p><img src="/images/hugo-content-templates-managing/im-back-terminator.jpg" alt="I&rsquo;m back"></p>
+<p><img src="/images/hugo-content-templates-managing/im-back-terminator.jpg" alt="I&amp;rsquo;m back"></p>
 <p>Tenia previst reconstruir el meu lloc i començar a crear contingut de nou, però mai no he trobat el temps fins ara.</p>
 <p>Volia fer el meu tema des de zero en lloc d’utilitzar un <a href="https://themes.gohugo.io/">tema predefinit</a>, així que vaig haver d’aprendre com es fan les plantilles i la gestió del contingut a Hugo.</p>
 <p>Un cop fet aquest procés, vull resumir les coses més importants que considero que heu de saber si voleu fer el vostre propi tema com ho vaig fer jo (aquest lloc ho demostra!).</p>
@@ -167,7 +167,7 @@ if (!doNotTrack) {
 <p>Tot el contingut que vulgueu tenir al vostre lloc ha d&rsquo;estar dins del directori <code>content/</code>. Simplement poseu les vostres publicacions dins de <code>content/posts</code> i la vostra descripció a <code>content/about</code> i Hugo us farà la màgia. Sembla fàcil oi? Continueu llavors.</p>
 <p>Hugo té principalment dos tipus de pàgines, les &ldquo;úniques&rdquo; i les &ldquo;múltiples&rdquo;. Els primers s&rsquo;utilitzen, per exemple, per a un &ldquo;about&rdquo; o per a un &ldquo;faq&rdquo; o un &ldquo;contribuir&rdquo; o un &ldquo;landing&rdquo; &hellip; Els segons s&rsquo;utilitzen quan es vol agrupar contingut en una mateixa categoria. Per exemple, les vostres diferents publicacions per a les vostres publicacions o un catàleg per als vostres productes. Dit això, hi ha una altra diferència que heu de saber quan creeu les vostres diferents pàgines.</p>
 <p>Els únics s&rsquo;han de nomenar com a &ldquo;index.md&rdquo;, els de la llista no. Això al final indica a Hugo com gestionar el contingut dins dels directoris i com generar les URL per accedir-hi. L&rsquo;esquema següent mostra com funciona això:</p>
-<pre><code>└── content
+<pre tabindex="0"><code>└── content
     └── about
     |   └── index.md        (https://mysite.com/about)
     ├── posts
@@ -181,7 +181,7 @@ if (!doNotTrack) {
 <h2 id="gestió-de-plantilles">Gestió de plantilles</h2>
 <p>Ara ja sabeu com organitzar el vostre contingut, és hora de parlar de les <a href="https://gohugo.io/templates/">plantilles</a>. Són el codi HTML que genera les pàgines del vostre lloc. Hi ha alguns trucs i consells que vull compartir amb vosaltres, com he fet amb el contingut de la secció anterior.</p>
 <p>Les diferents plantilles s&rsquo;han de col·locar dins del directori <code>layouts/</code>. A l&rsquo;arrel ha d&rsquo;haver-hi la plantilla principal anomenada <code>index.html</code> que s&rsquo;utilitza per representar la pàgina d&rsquo;inici. De la mateixa manera que el contingut, les plantilles es poden organitzar en carpetes si voleu mostrar de diferents maneres el contingut en funció de la ruta. Igual que el contingut, les plantilles es poden organitzar entre exclusives i múltiples. Prenent l&rsquo;organització de contingut descrita anteriorment, tenint en compte que voleu especificar plantilles diferents per a cada carpeta de contingut, una de les organitzacions de plantilla possibles pot ser:</p>
-<pre><code>└── layouts
+<pre tabindex="0"><code>└── layouts
     └── _default_
     |   ├── list.html
     |   └── single.html
@@ -243,7 +243,7 @@ if (!doNotTrack) {
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -288,7 +288,7 @@ if (!doNotTrack) {
 		</li>
 	</ul>
 	<div class="footer-text">Darrer post el 16/08/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 

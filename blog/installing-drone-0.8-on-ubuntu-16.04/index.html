@@ -165,11 +165,11 @@ if (!doNotTrack) {
 </blockquote>
 <h2 id="installation">Installation</h2>
 <p>First of all you need to pull the drone image.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">docker</span> <span class="nx">pull</span> <span class="nx">drone</span>/<span class="nx">drone</span>:<span class="m">0</span>.<span class="m">8</span><span class="err">
-</span></code></pre></div><p>Then create the docker-compose for run it:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">docker</span><span class="p">-</span><span class="nx">compose</span>.<span class="nx">yml</span><span class="err">
-</span></code></pre></div><p>And copy the following:</p>
-<pre><code>version: '2'
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">docker</span> <span class="nx">pull</span> <span class="nx">drone</span>/<span class="nx">drone</span>:<span class="m">0</span>.<span class="m">8</span><span class="err">
+</span></span></span></code></pre></div><p>Then create the docker-compose for run it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">docker</span><span class="p">-</span><span class="nx">compose</span>.<span class="nx">yml</span><span class="err">
+</span></span></span></code></pre></div><p>And copy the following:</p>
+<pre tabindex="0"><code>version: &#39;2&#39;
 
 services:
   drone-server:
@@ -195,9 +195,9 @@ services:
       - /etc/drone/agent.env
 </code></pre><p><!-- raw HTML omitted -->In my case I&rsquo;ve used these ports because I have other things in my Nginx, but you can choose your own ones. I&rsquo;ve also stored the server and agent <code>env</code> vars in a specific files.<!-- raw HTML omitted --></p>
 <p>Now it&rsquo;s time to create those files. First we create the server one:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">server</span>.<span class="nx">env</span><span class="err">
-</span></code></pre></div><p>And copy the following:</p>
-<pre><code># Service settings 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">server</span>.<span class="nx">env</span><span class="err">
+</span></span></span></code></pre></div><p>And copy the following:</p>
+<pre tabindex="0"><code># Service settings 
 DRONE_SECRET=secret_generated_on_command_line
 DRONE_HOST=https://yourDroneURL.com
 
@@ -211,16 +211,16 @@ DRONE_GITHUB_CLIENT=Client_ID_from_GitHub
 DRONE_GITHUB_SECRET=Client_Secret_from_GitHub
 </code></pre><p>For the GitHub clientID and clientSecret, you must register Drone in your GitHub account to obtain them. Follow <a href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/">these instructions</a>.</p>
 <p>And now the agent:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">agent</span>.<span class="nx">env</span><span class="err">
-</span></code></pre></div><p>And copy the following:</p>
-<pre><code>DRONE_SECRET=secret_generated_on_command_line
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">drone</span>/<span class="nx">agent</span>.<span class="nx">env</span><span class="err">
+</span></span></span></code></pre></div><p>And copy the following:</p>
+<pre tabindex="0"><code>DRONE_SECRET=secret_generated_on_command_line
 DRONE_SERVER=drone-server:9000
 </code></pre><p>To generate the <code>DRONE_SECRET</code> you can ype the following command</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">LC_ALL</span><span class="p">=</span><span class="nx">C</span> <span class="p">&lt;</span><span class="sr">/dev/</span><span class="nx">urandom</span> <span class="nx">tr</span> <span class="p">-</span><span class="nx">dc</span> <span class="nx">A</span><span class="p">-</span><span class="nx">Za</span><span class="p">-</span><span class="nx">z0</span><span class="m">-9</span> <span class="p">|</span> <span class="nx">head</span> <span class="p">-</span><span class="nx">c</span> <span class="m">65</span> &amp;&amp; <span class="nx">echo</span><span class="err">
-</span></code></pre></div><p>Once our Drone is installed and configured, we need to create a systemd unit file to manage the service.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">systemd</span><span class="sr">/system/</span><span class="nx">drone</span>.<span class="nx">service</span><span class="err">
-</span></code></pre></div><p>And copy the following:</p>
-<pre><code>[Unit]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">LC_ALL</span><span class="p">=</span><span class="nx">C</span> <span class="p">&lt;</span><span class="sr">/dev/</span><span class="nx">urandom</span> <span class="nx">tr</span> <span class="p">-</span><span class="nx">dc</span> <span class="nx">A</span><span class="p">-</span><span class="nx">Za</span><span class="p">-</span><span class="nx">z0</span><span class="m">-9</span> <span class="p">|</span> <span class="nx">head</span> <span class="p">-</span><span class="nx">c</span> <span class="m">65</span> &amp;&amp; <span class="nx">echo</span><span class="err">
+</span></span></span></code></pre></div><p>Once our Drone is installed and configured, we need to create a systemd unit file to manage the service.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">systemd</span><span class="sr">/system/</span><span class="nx">drone</span>.<span class="nx">service</span><span class="err">
+</span></span></span></code></pre></div><p>And copy the following:</p>
+<pre tabindex="0"><code>[Unit]
 Description=Drone server
 After=docker.service nginx.service
 
@@ -233,64 +233,64 @@ ExecStop=/usr/local/bin/docker-compose -f /etc/drone/docker-compose.yml stop
 WantedBy=multi-user.target
 </code></pre><h2 id="configure-nginx">Configure Nginx</h2>
 <p>And finally we need to configure our Nginx to proxy requests to our Drone server. First of all find the enabled server blocks with the following command:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">grep</span> <span class="p">-</span><span class="nx">R</span> <span class="nx">server_name</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">sites</span><span class="p">-</span><span class="nx">enabled</span><span class="err">
-</span></code></pre></div><p>You&rsquo;ll see something like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">Output</span><span class="err">
-</span><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:   <span class="nx">server_name</span> <span class="nx">yourDroneURL</span>.<span class="nx">com</span>;<span class="err">
-</span><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:   <span class="nx">return</span> <span class="m">301</span> <span class="nx">https</span>:<span class="sr">//</span>$<span class="nx">server_name</span>$<span class="nx">request_uri</span>;<span class="err">
-</span><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:   <span class="nx">server_name</span> <span class="nx">yourDroneURL</span>.<span class="nx">com</span>;<span class="err">
-</span><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:#  <span class="nx">server_name</span> <span class="nx">yourDroneURL</span>.<span class="nx">com</span>;<span class="err">
-</span></code></pre></div><p>After knowing the block that is handling our server, we can edit it typing:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span> <span class="err">
-</span></code></pre></div><p>And adding this text before the <code>server {</code> block:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">upstream</span> <span class="nx">drone</span> {<span class="nx">upstream</span> <span class="nx">drone</span> {<span class="err">
-</span><span class="err"></span>         <span class="nx">server</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">8000</span>;<span class="nx">server</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">8000</span>;<span class="err">
-</span><span class="err"></span> }}<span class="err">
-</span><span class="err">
-</span><span class="err"></span>  <span class="nx">map</span> $<span class="nx">http_upgrade</span> $<span class="nx">connection_upgrade</span> {<span class="nx">map</span> $<span class="nx">http_upgrade</span> $<span class="nx">connection_up</span> <span class="err">
-</span><span class="err"></span>    <span class="nx">default</span> <span class="nx">upgrade</span>;<span class="err">
-</span><span class="err"></span>    <span class="s1">&#39;&#39;</span>      <span class="nx">close</span>;<span class="err">
-</span><span class="err"></span>}<span class="err">
-</span></code></pre></div><p>Next, find the server block with the listen 443 directive inside. Replace the contents of the location block with the following:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">server</span> {<span class="err">
-</span><span class="err"></span>    <span class="nx">listen</span> <span class="m">443</span> <span class="nx">ssl</span>;<span class="err">
-</span><span class="err"></span>    <span class="nx">location</span> / {<span class="err">
-</span><span class="err"></span>        # <span class="nx">try_files</span> $<span class="nx">uri</span> $<span class="nx">uri</span>/ <span class="p">=</span><span class="m">404</span>;<span class="err">
-</span><span class="err"></span>        <span class="nx">proxy_pass</span> <span class="nx">http</span>:<span class="sr">//</span><span class="nx">drone</span>;<span class="err">
-</span><span class="err">
-</span><span class="err"></span>        <span class="nx">include</span> <span class="nx">proxy_params</span>;<span class="err">
-</span><span class="err"></span>        <span class="nx">proxy_set_header</span> <span class="nx">Upgrade</span> $<span class="nx">http_upgrade</span>;<span class="err">
-</span><span class="err"></span>        <span class="nx">proxy_set_header</span> <span class="nx">Connection</span> $<span class="nx">connection_upgrade</span>;<span class="err">
-</span><span class="err">
-</span><span class="err"></span>        <span class="nx">proxy_redirect</span> <span class="nx">off</span>;<span class="err">
-</span><span class="err"></span>        <span class="nx">proxy_http_version</span> <span class="m">1</span>.<span class="m">1</span>;<span class="err">
-</span><span class="err"></span>        <span class="nx">proxy_buffering</span> <span class="nx">off</span>;<span class="err">
-</span><span class="err"></span>        <span class="nx">chunked_transfer_encoding</span> <span class="nx">off</span>;<span class="err">
-</span><span class="err"></span>        <span class="nx">proxy_read_timeout</span> <span class="m">86400</span>;<span class="err">
-</span><span class="err"></span>    }<span class="err">
-</span><span class="err"></span>}<span class="err">
-</span></code></pre></div><p>Now it&rsquo;s time to test if our Nginx it&rsquo;s working or not:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">nginx</span> <span class="p">-</span><span class="nx">t</span><span class="err">
-</span></code></pre></div><p>You should see:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">Output</span><span class="err">
-</span><span class="err"></span><span class="nx">nginx</span>: <span class="nx">the</span> <span class="nx">configuration</span> <span class="nx">file</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">nginx</span>.<span class="nx">conf</span> <span class="nx">syntax</span> <span class="nx">is</span> <span class="nx">ok</span><span class="err">
-</span><span class="err"></span><span class="nx">nginx</span>: <span class="nx">configuration</span> <span class="nx">file</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">nginx</span>.<span class="nx">conf</span> <span class="nx">test</span> <span class="nx">is</span> <span class="nx">successful</span><span class="err">
-</span></code></pre></div><p>You just need to restart the server and will proxy the requests:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">nginx</span><span class="err">
-</span></code></pre></div><p>Finally, you need to start the Drone server:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">start</span> <span class="nx">drone</span><span class="err">
-</span></code></pre></div><p>To check the status of the container you can use the following command:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">status</span> <span class="nx">drone</span><span class="err">
-</span></code></pre></div><p>You can check the Nginx logs:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">less</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/nginx/</span><span class="nx">error</span>.<span class="nx">log</span><span class="err">
-</span></code></pre></div><p>And also you can check the Drone logs:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">journalctl</span> <span class="p">-</span><span class="nx">u</span> <span class="nx">drone</span><span class="err">
-</span></code></pre></div><p>If all it&rsquo;s okay, its time to enable Drone:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">enable</span> <span class="nx">drone</span><span class="err">
-</span></code></pre></div><p>If you want to switch off Drone you can type the following commands:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">cd</span> <span class="sr">/etc/</span><span class="nx">drone</span><span class="err">
-</span><span class="err"></span><span class="nx">sudo</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">docker</span><span class="p">-</span><span class="nx">compose</span> <span class="nx">down</span><span class="err">
-</span></code></pre></div><p>Visit your Drone server at your <code>https://yourDroneURL.com</code> and log in with the GitHub account you used for obtain the clientID and client secret.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">grep</span> <span class="p">-</span><span class="nx">R</span> <span class="nx">server_name</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">sites</span><span class="p">-</span><span class="nx">enabled</span><span class="err">
+</span></span></span></code></pre></div><p>You&rsquo;ll see something like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">Output</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:   <span class="nx">server_name</span> <span class="nx">yourDroneURL</span>.<span class="nx">com</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:   <span class="nx">return</span> <span class="m">301</span> <span class="nx">https</span>:<span class="sr">//</span>$<span class="nx">server_name</span>$<span class="nx">request_uri</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:   <span class="nx">server_name</span> <span class="nx">yourDroneURL</span>.<span class="nx">com</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span>:#  <span class="nx">server_name</span> <span class="nx">yourDroneURL</span>.<span class="nx">com</span>;<span class="err">
+</span></span></span></code></pre></div><p>After knowing the block that is handling our server, we can edit it typing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">nano</span> <span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/sites-enabled/</span><span class="nx">default</span> <span class="err">
+</span></span></span></code></pre></div><p>And adding this text before the <code>server {</code> block:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">upstream</span> <span class="nx">drone</span> {<span class="nx">upstream</span> <span class="nx">drone</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>         <span class="nx">server</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">8000</span>;<span class="nx">server</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">8000</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span> }}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">map</span> $<span class="nx">http_upgrade</span> $<span class="nx">connection_upgrade</span> {<span class="nx">map</span> $<span class="nx">http_upgrade</span> $<span class="nx">connection_up</span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">default</span> <span class="nx">upgrade</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="s1">&#39;&#39;</span>      <span class="nx">close</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span></code></pre></div><p>Next, find the server block with the listen 443 directive inside. Replace the contents of the location block with the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">server</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">listen</span> <span class="m">443</span> <span class="nx">ssl</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">location</span> / {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        # <span class="nx">try_files</span> $<span class="nx">uri</span> $<span class="nx">uri</span>/ <span class="p">=</span><span class="m">404</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">proxy_pass</span> <span class="nx">http</span>:<span class="sr">//</span><span class="nx">drone</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">include</span> <span class="nx">proxy_params</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">proxy_set_header</span> <span class="nx">Upgrade</span> $<span class="nx">http_upgrade</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">proxy_set_header</span> <span class="nx">Connection</span> $<span class="nx">connection_upgrade</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">proxy_redirect</span> <span class="nx">off</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">proxy_http_version</span> <span class="m">1</span>.<span class="m">1</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">proxy_buffering</span> <span class="nx">off</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">chunked_transfer_encoding</span> <span class="nx">off</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">proxy_read_timeout</span> <span class="m">86400</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    }<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span></code></pre></div><p>Now it&rsquo;s time to test if our Nginx it&rsquo;s working or not:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">nginx</span> <span class="p">-</span><span class="nx">t</span><span class="err">
+</span></span></span></code></pre></div><p>You should see:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">Output</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">nginx</span>: <span class="nx">the</span> <span class="nx">configuration</span> <span class="nx">file</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">nginx</span>.<span class="nx">conf</span> <span class="nx">syntax</span> <span class="nx">is</span> <span class="nx">ok</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">nginx</span>: <span class="nx">configuration</span> <span class="nx">file</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">nginx</span>.<span class="nx">conf</span> <span class="nx">test</span> <span class="nx">is</span> <span class="nx">successful</span><span class="err">
+</span></span></span></code></pre></div><p>You just need to restart the server and will proxy the requests:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">nginx</span><span class="err">
+</span></span></span></code></pre></div><p>Finally, you need to start the Drone server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">start</span> <span class="nx">drone</span><span class="err">
+</span></span></span></code></pre></div><p>To check the status of the container you can use the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">status</span> <span class="nx">drone</span><span class="err">
+</span></span></span></code></pre></div><p>You can check the Nginx logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">less</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/nginx/</span><span class="nx">error</span>.<span class="nx">log</span><span class="err">
+</span></span></span></code></pre></div><p>And also you can check the Drone logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">journalctl</span> <span class="p">-</span><span class="nx">u</span> <span class="nx">drone</span><span class="err">
+</span></span></span></code></pre></div><p>If all it&rsquo;s okay, its time to enable Drone:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">enable</span> <span class="nx">drone</span><span class="err">
+</span></span></span></code></pre></div><p>If you want to switch off Drone you can type the following commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">cd</span> <span class="sr">/etc/</span><span class="nx">drone</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">sudo</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">docker</span><span class="p">-</span><span class="nx">compose</span> <span class="nx">down</span><span class="err">
+</span></span></span></code></pre></div><p>Visit your Drone server at your <code>https://yourDroneURL.com</code> and log in with the GitHub account you used for obtain the clientID and client secret.</p>
 <h2 id="references">References</h2>
 <ul>
 <li>Drone official <a href="http://docs.drone.io/installation/">documentation</a></li>
@@ -304,7 +304,7 @@ WantedBy=multi-user.target
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -349,7 +349,7 @@ WantedBy=multi-user.target
 		</li>
 	</ul>
 	<div class="footer-text">Last post on 09/12/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 

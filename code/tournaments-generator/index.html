@@ -178,16 +178,16 @@ I&rsquo;ve chosen <a href="https://golang.org/">Go</a> as the programming langua
 <p>For the mobile app, I started putting all files inside a <code>components</code> folder but when it started growing it was a complete kaos to manage. After adding more complexity to the app I end up finding a clean way to organize the code, dividing it into two separate folders; one for the core and another one for the ui. Then inside of each one I also categorized the different type of components depending on their responsibilities and at the end the code (at least for me that I&rsquo;m not a Flutter expert) ended up looking super clean and (without no doubt) more maintainable. Below the folder organization in a general view:</p>
 <p><img src="/images/code/tournaments-generator/app-structure.jpeg" alt="app structure"></p>
 <p>At the beginning when I started coding and watching the results all was super fancy and I thought it was easier than expected. Connecting the app with the API was just a matter of knowing how to use the <code>http</code> library and the <code>get</code> or <code>post</code> methods was connected with no problems.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart">    <span class="kd">var</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">http</span><span class="p">.</span><span class="n">Client</span><span class="p">();</span>
-
-    <span class="kt">String</span> <span class="n">jsonBody</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">toJson</span><span class="p">());</span>
-    <span class="kd">var</span> <span class="n">response</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">_baseUrl</span><span class="s2">/token&#34;</span><span class="p">,</span>
-        <span class="nl">headers:</span> <span class="p">{</span><span class="s2">&#34;Content-Type&#34;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="nl">body:</span> <span class="n">jsonBody</span><span class="p">);</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">statusCode</span> <span class="o">==</span> <span class="m">200</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">));</span>
-    <span class="p">}</span>
-</code></pre></div><p>The unique problem I&rsquo;ve faced there is that I was running the apps from the Android Emulator; that means it was running in a virtual machine so the IP was not my local one and cannot access the <code>localhost</code>. After a bit of research I&rsquo;ve found the correct one and all worked correctly.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl">    <span class="kd">var</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">http</span><span class="p">.</span><span class="n">Client</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">String</span> <span class="n">jsonBody</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">toJson</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="n">response</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$</span><span class="n">_baseUrl</span><span class="s2">/token&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">headers:</span> <span class="p">{</span><span class="s2">&#34;Content-Type&#34;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="nl">body:</span> <span class="n">jsonBody</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">statusCode</span> <span class="o">==</span> <span class="m">200</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><p>The unique problem I&rsquo;ve faced there is that I was running the apps from the Android Emulator; that means it was running in a virtual machine so the IP was not my local one and cannot access the <code>localhost</code>. After a bit of research I&rsquo;ve found the correct one and all worked correctly.</p>
 <p>The problems started when I wanted to pass information between components, and refresh the view depending on that information, or even better, not refresh if nothing changed when I enter again into a view (for example going from a list to a detail view, and coming back again to the list). After a day reading in forums about the same problem that I was facing, I&rsquo;ve found the package <a href="https://pub.dev/packages/provider">Provider</a> and all seemed easy and the holy grail for everything, but it wasn&rsquo;t.</p>
 <p>The real pain just started there! It took me some days to really understand how it works. The initial Provider it&rsquo;s easy to understand and you use it and it works, but then you want to change just a small part of the view, or you want to rebuild the entire one, or you want to modify some values in a view A and then go to view B and see the changes there, and all that examples it&rsquo;s coded completely different and you have to know first of all that there are one way for each case of doing things and second you have to know how to do it. At the end I used the Provider, the ProxyProvider, the StreamProvider and the ChangeNotifierProvider.</p>
 <p>The project is not finished but for now is On Hold with the following functionalities:</p>
@@ -251,7 +251,7 @@ I&rsquo;ve chosen <a href="https://golang.org/">Go</a> as the programming langua
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -296,7 +296,7 @@ I&rsquo;ve chosen <a href="https://golang.org/">Go</a> as the programming langua
 		</li>
 	</ul>
 	<div class="footer-text">Last post on 09/12/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 

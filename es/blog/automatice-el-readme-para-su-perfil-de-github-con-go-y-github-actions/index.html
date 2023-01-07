@@ -167,78 +167,78 @@ if (!doNotTrack) {
 <h2 id="obtener-el-último-post-con-go">Obtener el último post con Go</h2>
 <p>Necesitaba escanear el feed del blog y lo quería hacer en Go, por tanto, lo primero que hice fue buscar si ya había alguna librería que me facilitara esta tarea para no reinventar la rueda y encontré la <a href="https://github.com/mmcdole/gofeed">github.com/mmcdole/gofeed</a>. Tenía un montón de funcionalidades pero yo con el uso básico descrito en su README tenía suficiente.</p>
 <p>Con el siguiente trozo de código, creo un nuevo parser, escaneo la dirección de mi feed y los elementos resultantes, me quedo con el primero, ya que es el último post publicado.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">p</span> <span class="o">:=</span> <span class="nx">gofeed</span><span class="p">.</span><span class="nf">NewParser</span><span class="p">()</span>
-<span class="nx">feed</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">p</span><span class="p">.</span><span class="nf">ParseURL</span><span class="p">(</span><span class="s">&#34;https://charly3pins.dev/index.xml&#34;</span><span class="p">)</span>
-<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-    <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;error getting feed: %v&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="nx">newestItem</span> <span class="o">:=</span> <span class="nx">feed</span><span class="p">.</span><span class="nx">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</code></pre></div><p>Con esto ya tengo el item con toda la información. Su aspecto es similar a:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;item&gt;</span>
-    <span class="nt">&lt;title&gt;</span>My productivity setup for VS Code<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;link&gt;</span>http://charly3pins.dev/blog/my-productivity-setup-for-vs-code/<span class="nt">&lt;/link&gt;</span>
-    <span class="nt">&lt;pubDate&gt;</span>Tue, 09 Mar 2021<span class="nt">&lt;/pubDate&gt;</span>
-    <span class="nt">&lt;guid&gt;</span>http://charly3pins.dev/blog/my-productivity-setup-for-vs-code/<span class="nt">&lt;/guid&gt;</span>
-    <span class="nt">&lt;description&gt;</span>I am gonna show you my setup for VS Code editor which makes me more productive and I feel more comfortable with the tool that I spend most of my time during the day.<span class="nt">&lt;/description&gt;</span>
-    <span class="nt">&lt;content&gt;&lt;p&gt;</span>I spend a lot of hours during the day coding for the company I work for and during nights or weekends for myself, so I want to be comfortable with the tools I use constantly. One of them is my editor of code, specifically <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#34;https://code.visualstudio.com/&#34;</span><span class="nt">&gt;</span>VS Code<span class="nt">&lt;/a&gt;</span>.....<span class="nt">&lt;/content&gt;</span>
-<span class="nt">&lt;/item&gt;</span>
-</code></pre></div><p>Lo que me interesa para mostrar al README es sólo el <code>title</code> y el <code>link</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">p</span> <span class="o">:=</span> <span class="nx">gofeed</span><span class="p">.</span><span class="nf">NewParser</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nx">feed</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">p</span><span class="p">.</span><span class="nf">ParseURL</span><span class="p">(</span><span class="s">&#34;https://charly3pins.dev/index.xml&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">log</span><span class="p">.</span><span class="nf">Fatalf</span><span class="p">(</span><span class="s">&#34;error getting feed: %v&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">newestItem</span> <span class="o">:=</span> <span class="nx">feed</span><span class="p">.</span><span class="nx">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span></code></pre></div><p>Con esto ya tengo el item con toda la información. Su aspecto es similar a:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;item&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;title&gt;</span>My productivity setup for VS Code<span class="nt">&lt;/title&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;link&gt;</span>http://charly3pins.dev/blog/my-productivity-setup-for-vs-code/<span class="nt">&lt;/link&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;pubDate&gt;</span>Tue, 09 Mar 2021<span class="nt">&lt;/pubDate&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;guid&gt;</span>http://charly3pins.dev/blog/my-productivity-setup-for-vs-code/<span class="nt">&lt;/guid&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;description&gt;</span>I am gonna show you my setup for VS Code editor which makes me more productive and I feel more comfortable with the tool that I spend most of my time during the day.<span class="nt">&lt;/description&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;content&gt;&lt;p&gt;</span>I spend a lot of hours during the day coding for the company I work for and during nights or weekends for myself, so I want to be comfortable with the tools I use constantly. One of them is my editor of code, specifically <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#34;https://code.visualstudio.com/&#34;</span><span class="nt">&gt;</span>VS Code<span class="nt">&lt;/a&gt;</span>.....<span class="nt">&lt;/content&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/item&gt;</span>
+</span></span></code></pre></div><p>Lo que me interesa para mostrar al README es sólo el <code>title</code> y el <code>link</code>.</p>
 <h2 id="leer-y-escribir-el-readme">Leer y escribir el README</h2>
 <p>Una vez tenía la información necesaria ahora tocaba leer el fichero <code>README.md</code> del <a href="https://github.com/charly3pins/charly3pins">repositorio</a>, escribir los cambios y guardarlo de nuevo.</p>
 <p>Para ello podía leer el archivo usando la librería standard <code>ioutil.ReadFile()</code>, pero en este caso como no quiero reaprovechar nada del archivo, puedo llamar directamente al <code>os.Create()</code> para crear un nuevo archivo y así sobrescribir el README.md que ya tenía en el directorio.</p>
 <p>Además, como que quiero poner la información del feed junto con la parte estática de texto que ya tenía, lo que haré es crear varias cadenas de texto con las diferentes secciones que quiero poner en el perfil y luego juntarlas todas con un <code>fmt.Sprintf() </code>.</p>
 <p>El código que hace todo esto es el siguiente:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">file</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="nx">filename</span><span class="p">)</span>
-<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;error creating file&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
-	<span class="k">return</span>
-<span class="p">}</span>
-<span class="k">defer</span> <span class="nx">file</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
-
-<span class="nx">_</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">io</span><span class="p">.</span><span class="nf">WriteString</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
-<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;error writing content to file&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
-	<span class="k">return</span>
-<span class="p">}</span>
-<span class="nx">file</span><span class="p">.</span><span class="nf">Sync</span><span class="p">()</span>
-</code></pre></div><p>Lo que falta por ver aquí es el valor de <code>filename</code> y el de <code>data</code>. El primero es fácil, simplemente la ruta para llegar al README. En mi caso como tengo el proyecto en un subdirectorio de mi repositorio tengo que usar <code>filename = ../README.md</code>. En la otra variable, lo que hay es el siguiente:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">hi</span> <span class="o">:=</span> <span class="s">&#34;# Hey there!&#34;</span>
-<span class="nx">blog</span> <span class="o">:=</span> <span class="s">&#34;## Blog\n\nMy latest blog post is: **[&#34;</span> <span class="o">+</span> <span class="nx">newestItem</span><span class="p">.</span><span class="nx">Title</span> <span class="o">+</span> <span class="s">&#34;](&#34;</span> <span class="o">+</span> <span class="nx">newestItem</span><span class="p">.</span><span class="nx">Link</span> <span class="o">+</span> <span class="s">&#34;)**.&#34;</span>
-
-<span class="nx">data</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s\n\n%s\n\n%s\n\n%s\n&#34;</span><span class="p">,</span> <span class="nx">hi</span><span class="p">,</span> <span class="nx">blog</span><span class="p">)</span>
-</code></pre></div><p>La parte importante es la de <code>blog</code> donde se ve claramente como leo la información del feed.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">file</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="nx">filename</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;error creating file&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">defer</span> <span class="nx">file</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">_</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">io</span><span class="p">.</span><span class="nf">WriteString</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;error writing content to file&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">file</span><span class="p">.</span><span class="nf">Sync</span><span class="p">()</span>
+</span></span></code></pre></div><p>Lo que falta por ver aquí es el valor de <code>filename</code> y el de <code>data</code>. El primero es fácil, simplemente la ruta para llegar al README. En mi caso como tengo el proyecto en un subdirectorio de mi repositorio tengo que usar <code>filename = ../README.md</code>. En la otra variable, lo que hay es el siguiente:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">hi</span> <span class="o">:=</span> <span class="s">&#34;# Hey there!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">blog</span> <span class="o">:=</span> <span class="s">&#34;## Blog\n\nMy latest blog post is: **[&#34;</span> <span class="o">+</span> <span class="nx">newestItem</span><span class="p">.</span><span class="nx">Title</span> <span class="o">+</span> <span class="s">&#34;](&#34;</span> <span class="o">+</span> <span class="nx">newestItem</span><span class="p">.</span><span class="nx">Link</span> <span class="o">+</span> <span class="s">&#34;)**.&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">data</span> <span class="o">:=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%s\n\n%s\n\n%s\n\n%s\n&#34;</span><span class="p">,</span> <span class="nx">hi</span><span class="p">,</span> <span class="nx">blog</span><span class="p">)</span>
+</span></span></code></pre></div><p>La parte importante es la de <code>blog</code> donde se ve claramente como leo la información del feed.</p>
 <p>Puede ver el código completo en <a href="https://github.com/charly3pins/charly3pins/blob/main/update/main.go">mi recompositorio</a>.</p>
 <h2 id="ejecutando-automáticamente-el-proceso">Ejecutando automáticamente el proceso</h2>
 <p>Una vez ya tenemos el código que nos genera el README automático y de forma dinámica según el último post, lo que queda por hacer es que se ejecute de forma periódica y no nos tengamos que preocupar de nada. Para hacerlo usaré un <a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows">trigger</a> de GitHub Actions para que cada vez que haga un push a la rama <code>master</code> ejecute el proceso y también que se ejecute de forma planificada cada domingo a las 12am.</p>
 <p>Primero de todo necesito la carpeta <code>.github/worfklows</code> y dentro creo el archivo<code> update.yaml</code> con el contenido siguiente:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">on</span>:<span class="err">
-</span><span class="err"></span>  <span class="nx">push</span>:<span class="err">
-</span><span class="err"></span>    <span class="nx">branches</span>:<span class="err">
-</span><span class="err"></span>      <span class="p">-</span> <span class="nx">master</span><span class="err">
-</span><span class="err"></span>  <span class="nx">schedule</span>:<span class="err">
-</span><span class="err"></span>    <span class="p">-</span> <span class="nx">cron</span>: <span class="s1">&#39;0 0 * * 0&#39;</span><span class="err">
-</span></code></pre></div><p>Cuando ya está el trigger listo, lo que se tienen que definir son los <a href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs">jobs</a>. Se pueden definir tantos como se quieran, en mi caso con 3 sencillos tengo suficiente. El primero hará un <code>checkout</code> del proyecto, el segundo <code>generarà</code> el README y el tercero <code>desplegarà</code> los cambios. Para hacer el último paso tendremos que usar los mecanismos de <a href="https://docs.github.com/en/actions/reference/authentication-in-a-workflow">autenticación</a> que proporciona GitHub Actions. El código resultantes es:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">jobs</span>:<span class="err">
-</span><span class="err"></span>  <span class="nx">build</span><span class="p">-</span><span class="nx">and</span><span class="p">-</span><span class="nx">deploy</span>:<span class="err">
-</span><span class="err"></span>    <span class="nx">runs</span><span class="p">-</span><span class="nx">on</span>: <span class="nx">ubuntu</span><span class="p">-</span><span class="nx">latest</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>    <span class="nx">steps</span>:<span class="err">
-</span><span class="err"></span>      <span class="p">-</span> <span class="nx">name</span>: <span class="nx">checkout</span> <span class="nx">repo</span><span class="err">
-</span><span class="err"></span>        <span class="nx">uses</span>: <span class="nx">actions</span>/<span class="nx">checkout</span>@<span class="nx">master</span><span class="err">
-</span><span class="err"></span>        <span class="nx">with</span>:<span class="err">
-</span><span class="err"></span>          <span class="nx">fetch</span><span class="p">-</span><span class="nx">depth</span>: <span class="m">1</span><span class="err">
-</span><span class="err"></span>      <span class="p">-</span> <span class="nx">name</span>: <span class="nx">generate</span> <span class="nx">README</span><span class="err">
-</span><span class="err"></span>        <span class="nx">run</span>: <span class="p">|</span><span class="err">
-</span><span class="err"></span>          <span class="nx">cd</span> ${<span class="nx">GITHUB_WORKSPACE</span>}<span class="sr">/update/</span><span class="err">
-</span><span class="err"></span>          <span class="nx">go</span> <span class="nx">run</span> <span class="nx">main</span>.<span class="nx">go</span><span class="err">
-</span><span class="err"></span>      <span class="p">-</span> <span class="nx">name</span>: <span class="nx">deploy</span> <span class="nx">changes</span><span class="err">
-</span><span class="err"></span>        <span class="nx">run</span>: <span class="p">|</span><span class="err">
-</span><span class="err"></span>          <span class="nx">git</span> <span class="nx">config</span> <span class="nx">user</span>.<span class="nx">name</span> <span class="s2">&#34;${GITHUB_ACTOR}&#34;</span><span class="err">
-</span><span class="err"></span>          <span class="nx">git</span> <span class="nx">config</span> <span class="nx">user</span>.<span class="nx">email</span> <span class="s2">&#34;${GITHUB_ACTOR}@users.noreply.github.com&#34;</span><span class="err">
-</span><span class="err"></span>          <span class="nx">git</span> <span class="nx">add</span> .<span class="err">
-</span><span class="err"></span>          <span class="nx">git</span> <span class="nx">commit</span> <span class="p">-</span><span class="nx">am</span> <span class="s2">&#34;:rocket:: updated content&#34;</span><span class="err">
-</span><span class="err"></span>          <span class="nx">git</span> <span class="nx">push</span> <span class="p">--</span><span class="nx">all</span> <span class="p">-</span><span class="nx">f</span> <span class="nx">https</span>:<span class="sr">//</span>${{ <span class="nx">secrets</span>.<span class="nx">GITHUB_TOKEN</span> }}@<span class="nx">github</span>.<span class="nx">com</span>/${<span class="nx">GITHUB_REPOSITORY</span>}.<span class="nx">git</span><span class="err">
-</span></code></pre></div><p>Puede ver el código completo en <a href="https://github.com/charly3pins/charly3pins/blob/main/.github/workflows/update.yaml">mi repositorio</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">on</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">push</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">branches</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="p">-</span> <span class="nx">master</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">schedule</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="p">-</span> <span class="nx">cron</span>: <span class="s1">&#39;0 0 * * 0&#39;</span><span class="err">
+</span></span></span></code></pre></div><p>Cuando ya está el trigger listo, lo que se tienen que definir son los <a href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs">jobs</a>. Se pueden definir tantos como se quieran, en mi caso con 3 sencillos tengo suficiente. El primero hará un <code>checkout</code> del proyecto, el segundo <code>generarà</code> el README y el tercero <code>desplegarà</code> los cambios. Para hacer el último paso tendremos que usar los mecanismos de <a href="https://docs.github.com/en/actions/reference/authentication-in-a-workflow">autenticación</a> que proporciona GitHub Actions. El código resultantes es:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">jobs</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">build</span><span class="p">-</span><span class="nx">and</span><span class="p">-</span><span class="nx">deploy</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">runs</span><span class="p">-</span><span class="nx">on</span>: <span class="nx">ubuntu</span><span class="p">-</span><span class="nx">latest</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">steps</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="p">-</span> <span class="nx">name</span>: <span class="nx">checkout</span> <span class="nx">repo</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">uses</span>: <span class="nx">actions</span>/<span class="nx">checkout</span>@<span class="nx">master</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">with</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>          <span class="nx">fetch</span><span class="p">-</span><span class="nx">depth</span>: <span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="p">-</span> <span class="nx">name</span>: <span class="nx">generate</span> <span class="nx">README</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">run</span>: <span class="p">|</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>          <span class="nx">cd</span> ${<span class="nx">GITHUB_WORKSPACE</span>}<span class="sr">/update/</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>          <span class="nx">go</span> <span class="nx">run</span> <span class="nx">main</span>.<span class="nx">go</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="p">-</span> <span class="nx">name</span>: <span class="nx">deploy</span> <span class="nx">changes</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">run</span>: <span class="p">|</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>          <span class="nx">git</span> <span class="nx">config</span> <span class="nx">user</span>.<span class="nx">name</span> <span class="s2">&#34;${GITHUB_ACTOR}&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>          <span class="nx">git</span> <span class="nx">config</span> <span class="nx">user</span>.<span class="nx">email</span> <span class="s2">&#34;${GITHUB_ACTOR}@users.noreply.github.com&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>          <span class="nx">git</span> <span class="nx">add</span> .<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>          <span class="nx">git</span> <span class="nx">commit</span> <span class="p">-</span><span class="nx">am</span> <span class="s2">&#34;:rocket:: updated content&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>          <span class="nx">git</span> <span class="nx">push</span> <span class="p">--</span><span class="nx">all</span> <span class="p">-</span><span class="nx">f</span> <span class="nx">https</span>:<span class="sr">//</span>${{ <span class="nx">secrets</span>.<span class="nx">GITHUB_TOKEN</span> }}@<span class="nx">github</span>.<span class="nx">com</span>/${<span class="nx">GITHUB_REPOSITORY</span>}.<span class="nx">git</span><span class="err">
+</span></span></span></code></pre></div><p>Puede ver el código completo en <a href="https://github.com/charly3pins/charly3pins/blob/main/.github/workflows/update.yaml">mi repositorio</a>.</p>
 <p>No dude en comentar aquí o contactarme en mis redes sociales para cualquier comentario, pregunta o sugerencia.</p>
 
 				</article>
@@ -308,7 +308,7 @@ if (!doNotTrack) {
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -353,7 +353,7 @@ if (!doNotTrack) {
 		</li>
 	</ul>
 	<div class="footer-text">Última publicación en 16/08/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 

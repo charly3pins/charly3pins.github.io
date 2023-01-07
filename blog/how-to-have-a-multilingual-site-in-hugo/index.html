@@ -162,93 +162,93 @@ if (!doNotTrack) {
 <p>After this long text, we are going to see how you can have your sites in Hugo in several languages ​​easily, simply and for the whole family. Let&rsquo;s go there!</p>
 <h2 id="set-languages">Set Languages</h2>
 <p>The first thing to do to have a multi-language site is to define in the <code>config.toml</code> the languages ​​that you want to offer. In my case I have decided English, Spanish and Catalan in the following way:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">[<span class="nx">languages</span>]<span class="err">
-</span><span class="err"></span>[<span class="nx">languages</span>.<span class="nx">en</span>]<span class="err">
-</span><span class="err"></span><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span><span class="err">
-</span><span class="err"></span><span class="nx">weight</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>[<span class="nx">languages</span>.<span class="nx">es</span>]<span class="err">
-</span><span class="err"></span><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;Spanish&#34;</span><span class="err">
-</span><span class="err"></span><span class="nx">weight</span> <span class="p">=</span> <span class="m">2</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>[<span class="nx">languages</span>.<span class="nx">ca</span>]<span class="err">
-</span><span class="err"></span><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;Catalan&#34;</span><span class="err">
-</span><span class="err"></span><span class="nx">weight</span> <span class="p">=</span> <span class="m">3</span><span class="err">
-</span></code></pre></div><p>The <code>languageName</code> it is used to define the text that will be seen on the web when checking which languages ​​are available. Spoiler alert! Later we will see how to translate these texts as well.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">languages</span>]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">languages</span>.<span class="nx">en</span>]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">weight</span> <span class="p">=</span> <span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">languages</span>.<span class="nx">es</span>]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;Spanish&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">weight</span> <span class="p">=</span> <span class="m">2</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">languages</span>.<span class="nx">ca</span>]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;Catalan&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">weight</span> <span class="p">=</span> <span class="m">3</span><span class="err">
+</span></span></span></code></pre></div><p>The <code>languageName</code> it is used to define the text that will be seen on the web when checking which languages ​​are available. Spoiler alert! Later we will see how to translate these texts as well.</p>
 <h2 id="menus">Menus</h2>
 <p>To translate the menus in the different languages, they must be declared as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">[[<span class="nx">languages</span>.<span class="nx">en</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
-</span><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;home&#34;</span><span class="err">
-</span><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>[[<span class="nx">languages</span>.<span class="nx">en</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
-</span><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;about me&#34;</span><span class="err">
-</span><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/about&#34;</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>[[<span class="nx">languages</span>.<span class="nx">es</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
-</span><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;inicio&#34;</span><span class="err">
-</span><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>[[<span class="nx">languages</span>.<span class="nx">es</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
-</span><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;sobre mí&#34;</span><span class="err">
-</span><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/about&#34;</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>[[<span class="nx">languages</span>.<span class="nx">ca</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
-</span><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;inici&#34;</span><span class="err">
-</span><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span>[[<span class="nx">languages</span>.<span class="nx">ca</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
-</span><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;sobre mi&#34;</span><span class="err">
-</span><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/about&#34;</span><span class="err">
-</span></code></pre></div><h2 id="content">Content</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[[<span class="nx">languages</span>.<span class="nx">en</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;home&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>[[<span class="nx">languages</span>.<span class="nx">en</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;about me&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/about&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>[[<span class="nx">languages</span>.<span class="nx">es</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;inicio&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>[[<span class="nx">languages</span>.<span class="nx">es</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;sobre mí&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/about&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>[[<span class="nx">languages</span>.<span class="nx">ca</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;inici&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>[[<span class="nx">languages</span>.<span class="nx">ca</span>.<span class="nx">menu</span>.<span class="nx">main</span>]]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;sobre mi&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/about&#34;</span><span class="err">
+</span></span></span></code></pre></div><h2 id="content">Content</h2>
 <p>If for example we want to translate the page of <code>About me</code>, we can do it simply by replicating that file as many times as we have languages, in this case 3, adding the ISO of the language in the filename as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">en</span>.<span class="nx">md</span><span class="err">
-</span><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">es</span>.<span class="nx">md</span><span class="err">
-</span><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">ca</span>.<span class="nx">md</span><span class="err">
-</span></code></pre></div><p>In our case, the English language is the default, so we could even do it like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">md</span><span class="err">
-</span><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">es</span>.<span class="nx">md</span><span class="err">
-</span><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">ca</span>.<span class="nx">md</span><span class="err">
-</span></code></pre></div><h2 id="translated-content">Translated content</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">en</span>.<span class="nx">md</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">es</span>.<span class="nx">md</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">ca</span>.<span class="nx">md</span><span class="err">
+</span></span></span></code></pre></div><p>In our case, the English language is the default, so we could even do it like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">md</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">es</span>.<span class="nx">md</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/content/</span><span class="nx">about</span>.<span class="nx">ca</span>.<span class="nx">md</span><span class="err">
+</span></span></span></code></pre></div><h2 id="translated-content">Translated content</h2>
 <p>To find the translations for the specific page you can use the code snippet provided in the official documentation:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span><span class="k">if</span> <span class="p">.</span><span class="nx">IsTranslated</span><span class="p">}}</span>
-<span class="p">&lt;</span><span class="nx">h4</span><span class="p">&gt;</span> <span class="p">{{</span><span class="nx">i18n</span> <span class="s">&#34;translations&#34;</span><span class="p">}}</span> <span class="p">&lt;</span><span class="o">/</span><span class="nx">h4</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nx">ul</span><span class="p">&gt;</span>
-    <span class="p">{{</span><span class="k">range</span> <span class="p">.</span><span class="nx">Translations</span><span class="p">}}</span>
-    <span class="p">&lt;</span><span class="nx">li</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;[{ .Permalink }-lex.europa.eu&#34;</span><span class="p">&gt;</span> <span class="p">{{.</span><span class="nx">Lang</span><span class="p">}}:</span> <span class="p">{{.</span><span class="nx">Title</span><span class="p">}}</span> <span class="p">{{</span><span class="k">if</span> <span class="p">.</span><span class="nx">IsPage</span><span class="p">}}</span> <span class="p">({{</span><span class="nx">i18n</span> <span class="s">&#34;wordCount&#34;</span><span class="p">.}})</span> <span class="p">{{</span><span class="nx">end</span><span class="p">}}</span> <span class="p">&lt;</span> <span class="o">/</span> <span class="nx">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="o">/</span><span class="nx">li</span><span class="p">&gt;</span>
-    <span class="p">{{</span><span class="nx">end</span><span class="p">}}</span>
-<span class="p">&lt;</span><span class="o">/</span><span class="nx">ul</span><span class="p">&gt;</span>
-<span class="p">{{</span><span class="nx">end</span><span class="p">}}</span>
-</code></pre></div><p>In the template where we insert this code, once the content for it is rendered, it will appear if there is a translation or not of that content.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="k">if</span> <span class="p">.</span><span class="nx">IsTranslated</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">h4</span><span class="p">&gt;</span> <span class="p">{{</span><span class="nx">i18n</span> <span class="s">&#34;translations&#34;</span><span class="p">}}</span> <span class="p">&lt;</span><span class="o">/</span><span class="nx">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{{</span><span class="k">range</span> <span class="p">.</span><span class="nx">Translations</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nx">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="p">=</span><span class="s">&#34;[{ .Permalink }-lex.europa.eu&#34;</span><span class="p">&gt;</span> <span class="p">{{.</span><span class="nx">Lang</span><span class="p">}}:</span> <span class="p">{{.</span><span class="nx">Title</span><span class="p">}}</span> <span class="p">{{</span><span class="k">if</span> <span class="p">.</span><span class="nx">IsPage</span><span class="p">}}</span> <span class="p">({{</span><span class="nx">i18n</span> <span class="s">&#34;wordCount&#34;</span><span class="p">.}})</span> <span class="p">{{</span><span class="nx">end</span><span class="p">}}</span> <span class="p">&lt;</span> <span class="o">/</span> <span class="nx">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="o">/</span><span class="nx">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{{</span><span class="nx">end</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="o">/</span><span class="nx">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="nx">end</span><span class="p">}}</span>
+</span></span></code></pre></div><p>In the template where we insert this code, once the content for it is rendered, it will appear if there is a translation or not of that content.</p>
 <h2 id="translation-of-texts">Translation of texts</h2>
 <p>In the previous code we can already see that the <code>i18n</code> function appears that Hugo uses to translate the texts defined in the language files within the root directory as <code>/i18n</code>. The format of the files inside must be for example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">i18n</span>/<span class="nx">en</span>.<span class="nx">toml</span><span class="err">
-</span><span class="err"></span><span class="nx">i18n</span>/<span class="nx">es</span>.<span class="nx">toml</span><span class="err">
-</span><span class="err"></span><span class="nx">i18n</span>/<span class="nx">ca</span>.<span class="nx">toml</span><span class="err">
-</span></code></pre></div><p>For each language described above respectively.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">i18n</span>/<span class="nx">en</span>.<span class="nx">toml</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">i18n</span>/<span class="nx">es</span>.<span class="nx">toml</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">i18n</span>/<span class="nx">ca</span>.<span class="nx">toml</span><span class="err">
+</span></span></span></code></pre></div><p>For each language described above respectively.</p>
 <p>The file content will be similar to:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
-<span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;Llegir més&#34;</span>
-</code></pre></div><p>For the English file.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
-<span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;Llegir més&#34;</span>
-</code></pre></div><p>For the Spanish file.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
-<span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;Llegir més&#34;</span>
-</code></pre></div><p>For the Catalan file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;Llegir més&#34;</span>
+</span></span></code></pre></div><p>For the English file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;Llegir més&#34;</span>
+</span></span></code></pre></div><p>For the Spanish file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">readMore</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;Llegir més&#34;</span>
+</span></span></code></pre></div><p>For the Catalan file.</p>
 <p>Once the translation for <code>Read more</code> is defined, it is used in our Hugo template as:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span><span class="nx">i18n</span> <span class="s">&#34;readMore&#34;</span><span class="p">}}</span>
-</code></pre></div><p>And the result will be the text defined in the <code>.toml</code> according to the language chosen by the user to view the web page.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="nx">i18n</span> <span class="s">&#34;readMore&#34;</span><span class="p">}}</span>
+</span></span></code></pre></div><p>And the result will be the text defined in the <code>.toml</code> according to the language chosen by the user to view the web page.</p>
 <h2 id="singular-andor-plural-translation">Singular and/or plural translation</h2>
 <p>Singular or plural translations can be defined depending on a &ldquo;counter&rdquo;, as the <code>i18n</code> function offers this possibility. For example for the <code>Reading time</code> of an article, we can define it as such in the <code>.toml</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readingTime</span><span class="p">]</span>
-<span class="nx">one</span> <span class="p">=</span> <span class="s2">&#34;One minute to read&#34;</span>
-<span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;{{.Count}} minutes to read&#34;</span>
-</code></pre></div><p>We see that we pass the <code>.Count</code> to the translation so we will have to invoke it in the following way:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span><span class="nx">i18n</span> <span class="s">&#34;readingTime&#34;</span> <span class="p">.</span><span class="nx">ReadingTime</span><span class="p">}}</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">readingTime</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">one</span> <span class="p">=</span> <span class="s2">&#34;One minute to read&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">other</span> <span class="p">=</span> <span class="s2">&#34;{{.Count}} minutes to read&#34;</span>
+</span></span></code></pre></div><p>We see that we pass the <code>.Count</code> to the translation so we will have to invoke it in the following way:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="nx">i18n</span> <span class="s">&#34;readingTime&#34;</span> <span class="p">.</span><span class="nx">ReadingTime</span><span class="p">}}</span>
+</span></span></code></pre></div><blockquote>
 <p>Note: the <code>.ReadingTime</code> property is a counter that Hugo returns according to the number of words of the articles we create.</p>
 </blockquote>
 <h2 id="references">References</h2>
@@ -317,7 +317,7 @@ if (!doNotTrack) {
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -362,7 +362,7 @@ if (!doNotTrack) {
 		</li>
 	</ul>
 	<div class="footer-text">Last post on 09/12/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 

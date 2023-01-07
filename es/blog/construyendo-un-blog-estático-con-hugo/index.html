@@ -163,13 +163,13 @@ if (!doNotTrack) {
 <p>Aquí explicaré en algunos pasos cómo crear un blog con Hugo y cómo ser alojado e implementado en GitHub y GitHub Pages. Si necesita más detalles visite los [documentos de Hugo] oficiales (<a href="https://gohugo.io/documentation/)">https://gohugo.io/documentation/)</a>.</p>
 <h2 id="inicio">Inicio</h2>
 <p>Primero que nada necesitas instalar Hugo, en mi caso usando <a href="https://brew.sh/">Homebrew</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">brew</span> <span class="nx">install</span> <span class="nx">hugo</span><span class="err">
-</span></code></pre></div><p>Verifique la versión instalada:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">hugo</span> <span class="nx">version</span><span class="err">
-</span></code></pre></div><h2 id="crear-sitio">Crear sitio</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">brew</span> <span class="nx">install</span> <span class="nx">hugo</span><span class="err">
+</span></span></span></code></pre></div><p>Verifique la versión instalada:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">version</span><span class="err">
+</span></span></span></code></pre></div><h2 id="crear-sitio">Crear sitio</h2>
 <p>Una vez que haya instalado Hugo, podrá crear su sitio web usando el comando:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">hugo</span> <span class="nx">new</span> <span class="nx">site</span> <span class="nx">your</span><span class="p">-</span><span class="nx">blog</span><span class="p">-</span><span class="nx">name</span><span class="err">
-</span></code></pre></div><p>Después de eso, verá una nueva carpeta llamada <code>your-blog-name</code> y si mira dentro verá el siguiente árbol:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">new</span> <span class="nx">site</span> <span class="nx">your</span><span class="p">-</span><span class="nx">blog</span><span class="p">-</span><span class="nx">name</span><span class="err">
+</span></span></span></code></pre></div><p>Después de eso, verá una nueva carpeta llamada <code>your-blog-name</code> y si mira dentro verá el siguiente árbol:
 <img src="/images/build-hugo-static-blog/folder-tree-your-blog-name.png" alt="Folder tree"></p>
 <ul>
 <li>Archetypes son archivos de plantilla de contenido para su proyecto, que se utilizan cuando ejecuta el comando <code>hugo new</code>.</li>
@@ -183,63 +183,63 @@ if (!doNotTrack) {
 <h2 id="instalar-el-tema">Instalar el tema</h2>
 <p>Si quieres utilizar un tema ya creado puedes hacerlo de dos formas. Para comprobar los temas existentes, visite el sitio web oficial de <a href="https://github.com/panr/hugo-theme-hello-friend">temas de Hugo</a> donde puede ver una demostración de cada uno.</p>
 <p>En primer lugar, debe iniciar un repositorio de git dentro de su proyecto:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">cd</span> <span class="nx">your</span><span class="p">-</span><span class="nx">blog</span><span class="p">-</span><span class="nx">name</span>;\<span class="err">
-</span><span class="err"></span><span class="nx">git</span> <span class="nx">init</span>;<span class="err">
-</span></code></pre></div><p>Luego puede clonar el repositorio dentro de la carpeta <code>themes</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">github</span>.<span class="nx">com</span><span class="sr">/panr/</span><span class="nx">hugo</span><span class="p">-</span><span class="nx">theme</span><span class="p">-</span><span class="nx">hello</span><span class="p">-</span><span class="nx">friend</span>.<span class="nx">git</span> <span class="nx">themes</span>/<span class="nx">hello</span><span class="p">-</span><span class="nx">friend</span><span class="err">
-</span></code></pre></div><p>Si no desea realizar ningún cambio, es mejor incluir el tema como un submódulo de git y puede obtener nuevas actualizaciones cuando estén disponibles. Hágalo con:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">git</span> <span class="nx">submodule</span> <span class="nx">add</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">github</span>.<span class="nx">com</span><span class="sr">/panr/</span><span class="nx">hugo</span><span class="p">-</span><span class="nx">theme</span><span class="p">-</span><span class="nx">hello</span><span class="p">-</span><span class="nx">friend</span>.<span class="nx">git</span> <span class="nx">themes</span>/<span class="nx">hello</span><span class="p">-</span><span class="nx">friend</span><span class="err">
-</span></code></pre></div><h2 id="crear-contenido">Crear contenido</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">cd</span> <span class="nx">your</span><span class="p">-</span><span class="nx">blog</span><span class="p">-</span><span class="nx">name</span>;\<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">git</span> <span class="nx">init</span>;<span class="err">
+</span></span></span></code></pre></div><p>Luego puede clonar el repositorio dentro de la carpeta <code>themes</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">github</span>.<span class="nx">com</span><span class="sr">/panr/</span><span class="nx">hugo</span><span class="p">-</span><span class="nx">theme</span><span class="p">-</span><span class="nx">hello</span><span class="p">-</span><span class="nx">friend</span>.<span class="nx">git</span> <span class="nx">themes</span>/<span class="nx">hello</span><span class="p">-</span><span class="nx">friend</span><span class="err">
+</span></span></span></code></pre></div><p>Si no desea realizar ningún cambio, es mejor incluir el tema como un submódulo de git y puede obtener nuevas actualizaciones cuando estén disponibles. Hágalo con:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">submodule</span> <span class="nx">add</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">github</span>.<span class="nx">com</span><span class="sr">/panr/</span><span class="nx">hugo</span><span class="p">-</span><span class="nx">theme</span><span class="p">-</span><span class="nx">hello</span><span class="p">-</span><span class="nx">friend</span>.<span class="nx">git</span> <span class="nx">themes</span>/<span class="nx">hello</span><span class="p">-</span><span class="nx">friend</span><span class="err">
+</span></span></span></code></pre></div><h2 id="crear-contenido">Crear contenido</h2>
 <p>Para generar su primera publicación de blog, puede usar el comando <code>hugo new</code> y establecer la ruta que desee, en mi caso <code>posts</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">hugo</span> <span class="nx">new</span> <span class="nx">posts</span>/<span class="nx">my</span><span class="p">-</span><span class="nx">first</span><span class="p">-</span><span class="nx">post</span>.<span class="nx">md</span><span class="err">
-</span></code></pre></div><p>Obtendrá el siguiente archivo:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">new</span> <span class="nx">posts</span>/<span class="nx">my</span><span class="p">-</span><span class="nx">first</span><span class="p">-</span><span class="nx">post</span>.<span class="nx">md</span><span class="err">
+</span></span></span></code></pre></div><p>Obtendrá el siguiente archivo:
 <img src="/images/build-hugo-static-blog/example-post.png" alt="Example post"></p>
 <p>La primera sección es para los parámetros y la segunda es para el contenido en este caso en markdown. Consulte esta <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Hoja de referencia de Markdown</a> una referencia rápida y un escaparate.</p>
 <h2 id="ejecute-su-sitio">Ejecute su sitio</h2>
 <p>Una vez que haya creado la publicación, puede construir su sitio usando el comando <code>hugo server</code>. La bandera <code>-D</code> es para renderizar borradores:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">hugo</span> <span class="nx">server</span> <span class="p">-</span><span class="nx">D</span><span class="err">
-</span></code></pre></div><p>Y aparecerán los registros de renderizado y al final un mensaje similar a:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">Web</span> <span class="nx">Server</span> <span class="nx">is</span> <span class="nx">available</span> <span class="nx">at</span> <span class="nx">http</span>:<span class="sr">//</span><span class="nx">localhost</span>:<span class="m">1313</span>/ <span class="p">(</span><span class="nx">bind</span> <span class="nx">address</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span><span class="p">)</span><span class="err">
-</span></code></pre></div><p>Copie la URL en su navegador y verá su sitio en funcionamiento.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">server</span> <span class="p">-</span><span class="nx">D</span><span class="err">
+</span></span></span></code></pre></div><p>Y aparecerán los registros de renderizado y al final un mensaje similar a:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">Web</span> <span class="nx">Server</span> <span class="nx">is</span> <span class="nx">available</span> <span class="nx">at</span> <span class="nx">http</span>:<span class="sr">//</span><span class="nx">localhost</span>:<span class="m">1313</span>/ <span class="p">(</span><span class="nx">bind</span> <span class="nx">address</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span><span class="p">)</span><span class="err">
+</span></span></span></code></pre></div><p>Copie la URL en su navegador y verá su sitio en funcionamiento.</p>
 <h2 id="host-en-github">Host en GitHub</h2>
 <p>Usaremos las páginas de usuario / organización <code>https://&lt;USERNAME|ORGANIZATION&gt;.github.io/</code>.</p>
 <p>Cree un repositorio <code>&lt;YOUR-PROJECT&gt;</code> en GitHub. Este repositorio contendrá el contenido de Hugo y otros archivos fuente.</p>
 <p>Cree un repositorio de GitHub <code>&lt;USERNAME&gt;.github.io</code>. Este es el repositorio que contendrá la versión completamente renderizada de su sitio web Hugo.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">github</span>.<span class="nx">com</span><span class="sr">/&lt;USERNAME&gt;/</span><span class="p">&lt;</span><span class="nx">YOUR</span><span class="p">-</span><span class="nx">PROJECT</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span><span class="nx">cd</span> <span class="p">&lt;</span><span class="nx">YOUR</span><span class="p">-</span><span class="nx">PROJECT</span><span class="p">&gt;</span><span class="err">
-</span></code></pre></div><p>Ejecute su sitio web localmente usando el comando <code>hugo server</code> o si está usando el tema <code>hugo server -t &lt;THEME_NAME&gt;</code>. Siga las instrucciones en la consola para acceder a él. El servidor web debe estar disponible en http: // localhost: 1313 /</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">github</span>.<span class="nx">com</span><span class="sr">/&lt;USERNAME&gt;/</span><span class="p">&lt;</span><span class="nx">YOUR</span><span class="p">-</span><span class="nx">PROJECT</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">cd</span> <span class="p">&lt;</span><span class="nx">YOUR</span><span class="p">-</span><span class="nx">PROJECT</span><span class="p">&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>Ejecute su sitio web localmente usando el comando <code>hugo server</code> o si está usando el tema <code>hugo server -t &lt;THEME_NAME&gt;</code>. Siga las instrucciones en la consola para acceder a él. El servidor web debe estar disponible en http: // localhost: 1313 /</p>
 <p>Finalmente, debe agregar el repositorio <code>&lt;USERNAME&gt;.github.io</code> dentro de la carpeta <code>public</code> como un submódulo de git para actualizar su sitio web una vez que lo regenere.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">git</span> <span class="nx">submodule</span> <span class="nx">add</span> <span class="p">-</span><span class="nx">b</span> <span class="nx">master</span> <span class="nx">git</span>@<span class="nx">github</span>.<span class="nx">com</span>:<span class="p">&lt;</span><span class="nx">USERNAME</span><span class="p">&gt;</span>/<span class="p">&lt;</span><span class="nx">USERNAME</span><span class="p">&gt;</span>.<span class="nx">github</span>.<span class="nx">io</span>.<span class="nx">git</span> <span class="nx">public</span><span class="err">
-</span></code></pre></div><p>Si no tiene configurada la clave de par RSA, deberá agregar el submódulo a través de HTTP:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">git</span> <span class="nx">submodule</span> <span class="nx">add</span> <span class="p">-</span><span class="nx">b</span> <span class="nx">master</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">github</span>.<span class="nx">com</span><span class="sr">/&lt;USERNAME&gt;/</span><span class="p">&lt;</span><span class="nx">USERNAME</span><span class="p">&gt;</span>.<span class="nx">github</span>.<span class="nx">io</span>.<span class="nx">git</span> <span class="nx">public</span><span class="err">
-</span></code></pre></div><p>Para automatizar los siguientes pasos, puede guardarlo en <code>deploy.sh</code>. Recuerde hacerlo ejecutable con:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">chmod</span> <span class="p">+</span><span class="nx">x</span> <span class="nx">deploy</span>.<span class="nx">sh</span><span class="err">
-</span></code></pre></div><p>deploy.sh</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="nb">echo</span> -e <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
-
-<span class="c1"># Build the project.</span>
-hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
-
-<span class="c1"># Go To Public folder</span>
-<span class="nb">cd</span> public
-<span class="c1"># Add changes to git.</span>
-git add .
-
-<span class="c1"># Commit changes.</span>
-<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
-  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
-<span class="k">fi</span>
-git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
-
-<span class="c1"># Push source and build repos.</span>
-git push origin master
-
-<span class="c1"># Come Back up to the Project Root</span>
-<span class="nb">cd</span> ..
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">submodule</span> <span class="nx">add</span> <span class="p">-</span><span class="nx">b</span> <span class="nx">master</span> <span class="nx">git</span>@<span class="nx">github</span>.<span class="nx">com</span>:<span class="p">&lt;</span><span class="nx">USERNAME</span><span class="p">&gt;</span>/<span class="p">&lt;</span><span class="nx">USERNAME</span><span class="p">&gt;</span>.<span class="nx">github</span>.<span class="nx">io</span>.<span class="nx">git</span> <span class="nx">public</span><span class="err">
+</span></span></span></code></pre></div><p>Si no tiene configurada la clave de par RSA, deberá agregar el submódulo a través de HTTP:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">submodule</span> <span class="nx">add</span> <span class="p">-</span><span class="nx">b</span> <span class="nx">master</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">github</span>.<span class="nx">com</span><span class="sr">/&lt;USERNAME&gt;/</span><span class="p">&lt;</span><span class="nx">USERNAME</span><span class="p">&gt;</span>.<span class="nx">github</span>.<span class="nx">io</span>.<span class="nx">git</span> <span class="nx">public</span><span class="err">
+</span></span></span></code></pre></div><p>Para automatizar los siguientes pasos, puede guardarlo en <code>deploy.sh</code>. Recuerde hacerlo ejecutable con:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">chmod</span> <span class="p">+</span><span class="nx">x</span> <span class="nx">deploy</span>.<span class="nx">sh</span><span class="err">
+</span></span></span></code></pre></div><p>deploy.sh</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Build the project.</span>
+</span></span><span class="line"><span class="cl">hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Go To Public folder</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl"><span class="c1"># Add changes to git.</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Commit changes.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Push source and build repos.</span>
+</span></span><span class="line"><span class="cl">git push origin master
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Come Back up to the Project Root</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span></code></pre></div>
 				</article>
 
 				
@@ -247,7 +247,7 @@ git push origin master
 				
 				<div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -292,7 +292,7 @@ git push origin master
 		</li>
 	</ul>
 	<div class="footer-text">Última publicación en 16/08/2021</div>
-	<div class="footer-text">© 2018 - 2022 Charly3Pins</div>
+	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
 </footer>
 <script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 
