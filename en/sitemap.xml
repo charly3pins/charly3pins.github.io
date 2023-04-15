@@ -39,7 +39,7 @@
                 />
   </url><url>
     <loc>https://charly3pins.dev/blog/</loc>
-    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -56,8 +56,21 @@
                 href="https://charly3pins.dev/blog/"
                 />
   </url><url>
+    <loc>https://charly3pins.dev/tags/book-club/</loc>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/book-club/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/book-club/"
+                />
+  </url><url>
     <loc>https://charly3pins.dev/</loc>
-    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -72,6 +85,50 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/tags/engineering/</loc>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/engineering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/engineering/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/tags/</loc>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/blog/tech-book-club/</loc>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/tech-book-club/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/tech-book-club/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/tags/go/</loc>
@@ -103,24 +160,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/blog/go-project-layout-with-clean-architecures-and-ddd/"
-                />
-  </url><url>
-    <loc>https://charly3pins.dev/tags/</loc>
-    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/tags/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/blog/learn-how-to-use-the-embed-package-in-go-by-building-a-web-page-easily/</loc>

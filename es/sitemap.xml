@@ -38,26 +38,8 @@
                 href="https://charly3pins.dev/es/code/tournaments-generator/"
                 />
   </url><url>
-    <loc>https://charly3pins.dev/es/blog/aprende-a-utilizar-el-paquete-embed-a-go-construyendo-una-p%C3%A1gina-web-f%C3%A1cilmente/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/blog/learn-how-to-use-the-embed-package-in-go-by-building-a-web-page-easily/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/blog/apr%C3%A8n-a-fer-servir-el-paquet-embed-a-go-construint-una-p%C3%A0gina-web-f%C3%A0cilment/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/blog/aprende-a-utilizar-el-paquete-embed-a-go-construyendo-una-p%C3%A1gina-web-f%C3%A1cilmente/"
-                />
-  </url><url>
     <loc>https://charly3pins.dev/es/blog/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -74,8 +56,21 @@
                 href="https://charly3pins.dev/es/blog/"
                 />
   </url><url>
+    <loc>https://charly3pins.dev/es/tags/book-club/</loc>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/book-club/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/book-club/"
+                />
+  </url><url>
     <loc>https://charly3pins.dev/es/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -92,8 +87,65 @@
                 href="https://charly3pins.dev/es/"
                 />
   </url><url>
+    <loc>https://charly3pins.dev/es/blog/tech-book-club/</loc>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/tech-book-club/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/tech-book-club/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/es/tags/engineering/</loc>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/engineering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/engineering/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/es/tags/</loc>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/tags/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/es/blog/go-project-layout-with-clean-architecures-and-ddd/</loc>
+    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/blog/go-project-layout-with-clean-architecures-and-ddd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/blog/go-project-layout-with-clean-architecures-and-ddd/"
+                />
+  </url><url>
     <loc>https://charly3pins.dev/es/tags/go/</loc>
-    <lastmod>2021-08-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -110,22 +162,22 @@
                 href="https://charly3pins.dev/es/tags/go/"
                 />
   </url><url>
-    <loc>https://charly3pins.dev/es/tags/</loc>
+    <loc>https://charly3pins.dev/es/blog/aprende-a-utilizar-el-paquete-embed-a-go-construyendo-una-p%C3%A1gina-web-f%C3%A1cilmente/</loc>
     <lastmod>2021-08-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://charly3pins.dev/tags/"
+                href="https://charly3pins.dev/blog/learn-how-to-use-the-embed-package-in-go-by-building-a-web-page-easily/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://charly3pins.dev/ca/tags/"
+                href="https://charly3pins.dev/ca/blog/apr%C3%A8n-a-fer-servir-el-paquet-embed-a-go-construint-una-p%C3%A0gina-web-f%C3%A0cilment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://charly3pins.dev/es/tags/"
+                href="https://charly3pins.dev/es/blog/aprende-a-utilizar-el-paquete-embed-a-go-construyendo-una-p%C3%A1gina-web-f%C3%A1cilmente/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/es/tags/life/</loc>
@@ -718,18 +770,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://charly3pins.dev/es/tags/ci/cd/"
-                />
-  </url><url>
-    <loc>https://charly3pins.dev/es/blog/go-project-layout-with-clean-architecures-and-ddd/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/blog/go-project-layout-with-clean-architecures-and-ddd/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/blog/go-project-layout-with-clean-architecures-and-ddd/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/es/about/</loc>
