@@ -4,7 +4,7 @@
     <link>https://charly3pins.dev/tags/javascript/</link>
     <description>Recent content in javascript on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Sat, 22 Sep 2018</lastBuildDate>
     
     <atom:link href="https://charly3pins.dev/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
@@ -367,7 +367,7 @@ Also you can order the properties and add new ones as you decide.&lt;/p&gt;
 &lt;p&gt;Maybe in a future post I will detail exactly how the internal pages and views look like or if you wanna see it, you can comment me here or in any social media and I will do it sooner than later!&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s it for a personal management system. I hope you enjoyed the reading and it will help you to take your goals to the next level with that tips of organization and management.&lt;/p&gt;
 &lt;p&gt;But&amp;hellip; &lt;strong&gt;THAT&amp;rsquo;S NOT ALL FOLKS!&lt;/strong&gt;
-&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/thats-all.gif&#34; alt=&#34;that&amp;amp;rsquo;s all&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/thats-all.gif&#34; alt=&#34;that&amp;rsquo;s all&#34;&gt;&lt;/p&gt;
 &lt;p&gt;If you consider this a great tool for your personal stuff but you are wondering what about using it for professional projects, for example replacing the JIRA in my job, don&amp;rsquo;t worry, there is another template that can help you doing that transition and it&amp;rsquo;s &lt;a href=&#34;https://www.notion.so/Jira-Alternative-Notion-template-93880ffefbbd4931900ffd11430859fd&#34;&gt;this one&lt;/a&gt;. As you can see it is pretty much the same as JIRA, having the views for epics, current sprint, future sprints and the backlog. Also in the top before the epics, there is a section with a few links to other pages like the  tickets, labels, fix versions and so on. So as you can see there is almost a copy of JIRA&amp;rsquo;s views but without the pain of JIRA&amp;rsquo;s views (you know what I mean).&lt;/p&gt;
 &lt;p&gt;You can also investigate the &lt;a href=&#34;https://www.notion.so/Notion-Template-Gallery-181e961aeb5c4ee6915307c0dfd5156d&#34;&gt;Notion Template Gallery&lt;/a&gt; to get some inspiration and duplicate one from there or also share your own one. &lt;a href=&#34;https://notionpages.com/&#34;&gt;Here&lt;/a&gt; you have another inspirational website made by fans of Notion.&lt;/p&gt;
 &lt;p&gt;As you can see Notion is the present and in my opinion the future of the management/organization applications and a though candidate to lead all the rankings so play with it, try all the templates, discover all the features that offers and as I always say feel free to comment here or contact me on my social media for any comments, questions or suggestions.&lt;/p&gt;
@@ -1282,7 +1282,7 @@ TEMPLATE: &amp;#34;{{CHANGE}}: {{MESSAGE}}&amp;#34;
       <guid>https://charly3pins.dev/blog/hugo-content-and-templates-managing/</guid>
       <description>How to organize your content and create your templates to get maximum value from Hugo.</description>
       <content>&lt;p&gt;After long time without writing&amp;hellip; I&amp;rsquo;m back!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/hugo-content-templates-managing/im-back-terminator.jpg&#34; alt=&#34;I&amp;amp;rsquo;m back&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/hugo-content-templates-managing/im-back-terminator.jpg&#34; alt=&#34;I&amp;rsquo;m back&#34;&gt;&lt;/p&gt;
 &lt;p&gt;I was planning to rebuild my site and start creating content again but never found the time until now.&lt;/p&gt;
 &lt;p&gt;I wanted to do my theme from scratch instead of using a predefined &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;theme&lt;/a&gt;, so I had to learn how the templating and the content managing is done in Hugo.&lt;/p&gt;
 &lt;p&gt;Once I did that process, I want to sum up the most important things that I consider you have to know if you wanna do your own theme like I did (this site is the prove of that!).&lt;/p&gt;

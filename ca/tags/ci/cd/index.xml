@@ -4,7 +4,7 @@
     <link>https://charly3pins.dev/ca/tags/ci/cd/</link>
     <description>Recent content in ci/cd on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>ca</language>
     
     <atom:link href="https://charly3pins.dev/ca/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
     
@@ -248,7 +248,7 @@ A més pot ordenar les propietats i afegir-ne de noves a la seva elecció.&lt;/p
 &lt;p&gt;Potser en una publicació futura detallaré exactament com es veuen les pàgines internes i les vistes o si vol veure-ho, pot comentar-me aquí o a qualsevol xarxa social i ho faré més aviat del previst.&lt;/p&gt;
 &lt;p&gt;Això és tot per a un sistema de gestió personal. Espero que hagi gaudit la lectura i l&amp;rsquo;ajudi a portar les seves metes a el següent nivell amb aquests consells d&amp;rsquo;organització i gestió.&lt;/p&gt;
 &lt;p&gt;Però&amp;hellip; &lt;strong&gt;AIXÒ NO ÉS TOT!&lt;/strong&gt;
-&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/thats-all.gif&#34; alt=&#34;That &amp;amp;rsquo;s all&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/thats-all.gif&#34; alt=&#34;That &amp;rsquo;s all&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Si considera que aquesta és una gran eina per les seves coses personals, però es pregunta què tal seria fer-la servir per a projectes professionals, per exemple, reemplaçant JIRA en el seu treball, no es preocupi, hi ha una altra plantilla que pot ajudar-lo a fer aquesta transició que és &lt;a href=&#34;https://www.notion.so/Jira-Alternative-Notion-template-93880ffefbbd4931900ffd11430859fd&#34;&gt;aquesta&lt;/a&gt;. Com pot veure, és més o menys el mateix que JIRA, ja que té les vistes de les èpiques, l&amp;rsquo;esprint actual, els esprints futurs i el backlog. També a la part superior abans de les èpiques, hi ha una secció amb alguns enllaços a altres pàgines com les tasques, les etiquetes, les versions, etc. Llavors, com pot veure, ofereix gairebé una còpia de les vistes de JIRA però sense el negatiu de les vistes de JIRA (ja sap al que em refereixo).&lt;/p&gt;
 &lt;p&gt;També pot investigar la &lt;a href=&#34;https://www.notion.so/Notion-Template-Gallery-181e961aeb5c4ee6915307c0dfd5156d&#34;&gt;Galeria de plantilles de Notion&lt;/a&gt; per inspirar-se i duplicar-ne una d&amp;rsquo;allà o també compartir-hi la seva pròpia. &lt;a href=&#34;https://notionpages.com/&#34;&gt;Aquí&lt;/a&gt; té un altre lloc web inspirador creat per fans de Notion.&lt;/p&gt;
 &lt;p&gt;Com veu Notion és el present i al meu entendre el futur de les aplicacions de gestió/organització i un ferm candidat per liderar tots els rànquings, així que jugui amb ell, provi totes les plantilles, descobreixi totes les funcionalitats que ofereix i com sempre dic no dubti a comentar aquí o contactar-me en les meves xarxes socials per a qualsevol comentari, pregunta o suggeriment.&lt;/p&gt;
@@ -1167,7 +1167,7 @@ TEMPLATE: &amp;#34;{{CHANGE}}: {{MESSAGE}}&amp;#34;
       <guid>https://charly3pins.dev/ca/blog/gesti%C3%B3-de-plantilles-i-contingut-dhugo/</guid>
       <description>Com organitzar el vostre contingut i crear les vostres plantilles per obtenir el màxim valor d’Hugo.</description>
       <content>&lt;p&gt;Després de molt de temps sense escriure&amp;hellip; he tornat!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/hugo-content-templates-managing/im-back-terminator.jpg&#34; alt=&#34;I&amp;amp;rsquo;m back&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/hugo-content-templates-managing/im-back-terminator.jpg&#34; alt=&#34;I&amp;rsquo;m back&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Tenia previst reconstruir el meu lloc i començar a crear contingut de nou, però mai no he trobat el temps fins ara.&lt;/p&gt;
 &lt;p&gt;Volia fer el meu tema des de zero en lloc d’utilitzar un &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;tema predefinit&lt;/a&gt;, així que vaig haver d’aprendre com es fan les plantilles i la gestió del contingut a Hugo.&lt;/p&gt;
 &lt;p&gt;Un cop fet aquest procés, vull resumir les coses més importants que considero que heu de saber si voleu fer el vostre propi tema com ho vaig fer jo (aquest lloc ho demostra!).&lt;/p&gt;

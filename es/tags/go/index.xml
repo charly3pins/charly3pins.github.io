@@ -4,7 +4,7 @@
     <link>https://charly3pins.dev/es/tags/go/</link>
     <description>Recent content in go on charly3pins.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>es</language>
     <lastBuildDate>Thu, 09 Dec 2021</lastBuildDate>
     
     <atom:link href="https://charly3pins.dev/es/tags/go/index.xml" rel="self" type="application/rss+xml" />
@@ -367,7 +367,7 @@ Además puede ordenar las propiedades y agregar nuevas a su elección.&lt;/p&gt;
 &lt;p&gt;Tal vez en una publicación futura detallaré exactamente cómo se ven las páginas internas y las vistas o si quiere verlo, puede comentarme aquí o en cualquier red social y lo haré tan pronto como pueda.&lt;/p&gt;
 &lt;p&gt;Eso es todo para un sistema de gestión personal. Espero que haya disfrutado la lectura y le ayude a llevar sus metas al siguiente nivel con estos consejos de organización y gestión.&lt;/p&gt;
 &lt;p&gt;Pero&amp;hellip; &lt;strong&gt;¡ESO NO ES TODO!&lt;/strong&gt;
-&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/thats-all.gif&#34; alt=&#34;that&amp;amp;rsquo;s all&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://charly3pins.dev/images/increase-productivity-notion/thats-all.gif&#34; alt=&#34;that&amp;rsquo;s all&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Si considera que esta es una gran herramienta para sus cosas personales, pero se pregunta qué tal sería usarla para proyectos profesionales, por ejemplo, reemplazando JIRA en su trabajo, no se preocupe, hay otra plantilla que puede ayudarle a hacer esa transición que es &lt;a href=&#34;https://www.notion.so/Jira-Alternative-Notion-template-93880ffefbbd4931900ffd11430859fd&#34;&gt;ésta&lt;/a&gt;. Como puede ver, es más o menos lo mismo que JIRA, ya que tiene las vistas para las épicas, el sprint actual, los sprints futuros y el backlog. También en la parte superior antes de las épicas, hay una sección con algunos enlaces a otras páginas como las tareas, las etiquetas, las versiones, etc. Entonces, como puede ver, ofrece casi una copia de las vistas de JIRA pero sin el dolor de los puntos de vista de JIRA (ya sabe a lo que me refiero).&lt;/p&gt;
 &lt;p&gt;También puede investigar la &lt;a href=&#34;https://www.notion.so/Notion-Template-Gallery-181e961aeb5c4ee6915307c0dfd5156d&#34;&gt;Galería de plantillas de Notion&lt;/a&gt; para inspirarse y duplicar una de allí o también compartir la suya propia. &lt;a href=&#34;https://notionpages.com/&#34;&gt;Aquí&lt;/a&gt; tiene otro sitio web inspirador creado por fans de Notion.&lt;/p&gt;
 &lt;p&gt;Como ve Notion es el presente y en mi opinión el futuro de las aplicaciones de gestión/organización y un serio candidato para liderar todos los rankings, así que juegue con él, pruebe todas las plantillas, descubra todas las funcionalidades que ofrece y como siempre digo no dude en comentar aquí o contactarme en mis redes sociales para cualquier comentario, pregunta o sugerencia.&lt;/p&gt;
@@ -1287,7 +1287,7 @@ TEMPLATE: &amp;#34;{{CHANGE}}: {{MESSAGE}}&amp;#34;
       <guid>https://charly3pins.dev/es/blog/gesti%C3%B3n-de-contenidos-y-plantillas-de-hugo/</guid>
       <description>Cómo organizar su contenido y crear sus plantillas para obtener el máximo valor de Hugo.</description>
       <content>&lt;p&gt;Después de mucho tiempo sin escribir&amp;hellip; ¡estoy de vuelta!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/hugo-content-templates-managing/im-back-terminator.jpg&#34; alt=&#34;I&amp;amp;rsquo;m back&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://charly3pins.dev/images/hugo-content-templates-managing/im-back-terminator.jpg&#34; alt=&#34;I&amp;rsquo;m back&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Estaba planeando reconstruir mi sitio y comenzar a crear contenido nuevamente, pero nunca encontré el tiempo hasta ahora.&lt;/p&gt;
 &lt;p&gt;Quería hacer mi tema desde cero en lugar de usar un &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;tema predefinido&lt;/a&gt;, así que tuve que aprender cómo se realizan las plantillas y la gestión de contenido en Hugo.&lt;/p&gt;
 &lt;p&gt;Una vez que hice ese proceso, quiero resumir las cosas más importantes que considero que debes saber si quieres hacer tu propio tema como lo hice yo (¡este sitio es la prueba de eso!).&lt;/p&gt;
