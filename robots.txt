@@ -1,6 +1,2 @@
 User-agent: *
 
-
-Disallow: /code/collectus/
-
-Disallow: /code/tournaments-generator/

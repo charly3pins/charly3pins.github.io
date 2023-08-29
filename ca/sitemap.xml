@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://charly3pins.dev/ca/code/collectus/</loc>
+    <loc>https://charly3pins.dev/ca/projects/collectus/</loc>
     <lastmod>2018-09-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://charly3pins.dev/code/collectus/"
+                href="https://charly3pins.dev/projects/collectus/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://charly3pins.dev/es/code/collectus/"
+                href="https://charly3pins.dev/es/projects/collectus/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://charly3pins.dev/ca/code/collectus/"
+                href="https://charly3pins.dev/ca/projects/collectus/"
                 />
   </url><url>
-    <loc>https://charly3pins.dev/ca/code/tournaments-generator/</loc>
+    <loc>https://charly3pins.dev/ca/projects/tournaments-generator/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://charly3pins.dev/code/tournaments-generator/"
+                href="https://charly3pins.dev/projects/tournaments-generator/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://charly3pins.dev/es/code/tournaments-generator/"
+                href="https://charly3pins.dev/es/projects/tournaments-generator/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://charly3pins.dev/ca/code/tournaments-generator/"
+                href="https://charly3pins.dev/ca/projects/tournaments-generator/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/ca/blog/apr%C3%A8n-a-fer-servir-el-paquet-embed-a-go-construint-una-p%C3%A0gina-web-f%C3%A0cilment/</loc>
@@ -488,24 +488,6 @@
                 href="https://charly3pins.dev/ca/blog/pujeu-de-nivell-les-vostres-presentacions-amb-go/"
                 />
   </url><url>
-    <loc>https://charly3pins.dev/ca/code/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/code/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/code/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/code/"
-                />
-  </url><url>
     <loc>https://charly3pins.dev/ca/tags/flutter/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -522,6 +504,24 @@
                 rel="alternate"
                 hreflang="ca"
                 href="https://charly3pins.dev/ca/tags/flutter/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/ca/projects/</loc>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/projects/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/ca/tags/python/</loc>
@@ -720,21 +720,21 @@
                 href="https://charly3pins.dev/ca/tags/ci/cd/"
                 />
   </url><url>
-    <loc>https://charly3pins.dev/ca/about/</loc>
+    <loc>https://charly3pins.dev/ca/whois/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://charly3pins.dev/about/"
+                href="https://charly3pins.dev/whois/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://charly3pins.dev/es/about/"
+                href="https://charly3pins.dev/es/whois/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://charly3pins.dev/ca/about/"
+                href="https://charly3pins.dev/ca/whois/"
                 />
   </url>
 </urlset>

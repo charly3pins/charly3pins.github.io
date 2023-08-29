@@ -1,172 +1,181 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-	
-	<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="chrome=1">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Eat; Sleep; Code; Repeat;">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Tournaments generator | Charly3Pins</title>
+  <link rel="icon" href="/favicon.ico">
 
-
-  <meta property="og:title" content="Tournaments generator - charly3pins" />
-
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Proof of concept building an application for managing FIFA 20 tournaments between different people using Flutter for building a mobile app and Go for building an API acting as a server. Also used Python to build simple scrapers.">
-  <meta property="og:url" content="https://charly3pins.dev/code/tournaments-generator/">
-  <meta property="og:site_name" content="charly3pins.dev">
+  <title>
+  Tournaments generator - charly3pins.dev
+  </title>
+  <meta name="description" content="Proof of concept building an application for managing FIFA 20 tournaments between different people using Flutter for building a mobile app and Go for building an API acting as a server. Also used Python to build simple scrapers." />
+  <meta name="author" content="charly3pins" />
+  <meta name="generator" content="Hugo 0.115.4"><link
+    rel="stylesheet"
+    href="https://charly3pins.dev/css/styles.css"
+    integrity=""
+  />
   
-  <meta property="og:image" content="https://charly3pins.dev/images/cyberpunk-ai.png">
+  
 
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Tournaments generator" />
+<meta property="og:description" content="Proof of concept building an application for managing FIFA 20 tournaments between different people using Flutter for building a mobile app and Go for building an API acting as a server. Also used Python to build simple scrapers." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://charly3pins.dev/code/tournaments-generator/" /><meta property="article:section" content="code" />
+<meta property="article:published_time" content="2020-05-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-01T00:00:00+00:00" />
 
-  <meta name="twitter:title" content="Tournaments generator" />
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tournaments generator"/>
+<meta name="twitter:description" content="Proof of concept building an application for managing FIFA 20 tournaments between different people using Flutter for building a mobile app and Go for building an API acting as a server. Also used Python to build simple scrapers."/>
 
+  <meta itemprop="name" content="Tournaments generator">
+<meta itemprop="description" content="Proof of concept building an application for managing FIFA 20 tournaments between different people using Flutter for building a mobile app and Go for building an API acting as a server. Also used Python to build simple scrapers."><meta itemprop="datePublished" content="2020-05-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-05-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1713">
+<meta itemprop="keywords" content="go,flutter,python," />
 
-  <meta name="twitter:description" content="Proof of concept building an application for managing FIFA 20 tournaments between different people using Flutter for building a mobile app and Go for building an API acting as a server. Also used Python to build simple scrapers.">
-
-
-  <meta name="twitter:image" content="https://charly3pins.dev/images/cyberpunk-ai.png">
-
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-126216319-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-  <link rel="stylesheet" href="https://charly3pins.dev/css/main.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/syntax.css" />
-  <link rel="stylesheet" href="https://charly3pins.dev/css/social_share.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <meta name="lang" content="en" />
+  
 </head>
-
-	<body>
-		<div class="navbar-container">
-    <nav class="navbar-navigation">
-        
-        <a href="/">Home</a>
-        
-        <a href="/blog/">Blog</a>
-        
-        <a href="/code/">Code</a>
-        
-        <a href="/about/">About</a>
-        
-        
-        <ul class="lang-selector">
-            <li>
-                <a>English</a> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                <ul>
-                
-                    <a href="https://charly3pins.dev/es/code/tournaments-generator/">Spanish</a>
-                
-                    <a href="https://charly3pins.dev/ca/code/tournaments-generator/">Catalan</a>
-                
-                </ul>
-            </li>
-        </ul>
-        
-        <button class="theme-switch-wrapper">
-            <img id="theme-switcher" class="theme-switcher" src="https://sunilsandhu.com/assets/icons/sun-moon.png" alt="toggle dark mode">
-        </button>
-    </nav>
-</div>
-		
-		<div class="layout-container">
-
-			<section class="blog-container">
-				
-				<h4 class="post-title">Tournaments generator</h4>
-				<h2 class="post-description">Proof of concept building an application for managing FIFA 20 tournaments between different people using Flutter for building a mobile app and Go for building an API acting as a server. Also used Python to build simple scrapers.</h2>
-
-				<div class="post-metadata">
-					<div class="post-tags">
-						
-						<a class="tag" href="https://charly3pins.dev/tags/go/">#go</a>
-						
-						<a class="tag" href="https://charly3pins.dev/tags/flutter/">#flutter</a>
-						
-						<a class="tag" href="https://charly3pins.dev/tags/python/">#python</a>
-						
-					</div>
-					<span class="post-date">
-						01/05/2020 · 9 min read
-					</span>
-				</div>
-
-				<ul class="icons">
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="https://charly3pins.dev/" class="capitalize font-extrabold text-2xl">
     
-    <li>
-        
-        <a href="//twitter.com/share?url=https%3a%2f%2fcharly3pins.dev%2fcode%2ftournaments-generator%2f&amp;text=Tournaments%20generator&amp;via=charly3pins&amp;hashtags=go%2cflutter%2cpython" target="_blank" class="share-btn twitter">
-            <i class="fa fa-twitter"></i>
-        </a>
-    </li>
+    charly3pins.dev
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
 
     
-    <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcharly3pins.dev%2fcode%2ftournaments-generator%2f" target="_blank" class="share-btn facebook">
-            <i class="fa fa-facebook"></i>
-        </a>
-    </li>
+    <li><a href="/">Home</a></li>
+    
+    <li><a href="/blog/">Blog</a></li>
+    
+    <li><a href="/code/">Code</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
 
     
-    <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fcharly3pins.dev%2fcode%2ftournaments-generator%2f&amp;title=Tournaments%20generator" target="_blank" class="share-btn reddit">
-            <i class="fa fa-reddit-alien"></i>
-        </a>
+    
+    <li class="relative cursor-pointer">
+      <span class="language-switcher flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="9" />
+          <line x1="3.6" y1="9" x2="20.4" y2="9" />
+          <line x1="3.6" y1="15" x2="20.4" y2="15" />
+          <path d="M11.5 3a17 17 0 0 0 0 18" />
+          <path d="M12.5 3a17 17 0 0 1 0 18" />
+        </svg>
+        <a></a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M18 15l-6 -6l-6 6h12" transform="rotate(180 12 12)" />
+        </svg>
+      </span>
+      <div
+        class="language-dropdown absolute top-full mt-2 left-0 flex-col gap-2 bg-gray-100 dark:bg-gray-900 dark:text-white z-10 hidden">
+        
+        
+        
+        
+        <a class="px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700" href="/es" lang="es">Spanish</a>
+        
+        
+        
+        <a class="px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700" href="/ca" lang="ca">Catalan</a>
+        
+        
+      </div>
     </li>
+    
+    
 
     
-    <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fcharly3pins.dev%2fcode%2ftournaments-generator%2f&amp;title=Tournaments%20generator" target="_blank" class="share-btn linkedin">
-            <i class="fa fa-linkedin"></i>
-        </a>
-    </li>
 
     
-    <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fcharly3pins.dev%2fcode%2ftournaments-generator%2f&amp;description=Tournaments%20generator" target="_blank" class="share-btn pinterest">
-            <i class="fa fa-pinterest-p"></i>
-        </a>
-    </li>
+  </ul>
+</header>
+<main class="flex-1">
+  
+  
+
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">Tournaments generator</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      &lt;no value&gt; min read9&nbsp;
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      1713&nbsp;
+      
+        &nbsp;&bull;&nbsp;&nbsp;<a href="https://charly3pins.dev/es/code/tournaments-generator/" lang="es">Spanish</a><a href="https://charly3pins.dev/ca/code/tournaments-generator/" lang="ca">Catalan</a>
+      
+    </h5>
+    
 
     
-    <li>
-        <a href="mailto:?subject=Check out this post by charly3pins&amp;body=https%3a%2f%2fcharly3pins.dev%2fcode%2ftournaments-generator%2f" target="_blank" class="share-btn email">
-            <i class="fa fa-envelope"></i>
-        </a>
-    </li>
-</ul>
 
-
-				<article>
-					
-					
-					<div class="page-separator"></div>
-					<h2 id="why">WHY</h2>
+    <h2 id="why">WHY</h2>
 <p>The motivation for starting this project is not another one than my curiosity about the mobile applications. It is obvious that the way of consuming technology has changed over the last few years and it is increasingly being done through a mobile device. For that reason I wanted to explore how the mobile apps work and how I can build one from scratch.
-I did some Android tutorials, but as they are changing a lot of things when releasing new versions and my idea was to build something generic for all devices, I decided to give it a try to <a href="https://flutter.dev/">Flutter</a>.</p>
-<p>I was between <a href="https://reactnative.dev/">React Native</a> or Flutter, but after reading some pros and cons, I&rsquo;ve decided to ally myself with Flutter. I started reading their <a href="https://flutter.dev/docs">documentation</a> and it was super similar to Android (they are using Dart in the bottom) and I started remembering my old days on the Android tutorials and I like, so I continued. After a few days reading only technical documentation, I continued with the &ldquo;hello world&rdquo; app <a href="https://flutter.dev/docs/get-started/codelab">tutorial</a> they provide in the website. And finally, I was ready to start my own project.</p>
+I did some Android tutorials, but as they are changing a lot of things when releasing new versions and my idea was to build something generic for all devices, I decided to give it a try to <a href="https://flutter.dev/" target="_blank" rel="noopener">Flutter</a>
+.</p>
+<p>I was between <a href="https://reactnative.dev/" target="_blank" rel="noopener">React Native</a>
+ or Flutter, but after reading some pros and cons, I&rsquo;ve decided to ally myself with Flutter. I started reading their <a href="https://flutter.dev/docs" target="_blank" rel="noopener">documentation</a>
+ and it was super similar to Android (they are using Dart in the bottom) and I started remembering my old days on the Android tutorials and I like, so I continued. After a few days reading only technical documentation, I continued with the &ldquo;hello world&rdquo; app <a href="https://flutter.dev/docs/get-started/codelab" target="_blank" rel="noopener">tutorial</a>
+ they provide in the website. And finally, I was ready to start my own project.</p>
 <p>For the time the global pandemic started, me and my friends started a FIFA 20 league on PS4 to distract ourselves in the afternoons/nights. Initially it was just playing and nothing else, but then we started having a Power BI dashboard for statistics, a YouTube channel to share the games live and then store them there and a Twitter to tweet the updates in the classification every week. The first league was created manually and a bit of pain and super static, so I&rsquo;ve decided to use that topic to create an app that helps us to manage the second league creating the league, managing our teams and matches there, notifying the results and showing more detailed statistics inside.</p>
 <h2 id="what">WHAT</h2>
-<p>First of all I wanted to put all the real FIFA 20 information inside the website related with leagues, teams and players. For that I found a few websites that have that information open and free, but they haven&rsquo;t an API for consuming it. The idea of copying manually was tempting a lot, but I preferred to write a simple crawler in <a href="https://www.python.org/">Python</a> using the library <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors">BeautifulSoup</a> with the css-selectors it provides. Doing some tweaks here and there, at the end I ended up having 3 json files, one for each topic I wanted initially so all perfect!</p>
+<p>First of all I wanted to put all the real FIFA 20 information inside the website related with leagues, teams and players. For that I found a few websites that have that information open and free, but they haven&rsquo;t an API for consuming it. The idea of copying manually was tempting a lot, but I preferred to write a simple crawler in <a href="https://www.python.org/" target="_blank" rel="noopener">Python</a>
+ using the library <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors" target="_blank" rel="noopener">BeautifulSoup</a>
+ with the css-selectors it provides. Doing some tweaks here and there, at the end I ended up having 3 json files, one for each topic I wanted initially so all perfect!</p>
 <p>Then in order to introduce all that information in the database the idea was to create a command line tool that reads those files and generates the corresponding SQL statements and then generate the corresponding migration files.
-I&rsquo;ve chosen <a href="https://golang.org/">Go</a> as the programming language for the API and I&rsquo;ve created a <code>cmd</code> that allows me to do the desired idea. The database would be <a href="https://www.postgresql.org/">PostgreSQL</a> so the &ldquo;inserts&rdquo; have to be according to its syntax.</p>
-<p>With all the initial data ready, I&rsquo;ve started to design the rest of the Database and the possible endpoints need it for manage all that information. I&rsquo;ve chosen <a href="https://github.com/gorilla/mux">mux</a> for the HTTP for it&rsquo;s simplicity but powerful in comparison with the standard lib one (just only for the parameter parsing it&rsquo;s worth it&hellip;). As I wanted to explore more the mobile app side than the server side, I just organized the code using the <a href="https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html">Layered Architecture</a> grouping the items by function and used <a href="https://gorm.io/index.html">GORM</a> as the ORM for simplify the query and the mappings between the database and my models.</p>
+I&rsquo;ve chosen <a href="https://golang.org/" target="_blank" rel="noopener">Go</a>
+ as the programming language for the API and I&rsquo;ve created a <code>cmd</code> that allows me to do the desired idea. The database would be <a href="https://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a>
+ so the &ldquo;inserts&rdquo; have to be according to its syntax.</p>
+<p>With all the initial data ready, I&rsquo;ve started to design the rest of the Database and the possible endpoints need it for manage all that information. I&rsquo;ve chosen <a href="https://github.com/gorilla/mux" target="_blank" rel="noopener">mux</a>
+ for the HTTP for it&rsquo;s simplicity but powerful in comparison with the standard lib one (just only for the parameter parsing it&rsquo;s worth it&hellip;). As I wanted to explore more the mobile app side than the server side, I just organized the code using the <a href="https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html" target="_blank" rel="noopener">Layered Architecture</a>
+ grouping the items by function and used <a href="https://gorm.io/index.html" target="_blank" rel="noopener">GORM</a>
+ as the ORM for simplify the query and the mappings between the database and my models.</p>
 <p><img src="/images/code/tournaments-generator/api-structure.jpeg" alt="api structure"></p>
 <p>Inside the <code>cmd</code> folder I&rsquo;ve created different commands:</p>
 <ul>
@@ -188,7 +197,8 @@ I&rsquo;ve chosen <a href="https://golang.org/">Go</a> as the programming langua
 </span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">User</span><span class="p">.</span><span class="n">fromJson</span><span class="p">(</span><span class="n">json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span></code></pre></div><p>The unique problem I&rsquo;ve faced there is that I was running the apps from the Android Emulator; that means it was running in a virtual machine so the IP was not my local one and cannot access the <code>localhost</code>. After a bit of research I&rsquo;ve found the correct one and all worked correctly.</p>
-<p>The problems started when I wanted to pass information between components, and refresh the view depending on that information, or even better, not refresh if nothing changed when I enter again into a view (for example going from a list to a detail view, and coming back again to the list). After a day reading in forums about the same problem that I was facing, I&rsquo;ve found the package <a href="https://pub.dev/packages/provider">Provider</a> and all seemed easy and the holy grail for everything, but it wasn&rsquo;t.</p>
+<p>The problems started when I wanted to pass information between components, and refresh the view depending on that information, or even better, not refresh if nothing changed when I enter again into a view (for example going from a list to a detail view, and coming back again to the list). After a day reading in forums about the same problem that I was facing, I&rsquo;ve found the package <a href="https://pub.dev/packages/provider" target="_blank" rel="noopener">Provider</a>
+ and all seemed easy and the holy grail for everything, but it wasn&rsquo;t.</p>
 <p>The real pain just started there! It took me some days to really understand how it works. The initial Provider it&rsquo;s easy to understand and you use it and it works, but then you want to change just a small part of the view, or you want to rebuild the entire one, or you want to modify some values in a view A and then go to view B and see the changes there, and all that examples it&rsquo;s coded completely different and you have to know first of all that there are one way for each case of doing things and second you have to know how to do it. At the end I used the Provider, the ProxyProvider, the StreamProvider and the ChangeNotifierProvider.</p>
 <p>The project is not finished but for now is On Hold with the following functionalities:</p>
 <p>Initially the user can switch between the signup/login views.
@@ -220,88 +230,85 @@ I&rsquo;ve chosen <a href="https://golang.org/">Go</a> as the programming langua
 <p>With this proof of concept I had the opportunity to work in a complex application in terms of designing reusable components in a mobile application, calling to an external API to manage the information displayed in the app and learning how to use the Provider package for moving information between multiple views and control the state of the application in a simpler and effective way.</p>
 <p>There is a lot more to learn regarding mobile development but I consider this project as an initial step to start with. I will do the missing views someday in order we can use it in real world, but I hope it&rsquo;s not because we have another pandemic 😏</p>
 <ul>
-<li>Source code of the API in Go: <a href="https://github.com/charly3pins/fifa-gen-api">https://github.com/charly3pins/fifa-gen-api</a></li>
-<li>Source of of the Flutter app: <a href="https://github.com/charly3pins/fifa_gen">https://github.com/charly3pins/fifa_gen</a></li>
+<li>Source code of the API in Go: <a href="https://github.com/charly3pins/fifa-gen-api" target="_blank" rel="noopener">https://github.com/charly3pins/fifa-gen-api</a>
+</li>
+<li>Source of of the Flutter app: <a href="https://github.com/charly3pins/fifa_gen" target="_blank" rel="noopener">https://github.com/charly3pins/fifa_gen</a>
+</li>
 </ul>
 
-				</article>
+  </article><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2"></div>
+      <p class="opacity-60"></p>
+    </div>
 
-				
-				
-				<div class="page-separator"><hr></div>
-				
-				<section class="post-preview-container">
-					<a href="https://charly3pins.dev/blog/gophercises-quiz/">
-						<div class="post-preview-title-container">
-							<h3 class="post-preview-title">Gophercises - Quiz game</h3>
-						</div>
-						<div class="post-preview-subtext">Code review of my first exercise in the Gophercises page. It&#39;s focused in the CSV and time packages in addition to an introduction for the goroutines and channels.</div>
-						<div>
-							<span class="post-preview-metadata">
-								24/09/2018 · 8 min read
-							</span>
-							
-							<a class="tag" href="https://charly3pins.dev/tags/go/">#go</a>
-							
-						</div>
-					</a>
-				</section>					
-				
-				
-				
-				<div id="disqus_thread"></div>
-<script type="application/javascript">
-    window.disqus_config = function () {
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
     
+    2023 © charly3pins.dev
     
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "https-charly3pins-dev" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-			
-			</section>
-			
-			<div class="page-separator centered"><hr></div>
-			
-			<footer class="footer-container">
-	<ul class="footer-social-icons-container">
-		<li><a class="footer-social-icon" href="https://twitter.com/charly3pins" target="_blank" aria-label="Twitter">
-			<i class="fa fa-twitter fa-fw" title="Twitter"></i></a>
-		</li>
-		<li><a class="footer-social-icon" href="https://github.com/charly3pins" target="_blank" aria-label="GitHub">
-			<i class="fa fa-github-alt fa-fw" title="GitHub"></i></a>
-		</li>
-		<li><a class="footer-social-icon" href="https://stackoverflow.com/users/4948631/charly3pins" target="_blank" aria-label="Stack Overflow">
-			<i class="fa fa-stack-overflow fa-fw" title="Stack Overflow"></i></a>
-		</li>
-		<li><a class="footer-social-icon" href="https://charly3pins.dev/index.xml" target="_blank" aria-label="RSS">
-			<i class="fa fa-rss fa-fw" title="RSS"></i></a>
-		</li>
-		<li><a class="footer-social-icon" href="https://dev.to/charly3pins" target="_blank" aria-label="Dev.to">
-			<i class="fa fa-dev-to" title="Dev.to"></i>DEV</a>
-		</li> 
-		<li><a class="footer-social-icon" href="mailto:hello@charly3pins.dev" target="_blank" aria-label="Email">
-			<i class="fa fa-envelope fa-fw" title="email"></i></a>
-		</li>
-	</ul>
-	<div class="footer-text">Last post on 15/04/2023</div>
-	<div class="footer-text">© 2018 - 2023 Charly3Pins</div>
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
 </footer>
-<script type="text/javascript" src="https://charly3pins.dev/js/theme-switcher.js"></script>
 
-		
-		</div>
 
-	</body>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-126216319-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+<script>
+  const languageMenuButton = document.querySelector('.language-switcher');
+  const languageDropdown = document.querySelector('.language-dropdown');
+  languageMenuButton.addEventListener('click', (evt) => {
+    evt.preventDefault()
+    if (languageDropdown.classList.contains('hidden')) {
+      languageDropdown.classList.remove('hidden')
+      languageDropdown.classList.add('flex')
+    } else {
+      languageDropdown.classList.add('hidden');
+      languageDropdown.classList.remove('flex');
+    }
+  })
+</script>
+
+
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
 </html>

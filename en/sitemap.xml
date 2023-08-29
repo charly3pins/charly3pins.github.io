@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://charly3pins.dev/code/collectus/</loc>
+    <loc>https://charly3pins.dev/projects/collectus/</loc>
     <lastmod>2018-09-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://charly3pins.dev/es/code/collectus/"
+                href="https://charly3pins.dev/es/projects/collectus/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://charly3pins.dev/ca/code/collectus/"
+                href="https://charly3pins.dev/ca/projects/collectus/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://charly3pins.dev/code/collectus/"
+                href="https://charly3pins.dev/projects/collectus/"
                 />
   </url><url>
-    <loc>https://charly3pins.dev/code/tournaments-generator/</loc>
+    <loc>https://charly3pins.dev/projects/tournaments-generator/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://charly3pins.dev/es/code/tournaments-generator/"
+                href="https://charly3pins.dev/es/projects/tournaments-generator/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ca"
-                href="https://charly3pins.dev/ca/code/tournaments-generator/"
+                href="https://charly3pins.dev/ca/projects/tournaments-generator/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://charly3pins.dev/code/tournaments-generator/"
+                href="https://charly3pins.dev/projects/tournaments-generator/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/blog/</loc>
@@ -540,24 +540,6 @@
                 href="https://charly3pins.dev/blog/level-up-your-preseentations-with-go/"
                 />
   </url><url>
-    <loc>https://charly3pins.dev/code/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/code/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/code/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/code/"
-                />
-  </url><url>
     <loc>https://charly3pins.dev/tags/flutter/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -574,6 +556,24 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/tags/flutter/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/projects/</loc>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/projects/"
                 />
   </url><url>
     <loc>https://charly3pins.dev/tags/python/</loc>
@@ -741,23 +741,6 @@
                 href="https://charly3pins.dev/tags/php/"
                 />
   </url><url>
-    <loc>https://charly3pins.dev/about/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://charly3pins.dev/es/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://charly3pins.dev/ca/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://charly3pins.dev/about/"
-                />
-  </url><url>
     <loc>https://charly3pins.dev/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -790,6 +773,23 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://charly3pins.dev/tags/ci/cd/"
+                />
+  </url><url>
+    <loc>https://charly3pins.dev/whois/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://charly3pins.dev/es/whois/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://charly3pins.dev/ca/whois/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://charly3pins.dev/whois/"
                 />
   </url>
 </urlset>
